@@ -1,0 +1,8 @@
+.claude/
+philosophical_poker/
+ideograph_experiments/__pycache__/
+ideograph_experiments/outputs/
+*.pyc
+*.pyo
+*.pyd
+tz.pdf
