@@ -68,11 +68,32 @@
 - [long_horizon_integrated_agent_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\long_horizon_integrated_agent_test.py)
 - [long_horizon_hidden_shift_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\long_horizon_hidden_shift_test.py)
 - [learned_hidden_shift_batch_suite.py](C:\Users\user\workspace\maevtica\ideograph_experiments\learned_hidden_shift_batch_suite.py)
+- [recurrent_hidden_shift_detector_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\recurrent_hidden_shift_detector_test.py)
+- [return_mode_signal_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\return_mode_signal_test.py)
 
 ### Сервисный раннер
 
 - [run_all_experiments.py](C:\Users\user\workspace\maevtica\ideograph_experiments\run_all_experiments.py)
   Сводный запуск старой серии экспериментов и генерация summary/plots.
+
+## Отдельный подпроект `epistemic_engine`
+
+- [epistemic_engine/README.md](C:\Users\user\workspace\maevtica\epistemic_engine\README.md)
+  Краткое описание отдельной ветки про выбор вопросов и пересмотр гипотез.
+- [epistemic_engine/models.py](C:\Users\user\workspace\maevtica\epistemic_engine\models.py)
+  Общие структуры данных для belief state, observation и benchmark result.
+- [epistemic_engine/environments/debugging.py](C:\Users\user\workspace\maevtica\epistemic_engine\environments\debugging.py)
+  Первая toy-среда: диагностика бага между несколькими конкурирующими причинами.
+- [epistemic_engine/questions/policy.py](C:\Users\user\workspace\maevtica\epistemic_engine\questions\policy.py)
+  Политика выбора следующего диагностического шага по ожидаемому information gain.
+- [epistemic_engine/revision/updater.py](C:\Users\user\workspace\maevtica\epistemic_engine\revision\updater.py)
+  Байесовское обновление belief state и фиксация событий пересмотра.
+- [epistemic_engine/policies/baselines.py](C:\Users\user\workspace\maevtica\epistemic_engine\policies\baselines.py)
+  Простые baseline-политики: `cheapest` и `random`.
+- [epistemic_engine/runner/demo_debugging_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_mvp.py)
+  Пошаговая демонстрация одного эпизода.
+- [epistemic_engine/runner/run_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_benchmark.py)
+  Сводный benchmark по политикам `information_gain`, `cheapest` и `random`.
 
 ## Что считать опорными файлами
 
@@ -86,3 +107,4 @@
 6. [long_horizon_integrated_agent_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\long_horizon_integrated_agent_test.py)
 7. [long_horizon_hidden_shift_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\long_horizon_hidden_shift_test.py)
 8. [learned_hidden_shift_batch_suite.py](C:\Users\user\workspace\maevtica\ideograph_experiments\learned_hidden_shift_batch_suite.py)
+9. [epistemic_engine/README.md](C:\Users\user\workspace\maevtica\epistemic_engine\README.md)
