@@ -5,4 +5,5 @@ ideograph_experiments/outputs/
 *.pyc
 *.pyo
 *.pyd
+*Zone.Identifier
 tz.pdf

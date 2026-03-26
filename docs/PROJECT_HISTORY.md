@@ -109,6 +109,56 @@ Belief требует связи с действием и штрафом за о
 `недостаточно научить систему решать probe/act по короткому локальному state;`
 `нужно учить richer hidden belief state по последовательности событий.`
 
+### 10. Recurrent hidden belief state
+
+- `recurrent_hidden_shift_detector_test.py`
+
+Вывод:
+
+- более богатое recurrent hidden state действительно улучшает learned hidden-shift detector;
+- на mixed eval по `10` seed-ам recurrent версия бьёт flat contextual baseline:
+  - `0.792` против `0.759` по среднему reward,
+  - `0.752` против `0.699` по худшему сценарию;
+- но сильная версия гипотезы пока не проходит:
+  - recurrent learned detector всё ещё слабее hand-crafted `risk_aware_hidden_shift` на long horizon (`0.796` против `0.853`).
+
+Новая корректировка тезиса:
+
+`просто richer recurrent belief state уже полезен;`
+`но без явного switch-latent / return-mode signal learned detector всё ещё недобирает на возвратах режимов и на политике probe.`
+
+### 11. Explicit return-mode signal
+
+- `return_mode_signal_test.py`
+
+Вывод:
+
+- простой явный `return-mode signal` действительно даёт ещё один шаг вперёд;
+- версия `iter5` улучшает long horizon относительно `iter4`:
+  - `0.897` против `0.892`;
+- но это пока слабое улучшение, не закрывающее зазор до hand-crafted `risk_aware_hidden_shift` (`0.913`).
+
+Новая корректировка тезиса:
+
+`явный return-mode signal нужен;`
+`но грубого high-risk revisit override недостаточно;`
+`следующий шаг — сделать этот сигнал learned и встроенным в hidden belief state.`
+
+### 12. Выделение отдельного подпроекта
+
+- `epistemic_engine/`
+
+Вывод:
+
+- из исследовательской линии начал выделяться отдельный прикладной трек;
+- его цель уже не объяснять всё сразу, а собрать минимальную машину выбора вопросов и пересмотра гипотез;
+- первый MVP намеренно узкий: toy-debugging / diagnosis вместо общей философской платформы.
+
+Новая развилка проекта:
+
+`ideograph_experiments` остаётся местом, где проверяются базовые гипотезы про inquiry, belief и hidden shift;`
+`epistemic_engine` становится местом, где эти идеи собираются в отдельный движок с понятным интерфейсом, политиками и benchmark-ами.`
+
 ## Текущая версия тезиса
 
 Сейчас проект движется не к формуле "`сознание = граф`" и не к доказательству сознания.
@@ -119,4 +169,4 @@ Belief требует связи с действием и штрафом за о
 
 Следующий естественный шаг:
 
-`recurrent / model-based hidden belief state`
+`learned switch-latent / return-mode-aware recurrent hidden belief state`
