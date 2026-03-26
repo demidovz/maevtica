@@ -15,6 +15,12 @@
 - `epistemic_engine` — подпроект про выбор вопросов и пересмотр гипотез;
 - первый MVP там — toy-debugging среда, где вопрос трактуется как диагностическое действие.
 
+## Состояние репозитория
+
+- GitHub `origin` уже подключён: `https://github.com/demidovz/maevtica.git`
+- рабочая ветка сейчас `main`
+- текущая git-идентичность для новых коммитов в этой репе: `Sergei <demidovz@yandex.ru>`
+
 ## Где проект сейчас
 
 Сильные уже подтверждённые результаты:
@@ -60,10 +66,29 @@
 `грубый явный return-mode signal уже помогает;`
 `следующий недостающий кусок — более точный learned switch-latent / return-mode signal вместо простого override.`
 
+Текущее состояние прикладной линии `epistemic_engine`:
+
+- на смешанном `meta-shift` benchmark лучшая общая политика сейчас `adaptive_shift / latent_shift`:
+  - `accuracy 0.785`,
+  - `mean_utility 0.150`.
+- `latent_shift` не обогнал `adaptive_shift`, но вынес внутренний режим пересмотра в явный `BeliefState`:
+  - `false_alarm_risk`,
+  - `persistent_shift_risk`,
+  - `switch_pressure`.
+- `ArtifactDebuggingEnvironment` подтвердил перенос на semi-real артефакты:
+  - `information_gain`, `type_memory`, `hybrid_memory` и `latent_shift` сейчас идут в паритете `1.000 / 1.900 / 0.552` (`accuracy / mean_cost / mean_utility`),
+  - это полезный отрицательный результат: перенос уже есть, но библиотека кейсов пока слишком статична и слишком маленькая.
+
+Текущий прикладной тезис:
+
+`для хорошего выбора следующего вопроса в меняющемся мире системе мало просто держать вероятности гипотез;`
+`ей нужен отдельный внутренний latent-state, который отслеживает риск ложной тревоги, риск устойчивой смены режима и силу переключения;`
+`следующий переносной тест должен проверять это уже не в чисто synthetic мире, а в artifact-level shift / drift среде.`
+
 ## Текущие проценты
 
 - Исследовательская линия: `85-87%`
-- Toy-архитектура: `55-60%`
+- `epistemic_engine` MVP: `81/100`
 - Конечная сильная цель: `35-40%`
 
 ## Что запускать в первую очередь
@@ -80,6 +105,14 @@ python C:\Users\user\workspace\maevtica\ideograph_experiments\recurrent_hidden_s
 python C:\Users\user\workspace\maevtica\ideograph_experiments\return_mode_signal_test.py
 ```
 
+Если нужна быстрая перепроверка текущей прикладной линии:
+
+```powershell
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py --episodes 800 --seed 17 --confidence-threshold 0.85 --max-cost 6.0 --max-steps 5 --ambiguous-share 0.5 --false-alarm-length 1
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py --episodes 800 --seed 17
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_meta_shift_mvp.py --seed 18 --confidence-threshold 0.85 --max-cost 6.0 --max-steps 5 --scenario auto --false-alarm-length 1
+```
+
 Если нужен общий обзор старых тестов:
 
 ```powershell
@@ -88,17 +121,18 @@ python C:\Users\user\workspace\maevtica\ideograph_experiments\run_all_experiment
 
 ## Что делать дальше
 
-Следующий правильный технический шаг:
+Следующие правильные технические шаги идут по двум линиям:
 
-1. Добавить в recurrent state явный сигнал возврата режима:
-   - не как грубый override,
-   - а как полноценный learned latent.
-2. Проверить варианты:
-   - `archive-match score`,
-   - `return-mode prior`,
-   - `mode reactivation confidence`.
-3. Учить probe-policy уже вместе с этим сигналом на long-horizon return-block benchmark.
-4. После этого снова сравнивать `learned recurrent` против `hand-crafted risk-aware hidden-shift detector`.
+1. `ideograph_experiments`
+   - добавить в recurrent state явный learned сигнал возврата режима вместо грубого override;
+   - проверить `archive-match score`, `return-mode prior`, `mode reactivation confidence`;
+   - учить probe-policy уже вместе с этим сигналом на long-horizon return-block benchmark;
+   - снова сравнить `learned recurrent` против `hand-crafted risk-aware hidden-shift detector`.
+2. `epistemic_engine`
+   - сделать `artifact-level shift / drift` среду;
+   - заставить внутри эпизода или между близкими инцидентами меняться полезность логов, diff, config и test-report источников;
+   - проверить, даёт ли явный `shift_latent` выигрыш уже вне чисто synthetic world;
+   - только после этого решать, нужен ли следующий шаг в сторону LLM/API или сначала ещё усложнять среду.
 
 ## Что важно не потерять
 
@@ -110,3 +144,4 @@ python C:\Users\user\workspace\maevtica\ideograph_experiments\run_all_experiment
   - её детский перевод.
 - Удобный автономный режим: `4 итерации подряд`, потом остановка и отчёт.
 - Отвечать всегда по-русски.
+- В каждом сообщении пользователю отдельной строкой писать прогресс формата `До MVP: X/100`.

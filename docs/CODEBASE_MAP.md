@@ -81,19 +81,41 @@
 - [epistemic_engine/README.md](C:\Users\user\workspace\maevtica\epistemic_engine\README.md)
   Краткое описание отдельной ветки про выбор вопросов и пересмотр гипотез.
 - [epistemic_engine/models.py](C:\Users\user\workspace\maevtica\epistemic_engine\models.py)
-  Общие структуры данных для belief state, observation и benchmark result.
+  Общие структуры данных для belief state, observation, shift latent и benchmark result.
+- [epistemic_engine/beliefs/shift_latent.py](C:\Users\user\workspace\maevtica\epistemic_engine\beliefs\shift_latent.py)
+  Явный latent-state для `false_alarm_risk`, `persistent_shift_risk` и `switch_pressure`.
+- [epistemic_engine/beliefs/state.py](C:\Users\user\workspace\maevtica\epistemic_engine\beliefs\state.py)
+  Базовые операции над belief state и выбор текущей верхней гипотезы.
 - [epistemic_engine/environments/debugging.py](C:\Users\user\workspace\maevtica\epistemic_engine\environments\debugging.py)
-  Первая toy-среда: диагностика бага между несколькими конкурирующими причинами.
+  Основная synthetic-среда: debugging, mode-shift, question-value-shift, ambiguous-shift и meta-shift сценарии.
+- [epistemic_engine/environments/artifact_debugging.py](C:\Users\user\workspace\maevtica\epistemic_engine\environments\artifact_debugging.py)
+  Semi-real debugging среда с короткими логами, diff, config, lockfile и regression-report артефактами.
 - [epistemic_engine/questions/policy.py](C:\Users\user\workspace\maevtica\epistemic_engine\questions\policy.py)
   Политика выбора следующего диагностического шага по ожидаемому information gain.
 - [epistemic_engine/revision/updater.py](C:\Users\user\workspace\maevtica\epistemic_engine\revision\updater.py)
-  Байесовское обновление belief state и фиксация событий пересмотра.
+  Байесовское обновление belief state, refresh `shift_latent` и фиксация событий пересмотра.
+- [epistemic_engine/memory/question_type_memory.py](C:\Users\user\workspace\maevtica\epistemic_engine\memory\question_type_memory.py)
+  Память о классе следующего полезного вопроса.
+- [epistemic_engine/memory/mode_memory.py](C:\Users\user\workspace\maevtica\epistemic_engine\memory\mode_memory.py)
+  Память о скрытых режимах инцидентов.
 - [epistemic_engine/policies/baselines.py](C:\Users\user\workspace\maevtica\epistemic_engine\policies\baselines.py)
   Простые baseline-политики: `cheapest` и `random`.
+- [epistemic_engine/policies/hybrid_memory.py](C:\Users\user\workspace\maevtica\epistemic_engine\policies\hybrid_memory.py)
+  Гибридная политика, объединяющая память о типе вопроса и режиме мира.
+- [epistemic_engine/policies/switch_memory.py](C:\Users\user\workspace\maevtica\epistemic_engine\policies\switch_memory.py)
+  Switch-aware, persistent, adaptive и latent-shift политики пересмотра.
 - [epistemic_engine/runner/demo_debugging_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_mvp.py)
-  Пошаговая демонстрация одного эпизода.
+  Пошаговая демонстрация базового debugging-эпизода.
+- [epistemic_engine/runner/demo_debugging_meta_shift_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_meta_shift_mvp.py)
+  Пошаговая демонстрация `latent_shift` с trace внутреннего состояния.
+- [epistemic_engine/runner/demo_artifact_debugging_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_artifact_debugging_mvp.py)
+  Пошаговая демонстрация semi-real artifact debugging кейса.
 - [epistemic_engine/runner/run_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_benchmark.py)
-  Сводный benchmark по политикам `information_gain`, `cheapest` и `random`.
+  Базовый strict benchmark по debugging-политикам.
+- [epistemic_engine/runner/run_debugging_meta_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py)
+  Смешанный benchmark, где `adaptive_shift` и `latent_shift` сейчас лидируют по общей utility.
+- [epistemic_engine/runner/run_artifact_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py)
+  Transfer sanity check на semi-real debugging артефактах.
 
 ## Что считать опорными файлами
 
@@ -108,3 +130,5 @@
 7. [long_horizon_hidden_shift_test.py](C:\Users\user\workspace\maevtica\ideograph_experiments\long_horizon_hidden_shift_test.py)
 8. [learned_hidden_shift_batch_suite.py](C:\Users\user\workspace\maevtica\ideograph_experiments\learned_hidden_shift_batch_suite.py)
 9. [epistemic_engine/README.md](C:\Users\user\workspace\maevtica\epistemic_engine\README.md)
+10. [epistemic_engine/runner/run_debugging_meta_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py)
+11. [epistemic_engine/runner/run_artifact_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py)

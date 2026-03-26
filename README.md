@@ -36,12 +36,14 @@ python C:\Users\user\workspace\maevtica\ideograph_experiments\recurrent_hidden_s
 python C:\Users\user\workspace\maevtica\ideograph_experiments\return_mode_signal_test.py
 python C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_mvp.py
 python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_benchmark.py
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py
 ```
 
 ## Статус
 
 - Исследовательская ясность: примерно `85-87%`
-- Toy-архитектура / синтетический агент: примерно `55-60%`
+- `epistemic_engine` MVP: примерно `81/100`
 - Сильная конечная цель: примерно `35-40%`
 
 Главный текущий результат:
@@ -55,7 +57,12 @@ python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_be
 - `return_mode_signal_test.py` показал, что явный `return-mode signal` поверх `iter4` версии даёт небольшой дополнительный выигрыш на long horizon:
   - `0.897` против `0.892`,
   - но до hand-crafted baseline `0.913` всё ещё есть заметный зазор.
+- в `epistemic_engine` лучшая общая политика на смешанном `meta-shift` benchmark сейчас `adaptive_shift / latent_shift`:
+  - `accuracy 0.785`,
+  - `mean_utility 0.150`.
+- `ArtifactDebuggingEnvironment` показал, что движок уже переносится на semi-real logs / diff / config / test-report артефакты, но текущая библиотека кейсов пока слишком статична и слишком лёгкая, чтобы память или latent-state давали дополнительный выигрыш.
 
-Главный следующий шаг:
+Главные следующие шаги:
 
-`learned switch-latent / return-mode signal`, а не только грубый high-risk revisit override.
+- `ideograph_experiments`: `learned switch-latent / return-mode signal`, а не только грубый high-risk revisit override.
+- `epistemic_engine`: `artifact-level shift / drift`, где внутри эпизода или между близкими инцидентами меняется полезность самих источников сигнала.

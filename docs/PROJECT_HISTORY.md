@@ -159,6 +159,50 @@ Belief требует связи с действием и штрафом за о
 `ideograph_experiments` остаётся местом, где проверяются базовые гипотезы про inquiry, belief и hidden shift;`
 `epistemic_engine` становится местом, где эти идеи собираются в отдельный движок с понятным интерфейсом, политиками и benchmark-ами.`
 
+### 13. Shift-aware контроллер в `epistemic_engine`
+
+- `run_debugging_meta_shift_benchmark.py`
+- `epistemic_engine/policies/switch_memory.py`
+- `epistemic_engine/beliefs/shift_latent.py`
+
+Вывод:
+
+- простого `information_gain` уже недостаточно, когда среда может давать и настоящие сдвиги, и ложные тревоги;
+- `hybrid_memory`, `switch_memory`, `persistent_shift` и `adaptive_shift` показали, что системе полезно выбирать не только следующий вопрос, но и режим собственного пересмотра;
+- `latent_shift` не улучшил метрики относительно `adaptive_shift`, но сделал внутренний механизм явным и наблюдаемым:
+  - `false_alarm_risk`,
+  - `persistent_shift_risk`,
+  - `switch_pressure`;
+- на смешанном `meta-shift` benchmark лучшая общая политика сейчас `adaptive_shift / latent_shift`:
+  - `accuracy 0.785`,
+  - `mean_utility 0.150`.
+
+Новая корректировка тезиса:
+
+`для хорошего выбора следующего вопроса в меняющемся мире мало просто держать вероятности гипотез;`
+`нужен отдельный внутренний latent-state, который отслеживает риск ложной тревоги, риск устойчивой смены режима и силу переключения.`
+
+### 14. Перенос на semi-real artifact debugging
+
+- `epistemic_engine/environments/artifact_debugging.py`
+- `epistemic_engine/runner/run_artifact_debugging_benchmark.py`
+
+Вывод:
+
+- перенос с чисто synthetic outcome labels на короткие логи, diff, config, lockfile и test-report артефакты уже получился;
+- `information_gain`, `type_memory`, `hybrid_memory` и `latent_shift` в текущей artifact-среде идут в паритете:
+  - `accuracy 1.000`,
+  - `mean_cost 1.900`,
+  - `mean_utility 0.552`;
+- это не победа сложной памяти, а полезный отрицательный результат:
+  - текущая библиотека кейсов пока слишком маленькая и статичная,
+  - поэтому перенос уже есть, но следующий архитектурный выигрыш пока не проявляется.
+
+Новая корректировка тезиса:
+
+`следующий переносной тест должен быть не про ещё один static case library;`
+`он должен быть про artifact-level shift / drift, где полезность источников сигнала меняется внутри эпизода или между близкими инцидентами.`
+
 ## Текущая версия тезиса
 
 Сейчас проект движется не к формуле "`сознание = граф`" и не к доказательству сознания.
@@ -167,6 +211,7 @@ Belief требует связи с действием и штрафом за о
 
 `Интеллект — это управление вопросами, beliefs, latent states и пространством гипотез под давлением неопределённости, цены ошибки, скрытого контекста и смены режима мира.`
 
-Следующий естественный шаг:
+Внутри неё сейчас уже две рабочие ветки:
 
-`learned switch-latent / return-mode-aware recurrent hidden belief state`
+- `ideograph_experiments`: `learned switch-latent / return-mode-aware recurrent hidden belief state`
+- `epistemic_engine`: `artifact-level shift / drift` для проверки явного `shift_latent` уже на semi-real debugging артефактах
