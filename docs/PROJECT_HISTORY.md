@@ -203,6 +203,49 @@ Belief требует связи с действием и штрафом за о
 `следующий переносной тест должен быть не про ещё один static case library;`
 `он должен быть про artifact-level shift / drift, где полезность источников сигнала меняется внутри эпизода или между близкими инцидентами.`
 
+### 15. Artifact-level question-value shift
+
+- `epistemic_engine/environments/artifact_debugging.py`
+- `epistemic_engine/runner/run_artifact_debugging_shift_benchmark.py`
+
+Вывод:
+
+- следующий переносной шаг действительно оказался правильным: теперь внутри semi-real artifact эпизода меняется не диагноз, а полезность самих источников сигнала;
+- `information_gain` и `hybrid_memory` на новой среде идут в паритете, а `adaptive_shift / latent_shift` уже оказываются лучше:
+  - при `confidence>=0.85`: `0.679 / -0.105` против `0.670 / -0.119`,
+  - при `confidence>=0.8`: `0.679 / -0.059` против `0.669 / -0.066`
+  в формате `accuracy / mean_utility`;
+- `latent_shift` пока не обгоняет `adaptive_shift`, но теперь его архитектурный смысл уже подтверждён не только в synthetic shift benchmark-ах, но и в semi-real artifact shift среде.
+
+Новая корректировка тезиса:
+
+`artifact-level shift` уже проходит;`
+`следующий вопрос уже не в том, нужен ли shift-aware latent-state вообще, а в том, помогает ли он отличать настоящий semi-real shift от ложной тревоги.`
+
+### 16. Artifact-level ambiguous shift / false alarm
+
+- `epistemic_engine/environments/artifact_debugging.py`
+- `epistemic_engine/runner/run_artifact_debugging_ambiguous_shift_benchmark.py`
+
+Вывод:
+
+- следующий переносной шаг тоже пройден: теперь semi-real artifact среда умеет давать не только настоящий сдвиг профиля, но и короткую ложную тревогу с возвратом;
+- на этой среде `adaptive_shift / latent_shift` дают лучшую `accuracy`, но не лучшую `utility`;
+- `persistent_shift` оказывается сильнее именно по cost-aware критерию:
+  - при `confidence>=0.85`: `adaptive_shift = 0.691 / -0.099`, `latent_shift = 0.675 / -0.086`, `persistent_shift = 0.689 / -0.083`,
+  - при `confidence>=0.8`: `0.691 / -0.066` против `0.689 / -0.051`
+  в формате `accuracy / mean_utility`;
+- отдельные попытки улучшить semi-real latent через action robustness и tempered observation update не прошли:
+  - `latent_trust_shift` дал `0.675 / -0.092` и не обошёл ни `latent_shift`, ни `persistent_shift`;
+- это уже не отрицание `shift_latent`, а более узкое уточнение:
+  - текущий semi-real latent-state уже полезен,
+  - но пока ещё недостаточно cost-aware в мире с ложными тревогами.
+
+Новая корректировка тезиса:
+
+`нужен не просто shift-aware latent-state;`
+`нужен latent-state, который не путает profile shift и hypothesis switch, лучше различает one-off anomaly и persistent shift и поэтому не проигрывает осторожной policy по utility.`
+
 ## Текущая версия тезиса
 
 Сейчас проект движется не к формуле "`сознание = граф`" и не к доказательству сознания.
@@ -214,4 +257,4 @@ Belief требует связи с действием и штрафом за о
 Внутри неё сейчас уже две рабочие ветки:
 
 - `ideograph_experiments`: `learned switch-latent / return-mode-aware recurrent hidden belief state`
-- `epistemic_engine`: `artifact-level shift / drift` для проверки явного `shift_latent` уже на semi-real debugging артефактах
+- `epistemic_engine`: `cost-aware semi-real shift_latent`, который лучше различает `one-off anomaly` и `persistent shift`

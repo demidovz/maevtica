@@ -505,6 +505,7 @@ class AdaptiveShiftMemoryPolicy(PersistentShiftMemoryPolicy):
         false_alarm_scale: float = 1.20,
         neutral_gate: float = 0.50,
         min_aggressive_gate: float = 0.0,
+        same_group_margin: float = 0.35,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -572,9 +573,11 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
         persistence_scale: float = 0.85,
         rebound_penalty: float = 0.60,
         streak_bonus: float = 0.35,
+        rebound_scale: float = 1.0,
         false_alarm_scale: float = 1.20,
         neutral_gate: float = 0.50,
         min_aggressive_gate: float = 0.0,
+        same_group_margin: float = 0.35,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -583,9 +586,11 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
         self.persistence_scale = persistence_scale
         self.rebound_penalty = rebound_penalty
         self.streak_bonus = streak_bonus
+        self.rebound_scale = rebound_scale
         self.false_alarm_scale = false_alarm_scale
         self.neutral_gate = neutral_gate
         self.min_aggressive_gate = min_aggressive_gate
+        self.same_group_margin = same_group_margin
         self.shift_latent_updater = ShiftLatentUpdater(
             recent_window=self.recent_window,
             surprise_floor=self.surprise_floor,
@@ -594,9 +599,11 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
             persistence_scale=self.persistence_scale,
             rebound_penalty=self.rebound_penalty,
             streak_bonus=self.streak_bonus,
+            rebound_scale=self.rebound_scale,
             false_alarm_scale=self.false_alarm_scale,
             neutral_gate=self.neutral_gate,
             min_aggressive_gate=self.min_aggressive_gate,
+            same_group_margin=self.same_group_margin,
         )
 
     def infer_latent_state(self, state, environment):
@@ -665,3 +672,138 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
                 best_action = action
 
         return best_action
+
+
+class LatentRobustShiftMemoryPolicy(LatentAdaptiveShiftMemoryPolicy):
+    policy_name = "information_gain+latent_robust_shift"
+
+    def __init__(
+        self,
+        *,
+        robust_bonus: float = 0.08,
+        volatility_penalty: float = 0.10,
+        **kwargs,
+    ) -> None:
+        super().__init__(**kwargs)
+        self.robust_bonus = robust_bonus
+        self.volatility_penalty = volatility_penalty
+
+    def select_action(self, state, environment):
+        candidates = candidate_actions(state, environment)
+        latent_state = self.infer_latent_state(state, environment)
+        planning_probabilities = self.planning_probabilities(state, environment)
+        current_entropy = entropy(planning_probabilities)
+        type_support = self.type_memory.next_type_support(state.history, candidates)
+        aggressive_mode = latent_state.default_second_mode
+        cautious_mode = latent_state.candidate_mode
+        counterpart_mode = self._paired_mode(environment, latent_state.top_mode)
+        best_score = float("-inf")
+        best_action = candidates[0]
+
+        for action in candidates:
+            expected_entropy = 0.0
+            for outcome in environment.outcomes_for(action.action_id):
+                outcome_probability = 0.0
+                posterior_scores: dict[str, float] = {}
+                for hypothesis_id, prior in planning_probabilities.items():
+                    likelihood = environment.likelihood(
+                        action.action_id,
+                        outcome,
+                        hypothesis_id,
+                    )
+                    posterior_scores[hypothesis_id] = prior * likelihood
+                    outcome_probability += prior * likelihood
+                posterior = normalize(posterior_scores)
+                expected_entropy += outcome_probability * entropy(posterior)
+
+            information_gain = current_entropy - expected_entropy
+            score = information_gain / max(action.cost, 1e-9)
+            score += self.type_bonus * type_support.get(action.action_type, 0.0)
+
+            aggressive_disagreement = self._mode_disagreement(
+                environment,
+                action.action_id,
+                latent_state.top_mode,
+                aggressive_mode,
+            )
+            cautious_disagreement = self._mode_disagreement(
+                environment,
+                action.action_id,
+                latent_state.top_mode,
+                cautious_mode,
+            )
+            profile_volatility = self._mode_disagreement(
+                environment,
+                action.action_id,
+                latent_state.top_mode,
+                counterpart_mode,
+            )
+            switch_probe_value = max(aggressive_disagreement, cautious_disagreement)
+            stability_bonus = (1.0 - profile_volatility) / max(action.cost, 1e-9)
+
+            score += (
+                self.switch_bonus
+                * latent_state.persistent_shift_risk
+                * switch_probe_value
+            )
+            score += (
+                self.robust_bonus
+                * latent_state.false_alarm_risk
+                * stability_bonus
+            )
+            score -= (
+                self.volatility_penalty
+                * latent_state.false_alarm_risk
+                * profile_volatility
+            )
+            if score > best_score:
+                best_score = score
+                best_action = action
+
+        return best_action
+
+    def _paired_mode(self, environment, mode_id: str) -> str:
+        paired_mode = getattr(environment, "paired_mode", None)
+        if callable(paired_mode):
+            return paired_mode(mode_id)
+        return mode_id
+
+
+class LatentTrustShiftMemoryPolicy(LatentAdaptiveShiftMemoryPolicy):
+    policy_name = "information_gain+latent_trust_shift"
+
+    def __init__(
+        self,
+        *,
+        min_observation_weight: float = 0.45,
+        false_alarm_discount: float = 0.70,
+        persistence_relief: float = 0.35,
+        **kwargs,
+    ) -> None:
+        super().__init__(**kwargs)
+        self.min_observation_weight = min_observation_weight
+        self.false_alarm_discount = false_alarm_discount
+        self.persistence_relief = persistence_relief
+
+    def observation_weight(self, *, state, environment, observation) -> float:
+        latent_state = self.infer_latent_state(state, environment)
+        counterpart_mode = self._paired_mode(environment, latent_state.top_mode)
+        profile_volatility = self._mode_disagreement(
+            environment,
+            observation.action_id,
+            latent_state.top_mode,
+            counterpart_mode,
+        )
+        effective_false_alarm = max(
+            0.0,
+            latent_state.false_alarm_risk
+            - self.persistence_relief * latent_state.persistent_shift_risk,
+        )
+        weight = 1.0 - self.false_alarm_discount * effective_false_alarm * profile_volatility
+        return min(1.0, max(self.min_observation_weight, weight))
+
+    def _paired_mode(self, environment, mode_id: str) -> str:
+        paired_mode = getattr(environment, "paired_mode", None)
+        if callable(paired_mode):
+            return paired_mode(mode_id)
+        return mode_id

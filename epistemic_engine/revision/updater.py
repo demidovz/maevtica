@@ -22,16 +22,38 @@ def refresh_shift_latent(state: BeliefState, environment, policy) -> None:
         state.shift_latent_history[-1] = latent_state
 
 
-def apply_observation(state: BeliefState, environment, observation: Observation) -> None:
+def apply_observation(
+    state: BeliefState,
+    environment,
+    observation: Observation,
+    policy=None,
+) -> None:
     previous_top, previous_confidence = top_hypothesis(state)
     posterior_scores: dict[str, float] = {}
+    observation_weight = 1.0
+    if policy is not None:
+        weight_fn = getattr(policy, "observation_weight", None)
+        if callable(weight_fn):
+            observation_weight = min(
+                1.0,
+                max(
+                    0.0,
+                    weight_fn(
+                        state=state,
+                        environment=environment,
+                        observation=observation,
+                    ),
+                ),
+            )
 
     for hypothesis_id, prior in state.probabilities.items():
-        posterior_scores[hypothesis_id] = prior * environment.likelihood(
+        likelihood = environment.likelihood(
             observation.action_id,
             observation.outcome,
             hypothesis_id,
         )
+        tempered_likelihood = max(likelihood, 1e-9) ** observation_weight
+        posterior_scores[hypothesis_id] = prior * tempered_likelihood
 
     state.probabilities = normalize(posterior_scores)
     state.asked_actions.append(observation.action_id)

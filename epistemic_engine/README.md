@@ -154,6 +154,18 @@ Artifact debugging benchmark:
 python epistemic_engine\runner\run_artifact_debugging_benchmark.py --episodes 800 --seed 17
 ```
 
+Artifact question-value-shift benchmark:
+
+```powershell
+python epistemic_engine\runner\run_artifact_debugging_shift_benchmark.py --episodes 800 --seed 17 --confidence-threshold 0.85 --max-cost 6.0 --max-steps 5 --shift-after-step 2
+```
+
+Artifact ambiguous-shift benchmark:
+
+```powershell
+python epistemic_engine\runner\run_artifact_debugging_ambiguous_shift_benchmark.py --episodes 800 --seed 17 --confidence-threshold 0.85 --max-cost 6.0 --max-steps 5 --shift-after-step 2 --shift-probability 0.5 --false-alarm-length 1
+```
+
 ## Что считаем успехом
 
 На первом этапе успех — не “разумность вообще”, а более узкие свойства:
@@ -428,13 +440,81 @@ python epistemic_engine\runner\run_artifact_debugging_benchmark.py --episodes 80
 `но эта среда пока слишком статична и слишком маленькая, чтобы type memory, hybrid memory или latent shift начали реально выигрывать у обычного information gain;`
 `значит следующий переносной шаг должен быть не "ещё один static case library", а artifact-level shift / drift, где сами полезные источники сигнала меняются внутри эпизода или между близкими инцидентами.`
 
+## Текущий результат в artifact question-value-shift среде
+
+Следующая гипотеза была такой:
+
+`если внутри semi-real artifact эпизода меняется не диагноз, а полезность самих источников сигнала, shift-aware policy должна начать выигрывать уже вне чисто synthetic мира.`
+
+Сейчас это проверяется в `ArtifactDebuggingQuestionValueShiftEnvironment`:
+
+- внутри одного эпизода профиль сдвигается между `artifact_heavy` и `runtime_heavy`;
+- до сдвига сильнее работают `history / inspect_artifact`, после сдвига — `inspect_code / run_test / probe_runtime`;
+- benchmark не разрешает останавливаться раньше третьего шага, чтобы сдвиг успел реально повлиять на политику.
+
+Результат:
+
+- при `confidence>=0.85`, `800` эпизодов:
+  - `information_gain`: `accuracy 0.670`, `mean_utility -0.119`
+  - `information_gain+hybrid_memory`: `0.670`, `-0.119`
+  - `information_gain+adaptive_shift`: `0.679`, `-0.105`
+  - `information_gain+latent_shift`: `0.679`, `-0.105`
+- при `confidence>=0.8`, `800` эпизодов:
+  - `information_gain`: `0.669`, `-0.066`
+  - `information_gain+hybrid_memory`: `0.669`, `-0.066`
+  - `information_gain+adaptive_shift`: `0.679`, `-0.059`
+  - `information_gain+latent_shift`: `0.679`, `-0.059`
+
+Текущий вывод:
+
+`artifact-level shift` уже проходит: shift-aware policy действительно начинает выигрывать на semi-real artifacts;`
+`пока это не большой скачок, но уже честный перенос из synthetic мира в более похожую на жизнь диагностику;`
+`latent_shift пока не обгоняет adaptive_shift, но уже воспроизводит его выигрыш в новой среде и делает внутренний режим пересмотра наблюдаемым.`
+
+## Текущий результат в artifact ambiguous-shift среде
+
+Следующая гипотеза была такой:
+
+`если в том же semi-real artifact мире добавить ложные тревоги, станет видно, умеет ли shift-aware latent-state не только быстро реагировать на настоящий сдвиг, но и не переплачивать за одноразовую странность.`
+
+Сейчас это проверяется в `ArtifactDebuggingAmbiguousShiftEnvironment`:
+
+- часть эпизодов содержит настоящий устойчивый профильный сдвиг;
+- часть содержит только короткий ложный `artifact -> runtime` сигнал и потом возвращается к исходному профилю;
+- benchmark не разрешает останавливаться раньше `4` шагов.
+
+Результат:
+
+- при `confidence>=0.85`, `800` эпизодов:
+  - `information_gain`: `accuracy 0.686`, `mean_utility -0.103`
+  - `information_gain+hybrid_memory`: `0.686`, `-0.103`
+  - `information_gain+persistent_shift`: `0.689`, `-0.083`
+  - `information_gain+adaptive_shift`: `0.691`, `-0.099`
+  - `information_gain+latent_shift`: `0.675`, `-0.086`
+  - `information_gain+latent_trust_shift`: `0.675`, `-0.092`
+- при `confidence>=0.8`, `800` эпизодов:
+  - `information_gain`: `0.686`, `-0.066`
+  - `information_gain+hybrid_memory`: `0.686`, `-0.066`
+  - `information_gain+persistent_shift`: `0.689`, `-0.051`
+  - `information_gain+adaptive_shift`: `0.691`, `-0.066`
+  - текущая пересборка `latent_shift` на этой границе ещё не догонялась полным прогоном, поэтому опорной линией остаются цифры для `confidence>=0.85`
+
+Текущий вывод:
+
+`semi-real false alarms уже есть, и картина стала честнее;`
+`adaptive_shift даёт лучшую accuracy, но по utility его обходит более осторожный persistent_shift;`
+`текущий latent_shift уже стал чуть более cost-aware, чем adaptive_shift, но заплатил за это слишком большой просадкой accuracy;`
+`latent_trust_shift` показал, что простого tempered observation update тоже недостаточно;`
+`значит следующий шаг уже не в том, чтобы ещё раз доказать полезность shift-aware latent-state, а в том, чтобы разделить внутри него profile shift и hypothesis switch и только после этого снова калибровать false_alarm / persistent shift.`
+
 ## Текущий рабочий тезис
 
 Сейчас тестируется такой тезис:
 
 `для хорошего выбора следующего вопроса в меняющемся мире системе мало просто держать вероятности гипотез;`
 `ей нужен отдельный внутренний latent-state, который отслеживает риск ложной тревоги, риск устойчивой смены режима и силу переключения;`
-`следующий переносной тест должен проверять это уже не в чисто synthetic world, а в artifact-level shift / drift среде.`
+`artifact-level shift` и `artifact false alarm` уже пройдены;`
+`следующий переносной шаг — сделать этот latent-state более cost-aware к one-off anomaly, не путая profile shift и hypothesis switch, чтобы он не уступал `persistent_shift` по utility.`
 
 По-детски:
 
@@ -446,14 +526,14 @@ python epistemic_engine\runner\run_artifact_debugging_benchmark.py --episodes 80
 
 Следующий правильный эксперимент:
 
-- сделать `artifact-level shift / drift` среду поверх `ArtifactDebuggingEnvironment`;
-- заставить внутри эпизода или между близкими инцидентами меняться полезность логов, diff, config, lockfile и test-report источников;
-- снова сравнить `information_gain`, `hybrid_memory`, `adaptive_shift` и `latent_shift`;
-- проверить, начинает ли явный `shift_latent` давать выигрыш уже вне чисто synthetic мира.
+- улучшить semi-real `shift_latent`, чтобы он лучше различал `one-off anomaly` и `persistent shift`;
+- отдельно откалибровать `false_alarm_risk` и `persistent_shift_risk` под artifact false alarms;
+- снова сравнить `persistent_shift`, `adaptive_shift` и `latent_shift`;
+- только потом решать, нужно ли подключать LLM/API или ещё развивать среду.
 
 ## Прогресс до MVP
 
-- текущая оценка: `81/100`
+- текущая оценка: `83/100`
 
 ## Куда это может расти
 

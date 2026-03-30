@@ -465,6 +465,12 @@ class ArtifactDebuggingEnvironment:
     def mode_distribution(self, action_id: str, mode_id: str) -> dict[str, float]:
         return self._smoothed_distribution(action_id, mode_id)
 
+    def paired_mode(self, mode_id: str) -> str:
+        return mode_id
+
+    def mode_group(self, mode_id: str) -> str:
+        return mode_id
+
     def stop_reason(self, state) -> str | None:
         if self.max_steps is not None and len(state.history) >= self.max_steps:
             return "step_limit"
@@ -509,3 +515,233 @@ class ArtifactDebuggingEnvironment:
             outcome: (1.0 - alpha) * raw.get(outcome, 0.0) + alpha * uniform
             for outcome in outcomes
         }
+
+
+PROFILE_VARIANTS = ("artifact_heavy", "runtime_heavy")
+PROFILE_MODE_IDS = [
+    f"{hypothesis_id}:{variant}"
+    for hypothesis_id in HYPOTHESES
+    for variant in PROFILE_VARIANTS
+]
+PROFILE_PRIORS = {
+    hypothesis_id: {
+        f"{hypothesis_id}:artifact_heavy": 0.5,
+        f"{hypothesis_id}:runtime_heavy": 0.5,
+    }
+    for hypothesis_id in HYPOTHESES
+}
+PROFILE_TRANSITIONS = {
+    **{
+        f"{hypothesis_id}:artifact_heavy": f"{hypothesis_id}:runtime_heavy"
+        for hypothesis_id in HYPOTHESES
+    },
+    **{
+        f"{hypothesis_id}:runtime_heavy": f"{hypothesis_id}:artifact_heavy"
+        for hypothesis_id in HYPOTHESES
+    },
+}
+PROFILE_ACTION_TYPE_STRENGTHS = {
+    "artifact_heavy": {
+        "telemetry": 0.58,
+        "ask_user": 0.56,
+        "history": 0.82,
+        "inspect_artifact": 0.92,
+        "inspect_code": 0.44,
+        "run_test": 0.24,
+        "probe_runtime": 0.18,
+    },
+    "runtime_heavy": {
+        "telemetry": 0.42,
+        "ask_user": 0.46,
+        "history": 0.30,
+        "inspect_artifact": 0.26,
+        "inspect_code": 0.78,
+        "run_test": 0.91,
+        "probe_runtime": 0.86,
+    },
+}
+
+
+def profile_hypothesis(profile_id: str) -> str:
+    return profile_id.split(":", 1)[0]
+
+
+def profile_variant(profile_id: str) -> str:
+    return profile_id.split(":", 1)[1]
+
+
+class ArtifactDebuggingQuestionValueShiftEnvironment(ArtifactDebuggingEnvironment):
+    def __init__(
+        self,
+        actual_hypothesis: str | None = None,
+        seed: int = 7,
+        max_cost: float | None = None,
+        max_steps: int | None = None,
+        shift_after_step: int | None = None,
+    ) -> None:
+        super().__init__(
+            actual_hypothesis=actual_hypothesis,
+            seed=seed,
+            max_cost=max_cost,
+            max_steps=max_steps,
+        )
+        self.actual_profile = self._sample_profile()
+        self.initial_profile = self.actual_profile
+        self.shifted_profile = PROFILE_TRANSITIONS[self.actual_profile]
+        self.shift_after_step = shift_after_step or self._sample_shift_step()
+        self.observations_emitted = 0
+        self.generic_action_distributions = {
+            action.action_id: self._build_generic_action_distribution(action.action_id)
+            for action in ACTIONS
+        }
+
+    def mode_ids(self) -> list[str]:
+        return PROFILE_MODE_IDS
+
+    def mode_support_to_hypotheses(self, mode_support: dict[str, float]) -> dict[str, float]:
+        scores = {hypothesis_id: 1e-6 for hypothesis_id in HYPOTHESES}
+        for mode_id, support in mode_support.items():
+            scores[profile_hypothesis(mode_id)] += support
+        return normalize(scores)
+
+    def hypotheses_given_mode(self, mode_id: str) -> dict[str, float]:
+        target_hypothesis = profile_hypothesis(mode_id)
+        return normalize(
+            {
+                hypothesis_id: 1.0 if hypothesis_id == target_hypothesis else 1e-6
+                for hypothesis_id in HYPOTHESES
+            }
+        )
+
+    def mode_likelihood(self, action_id: str, outcome: str, mode_id: str) -> float:
+        return self._mode_action_distribution(action_id, mode_id).get(outcome, 0.0)
+
+    def mode_distribution(self, action_id: str, mode_id: str) -> dict[str, float]:
+        return self._mode_action_distribution(action_id, mode_id)
+
+    def paired_mode(self, mode_id: str) -> str:
+        return PROFILE_TRANSITIONS.get(mode_id, mode_id)
+
+    def mode_group(self, mode_id: str) -> str:
+        return profile_hypothesis(mode_id)
+
+    def likelihood(self, action_id: str, outcome: str, hypothesis_id: str) -> float:
+        return sum(
+            profile_weight
+            * self._profile_conditioned_distribution(
+                action_id,
+                hypothesis_id,
+                profile_id,
+            ).get(outcome, 0.0)
+            for profile_id, profile_weight in PROFILE_PRIORS[hypothesis_id].items()
+        )
+
+    def sample_observation(self, action_id: str) -> str:
+        active_profile = self.active_profile()
+        distribution = self._profile_conditioned_distribution(
+            action_id,
+            self.actual_hypothesis,
+            active_profile,
+        )
+        outcomes = list(distribution)
+        weights = [distribution[outcome] for outcome in outcomes]
+        self.observations_emitted += 1
+        return self.rng.choices(outcomes, weights=weights, k=1)[0]
+
+    def active_profile(self) -> str:
+        if self.observations_emitted < self.shift_after_step:
+            return self.initial_profile
+        return self.shifted_profile
+
+    def scenario_label(self) -> str:
+        return profile_variant(self.active_profile())
+
+    def _sample_profile(self) -> str:
+        profiles = list(PROFILE_PRIORS[self.actual_hypothesis])
+        weights = [PROFILE_PRIORS[self.actual_hypothesis][profile_id] for profile_id in profiles]
+        return self.rng.choices(profiles, weights=weights, k=1)[0]
+
+    def _sample_shift_step(self) -> int:
+        if self.max_steps is None:
+            return 2
+        max_shift_step = max(2, self.max_steps - 1)
+        return self.rng.randint(2, max_shift_step)
+
+    def _profile_conditioned_distribution(
+        self,
+        action_id: str,
+        hypothesis_id: str,
+        profile_id: str,
+    ) -> dict[str, float]:
+        base_distribution = self._smoothed_distribution(action_id, hypothesis_id)
+        generic_distribution = self.generic_action_distributions[action_id]
+        action_type = self.action_by_id(action_id).action_type
+        strength = PROFILE_ACTION_TYPE_STRENGTHS[profile_variant(profile_id)][action_type]
+        outcomes = sorted(set(base_distribution) | set(generic_distribution))
+        return normalize(
+            {
+                outcome: (
+                    strength * base_distribution.get(outcome, 0.0)
+                    + (1.0 - strength) * generic_distribution.get(outcome, 0.0)
+                )
+                for outcome in outcomes
+            }
+        )
+
+    def _mode_action_distribution(
+        self,
+        action_id: str,
+        mode_id: str,
+    ) -> dict[str, float]:
+        return self._profile_conditioned_distribution(
+            action_id,
+            profile_hypothesis(mode_id),
+            mode_id,
+        )
+
+    def _build_generic_action_distribution(
+        self,
+        action_id: str,
+    ) -> dict[str, float]:
+        scores = {outcome: 0.0 for outcome in self.outcomes_for(action_id)}
+        for hypothesis_id in HYPOTHESES:
+            distribution = self._smoothed_distribution(action_id, hypothesis_id)
+            for outcome, probability in distribution.items():
+                scores[outcome] += probability
+        return normalize(scores)
+
+
+class ArtifactDebuggingAmbiguousShiftEnvironment(ArtifactDebuggingQuestionValueShiftEnvironment):
+    def __init__(
+        self,
+        actual_hypothesis: str | None = None,
+        seed: int = 7,
+        max_cost: float | None = None,
+        max_steps: int | None = None,
+        shift_after_step: int | None = None,
+        shift_probability: float = 0.5,
+        false_alarm_length: int = 1,
+    ) -> None:
+        super().__init__(
+            actual_hypothesis=actual_hypothesis,
+            seed=seed,
+            max_cost=max_cost,
+            max_steps=max_steps,
+            shift_after_step=shift_after_step,
+        )
+        self.false_alarm_length = false_alarm_length
+        self.has_true_shift = self.rng.random() < shift_probability
+
+    def active_profile(self) -> str:
+        if self.has_true_shift:
+            return super().active_profile()
+        if (
+            self.shift_after_step
+            <= self.observations_emitted
+            < self.shift_after_step + self.false_alarm_length
+        ):
+            return self.shifted_profile
+        return self.initial_profile
+
+    def scenario_label(self) -> str:
+        return "true_shift" if self.has_true_shift else "false_alarm"

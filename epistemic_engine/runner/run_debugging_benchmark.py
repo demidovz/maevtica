@@ -92,7 +92,7 @@ def run_episode(
             cost=action.cost,
             action_type=action.action_type,
         )
-        apply_observation(state, environment, observation)
+        apply_observation(state, environment, observation, policy=policy)
         refresh_shift_latent(state, environment, policy)
 
     final_probabilities = policy.decision_probabilities(state, environment)

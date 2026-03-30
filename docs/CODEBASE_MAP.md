@@ -89,7 +89,7 @@
 - [epistemic_engine/environments/debugging.py](C:\Users\user\workspace\maevtica\epistemic_engine\environments\debugging.py)
   Основная synthetic-среда: debugging, mode-shift, question-value-shift, ambiguous-shift и meta-shift сценарии.
 - [epistemic_engine/environments/artifact_debugging.py](C:\Users\user\workspace\maevtica\epistemic_engine\environments\artifact_debugging.py)
-  Semi-real debugging среда с короткими логами, diff, config, lockfile и regression-report артефактами.
+  Semi-real debugging среда с короткими логами, diff, config, lockfile и regression-report артефактами, плюс `artifact-level question-value shift` и `artifact ambiguous shift`.
 - [epistemic_engine/questions/policy.py](C:\Users\user\workspace\maevtica\epistemic_engine\questions\policy.py)
   Политика выбора следующего диагностического шага по ожидаемому information gain.
 - [epistemic_engine/revision/updater.py](C:\Users\user\workspace\maevtica\epistemic_engine\revision\updater.py)
@@ -110,12 +110,20 @@
   Пошаговая демонстрация `latent_shift` с trace внутреннего состояния.
 - [epistemic_engine/runner/demo_artifact_debugging_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_artifact_debugging_mvp.py)
   Пошаговая демонстрация semi-real artifact debugging кейса.
+- [epistemic_engine/runner/demo_artifact_debugging_shift_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_artifact_debugging_shift_mvp.py)
+  Пошаговая демонстрация semi-real artifact shift кейса с `latent_shift trace`.
+- [epistemic_engine/runner/demo_artifact_debugging_ambiguous_shift_mvp.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_artifact_debugging_ambiguous_shift_mvp.py)
+  Пошаговая демонстрация semi-real artifact false alarm / true shift кейса.
 - [epistemic_engine/runner/run_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_benchmark.py)
   Базовый strict benchmark по debugging-политикам.
 - [epistemic_engine/runner/run_debugging_meta_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py)
   Смешанный benchmark, где `adaptive_shift` и `latent_shift` сейчас лидируют по общей utility.
 - [epistemic_engine/runner/run_artifact_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py)
   Transfer sanity check на semi-real debugging артефактах.
+- [epistemic_engine/runner/run_artifact_debugging_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_shift_benchmark.py)
+  Benchmark для `artifact-level question-value shift`, где полезность источников сигнала меняется внутри одного semi-real эпизода.
+- [epistemic_engine/runner/run_artifact_debugging_ambiguous_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_ambiguous_shift_benchmark.py)
+  Benchmark для semi-real `false alarm` против `true shift`.
 
 ## Что считать опорными файлами
 
@@ -132,3 +140,5 @@
 9. [epistemic_engine/README.md](C:\Users\user\workspace\maevtica\epistemic_engine\README.md)
 10. [epistemic_engine/runner/run_debugging_meta_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py)
 11. [epistemic_engine/runner/run_artifact_debugging_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py)
+12. [epistemic_engine/runner/run_artifact_debugging_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_shift_benchmark.py)
+13. [epistemic_engine/runner/run_artifact_debugging_ambiguous_shift_benchmark.py](C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_ambiguous_shift_benchmark.py)

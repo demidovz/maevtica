@@ -38,12 +38,14 @@ python C:\Users\user\workspace\maevtica\epistemic_engine\runner\demo_debugging_m
 python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_benchmark.py
 python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_debugging_meta_shift_benchmark.py
 python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_benchmark.py
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_shift_benchmark.py
+python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_debugging_ambiguous_shift_benchmark.py
 ```
 
 ## Статус
 
 - Исследовательская ясность: примерно `85-87%`
-- `epistemic_engine` MVP: примерно `81/100`
+- `epistemic_engine` MVP: примерно `83/100`
 - Сильная конечная цель: примерно `35-40%`
 
 Главный текущий результат:
@@ -61,8 +63,20 @@ python C:\Users\user\workspace\maevtica\epistemic_engine\runner\run_artifact_deb
   - `accuracy 0.785`,
   - `mean_utility 0.150`.
 - `ArtifactDebuggingEnvironment` показал, что движок уже переносится на semi-real logs / diff / config / test-report артефакты, но текущая библиотека кейсов пока слишком статична и слишком лёгкая, чтобы память или latent-state давали дополнительный выигрыш.
+- `ArtifactDebuggingQuestionValueShiftEnvironment` показал, что после добавления `artifact-level shift` `adaptive_shift / latent_shift` уже лучше голого `information_gain` и на semi-real artifacts:
+  - при `confidence>=0.85`: `0.679 / -0.105` против `0.670 / -0.119`,
+  - при `confidence>=0.8`: `0.679 / -0.059` против `0.669 / -0.066`
+  в формате `accuracy / mean_utility`.
+- `ArtifactDebuggingAmbiguousShiftEnvironment` добавил ложные тревоги в semi-real artifact-мир и показал более честную границу:
+  - при `confidence>=0.85` лучшая `accuracy` у `adaptive_shift` (`0.691`), но лучшая `mean_utility` у `persistent_shift` (`-0.083`);
+  - текущий `latent_shift` после belief-anchored / rebound-калибровки стал чуть более cost-aware, чем `adaptive_shift`, но заплатил за это точностью:
+    - `adaptive_shift`: `0.691 / -0.099`,
+    - `latent_shift`: `0.675 / -0.086`,
+    - `persistent_shift`: `0.689 / -0.083`;
+  - экспериментальный `latent_trust_shift` с tempered observation update не прошёл:
+    - `0.675 / -0.092`.
 
 Главные следующие шаги:
 
 - `ideograph_experiments`: `learned switch-latent / return-mode signal`, а не только грубый high-risk revisit override.
-- `epistemic_engine`: `artifact-level shift / drift`, где внутри эпизода или между близкими инцидентами меняется полезность самих источников сигнала.
+- `epistemic_engine`: улучшить semi-real `shift_latent`, чтобы он не путал `profile shift` и `hypothesis switch`, лучше различал `one-off anomaly` и `persistent shift` и перестал проигрывать `persistent_shift` по utility на artifact false alarms.
