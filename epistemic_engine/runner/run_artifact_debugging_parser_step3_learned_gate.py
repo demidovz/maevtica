@@ -142,6 +142,7 @@ def backoff_keys(signature: tuple[str, str, str, str, str, str, str]) -> list[tu
 @dataclass
 class Step3Sample:
     signature: tuple[str, str, str, str, str, str, str]
+    scenario_label: str
     fallback_action_id: str
     action_values: dict[str, float]
 
@@ -159,6 +160,10 @@ class LearnedActionGate:
         self.min_support = min_support
         self.global_values: dict[str, float] = {}
         self.global_counts: dict[str, int] = {}
+        self.scenario_tables: list[dict[tuple[str, ...], Counter[str]]] = [
+            defaultdict(Counter)
+            for _ in range(6)
+        ]
         self.tables: list[dict[tuple[str, ...], dict[str, list[float]]]] = [
             defaultdict(lambda: defaultdict(list))
             for _ in range(6)
@@ -171,6 +176,7 @@ class LearnedActionGate:
                 global_bucket[action_id].append(value)
             for level, key in enumerate(backoff_keys(sample.signature)):
                 action_bucket = self.tables[level][key]
+                self.scenario_tables[level][key][sample.scenario_label] += 1
                 for action_id, value in sample.action_values.items():
                     action_bucket[action_id].append(value)
         self.global_values = {
@@ -191,21 +197,11 @@ class LearnedActionGate:
         for level, key in enumerate(backoff_keys(signature)):
             if key not in self.tables[level]:
                 continue
-            action_bucket = self.tables[level][key]
-            best_scores: dict[str, float] = {}
-            support_counts: dict[str, int] = {}
-            for action_id in candidate_action_ids:
-                local_values = action_bucket.get(action_id)
-                global_value = self.global_values.get(action_id, float("-inf"))
-                if not local_values:
-                    best_scores[action_id] = global_value
-                    support_counts[action_id] = self.global_counts.get(action_id, 0)
-                    continue
-                shrunk_mean = (
-                    sum(local_values) + self.shrinkage * global_value
-                ) / (len(local_values) + self.shrinkage)
-                best_scores[action_id] = shrunk_mean
-                support_counts[action_id] = len(local_values)
+            best_scores, support_counts = self._scores_for_level(
+                level=level,
+                key=key,
+                candidate_action_ids=candidate_action_ids,
+            )
             if not best_scores:
                 continue
             best_action_id = max(
@@ -217,6 +213,30 @@ class LearnedActionGate:
             )
             return best_action_id, best_scores, support_counts
         return "", {}, {}
+
+    def _scores_for_level(
+        self,
+        *,
+        level: int,
+        key: tuple[str, ...],
+        candidate_action_ids: list[str],
+    ) -> tuple[dict[str, float], dict[str, int]]:
+        action_bucket = self.tables[level][key]
+        best_scores: dict[str, float] = {}
+        support_counts: dict[str, int] = {}
+        for action_id in candidate_action_ids:
+            local_values = action_bucket.get(action_id)
+            global_value = self.global_values.get(action_id, float("-inf"))
+            if not local_values:
+                best_scores[action_id] = global_value
+                support_counts[action_id] = self.global_counts.get(action_id, 0)
+                continue
+            shrunk_mean = (
+                sum(local_values) + self.shrinkage * global_value
+            ) / (len(local_values) + self.shrinkage)
+            best_scores[action_id] = shrunk_mean
+            support_counts[action_id] = len(local_values)
+        return best_scores, support_counts
 
     def predict(
         self,
@@ -245,6 +265,71 @@ class LearnedActionGate:
             and best_score - fallback_score >= self.min_advantage
         ):
             return best_action_id
+        return fallback_action_id
+
+    def regime_parameters(
+        self,
+        *,
+        level: int,
+        key: tuple[str, ...],
+    ) -> tuple[float, int]:
+        scenario_counts = self.scenario_tables[level].get(key)
+        if not scenario_counts:
+            return self.min_advantage, self.min_support
+        total = sum(scenario_counts.values())
+        true_shift_rate = scenario_counts.get("true_shift", 0) / max(total, 1)
+        min_advantage = self.min_advantage
+        min_support = self.min_support
+        if total < 3:
+            min_advantage += 0.008
+            min_support = max(min_support, 3)
+        if true_shift_rate <= 0.35:
+            min_advantage += 0.010
+            min_support = max(min_support, 3)
+        elif true_shift_rate >= 0.65:
+            min_advantage = max(0.005, min_advantage - 0.005)
+        return min_advantage, min_support
+
+    def predict_regime_aware(
+        self,
+        *,
+        signature: tuple[str, str, str, str, str, str, str],
+        candidate_action_ids: list[str],
+        fallback_action_id: str,
+    ) -> str:
+        for level, key in enumerate(backoff_keys(signature)):
+            if key not in self.tables[level]:
+                continue
+            best_scores, support_counts = self._scores_for_level(
+                level=level,
+                key=key,
+                candidate_action_ids=candidate_action_ids,
+            )
+            if not best_scores:
+                continue
+            best_action_id = max(
+                candidate_action_ids,
+                key=lambda action_id: best_scores.get(
+                    action_id,
+                    self.global_values.get(action_id, float("-inf")),
+                ),
+            )
+            min_advantage, min_support = self.regime_parameters(level=level, key=key)
+            fallback_score = best_scores.get(
+                fallback_action_id,
+                self.global_values.get(fallback_action_id, float("-inf")),
+            )
+            best_score = best_scores.get(
+                best_action_id,
+                self.global_values.get(best_action_id, float("-inf")),
+            )
+            if (
+                best_action_id != fallback_action_id
+                and support_counts.get(best_action_id, 0) >= min_support
+                and best_score - fallback_score >= min_advantage
+            ):
+                return best_action_id
+            return fallback_action_id
         return fallback_action_id
 
 
@@ -304,6 +389,114 @@ class ParserScopeSelectiveLearnedGatePolicy(ParserScopeBaselinePolicy):
                     candidate_action_ids=candidate_action_ids,
                     fallback_action_id=fallback_action_id,
                 )
+                for action in environment.candidate_actions(state):
+                    if action.action_id == selected_action_id:
+                        return action
+        return super().select_action(state, environment)
+
+
+class ParserScopeRegimeAwareGatePolicy(ParserScopeBaselinePolicy):
+    def __init__(self, *, gate: LearnedActionGate, **kwargs) -> None:
+        super().__init__(**kwargs)
+        self.gate = gate
+        self.policy_name = "information_gain+latent_shift[parser_scope+regime_aware_gate]"
+
+    def select_action(self, state, environment):
+        if len(state.history) == 2 and state.history[1].action_id == "ask_user_scope":
+            top_hypothesis_id, _confidence = top_probability(state.probabilities)
+            if top_hypothesis_id == "parser_bug":
+                signature = feature_signature(state)
+                candidate_action_ids = [
+                    action.action_id for action in environment.candidate_actions(state)
+                ]
+                fallback_action_id = super().select_action(state, environment).action_id
+                selected_action_id = self.gate.predict_regime_aware(
+                    signature=signature,
+                    candidate_action_ids=candidate_action_ids,
+                    fallback_action_id=fallback_action_id,
+                )
+                for action in environment.candidate_actions(state):
+                    if action.action_id == selected_action_id:
+                        return action
+        return super().select_action(state, environment)
+
+
+class ParserScopeSplitRegimeGatePolicy(ParserScopeBaselinePolicy):
+    def __init__(
+        self,
+        *,
+        mixed_gate: LearnedActionGate,
+        false_alarm_gate: LearnedActionGate,
+        true_shift_gate: LearnedActionGate,
+        **kwargs,
+    ) -> None:
+        super().__init__(**kwargs)
+        self.mixed_gate = mixed_gate
+        self.false_alarm_gate = false_alarm_gate
+        self.true_shift_gate = true_shift_gate
+        self.policy_name = "information_gain+latent_shift[parser_scope+split_regime_gate]"
+
+    def select_action(self, state, environment):
+        if len(state.history) == 2 and state.history[1].action_id == "ask_user_scope":
+            top_hypothesis_id, _confidence = top_probability(state.probabilities)
+            if top_hypothesis_id == "parser_bug":
+                signature = feature_signature(state)
+                dominant_risk, false_alarm_bucket, hypothesis_switch_bucket, _margin, _diff, _scope, _second = signature
+                candidate_action_ids = [
+                    action.action_id for action in environment.candidate_actions(state)
+                ]
+                fallback_action_id = super().select_action(state, environment).action_id
+                gate = self.mixed_gate
+                if dominant_risk == "false_alarm" or false_alarm_bucket in {"mid", "high"}:
+                    gate = self.false_alarm_gate
+                elif dominant_risk == "hypothesis_switch" or hypothesis_switch_bucket in {"mid", "high"}:
+                    gate = self.true_shift_gate
+                selected_action_id = gate.predict(
+                    signature=signature,
+                    candidate_action_ids=candidate_action_ids,
+                    fallback_action_id=fallback_action_id,
+                )
+                for action in environment.candidate_actions(state):
+                    if action.action_id == selected_action_id:
+                        return action
+        return super().select_action(state, environment)
+
+
+class ParserScopeHybridGatePolicy(ParserScopeBaselinePolicy):
+    def __init__(self, *, gate: LearnedActionGate, **kwargs) -> None:
+        super().__init__(**kwargs)
+        self.gate = gate
+        self.policy_name = "information_gain+latent_shift[parser_scope+hybrid_gate]"
+
+    def select_action(self, state, environment):
+        if len(state.history) == 2 and state.history[1].action_id == "ask_user_scope":
+            top_hypothesis_id, _confidence = top_probability(state.probabilities)
+            if top_hypothesis_id == "parser_bug":
+                signature = feature_signature(state)
+                dominant_risk, false_alarm_bucket, hypothesis_switch_bucket, _margin, _diff, _scope, _second = signature
+                candidate_action_ids = [
+                    action.action_id for action in environment.candidate_actions(state)
+                ]
+                fallback_action_id = super().select_action(state, environment).action_id
+                if dominant_risk == "hypothesis_switch" or hypothesis_switch_bucket == "high":
+                    selected_action_id, _scores, _supports = self.gate.predict_best(
+                        signature=signature,
+                        candidate_action_ids=candidate_action_ids,
+                    )
+                    if not selected_action_id:
+                        selected_action_id = fallback_action_id
+                elif dominant_risk == "false_alarm" or false_alarm_bucket in {"mid", "high"}:
+                    selected_action_id = self.gate.predict(
+                        signature=signature,
+                        candidate_action_ids=candidate_action_ids,
+                        fallback_action_id=fallback_action_id,
+                    )
+                else:
+                    selected_action_id = self.gate.predict(
+                        signature=signature,
+                        candidate_action_ids=candidate_action_ids,
+                        fallback_action_id=fallback_action_id,
+                    )
                 for action in environment.candidate_actions(state):
                     if action.action_id == selected_action_id:
                         return action
@@ -407,6 +600,17 @@ def rollout_forced_step3(
 
 
 def collect_training_samples(args: argparse.Namespace) -> list[Step3Sample]:
+    return collect_training_samples_for_shift_probability(
+        args,
+        shift_probability=args.train_shift_probability,
+    )
+
+
+def collect_training_samples_for_shift_probability(
+    args: argparse.Namespace,
+    *,
+    shift_probability: float,
+) -> list[Step3Sample]:
     policy = ParserScopeBaselinePolicy(**policy_kwargs())
     samples: list[Step3Sample] = []
 
@@ -416,7 +620,7 @@ def collect_training_samples(args: argparse.Namespace) -> list[Step3Sample]:
             max_cost=args.max_cost,
             max_steps=args.max_steps,
             shift_after_step=args.shift_after_step,
-            shift_probability=args.train_shift_probability,
+            shift_probability=shift_probability,
             false_alarm_length=args.false_alarm_length,
         )
         state = uniform_belief(list(environment.hypotheses()))
@@ -459,6 +663,7 @@ def collect_training_samples(args: argparse.Namespace) -> list[Step3Sample]:
         samples.append(
             Step3Sample(
                 signature=feature_signature(state),
+                scenario_label=environment.scenario_label(),
                 fallback_action_id=fallback_action_id,
                 action_values=action_values,
             )
@@ -533,21 +738,48 @@ def print_training_summary(samples: list[Step3Sample]) -> None:
     print("Top signatures:")
     for signature, count in signature_counts.most_common(6):
         print(f"  {count} x {signature}")
+    print("Scenario mix:")
+    print(
+        "  true_shift=",
+        sum(sample.scenario_label == "true_shift" for sample in samples),
+        "false_alarm=",
+        sum(sample.scenario_label == "false_alarm" for sample in samples),
+    )
     print()
 
 
 def main() -> None:
     args = parse_args()
     samples = collect_training_samples(args)
+    false_alarm_samples = collect_training_samples_for_shift_probability(
+        args,
+        shift_probability=0.0,
+    )
+    true_shift_samples = collect_training_samples_for_shift_probability(
+        args,
+        shift_probability=1.0,
+    )
     print_training_summary(samples)
     gate = LearnedActionGate()
     gate.fit(samples)
+    false_alarm_gate = LearnedActionGate()
+    false_alarm_gate.fit(false_alarm_samples)
+    true_shift_gate = LearnedActionGate()
+    true_shift_gate.fit(true_shift_samples)
 
     policies = [
         LatentAdaptiveShiftMemoryPolicy(**policy_kwargs()),
         ParserScopeBaselinePolicy(**policy_kwargs()),
         ParserScopeLearnedGatePolicy(gate=gate, **policy_kwargs()),
         ParserScopeSelectiveLearnedGatePolicy(gate=gate, **policy_kwargs()),
+        ParserScopeRegimeAwareGatePolicy(gate=gate, **policy_kwargs()),
+        ParserScopeSplitRegimeGatePolicy(
+            mixed_gate=gate,
+            false_alarm_gate=false_alarm_gate,
+            true_shift_gate=true_shift_gate,
+            **policy_kwargs(),
+        ),
+        ParserScopeHybridGatePolicy(gate=gate, **policy_kwargs()),
     ]
     scenarios = [
         ("false_alarm", 0.0),

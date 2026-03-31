@@ -273,6 +273,56 @@ python epistemic_engine\runner\run_artifact_debugging_ambiguous_shift_benchmark.
 `память о режиме мира даёт небольшой, но устойчивый дополнительный выигрыш при мягком весе;`
 `следующий логичный шаг — добавить явное переключение между режимами мира, а не только мягкий prior из mode memory.`
 
+## 2026-03-31 Parser Gate Status
+
+Current practical status of the artifact ambiguous-shift line:
+
+- overall champion is still `information_gain+latent_shift`;
+- confirmed mixed benchmark reference:
+  - `accuracy 0.755`
+  - `mean_utility 0.181`
+- parser-specific `step3` overrides were explored through:
+  - pair-pattern ablations
+  - oracle reports
+  - signature reports
+  - learned-gate runners
+- these tools were useful, but none of the parser-specific policies beat the global champion.
+
+Best parser-line result so far:
+
+- `information_gain+latent_shift[parser_scope+selective_learned_gate]`
+- confirmed metrics:
+  - `false_alarm`: `0.695 / 0.093`
+  - `mixed`: `0.735 / 0.134`
+  - `true_shift`: `0.710 / 0.099`
+- format: `accuracy / mean_utility`
+
+Important negative result:
+
+- hard parser `step3` rules are not robust enough;
+- hard routing between separate false-alarm and true-shift gates also did not become the new winner;
+- the best learned parser gate so far is selective, not aggressive.
+
+Current thesis:
+
+`a learned parser gate helps only when it acts as a selective override over the fallback policy, not as a full replacement for step3 selection.`
+
+По-детски:
+
+`маленькая обученная штука полезна, когда она редко подсказывает лучший третий шаг, а не когда пытается командовать всегда.`
+
+Next thesis:
+
+`the next step is a soft mixture-of-gates, where regime signals adjust gate weights instead of forcing a hard route into one gate head.`
+
+По-детски:
+
+`теперь нужно, чтобы штука не выбирала одного советчика насовсем, а по-разному прислушивалась к нескольким сразу.`
+
+Progress:
+
+- `epistemic_engine` MVP: `91/100`
+
 ## Текущий результат по switch-сигналу
 
 Следующая гипотеза была такой:

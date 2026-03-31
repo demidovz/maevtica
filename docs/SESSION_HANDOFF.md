@@ -174,3 +174,51 @@ python C:\Users\user\workspace\maevtica\ideograph_experiments\run_all_experiment
 - Удобный автономный режим: `4 итерации подряд`, потом остановка и отчёт.
 - Отвечать всегда по-русски.
 - В каждом сообщении пользователю отдельной строкой писать прогресс формата `До MVP: X/100`.
+
+## 2026-03-31 Epistemic Engine Update
+
+Latest confirmed status for the current `epistemic_engine` line:
+
+- champion policy is still `information_gain+latent_shift`;
+- confirmed mixed benchmark reference remains:
+  - `accuracy 0.755`
+  - `mean_utility 0.181`
+- parser-specific `step3` work produced useful research tools, but not a new champion;
+- best parser-line learned variant right now is `parser_scope+selective_learned_gate`;
+- confirmed mixed result for that variant:
+  - `accuracy 0.735`
+  - `mean_utility 0.134`
+- confirmed false-alarm result for that variant:
+  - `accuracy 0.695`
+  - `mean_utility 0.093`
+- confirmed true-shift result for that variant:
+  - `accuracy 0.710`
+  - `mean_utility 0.099`
+- more aggressive parser gates (`learned_gate`, `split_regime_gate`, `hybrid_gate`) help parts of the parser branch, but still lose to the global champion.
+
+Current thesis:
+
+`learned gate for parser step3 becomes useful only when it does not override all the time;`
+`it should intervene selectively, with explicit respect for fallback quality and false-alarm risk.`
+
+По-детски:
+
+`маленькая обученная штука помогает только когда не лезет со своим советом всегда подряд;`
+`ей надо вмешиваться редко и только когда она правда видит хороший шанс помочь.`
+
+Next thesis:
+
+`the next honest step is not another hard rule, but a soft mixture-of-gates;`
+`regime information should change how much we trust each gate, not force a hard switch between separate heads.`
+
+По-детски:
+
+`теперь штуке лучше не выбирать одного советчика навсегда;`
+`ей нужно слушать несколько советчиков сразу, но одному верить больше, а другому меньше в зависимости от ситуации.`
+
+Operational status:
+
+- `epistemic_engine` MVP: `91/100`
+- next milestone is still the same:
+  - keep champion unchanged;
+  - improve parser-branch learned gate until it stops being just a repair for `parser_scope` and starts competing with the global champion on mixed utility.
