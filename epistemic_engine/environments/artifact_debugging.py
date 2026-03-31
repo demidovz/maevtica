@@ -471,6 +471,9 @@ class ArtifactDebuggingEnvironment:
     def mode_group(self, mode_id: str) -> str:
         return mode_id
 
+    def mode_action_type_strength(self, mode_id: str, action_type: str) -> float:
+        return 0.5
+
     def stop_reason(self, state) -> str | None:
         if self.max_steps is not None and len(state.history) >= self.max_steps:
             return "step_limit"
@@ -624,6 +627,12 @@ class ArtifactDebuggingQuestionValueShiftEnvironment(ArtifactDebuggingEnvironmen
 
     def mode_group(self, mode_id: str) -> str:
         return profile_hypothesis(mode_id)
+
+    def mode_action_type_strength(self, mode_id: str, action_type: str) -> float:
+        return PROFILE_ACTION_TYPE_STRENGTHS[profile_variant(mode_id)].get(
+            action_type,
+            0.5,
+        )
 
     def likelihood(self, action_id: str, outcome: str, hypothesis_id: str) -> float:
         return sum(

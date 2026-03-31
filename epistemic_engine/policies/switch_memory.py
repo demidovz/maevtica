@@ -3,7 +3,7 @@ from __future__ import annotations
 import math
 
 from epistemic_engine.beliefs.shift_latent import ShiftLatentUpdater
-from epistemic_engine.beliefs.state import entropy, normalize
+from epistemic_engine.beliefs.state import entropy, normalize, top_hypothesis
 from epistemic_engine.memory.mode_memory import ModeMemory
 from epistemic_engine.memory.question_type_memory import QuestionTypeMemory
 from epistemic_engine.questions.policy import candidate_actions, InformationGainPolicy
@@ -506,6 +506,7 @@ class AdaptiveShiftMemoryPolicy(PersistentShiftMemoryPolicy):
         neutral_gate: float = 0.50,
         min_aggressive_gate: float = 0.0,
         same_group_margin: float = 0.35,
+        decision_mode_strength: float = 0.20,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -578,6 +579,22 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
         neutral_gate: float = 0.50,
         min_aggressive_gate: float = 0.0,
         same_group_margin: float = 0.35,
+        decision_mode_strength: float = 0.20,
+        late_stage_min_steps: int = 4,
+        late_stage_consolidation_power: float = 2.0,
+        profile_bootstrap_step: int = 1,
+        profile_bootstrap_margin: float = 0.0,
+        profile_bootstrap_hypotheses: tuple[str, ...] = (
+            "dependency_drift",
+            "schema_migration",
+        ),
+        parser_scope_step: int = 1,
+        parser_scope_hypotheses: tuple[str, ...] = (),
+        parser_scope_action_id: str = "ask_user_scope",
+        parser_scope_diff_outcomes: tuple[str, ...] = (),
+        parser_followup_step: int = 2,
+        parser_followup_action_id: str = "run_targeted_regression",
+        parser_followup_patterns: tuple[tuple[str, str], ...] = (),
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -591,6 +608,19 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
         self.neutral_gate = neutral_gate
         self.min_aggressive_gate = min_aggressive_gate
         self.same_group_margin = same_group_margin
+        self.decision_mode_strength = decision_mode_strength
+        self.late_stage_min_steps = late_stage_min_steps
+        self.late_stage_consolidation_power = late_stage_consolidation_power
+        self.profile_bootstrap_step = profile_bootstrap_step
+        self.profile_bootstrap_margin = profile_bootstrap_margin
+        self.profile_bootstrap_hypotheses = set(profile_bootstrap_hypotheses)
+        self.parser_scope_step = parser_scope_step
+        self.parser_scope_hypotheses = set(parser_scope_hypotheses)
+        self.parser_scope_action_id = parser_scope_action_id
+        self.parser_scope_diff_outcomes = set(parser_scope_diff_outcomes)
+        self.parser_followup_step = parser_followup_step
+        self.parser_followup_action_id = parser_followup_action_id
+        self.parser_followup_patterns = set(parser_followup_patterns)
         self.shift_latent_updater = ShiftLatentUpdater(
             recent_window=self.recent_window,
             surprise_floor=self.surprise_floor,
@@ -617,22 +647,91 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
 
     def planning_probabilities(self, state, environment) -> dict[str, float]:
         latent_state = self.infer_latent_state(state, environment)
+        return self._combined_hypothesis_probabilities(
+            state=state,
+            environment=environment,
+            latent_state=latent_state,
+            blend_strength=self.mode_strength * (1.0 - latent_state.switch_pressure),
+        )
+
+    def decision_probabilities(self, state, environment) -> dict[str, float]:
+        latent_state = self.infer_latent_state(state, environment)
+        decision_blend_strength = max(
+            self.mode_strength,
+            self.decision_mode_strength
+            * max(
+                latent_state.profile_shift_risk,
+                latent_state.hypothesis_switch_risk,
+            ),
+        )
+        decision_probabilities = self._combined_hypothesis_probabilities(
+            state=state,
+            environment=environment,
+            latent_state=latent_state,
+            blend_strength=decision_blend_strength,
+        )
+        return self._late_stage_decision_probabilities(
+            state=state,
+            decision_probabilities=decision_probabilities,
+        )
+
+    def _combined_hypothesis_probabilities(
+        self,
+        *,
+        state,
+        environment,
+        latent_state,
+        blend_strength: float,
+    ) -> dict[str, float]:
         mode_hypotheses = environment.mode_support_to_hypotheses(latent_state.mode_support)
-        effective_mode_strength = self.mode_strength * (1.0 - latent_state.switch_pressure)
         combined = {}
         for hypothesis_id, probability in state.probabilities.items():
             combined[hypothesis_id] = (
-                (1.0 - effective_mode_strength) * probability
-                + effective_mode_strength * mode_hypotheses[hypothesis_id]
+                (1.0 - blend_strength) * probability
+                + blend_strength * mode_hypotheses[hypothesis_id]
             )
         return normalize(combined)
 
+    def _late_stage_decision_probabilities(
+        self,
+        *,
+        state,
+        decision_probabilities: dict[str, float],
+    ) -> dict[str, float]:
+        if len(state.history) < self.late_stage_min_steps:
+            return decision_probabilities
+        if self.late_stage_consolidation_power <= 1.0:
+            return decision_probabilities
+        return normalize(
+            {
+                hypothesis_id: probability ** self.late_stage_consolidation_power
+                for hypothesis_id, probability in decision_probabilities.items()
+            }
+        )
+
     def select_action(self, state, environment):
         candidates = candidate_actions(state, environment)
+        early_override = self._early_override_action(
+            state=state,
+            environment=environment,
+            candidates=candidates,
+        )
+        if early_override is not None:
+            return early_override
         latent_state = self.infer_latent_state(state, environment)
         planning_probabilities = self.planning_probabilities(state, environment)
         current_entropy = entropy(planning_probabilities)
         type_support = self.type_memory.next_type_support(state.history, candidates)
+        profile_mode = latent_state.profile_candidate_mode
+        hypothesis_mode = latent_state.hypothesis_candidate_mode
+        hypothesis_group = self._mode_group(environment, hypothesis_mode)
+        counterpart_mode = self._paired_mode(environment, latent_state.top_mode)
+        candidates = self._profile_bootstrap_candidates(
+            state=state,
+            environment=environment,
+            latent_state=latent_state,
+            candidates=candidates,
+        )
         best_score = float("-inf")
         best_action = candidates[0]
 
@@ -655,23 +754,201 @@ class LatentAdaptiveShiftMemoryPolicy(SwitchAwareHybridMemoryPolicy):
             information_gain = current_entropy - expected_entropy
             score = information_gain / max(action.cost, 1e-9)
             score += self.type_bonus * type_support.get(action.action_type, 0.0)
+            hypothesis_probe_value = self._group_disagreement(
+                environment,
+                action.action_id,
+                latent_state.top_group,
+                hypothesis_group,
+                latent_state.mode_support,
+            )
+            profile_volatility = self._mode_disagreement(
+                environment,
+                action.action_id,
+                latent_state.top_mode,
+                counterpart_mode,
+            )
+            stability_bonus = (1.0 - profile_volatility) / max(action.cost, 1e-9)
+
             score += (
                 self.switch_bonus
-                * latent_state.switch_pressure
-                * self._mode_disagreement(
-                    environment,
-                    action.action_id,
-                    latent_state.top_mode,
-                    latent_state.default_second_mode
-                    if latent_state.aggressive_gate >= 0.5
-                    else latent_state.candidate_mode,
-                )
+                * latent_state.hypothesis_switch_risk
+                * hypothesis_probe_value
+            )
+            score += (
+                0.45
+                * self.switch_bonus
+                * latent_state.profile_shift_risk
+                * stability_bonus
+            )
+            score -= (
+                0.65
+                * self.switch_bonus
+                * latent_state.false_alarm_risk
+                * profile_volatility
             )
             if score > best_score:
                 best_score = score
                 best_action = action
 
         return best_action
+
+    def _early_override_action(
+        self,
+        *,
+        state,
+        environment,
+        candidates,
+    ):
+        if not self.parser_scope_hypotheses:
+            return None
+
+        top_hypothesis_id, _confidence = top_hypothesis(state)
+        if top_hypothesis_id not in self.parser_scope_hypotheses:
+            return None
+        if len(state.history) == self.parser_followup_step and self.parser_followup_patterns:
+            if len(state.history) < 2:
+                return None
+            pattern = (
+                state.history[0].outcome,
+                state.history[1].outcome,
+            )
+            if pattern in self.parser_followup_patterns:
+                for action in candidates:
+                    if action.action_id == self.parser_followup_action_id:
+                        return action
+                return None
+        if len(state.history) != self.parser_scope_step:
+            return None
+        if self.parser_scope_diff_outcomes:
+            if not state.history:
+                return None
+            if state.history[0].outcome not in self.parser_scope_diff_outcomes:
+                return None
+
+        for action in candidates:
+            if action.action_id == self.parser_scope_action_id:
+                return action
+        return None
+
+    def _profile_bootstrap_candidates(
+        self,
+        *,
+        state,
+        environment,
+        latent_state,
+        candidates,
+    ):
+        if len(state.history) != self.profile_bootstrap_step:
+            return candidates
+        if latent_state.profile_shift_risk > latent_state.false_alarm_risk:
+            return candidates
+        if self.profile_bootstrap_hypotheses:
+            top_hypothesis_id, _confidence = top_hypothesis(state)
+            if top_hypothesis_id not in self.profile_bootstrap_hypotheses:
+                return candidates
+
+        strengths = {
+            action.action_id: self._mode_action_type_strength(
+                environment,
+                latent_state.top_mode,
+                action.action_type,
+            )
+            for action in candidates
+        }
+        max_strength = max(strengths.values(), default=0.5)
+        shortlisted = [
+            action
+            for action in candidates
+            if strengths[action.action_id] >= max_strength - self.profile_bootstrap_margin
+        ]
+        return shortlisted or candidates
+
+    def _paired_mode(self, environment, mode_id: str) -> str:
+        paired_mode = getattr(environment, "paired_mode", None)
+        if callable(paired_mode):
+            return paired_mode(mode_id)
+        return mode_id
+
+    def _mode_group(self, environment, mode_id: str) -> str:
+        mode_group = getattr(environment, "mode_group", None)
+        if callable(mode_group):
+            return mode_group(mode_id)
+        return mode_id
+
+    def _mode_action_type_strength(
+        self,
+        environment,
+        mode_id: str,
+        action_type: str,
+    ) -> float:
+        mode_action_type_strength = getattr(environment, "mode_action_type_strength", None)
+        if callable(mode_action_type_strength):
+            return mode_action_type_strength(mode_id, action_type)
+        return 0.5
+
+    def _group_disagreement(
+        self,
+        environment,
+        action_id: str,
+        top_group: str,
+        candidate_group: str,
+        mode_support: dict[str, float],
+    ) -> float:
+        if top_group == candidate_group:
+            return 0.0
+
+        top_distribution = self._group_distribution(
+            environment,
+            action_id,
+            top_group,
+            mode_support,
+        )
+        candidate_distribution = self._group_distribution(
+            environment,
+            action_id,
+            candidate_group,
+            mode_support,
+        )
+        return 0.5 * sum(
+            abs(top_distribution[outcome] - candidate_distribution[outcome])
+            for outcome in top_distribution
+        )
+
+    def _group_distribution(
+        self,
+        environment,
+        action_id: str,
+        group_id: str,
+        mode_support: dict[str, float],
+    ) -> dict[str, float]:
+        outcomes = environment.outcomes_for(action_id)
+        matching_modes = [
+            mode_id
+            for mode_id in environment.mode_ids()
+            if self._mode_group(environment, mode_id) == group_id
+        ]
+        if not matching_modes:
+            return {outcome: 0.0 for outcome in outcomes}
+
+        weights = {mode_id: mode_support.get(mode_id, 0.0) for mode_id in matching_modes}
+        total_weight = sum(weights.values())
+        if total_weight <= 1e-9:
+            uniform = 1.0 / len(matching_modes)
+            weights = {mode_id: uniform for mode_id in matching_modes}
+        else:
+            weights = {
+                mode_id: weight / total_weight
+                for mode_id, weight in weights.items()
+            }
+
+        return {
+            outcome: sum(
+                weights[mode_id]
+                * environment.mode_distribution(action_id, mode_id).get(outcome, 0.0)
+                for mode_id in matching_modes
+            )
+            for outcome in outcomes
+        }
 
 
 class LatentRobustShiftMemoryPolicy(LatentAdaptiveShiftMemoryPolicy):

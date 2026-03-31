@@ -9,15 +9,21 @@ from epistemic_engine.beliefs.state import normalize
 @dataclass(frozen=True)
 class ShiftLatentState:
     mode_support: dict[str, float]
+    group_support: dict[str, float]
     top_mode: str
+    top_group: str
     default_second_mode: str
     candidate_mode: str
+    profile_candidate_mode: str
+    hypothesis_candidate_mode: str
     surprise_pressure: float
     ambiguity_pressure: float
     base_switch_pressure: float
     anomaly_pressure: float
     persistence_pressure: float
     rebound_pressure: float
+    profile_shift_risk: float
+    hypothesis_switch_risk: float
     false_alarm_risk: float
     persistent_shift_risk: float
     aggressive_gate: float
@@ -93,25 +99,33 @@ def infer_shift_latent(
         key=lambda item: item[1],
         reverse=True,
     )
+    group_support = aggregate_group_support(mode_support=mode_support, environment=environment)
     top_mode, top_probability = ordered_modes[0]
     default_second_mode, second_probability = (
         ordered_modes[1]
         if len(ordered_modes) > 1
         else (top_mode, 0.0)
     )
+    top_group = mode_group_id(environment=environment, mode_id=top_mode)
 
     if not state.history:
         return ShiftLatentState(
             mode_support=mode_support,
+            group_support=group_support,
             top_mode=top_mode,
+            top_group=top_group,
             default_second_mode=default_second_mode,
             candidate_mode=default_second_mode,
+            profile_candidate_mode=top_mode,
+            hypothesis_candidate_mode=default_second_mode,
             surprise_pressure=0.0,
             ambiguity_pressure=0.0,
             base_switch_pressure=0.0,
             anomaly_pressure=0.0,
             persistence_pressure=0.0,
             rebound_pressure=0.0,
+            profile_shift_risk=0.0,
+            hypothesis_switch_risk=0.0,
             false_alarm_risk=0.0,
             persistent_shift_risk=0.0,
             aggressive_gate=neutral_gate,
@@ -141,19 +155,33 @@ def infer_shift_latent(
         max(0.0, 0.6 * surprise_pressure + 0.4 * ambiguity_pressure),
     )
 
-    candidate_mode = best_recent_alternative_mode(
+    profile_candidate_mode = best_recent_alternative_mode(
         state=state,
         environment=environment,
         top_mode=top_mode,
         default_second_mode=default_second_mode,
         recent_window=recent_window,
         same_group_margin=same_group_margin,
+        require_same_group=True,
     )
-    anomaly_pressure, persistence_pressure, rebound_pressure = recent_shift_signals(
+    hypothesis_candidate_mode = best_recent_alternative_mode(
         state=state,
         environment=environment,
         top_mode=top_mode,
-        candidate_mode=candidate_mode,
+        default_second_mode=default_second_mode,
+        recent_window=recent_window,
+        same_group_margin=same_group_margin,
+        require_same_group=False,
+    )
+    (
+        profile_anomaly_pressure,
+        profile_persistence_pressure,
+        profile_rebound_pressure,
+    ) = recent_shift_signals(
+        state=state,
+        environment=environment,
+        top_mode=top_mode,
+        candidate_mode=profile_candidate_mode,
         recent_window=recent_window,
         anomaly_scale=anomaly_scale,
         persistence_scale=persistence_scale,
@@ -161,48 +189,128 @@ def infer_shift_latent(
         streak_bonus=streak_bonus,
         rebound_scale=rebound_scale,
     )
+    (
+        hypothesis_anomaly_pressure,
+        hypothesis_persistence_pressure,
+        hypothesis_rebound_pressure,
+    ) = recent_shift_signals(
+        state=state,
+        environment=environment,
+        top_mode=top_mode,
+        candidate_mode=hypothesis_candidate_mode,
+        recent_window=recent_window,
+        anomaly_scale=anomaly_scale,
+        persistence_scale=persistence_scale,
+        rebound_penalty=rebound_penalty,
+        streak_bonus=streak_bonus,
+        rebound_scale=rebound_scale,
+    )
+    anomaly_pressure = max(profile_anomaly_pressure, hypothesis_anomaly_pressure)
+    persistence_pressure = max(
+        profile_persistence_pressure,
+        hypothesis_persistence_pressure,
+    )
+    rebound_pressure = max(profile_rebound_pressure, hypothesis_rebound_pressure)
+
+    profile_shift_evidence = min(
+        1.0,
+        max(
+            0.0,
+            0.25 * profile_anomaly_pressure
+            + 0.75 * profile_persistence_pressure
+            - 0.25 * profile_rebound_pressure,
+        ),
+    )
+    profile_shift_risk = min(
+        1.0,
+        max(0.0, base_switch_pressure * profile_shift_evidence),
+    )
+
+    hypothesis_candidate_group = mode_group_id(
+        environment=environment,
+        mode_id=hypothesis_candidate_mode,
+    )
+    top_group_support = group_support.get(top_group, 0.0)
+    candidate_group_support = (
+        group_support.get(hypothesis_candidate_group, 0.0)
+        if hypothesis_candidate_group != top_group
+        else 0.0
+    )
+    group_competition = candidate_group_support / max(
+        top_group_support + candidate_group_support,
+        1e-9,
+    )
+    hypothesis_switch_evidence = min(
+        1.0,
+        max(
+            0.0,
+            0.20 * hypothesis_anomaly_pressure
+            + 0.80 * hypothesis_persistence_pressure
+            - 0.45 * hypothesis_rebound_pressure,
+        ),
+    )
+    hypothesis_switch_risk = min(
+        1.0,
+        max(
+            0.0,
+            base_switch_pressure
+            * hypothesis_switch_evidence
+            * (0.35 + 0.65 * group_competition),
+        ),
+    )
+
     false_alarm_risk = min(
         1.0,
         max(
             0.0,
-            0.85 * rebound_pressure
-            + 0.15 * max(0.0, anomaly_pressure - persistence_pressure),
+            0.50 * profile_shift_risk
+            + 0.30 * profile_rebound_pressure
+            + 0.20 * max(0.0, profile_shift_risk - hypothesis_switch_risk),
         ),
     )
     persistent_shift_risk = min(
         1.0,
         max(
             0.0,
-            0.20 * anomaly_pressure
-            + 0.70 * persistence_pressure
-            - 0.40 * rebound_pressure,
+            max(profile_shift_risk, hypothesis_switch_risk),
         ),
     )
     aggressive_gate = aggressive_switch_gate(
-        anomaly_pressure=anomaly_pressure,
-        persistence_pressure=persistence_pressure,
+        hypothesis_switch_risk=hypothesis_switch_risk,
+        false_alarm_risk=false_alarm_risk,
         false_alarm_scale=false_alarm_scale,
         neutral_gate=neutral_gate,
         min_aggressive_gate=min_aggressive_gate,
     )
-    aggressive_pressure = base_switch_pressure
+    aggressive_pressure = base_switch_pressure * hypothesis_switch_risk
     cautious_pressure = base_switch_pressure * persistent_shift_risk
     switch_pressure = (
         aggressive_gate * aggressive_pressure
         + (1.0 - aggressive_gate) * cautious_pressure
     )
+    candidate_mode = (
+        hypothesis_candidate_mode
+        if hypothesis_switch_risk >= profile_shift_risk
+        else profile_candidate_mode
+    )
 
     return ShiftLatentState(
         mode_support=mode_support,
+        group_support=group_support,
         top_mode=top_mode,
+        top_group=top_group,
         default_second_mode=default_second_mode,
         candidate_mode=candidate_mode,
+        profile_candidate_mode=profile_candidate_mode,
+        hypothesis_candidate_mode=hypothesis_candidate_mode,
         surprise_pressure=surprise_pressure,
         ambiguity_pressure=ambiguity_pressure,
         base_switch_pressure=base_switch_pressure,
         anomaly_pressure=anomaly_pressure,
         persistence_pressure=persistence_pressure,
         rebound_pressure=rebound_pressure,
+        profile_shift_risk=profile_shift_risk,
+        hypothesis_switch_risk=hypothesis_switch_risk,
         false_alarm_risk=false_alarm_risk,
         persistent_shift_risk=persistent_shift_risk,
         aggressive_gate=aggressive_gate,
@@ -220,6 +328,7 @@ def best_recent_alternative_mode(
     default_second_mode: str,
     recent_window: int,
     same_group_margin: float,
+    require_same_group: bool | None = None,
 ) -> str:
     if len(environment.mode_ids()) <= 1 or not state.history:
         return default_second_mode
@@ -229,11 +338,15 @@ def best_recent_alternative_mode(
     best_score = float("-inf")
     best_same_group_mode = default_second_mode
     best_same_group_score = float("-inf")
-    mode_group = getattr(environment, "mode_group", None)
-    top_group = mode_group(top_mode) if callable(mode_group) else top_mode
+    top_group = mode_group_id(environment=environment, mode_id=top_mode)
 
     for mode_id in environment.mode_ids():
         if mode_id == top_mode:
+            continue
+        candidate_group = mode_group_id(environment=environment, mode_id=mode_id)
+        if require_same_group is True and candidate_group != top_group:
+            continue
+        if require_same_group is False and candidate_group == top_group:
             continue
         score = 0.0
         for index, observation in enumerate(recent_history, start=1):
@@ -255,11 +368,12 @@ def best_recent_alternative_mode(
         if score > best_score:
             best_score = score
             best_mode = mode_id
-        candidate_group = mode_group(mode_id) if callable(mode_group) else mode_id
         if candidate_group == top_group and score > best_same_group_score:
             best_same_group_score = score
             best_same_group_mode = mode_id
 
+    if best_score == float("-inf"):
+        return top_mode
     if best_same_group_score >= best_score - same_group_margin:
         return best_same_group_mode
     return best_mode
@@ -367,22 +481,36 @@ def recent_shift_signals(
 
 def aggressive_switch_gate(
     *,
-    anomaly_pressure: float,
-    persistence_pressure: float,
+    hypothesis_switch_risk: float,
+    false_alarm_risk: float,
     false_alarm_scale: float,
     neutral_gate: float,
     min_aggressive_gate: float,
 ) -> float:
-    if anomaly_pressure <= 1e-9 and persistence_pressure <= 1e-9:
+    if hypothesis_switch_risk <= 1e-9 and false_alarm_risk <= 1e-9:
         return neutral_gate
 
-    false_alarm_risk = max(0.0, anomaly_pressure - persistence_pressure)
-    denominator = persistence_pressure + false_alarm_scale * false_alarm_risk
+    denominator = hypothesis_switch_risk + false_alarm_scale * false_alarm_risk
     if denominator <= 1e-9:
         return min_aggressive_gate
 
-    gate = persistence_pressure / denominator
+    gate = hypothesis_switch_risk / denominator
     return min(1.0, max(min_aggressive_gate, gate))
+
+
+def mode_group_id(*, environment, mode_id: str) -> str:
+    mode_group = getattr(environment, "mode_group", None)
+    if callable(mode_group):
+        return mode_group(mode_id)
+    return mode_id
+
+
+def aggregate_group_support(*, mode_support: dict[str, float], environment) -> dict[str, float]:
+    scores: dict[str, float] = {}
+    for mode_id, support in mode_support.items():
+        group_id = mode_group_id(environment=environment, mode_id=mode_id)
+        scores[group_id] = scores.get(group_id, 0.0) + support
+    return normalize(scores)
 
 
 def latent_mode_support_to_hypotheses(environment, latent_state: ShiftLatentState) -> dict[str, float]:
