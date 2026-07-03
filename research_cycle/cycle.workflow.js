@@ -7,6 +7,7 @@ export const meta = {
     { title: 'Generate', detail: 'propose candidate concepts with testable predictions' },
     { title: 'Attack',   detail: 'adversary + historian try to kill each' },
     { title: 'Test',     detail: 'real external experiment for testable survivors' },
+    { title: 'Archive',  detail: 'persist round journal + treasurer ledger' },
     { title: 'Report',   detail: 'honest narrative of searched / found / refuted / survived' },
   ],
 }
@@ -27,6 +28,24 @@ const CAP = A.capTokens || null
 const spent0 = budget.spent()  // baseline: budget.spent() is the WHOLE-TURN shared pool, not per-workflow. Meter THIS campaign from its own start (2026-07-03: a 500k cap was already blown by the evening's prior work → loop ran 0 rounds)
 const campaignSpent = () => budget.spent() - spent0
 const underBudget = () => !CAP || campaignSpent() < CAP * (1 - RESERVE)
+
+// ── backlog + archivist (2026-07-04 upgrades) ───────────────────────────────
+// BACKLOG: concepts carried in from prior runs (or deferred within this run) go
+// straight to the teeth BEFORE any new exploration — earlier the deferred ones
+// were simply dropped and the flashlight always wandered to fresh ground.
+const BACKLOG = Array.isArray(A.backlog) ? A.backlog.slice() : []
+const CAMPAIGN = A.campaign || null
+const REPO = '/home/friemann/workspace/repos-demidovz/maevtica/research_cycle'
+let persistedSpent = 0
+async function archive(round, payload) {
+  // crash-safety: persist every round to disk + feed the treasurer ledger
+  // (run 2 on 2026-07-03 lost its whole journal to a stall before Report)
+  if (!CAMPAIGN) return
+  const delta = Math.max(0, campaignSpent() - persistedSpent)
+  persistedSpent = campaignSpent()
+  await agent(`You are the ARCHIVIST — a mechanical persistence step, no analysis, no commentary. Do exactly this: (1) Bash: mkdir -p ${REPO}/campaigns/${CAMPAIGN} ; (2) use the Write tool to write the following JSON verbatim to ${REPO}/campaigns/${CAMPAIGN}/round${round}.json : ${JSON.stringify(payload).slice(0, 30000)} ; (3) Bash: python3 ${REPO}/treasurer.py spend ${CAMPAIGN} --tokens ${delta} --stage round${round} ; (4) reply with the single word ok.`,
+    { label: `archive#${round}`, phase: 'Archive', effort: 'low' })
+}
 
 // ── structured-output schemas ───────────────────────────────────────────────
 const S_STRESS = { type: 'object', required: ['stress_points'], properties: { stress_points: { type: 'array', items: { type: 'object', required: ['where', 'why', 'testable'], properties: {
@@ -70,6 +89,28 @@ log(`flashlight → "${DOMAIN}" · cap≈${(CAP || 0).toLocaleString()} out-tok 
 
 while (round < MAX_ROUNDS && underBudget()) {
   round++
+  if (BACKLOG.length) {
+    // test-first: survivors from earlier runs/rounds earn their experiment
+    // before the flashlight moves to new ground
+    phase('Test')
+    const toTest = BACKLOG.splice(0, MAX_TEST)
+    const tested = []
+    for (const c of toTest) {
+      const t = await agent(P.tester(c), { label: `test:${c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
+      tested.push({ name: c.name, concept: c, test: t })
+    }
+    for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push({ ...t, route: 'backlog' })
+    const rec = { round, source: 'backlog', tested, backlogLeft: BACKLOG.map(b => b.name) }
+    journal.rounds.push(rec)
+    log(`round ${round}: backlog — ${tested.length} tested · ${BACKLOG.length} still queued · ${journal.survivors.length} survivors`)
+    if (round % CONTROL_EVERY === 0) {
+      const ctl = await agent(P.control(), { label: `control#${round}`, phase: 'Attack', schema: S_CONTROL })
+      journal.controls.push(ctl)
+      if (ctl && ctl.judges_trustworthy === false) { log(`round ${round}: CONTROL FAILED — halting to avoid self-fooling`); break }
+    }
+    await archive(round, rec)
+    continue
+  }
   phase('Explore')
   const stress = await agent(P.explorer(journal.seenStress), { label: `explore#${round}`, phase: 'Explore', schema: S_STRESS })
   if (!stress || !stress.stress_points || !stress.stress_points.length) { log(`round ${round}: no fresh stress found — flashlight exhausted`); break }
@@ -105,7 +146,8 @@ while (round < MAX_ROUNDS && underBudget()) {
   // heavy stage: prefer concepts whose prediction diverges from prior art (they
   // have a concrete thing to test), then cap how many actually run this round.
   survivors.sort((a, b) => (b.route === 'separable-prediction') - (a.route === 'separable-prediction'))
-  const toTest = survivors.slice(0, MAX_TEST), deferred = survivors.slice(MAX_TEST)
+  const toTest = survivors.slice(0, MAX_TEST)
+  BACKLOG.push(...survivors.slice(MAX_TEST).map(s => s.c))  // deferred queue for later rounds instead of being dropped
   const tested = []
   for (const s of toTest) {   // SEQUENTIAL — heavy experiments must not contend on one CPU box (2026-07-03 stall: 4 in parallel overwhelmed it, never reached Report)
     const t = await agent(P.tester(s.c), { label: `test:${s.c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
@@ -114,17 +156,21 @@ while (round < MAX_ROUNDS && underBudget()) {
 
   // a survivor is only "kept" if its test didn't refute it
   for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push(t)
-  for (const d of deferred) journal.survivors.push({ name: d.c.name, concept: d.c, test: { status: 'deferred', verdict: 'n/a', design: 'not run this round (MAX_TEST cap)' } })
 
-  journal.rounds.push({ round, stress: top, generated: cands.length, killed, tested })
-  log(`round ${round}: ${cands.length} proposed · ${killed.length} killed · ${tested.length} tested · ${journal.survivors.length} survivors so far`)
+  const rec = { round, stress: top, generated: cands.length, killed, tested, backlogLeft: BACKLOG.map(b => b.name) }
+  journal.rounds.push(rec)
+  log(`round ${round}: ${cands.length} proposed · ${killed.length} killed · ${tested.length} tested · ${BACKLOG.length} queued · ${journal.survivors.length} survivors so far`)
 
   if (round % CONTROL_EVERY === 0) {
     const ctl = await agent(P.control(), { label: `control#${round}`, phase: 'Attack', schema: S_CONTROL })
     journal.controls.push(ctl)
     if (ctl && ctl.judges_trustworthy === false) { log(`round ${round}: CONTROL FAILED — judges can't tell real from distractor; halting to avoid self-fooling`); break }
   }
+  await archive(round, rec)
 }
+
+// anything still queued is reported honestly as untested, and handed to the next run
+for (const c of BACKLOG) journal.survivors.push({ name: c.name, concept: c, test: { status: 'deferred', verdict: 'n/a', design: 'still in backlog at run end — seed the next run with it' } })
 
 phase('Report')
 const report = await agent(P.report(journal), { label: 'report', phase: 'Report', effort: 'high' })
