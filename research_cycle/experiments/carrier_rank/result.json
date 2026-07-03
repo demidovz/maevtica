@@ -1,0 +1,216 @@
+{
+ "oracle": {
+  "o1_atom_maxcos": 1.0,
+  "null_995": 0.1706,
+  "concept_maxcos": {
+   "dog": 0.35,
+   "war": 0.334,
+   "love": 0.423,
+   "music": 0.372,
+   "snow": 0.408
+  },
+  "oracle_ok": true
+ },
+ "validity": {
+  "pairwise_cos": {
+   "dog~war": 0.525,
+   "dog~love": 0.556,
+   "dog~music": 0.562,
+   "dog~snow": 0.631,
+   "war~love": 0.469,
+   "war~music": 0.474,
+   "war~snow": 0.604,
+   "love~music": 0.498,
+   "love~snow": 0.47,
+   "music~snow": 0.569
+  },
+  "v1_ok": false,
+  "pr_rho3": {
+   "dog+war+love": 1.9550577402114868,
+   "music+snow+war": 1.8646222352981567
+  },
+  "v2_ok": false
+ },
+ "live_atoms": 2907,
+ "properties": [
+  {
+   "rho": 1,
+   "prop": "dog",
+   "maxcos": 0.3501703441143036,
+   "count03": 2,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.35,
+    0.307,
+    0.282,
+    0.271,
+    0.266
+   ],
+   "subspace_maxproj": 0.3501703441143036,
+   "subspace_count03": 2
+  },
+  {
+   "rho": 1,
+   "prop": "war",
+   "maxcos": 0.3344271779060364,
+   "count03": 1,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.334,
+    0.284,
+    0.278,
+    0.274,
+    0.271
+   ],
+   "subspace_maxproj": 0.3344271779060364,
+   "subspace_count03": 1
+  },
+  {
+   "rho": 1,
+   "prop": "love",
+   "maxcos": 0.4228244423866272,
+   "count03": 6,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.423,
+    0.385,
+    0.35,
+    0.339,
+    0.328
+   ],
+   "subspace_maxproj": 0.4228244423866272,
+   "subspace_count03": 6
+  },
+  {
+   "rho": 1,
+   "prop": "music",
+   "maxcos": 0.37244826555252075,
+   "count03": 4,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.372,
+    0.356,
+    0.346,
+    0.315,
+    0.296
+   ],
+   "subspace_maxproj": 0.37244826555252075,
+   "subspace_count03": 4
+  },
+  {
+   "rho": 1,
+   "prop": "snow",
+   "maxcos": 0.40824568271636963,
+   "count03": 3,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.408,
+    0.333,
+    0.301,
+    0.299,
+    0.288
+   ],
+   "subspace_maxproj": 0.40824568271636963,
+   "subspace_count03": 3
+  },
+  {
+   "rho": 2,
+   "prop": "dog+war",
+   "maxcos": 0.39177781343460083,
+   "count03": 3,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.392,
+    0.311,
+    0.308,
+    0.288,
+    0.288
+   ],
+   "subspace_maxproj": 0.392355352640152,
+   "subspace_count03": 6
+  },
+  {
+   "rho": 2,
+   "prop": "love+music",
+   "maxcos": 0.3947955071926117,
+   "count03": 6,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.395,
+    0.384,
+    0.343,
+    0.306,
+    0.302
+   ],
+   "subspace_maxproj": 0.4254986643791199,
+   "subspace_count03": 15
+  },
+  {
+   "rho": 2,
+   "prop": "war+snow",
+   "maxcos": 0.3723755478858948,
+   "count03": 5,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.372,
+    0.326,
+    0.32,
+    0.307,
+    0.3
+   ],
+   "subspace_maxproj": 0.4203372597694397,
+   "subspace_count03": 12
+  },
+  {
+   "rho": 3,
+   "prop": "dog+war+love",
+   "maxcos": 0.4097631573677063,
+   "count03": 3,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.41,
+    0.301,
+    0.301,
+    0.298,
+    0.292
+   ],
+   "subspace_maxproj": 0.4334256649017334,
+   "subspace_count03": 15
+  },
+  {
+   "rho": 3,
+   "prop": "music+snow+war",
+   "maxcos": 0.4076070785522461,
+   "count03": 4,
+   "count05": 0,
+   "count08": 0,
+   "top5": [
+    0.408,
+    0.322,
+    0.319,
+    0.301,
+    0.296
+   ],
+   "subspace_maxproj": 0.4865199625492096,
+   "subspace_count03": 28
+  }
+ ],
+ "stats": {
+  "spearman_rho_count03": 0.225,
+  "spearman_rho_maxcos": 0.296,
+  "mean_count03_rho1": 3.2,
+  "mean_count03_rho3": 3.5,
+  "any_rho3_maxcos_ge_08": false,
+  "rho1_props_without_atom_gt05": 5
+ },
+ "verdict": "INCONCLUSIVE_DESIGN"
+}
