@@ -1,0 +1,73 @@
+{
+  "round": 4,
+  "models": [
+    "gpt2",
+    "pythia-160m",
+    "opt-125m"
+  ],
+  "K": 24,
+  "chance": 0.041666666666666664,
+  "pairs": {
+    "gpt2__pythia-160m": {
+      "broad_probe": 108,
+      "geometry": 0.16666666666666666,
+      "interventions": {
+        "add": {
+          "crc_mean": 0.7760416666666666,
+          "crc_std": 0.03570653437708876,
+          "crc_point": 0.7916666666666666,
+          "transfer_crc": 4.080108165740967,
+          "transfer_oracle": 4.286069869995117
+        },
+        "ablate": {
+          "crc_mean": 0.3854166666666667,
+          "crc_std": 0.09716019846967515,
+          "crc_point": 0.375,
+          "transfer_crc": -0.2202286273241043,
+          "transfer_oracle": -0.08592257648706436
+        }
+      }
+    },
+    "gpt2__opt-125m": {
+      "broad_probe": 108,
+      "geometry": 0.625,
+      "interventions": {
+        "add": {
+          "crc_mean": 0.8385416666666666,
+          "crc_std": 0.0640010714971068,
+          "crc_point": 0.875,
+          "transfer_crc": 1.218329668045044,
+          "transfer_oracle": 1.3114100694656372
+        },
+        "ablate": {
+          "crc_mean": 0.390625,
+          "crc_std": 0.035706534377088775,
+          "crc_point": 0.4583333333333333,
+          "transfer_crc": -0.04412759467959404,
+          "transfer_oracle": -0.05183950066566467
+        }
+      }
+    },
+    "pythia-160m__opt-125m": {
+      "broad_probe": 108,
+      "geometry": 0.625,
+      "interventions": {
+        "add": {
+          "crc_mean": 0.765625,
+          "crc_std": 0.028998772723073003,
+          "crc_point": 0.7916666666666666,
+          "transfer_crc": 1.1743886470794678,
+          "transfer_oracle": 1.3036701679229736
+        },
+        "ablate": {
+          "crc_mean": 0.26041666666666663,
+          "crc_std": 0.08777239347058707,
+          "crc_point": 0.2916666666666667,
+          "transfer_crc": -0.013466708362102509,
+          "transfer_oracle": -0.050303976982831955
+        }
+      }
+    }
+  },
+  "seconds": 1695.3
+}
