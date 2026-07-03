@@ -1,0 +1,55 @@
+{
+  "models": [
+    "pythia-160m",
+    "pythia-410m"
+  ],
+  "K_categories": 7,
+  "categories": [
+    "animals",
+    "colors",
+    "numbers",
+    "countries",
+    "body",
+    "fruits",
+    "metals"
+  ],
+  "shared_vocab_tokens": 73,
+  "steer_layers": {
+    "A": 6,
+    "B": 12
+  },
+  "steer_norm_c": 0.5,
+  "random_baseline_acc": 0.14285714285714285,
+  "match_accuracy": {
+    "crc_mean": 1.0,
+    "crc_std": 0.0,
+    "crc_point": 1.0,
+    "geometry": 0.1428571492433548
+  },
+  "transfer_effect_logit": {
+    "crc": 7.067031724112375,
+    "geometry": 0.6377814316323825,
+    "oracle": 7.067031724112375
+  },
+  "crc_minus_geometry": 0.8571428507566452,
+  "verdict": "SUPPORTED",
+  "crc_predictions": [
+    "animals",
+    "colors",
+    "numbers",
+    "countries",
+    "body",
+    "fruits",
+    "metals"
+  ],
+  "geo_predictions": [
+    "animals",
+    "animals",
+    "fruits",
+    "fruits",
+    "countries",
+    "colors",
+    "numbers"
+  ],
+  "seconds": 1715.9
+}
