@@ -12,17 +12,18 @@ export const meta = {
 }
 
 // args: { domain: string, capTokens?: number, maxRounds?: number, controlEvery?: number }
-const DOMAIN = (args && args.domain) || 'mechanistic interpretability'
-const MAX_ROUNDS = (args && args.maxRounds) || 6
-const CONTROL_EVERY = (args && args.controlEvery) || 3
-const MAX_TEST = (args && args.maxTest) || 99  // cap how many survivors actually RUN a real experiment per round (each is heavy: model load + run)
-const DRY = !!(args && args.dryTest)  // shakedown: tester designs only, runs nothing
+const A = (typeof args === 'string') ? (JSON.parse(args) || {}) : (args || {})  // args can arrive JSON-encoded — parse defensively (2026-07-03: passed caps silently didn't bind → ran uncapped)
+const DOMAIN = A.domain || 'mechanistic interpretability'
+const MAX_ROUNDS = A.maxRounds || 6
+const CONTROL_EVERY = A.controlEvery || 3
+const MAX_TEST = A.maxTest || 1  // heavy stage — default ONE experiment at a time; raise via args
+const DRY = !!A.dryTest  // shakedown: tester designs only, runs nothing
 const RESERVE = 0.12  // stop with ~12% of the slice unspent, for the report itself
 // The token cap from the казначей (treasurer.py). budget.spent() ALWAYS works
 // (unlike budget.total, which is null without a turn directive — the bug the
 // 2026-07-03 shakedown caught: the cap silently didn't apply and the loop ran
 // free for 5 rounds / 51 agents). Gate on spent() so the cap is always enforced.
-const CAP = (args && args.capTokens) || null
+const CAP = A.capTokens || null
 const underBudget = () => !CAP || budget.spent() < CAP * (1 - RESERVE)
 
 // ── structured-output schemas ───────────────────────────────────────────────
@@ -55,7 +56,7 @@ const P = {
   generator: (stress, killed) => `You are the GENERATOR for "${DOMAIN}". Given this stress point: ${JSON.stringify(stress)}. Propose 2-4 candidate NEW representations that would relieve it. Each MUST have (a) an OPERATIONAL definition (measurable, not poetry), (b) a concrete FALSIFIABLE prediction (ideally computable), (c) the nearest existing concept it might just be renaming. Avoid ideas already killed: ${JSON.stringify(killed).slice(0, 1200)}. Facts are cheap, representations are expensive — only propose what earns its keep.`,
   adversary: (c) => `You are the ADVERSARY. Try HARD to KILL this concept, do not be charitable: "${c.name}" — ${c.definition}. Prediction: ${c.prediction}. Find a concrete counterexample. Decide: is it just "${c.reduces_to}" renamed? Default to survives=false if you cannot find a real, non-trivial, hard-to-replace distinction. A concept survives only if it compresses multiple phenomena AND makes a distinctive prediction AND has clear failure boundaries.`,
   historian: (c) => `You are the HISTORIAN. Has science already got "${c.name}" (${c.definition}) under another name? Search prior art across relevant fields (information theory, RL, statistics, the domain's own literature, adjacent disciplines). Benchmark-008 lesson: most "new" ideas are rediscoveries — bias toward is_rediscovery=true unless the novelty is specific and defensible. SEPARATELY judge separable_prediction: does this concept's prediction ("${c.prediction}") DIVERGE from what the named prior art predicts, enough that a concrete experiment could tell them apart? Set it true even when is_rediscovery=true — a sharpened/extended version with a testable difference earns a real test rather than an armchair kill (this is how Causal Role Carrier earned its place: "just steering vectors" by name, but its prediction beat the geometry baseline on data).`,
-  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03).'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
+  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03). Keep it TIGHT and time-boxed: smallest model (gpt2 or pythia-160m), fewest categories, ONE intervention — a minimal decisive test in a handful of runs, NOT a sprawling study; do not install heavy deps unless unavoidable.'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
   control: () => `You are the CONTROL. Calibrate the judges: take 2 concepts KNOWN to be real (e.g. entropy, gene) and 2 obvious DISTRACTORS (vague/renamed) for "${DOMAIN}", run them through the same adversary+historian bar this campaign uses, and report whether the known-good passed and the distractors were killed. If the judges can't tell them apart, the campaign's verdicts are untrustworthy.`,
   report: (journal) => `You are the REPORTER. Write a BEAUTIFUL, HONEST report for a non-technical boss from this campaign journal: ${JSON.stringify(journal).slice(0, 12000)}. Structure: (1) where we shone the flashlight and why; (2) the interesting thoughts we found; (3) what we tried to build and REFUTED, and how (this is the valuable part — most pans are empty, say so plainly); (4) the survivors, with honest caveats ("survived our tests" ≠ "proven"); (5) what a next campaign should chase. No jargon-dumping; put technical detail under a "детали по запросу" tail. Register: the reader is a boss, not a co-developer.`,
 }
@@ -63,7 +64,7 @@ const P = {
 // ── the loop ────────────────────────────────────────────────────────────────
 const journal = { domain: DOMAIN, seenStress: [], rounds: [], survivors: [], killed: [], controls: [] }
 let round = 0
-log(`flashlight → "${DOMAIN}" · cap≈${(CAP || 0).toLocaleString()} output tokens · maxRounds ${MAX_ROUNDS} · reserve ${RESERVE}`)
+log(`flashlight → "${DOMAIN}" · cap≈${(CAP || 0).toLocaleString()} out-tok · rounds≤${MAX_ROUNDS} · test≤${MAX_TEST}/round · dry=${DRY} (args ${typeof args})`)
 
 while (round < MAX_ROUNDS && underBudget()) {
   round++
@@ -103,10 +104,11 @@ while (round < MAX_ROUNDS && underBudget()) {
   // have a concrete thing to test), then cap how many actually run this round.
   survivors.sort((a, b) => (b.route === 'separable-prediction') - (a.route === 'separable-prediction'))
   const toTest = survivors.slice(0, MAX_TEST), deferred = survivors.slice(MAX_TEST)
-  const tested = (await parallel(toTest.map(s => () =>
-    agent(P.tester(s.c), { label: `test:${s.c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
-      .then(t => ({ name: s.c.name, concept: s.c, test: t }))
-  ))).filter(Boolean)
+  const tested = []
+  for (const s of toTest) {   // SEQUENTIAL — heavy experiments must not contend on one CPU box (2026-07-03 stall: 4 in parallel overwhelmed it, never reached Report)
+    const t = await agent(P.tester(s.c), { label: `test:${s.c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
+    tested.push({ name: s.c.name, concept: s.c, test: t })
+  }
 
   // a survivor is only "kept" if its test didn't refute it
   for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push(t)
