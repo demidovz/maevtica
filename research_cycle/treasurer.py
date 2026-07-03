@@ -2,13 +2,15 @@
 """Gap #1 — campaign TREASURER (казначей): the budget cap for a research run.
 
 A "campaign" is one budgeted research run. The treasurer:
-  • turns "X% of the weekly Claude limit" into an absolute token cap,
-    reading the studio's calibrated weekly limit from ~/.config/mst/fuel.toml;
-  • keeps a per-campaign spend ledger (for the final report + hard stop);
-  • answers can_continue() so the loop stops cleanly at the cap;
-  • cross-checks the real weekly Claude burn (usage.db, 7d) as a soft ceiling,
-    degrading gracefully when that signal is unavailable (it currently reads 0
-    in some environments — so it is a *safety* check, never the primary meter).
+  • sizes the campaign in POINTS OF THE REAL /usage WEEK GAUGE (mst-usage):
+    "20% of the weekly limit" = 20 points; open records the gauge, can_continue
+    stops at open+points. Immune to tank-calibration error by construction;
+  • keeps a per-campaign spend ledger (for the final report);
+  • keeps an approximate token cap (fuel.toml calibration) as a SECONDARY latch
+    and for sizing the Workflow's capTokens arg.
+  2026-07-04 lesson: do NOT try to reproduce Anthropic's weekly math from
+  usage.db — wrong window (rolling 7d vs reset-aligned) + unverifiable tank
+  (computed 26% vs real 6%). Read the real gauge instead.
 
 Enforcement note: when the loop runs as a Workflow, the Workflow's own
 `budget.total` should be set to treasurer.cap() and the loop gated on
@@ -23,14 +25,34 @@ CLI:
   treasurer.py can-continue <campaign> [--reserve 0.10]       # exit 0=go 3=stop
 """
 from __future__ import annotations
-import argparse, json, sqlite3, sys, tomllib
+import argparse, json, sqlite3, subprocess, sys, tomllib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 STATE = Path.home() / ".local" / "state" / "mst" / "research_cycle"
 FUEL_TOML = Path.home() / ".config" / "mst" / "fuel.toml"
 USAGE_DB = Path.home() / ".claude" / "usage.db"
+MST_USAGE = Path.home() / "workspace" / "maestratica" / "scripts" / "mst-usage"
 WEEK_SECONDS = 7 * 24 * 3600
+
+
+def live_week_pct() -> int | None:
+    """REAL weekly Claude % straight from the /usage gauge (mst-usage --json).
+
+    This is the PRIMARY weekly meter (2026-07-04 lesson: reproducing Anthropic's
+    math from usage.db was wrong twice over — rolling-7d window vs reset-aligned
+    week, and an unverifiable tank calibration: computed 26% vs real 6%).
+    None when the gauge is unavailable."""
+    try:
+        out = subprocess.run([str(MST_USAGE), "--json"], capture_output=True,
+                             text=True, timeout=90)
+        if out.returncode != 0:
+            return None
+        week = json.loads(out.stdout).get("week") or {}
+        pct = week.get("pct")
+        return int(pct) if pct is not None else None
+    except Exception:
+        return None
 
 
 def _now() -> str:
@@ -75,14 +97,17 @@ def _dir(campaign: str) -> Path:
 def open_campaign(campaign: str, domain: str, frac: float) -> dict:
     d = _dir(campaign)
     d.mkdir(parents=True, exist_ok=True)
+    week0 = live_week_pct()
     wl = weekly_limit_tokens()
-    if not wl:
-        sys.exit("treasurer: weekly Claude limit unknown (set [claude].limit_week_tokens "
-                 "in ~/.config/mst/fuel.toml). Cannot size the campaign.")
-    cap = int(frac * wl)
+    if week0 is None and not wl:
+        sys.exit("treasurer: no weekly meter at all — /usage gauge unreachable AND no "
+                 "[claude].limit_week_tokens in ~/.config/mst/fuel.toml. Cannot size the campaign.")
+    # PRIMARY: the campaign owns frac·100 points of the REAL /usage week gauge.
+    # SECONDARY: a token cap from the (approximate) toml calibration, as a backstop.
     manifest = {"campaign": campaign, "domain": domain, "frac": frac,
-                "weekly_limit_tokens": wl, "cap_tokens": cap,
-                "opened_at": _now(), "weekly_used_at_open": weekly_used_tokens()}
+                "cap_week_points": round(frac * 100, 1), "week_pct_at_open": week0,
+                "weekly_limit_tokens": wl, "cap_tokens": int(frac * wl) if wl else None,
+                "opened_at": _now()}
     (d / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False))
     (d / "ledger.jsonl").touch()
     return manifest
@@ -112,23 +137,31 @@ def spent(campaign: str) -> int:
 def status(campaign: str) -> dict:
     man = _load(campaign)
     sp = spent(campaign)
-    cap = man["cap_tokens"]
-    used_now = weekly_used_tokens()
-    return {**man, "spent_tokens": sp, "remaining_tokens": cap - sp,
+    cap = man.get("cap_tokens")
+    week_now = live_week_pct()
+    points_used = (week_now - man["week_pct_at_open"]
+                   if week_now is not None and man.get("week_pct_at_open") is not None else None)
+    return {**man, "spent_tokens": sp,
+            "remaining_tokens": (cap - sp) if cap else None,
             "spent_pct_of_cap": round(100 * sp / cap, 1) if cap else None,
-            "weekly_used_now": used_now,
-            "weekly_used_pct": (round(100 * used_now / man["weekly_limit_tokens"], 1)
-                                if used_now else None)}
+            "week_pct_now": week_now, "week_points_used": points_used}
 
 
-def can_continue(campaign: str, reserve: float = 0.10, weekly_ceiling: float = 0.90) -> bool:
-    """Go/stop. Stop if campaign spent ≥ cap·(1−reserve), OR (soft) if the whole
-    week's Claude burn is already ≥ weekly_ceiling of the limit."""
+def can_continue(campaign: str, reserve: float = 0.10, week_ceiling_pct: int = 90) -> bool:
+    """Go/stop. PRIMARY: stop when the campaign has consumed its share of the
+    REAL /usage week gauge (points since open ≥ cap_week_points·(1−reserve)) or
+    the whole week is nearly exhausted (≥ week_ceiling_pct). SECONDARY: the
+    campaign's own token ledger vs the approximate token cap."""
     man = _load(campaign)
-    if spent(campaign) >= man["cap_tokens"] * (1 - reserve):
-        return False
-    used = weekly_used_tokens()
-    if used and used >= man["weekly_limit_tokens"] * weekly_ceiling:
+    week_now = live_week_pct()
+    if week_now is not None:
+        if week_now >= week_ceiling_pct:
+            return False
+        w0 = man.get("week_pct_at_open")
+        if w0 is not None and (week_now - w0) >= man["cap_week_points"] * (1 - reserve):
+            return False
+    cap = man.get("cap_tokens")
+    if cap and spent(campaign) >= cap * (1 - reserve):
         return False
     return True
 
@@ -143,8 +176,12 @@ def main() -> int:
     a = p.parse_args()
     if a.cmd == "open":
         m = open_campaign(a.campaign, a.domain, a.frac)
+        w0 = m["week_pct_at_open"]
+        gauge = (f"week gauge {w0}% now → stop at {w0 + m['cap_week_points']:.0f}%"
+                 if w0 is not None else "week gauge UNAVAILABLE (token backstop only)")
+        cap_s = f" · token backstop {m['cap_tokens']:,}" if m.get("cap_tokens") else ""
         print(f"campaign {a.campaign!r} opened · domain={a.domain!r} · "
-              f"cap={m['cap_tokens']:,} tokens ({a.frac:.0%} of {m['weekly_limit_tokens']:,}/week)")
+              f"{m['cap_week_points']} week-points · {gauge}{cap_s}")
     elif a.cmd == "spend":
         record_spend(a.campaign, a.tokens, a.stage, a.note)
         print(f"recorded {a.tokens:,} tokens @ {a.stage}; total {spent(a.campaign):,}")
