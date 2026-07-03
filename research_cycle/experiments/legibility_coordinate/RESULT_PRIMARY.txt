@@ -1,0 +1,21 @@
+Full preregistered run, primary-only pass (causal C loop skipped; C is secondary
+per PREREG and gates only corollaries). Background full run appends corollaries
+to RESULT.txt when done. 2026-07-04.
+
+corpus: wikitext-103 test, stat (64,128) causal (8,128)
+alive atoms: 3043 / 24576, sampled n=200 (seed 0)
+O1 synthetic-legible λ = 1.000 (need >0.9) | noise λ = -0.008 (need <0.15)  PASS
+O2 std(λ) = 0.198 (need >0.03) | λ range [-0.008, 0.999]                    PASS
+O3 rho_top 28.704 rho_bot ~0 ratio >>5 rho_rand 6.940 (expect 6.948)        PASS
+
+n=200 atoms | λ mean 0.155 | f_rate range [0.0050,0.1110] | R range [0.028,0.105]
+PRIMARY Pearson(λ, R)       = -0.084 (p=0.236)
+PRIMARY Pearson(λ, log10 f) = -0.093 (p=0.191)
+robustness: Spearman(λ,R) -0.058 | Spearman(λ,logf) -0.089 | Pearson(λ,raw f) -0.102
+            K=50 label: r_R -0.076, r_κ -0.041
+
+VERDICT SUPPORTED (per frozen rule: |r_R|<0.20 AND |r_κ|<0.20)
+Scope: gpt2-small, jbloom SAE resid_pre L8, unigram-label simulator (lower
+bound of LLM auto-interp), one corpus slice, one seed. Survival ≠ proof.
+Caveat: R range across SAE atoms is narrow (0.028-0.105) — restriction of
+range makes a large r_R harder to observe; κ (log f) spans 0.005-0.111.
