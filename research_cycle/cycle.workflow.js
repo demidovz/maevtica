@@ -15,6 +15,7 @@ export const meta = {
 const DOMAIN = (args && args.domain) || 'mechanistic interpretability'
 const MAX_ROUNDS = (args && args.maxRounds) || 6
 const CONTROL_EVERY = (args && args.controlEvery) || 3
+const MAX_TEST = (args && args.maxTest) || 99  // cap how many survivors actually RUN a real experiment per round (each is heavy: model load + run)
 const DRY = !!(args && args.dryTest)  // shakedown: tester designs only, runs nothing
 const RESERVE = 0.12  // stop with ~12% of the slice unspent, for the report itself
 // The token cap from the казначей (treasurer.py). budget.spent() ALWAYS works
@@ -98,13 +99,18 @@ while (round < MAX_ROUNDS && underBudget()) {
   journal.killed.push(...killed.map(k => k.name))
 
   phase('Test')
-  const tested = (await parallel(survivors.map(s => () =>
+  // heavy stage: prefer concepts whose prediction diverges from prior art (they
+  // have a concrete thing to test), then cap how many actually run this round.
+  survivors.sort((a, b) => (b.route === 'separable-prediction') - (a.route === 'separable-prediction'))
+  const toTest = survivors.slice(0, MAX_TEST), deferred = survivors.slice(MAX_TEST)
+  const tested = (await parallel(toTest.map(s => () =>
     agent(P.tester(s.c), { label: `test:${s.c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
       .then(t => ({ name: s.c.name, concept: s.c, test: t }))
   ))).filter(Boolean)
 
   // a survivor is only "kept" if its test didn't refute it
   for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push(t)
+  for (const d of deferred) journal.survivors.push({ name: d.c.name, concept: d.c, test: { status: 'deferred', verdict: 'n/a', design: 'not run this round (MAX_TEST cap)' } })
 
   journal.rounds.push({ round, stress: top, generated: cands.length, killed, tested })
   log(`round ${round}: ${cands.length} proposed · ${killed.length} killed · ${tested.length} tested · ${journal.survivors.length} survivors so far`)
