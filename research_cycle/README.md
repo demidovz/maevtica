@@ -23,12 +23,18 @@ python3 research_cycle/treasurer.py open mechinterp-2026-07 \
         --domain "mechanistic interpretability" --frac 0.20
 # → cap ≈ 93,400,000 tokens (20% of 467M/week)
 
-# 2. run the loop as a Workflow with that cap as the budget target
-#    (Workflow tool, args: {domain, capTokens}, budget target = cap)
-#    the loop self-stops at the cap and returns {survivors, killed, report}
-
-# 3. the returned report is the boss-facing "what we searched / found / refuted"
+# 2. run the loop as a Workflow, PASSING the cap as args.capTokens
+#    (Workflow tool, args: {domain, capTokens: <cap from step 1>, maxRounds})
+#    the loop gates every round on budget.spent() < capTokens and self-stops.
+#    the returned {survivors, killed, report} is the boss-facing result
 ```
+
+> **2026-07-03 shakedown lesson (fixed):** the loop must gate on `budget.spent()`
+> — NOT on `budget.total`/`budget.remaining()`, which are null unless the *turn*
+> carries a `+Nk` token directive. The first shakedown relied on the latter, so
+> the 3% cap silently didn't apply and the loop ran ~5 rounds / 51 agents until
+> stopped by hand. Now `args.capTokens` + `budget.spent()` enforce the slice, and
+> `maxRounds` (default 6) is a hard backstop. Always pass `capTokens`.
 
 The Claude budget is spent on THINKING (explore/generate/attack/test-design/
 report). The experiments themselves run on LOCAL open models

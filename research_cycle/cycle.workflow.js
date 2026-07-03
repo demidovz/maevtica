@@ -13,9 +13,16 @@ export const meta = {
 
 // args: { domain: string, capTokens?: number, maxRounds?: number, controlEvery?: number }
 const DOMAIN = (args && args.domain) || 'mechanistic interpretability'
-const MAX_ROUNDS = (args && args.maxRounds) || 20
+const MAX_ROUNDS = (args && args.maxRounds) || 6
 const CONTROL_EVERY = (args && args.controlEvery) || 3
+const DRY = !!(args && args.dryTest)  // shakedown: tester designs only, runs nothing
 const RESERVE = 0.12  // stop with ~12% of the slice unspent, for the report itself
+// The token cap from the казначей (treasurer.py). budget.spent() ALWAYS works
+// (unlike budget.total, which is null without a turn directive — the bug the
+// 2026-07-03 shakedown caught: the cap silently didn't apply and the loop ran
+// free for 5 rounds / 51 agents). Gate on spent() so the cap is always enforced.
+const CAP = (args && args.capTokens) || null
+const underBudget = () => !CAP || budget.spent() < CAP * (1 - RESERVE)
 
 // ── structured-output schemas ───────────────────────────────────────────────
 const S_STRESS = { type: 'object', required: ['stress_points'], properties: { stress_points: { type: 'array', items: { type: 'object', required: ['where', 'why', 'testable'], properties: {
@@ -45,7 +52,7 @@ const P = {
   generator: (stress, killed) => `You are the GENERATOR for "${DOMAIN}". Given this stress point: ${JSON.stringify(stress)}. Propose 2-4 candidate NEW representations that would relieve it. Each MUST have (a) an OPERATIONAL definition (measurable, not poetry), (b) a concrete FALSIFIABLE prediction (ideally computable), (c) the nearest existing concept it might just be renaming. Avoid ideas already killed: ${JSON.stringify(killed).slice(0, 1200)}. Facts are cheap, representations are expensive — only propose what earns its keep.`,
   adversary: (c) => `You are the ADVERSARY. Try HARD to KILL this concept, do not be charitable: "${c.name}" — ${c.definition}. Prediction: ${c.prediction}. Find a concrete counterexample. Decide: is it just "${c.reduces_to}" renamed? Default to survives=false if you cannot find a real, non-trivial, hard-to-replace distinction. A concept survives only if it compresses multiple phenomena AND makes a distinctive prediction AND has clear failure boundaries.`,
   historian: (c) => `You are the HISTORIAN. Has science already got "${c.name}" (${c.definition}) under another name? Search prior art across relevant fields (information theory, RL, statistics, the domain's own literature, adjacent disciplines). Benchmark-008 lesson: most "new" ideas are rediscoveries — bias toward is_rediscovery=true unless the novelty is specific and defensible.`,
-  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03). Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
+  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03).'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
   control: () => `You are the CONTROL. Calibrate the judges: take 2 concepts KNOWN to be real (e.g. entropy, gene) and 2 obvious DISTRACTORS (vague/renamed) for "${DOMAIN}", run them through the same adversary+historian bar this campaign uses, and report whether the known-good passed and the distractors were killed. If the judges can't tell them apart, the campaign's verdicts are untrustworthy.`,
   report: (journal) => `You are the REPORTER. Write a BEAUTIFUL, HONEST report for a non-technical boss from this campaign journal: ${JSON.stringify(journal).slice(0, 12000)}. Structure: (1) where we shone the flashlight and why; (2) the interesting thoughts we found; (3) what we tried to build and REFUTED, and how (this is the valuable part — most pans are empty, say so plainly); (4) the survivors, with honest caveats ("survived our tests" ≠ "proven"); (5) what a next campaign should chase. No jargon-dumping; put technical detail under a "детали по запросу" tail. Register: the reader is a boss, not a co-developer.`,
 }
@@ -53,9 +60,9 @@ const P = {
 // ── the loop ────────────────────────────────────────────────────────────────
 const journal = { domain: DOMAIN, seenStress: [], rounds: [], survivors: [], killed: [], controls: [] }
 let round = 0
-log(`flashlight → "${DOMAIN}" · cap≈${(budget.total || 0).toLocaleString()} output tokens · reserve ${RESERVE}`)
+log(`flashlight → "${DOMAIN}" · cap≈${(CAP || 0).toLocaleString()} output tokens · maxRounds ${MAX_ROUNDS} · reserve ${RESERVE}`)
 
-while (round < MAX_ROUNDS && (!budget.total || budget.remaining() > budget.total * RESERVE)) {
+while (round < MAX_ROUNDS && underBudget()) {
   round++
   phase('Explore')
   const stress = await agent(P.explorer(journal.seenStress), { label: `explore#${round}`, phase: 'Explore', schema: S_STRESS })
