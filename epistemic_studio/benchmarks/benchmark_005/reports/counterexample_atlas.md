@@ -1,0 +1,29 @@
+# Counterexample Atlas
+
+- persistent_memory in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- institutionalized_criticism in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- preserved_failures in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- question_refinement in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- knowledge_compression in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- applicability_boundaries in Perfect oracle world: dominated. Direct oracle access dominates organizational research mechanisms.
+- persistent_memory in Rule-chaos world: harmful. Past evidence becomes actively misleading when rules change faster than learning.
+- preserved_failures in Rule-chaos world: harmful. Past evidence becomes actively misleading when rules change faster than learning.
+- knowledge_compression in Rule-chaos world: harmful. Past evidence becomes actively misleading when rules change faster than learning.
+- persistent_memory in Adversarial memory world: harmful. Stored records are less trustworthy than fresh observation.
+- preserved_failures in Adversarial memory world: harmful. Stored records are less trustworthy than fresh observation.
+- persistent_memory in No identity persistence world: impossible. No agent identity or commitment persists long enough to maintain the practice.
+- institutionalized_criticism in No identity persistence world: impossible. No agent identity or commitment persists long enough to maintain the practice.
+- question_refinement in No identity persistence world: impossible. No agent identity or commitment persists long enough to maintain the practice.
+- institutionalized_criticism in Hostile prestige world: harmful. Criticism and failure memory become weapons rather than correction mechanisms.
+- preserved_failures in Hostile prestige world: harmful. Criticism and failure memory become weapons rather than correction mechanisms.
+- question_refinement in Exhaustive search world: dominated. Exhaustive search can dominate abstraction under zero cost.
+- knowledge_compression in Exhaustive search world: dominated. Exhaustive search can dominate abstraction under zero cost.
+- question_refinement in Incompressible truth world: harmful. Searching for reusable structure adds false patterns in a noncompressible world.
+- knowledge_compression in Incompressible truth world: harmful. Searching for reusable structure adds false patterns in a noncompressible world.
+- applicability_boundaries in Incompressible truth world: harmful. Searching for reusable structure adds false patterns in a noncompressible world.
+- knowledge_compression in Nonmonotonic logic world: harmful. Stable compression can erase context needed for valid local reasoning.
+- knowledge_compression in Private-truth world: harmful. Stable compression can erase context needed for valid local reasoning.
+- institutionalized_criticism in Immortal hive-mind world: irrelevant. There are no separate critics unless the hive simulates disagreement.
+- persistent_memory in Adversarial observation world: harmful. Past evidence becomes actively misleading when rules change faster than learning.
+- preserved_failures in Adversarial observation world: harmful. Past evidence becomes actively misleading when rules change faster than learning.
+- knowledge_compression in Adversarial observation world: harmful. Past evidence becomes actively misleading when rules change faster than learning.

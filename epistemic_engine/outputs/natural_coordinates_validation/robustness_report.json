@@ -1,0 +1,241 @@
+{
+  "summary": {
+    "noise": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.4441586799143753
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4272607813164062
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.41215313527964403
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.41218004371247086
+      }
+    ],
+    "memory": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.43307162469306404
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4021324725811799
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.3756968445293445
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.35117227805581475
+      }
+    ],
+    "hierarchy": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.44331103147496875
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.41399185302926633
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.4055974756776447
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.3915804230941471
+      }
+    ],
+    "interaction_topology": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.40549673839822586
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.3749608034951266
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.1423326052494832
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.13467431563780508
+      }
+    ],
+    "observation_budget": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.45575222171069274
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.4521569647471253
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4594846650861165
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.45290553771175257
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.4459567478180153
+      }
+    ]
+  },
+  "rows": [
+    {
+      "axis": "noise",
+      "level": 0.0,
+      "affine_r2": 0.4562085929464317
+    },
+    {
+      "axis": "noise",
+      "level": 0.15,
+      "affine_r2": 0.4441586799143753
+    },
+    {
+      "axis": "noise",
+      "level": 0.3,
+      "affine_r2": 0.4272607813164062
+    },
+    {
+      "axis": "noise",
+      "level": 0.45,
+      "affine_r2": 0.41215313527964403
+    },
+    {
+      "axis": "noise",
+      "level": 0.6,
+      "affine_r2": 0.41218004371247086
+    },
+    {
+      "axis": "memory",
+      "level": 0.0,
+      "affine_r2": 0.4562085929464317
+    },
+    {
+      "axis": "memory",
+      "level": 0.15,
+      "affine_r2": 0.43307162469306404
+    },
+    {
+      "axis": "memory",
+      "level": 0.3,
+      "affine_r2": 0.4021324725811799
+    },
+    {
+      "axis": "memory",
+      "level": 0.45,
+      "affine_r2": 0.3756968445293445
+    },
+    {
+      "axis": "memory",
+      "level": 0.6,
+      "affine_r2": 0.35117227805581475
+    },
+    {
+      "axis": "hierarchy",
+      "level": 0.0,
+      "affine_r2": 0.4562085929464317
+    },
+    {
+      "axis": "hierarchy",
+      "level": 0.15,
+      "affine_r2": 0.44331103147496875
+    },
+    {
+      "axis": "hierarchy",
+      "level": 0.3,
+      "affine_r2": 0.41399185302926633
+    },
+    {
+      "axis": "hierarchy",
+      "level": 0.45,
+      "affine_r2": 0.4055974756776447
+    },
+    {
+      "axis": "hierarchy",
+      "level": 0.6,
+      "affine_r2": 0.3915804230941471
+    },
+    {
+      "axis": "interaction_topology",
+      "level": 0.0,
+      "affine_r2": 0.4562085929464317
+    },
+    {
+      "axis": "interaction_topology",
+      "level": 0.15,
+      "affine_r2": 0.40549673839822586
+    },
+    {
+      "axis": "interaction_topology",
+      "level": 0.3,
+      "affine_r2": 0.3749608034951266
+    },
+    {
+      "axis": "interaction_topology",
+      "level": 0.45,
+      "affine_r2": 0.1423326052494832
+    },
+    {
+      "axis": "interaction_topology",
+      "level": 0.6,
+      "affine_r2": 0.13467431563780508
+    },
+    {
+      "axis": "observation_budget",
+      "level": 0.0,
+      "affine_r2": 0.45575222171069274
+    },
+    {
+      "axis": "observation_budget",
+      "level": 0.15,
+      "affine_r2": 0.4521569647471253
+    },
+    {
+      "axis": "observation_budget",
+      "level": 0.3,
+      "affine_r2": 0.4594846650861165
+    },
+    {
+      "axis": "observation_budget",
+      "level": 0.45,
+      "affine_r2": 0.45290553771175257
+    },
+    {
+      "axis": "observation_budget",
+      "level": 0.6,
+      "affine_r2": 0.4459567478180153
+    }
+  ]
+}

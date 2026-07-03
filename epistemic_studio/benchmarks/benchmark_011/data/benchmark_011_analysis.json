@@ -1,0 +1,1880 @@
+{
+  "aggregate": {
+    "B348AB161": {
+      "composite": 0.443,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.45,
+      "new_primitive_need": 0.347,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    },
+    "B4E9E6825": {
+      "composite": 0.243,
+      "compression_gain": 0.285,
+      "counterexample_resistance": 0.4,
+      "explanatory_power": 0.352,
+      "new_primitive_need": 0.187,
+      "potential_universality": 0.427,
+      "prediction_gain": 0.262,
+      "redundancy": 0.77,
+      "replaceability": 0.897
+    },
+    "B50ADCEB7": {
+      "composite": 0.446,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.227,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317
+    },
+    "B6108D310": {
+      "composite": 0.167,
+      "compression_gain": 0.125,
+      "counterexample_resistance": 0.45,
+      "explanatory_power": 0.232,
+      "new_primitive_need": 0.0,
+      "potential_universality": 0.348,
+      "prediction_gain": 0.312,
+      "redundancy": 0.67,
+      "replaceability": 0.797
+    },
+    "B61C2F2E6": {
+      "composite": 0.394,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.392,
+      "new_primitive_need": 0.227,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.552,
+      "redundancy": 0.19,
+      "replaceability": 0.317
+    },
+    "B6CD458CB": {
+      "composite": 0.43,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.47,
+      "new_primitive_need": 0.407,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.547,
+      "redundancy": 0.4,
+      "replaceability": 0.527
+    },
+    "B85D3A1BA": {
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.347,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    },
+    "B8C4ABAB2": {
+      "composite": 0.458,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.452,
+      "new_primitive_need": 0.407,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.67,
+      "redundancy": 0.19,
+      "replaceability": 0.317
+    },
+    "B9042869F": {
+      "composite": 0.416,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.448,
+      "new_primitive_need": 0.287,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.529,
+      "redundancy": 0.4,
+      "replaceability": 0.527
+    },
+    "BAC92E0E3": {
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.347,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    },
+    "BB1CAC289": {
+      "composite": 0.467,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.64,
+      "explanatory_power": 0.533,
+      "new_primitive_need": 0.407,
+      "potential_universality": 0.59,
+      "prediction_gain": 0.637,
+      "redundancy": 0.48,
+      "replaceability": 0.607
+    },
+    "BB2A90B32": {
+      "composite": 0.432,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.227,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    },
+    "BCBBE9B77": {
+      "composite": 0.444,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.43,
+      "new_primitive_need": 0.287,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317
+    },
+    "BE54436D4": {
+      "composite": 0.391,
+      "compression_gain": 0.31,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.413,
+      "new_primitive_need": 0.347,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.535,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    },
+    "BECA73A38": {
+      "composite": 0.331,
+      "compression_gain": 0.27,
+      "counterexample_resistance": 0.61,
+      "explanatory_power": 0.363,
+      "new_primitive_need": 0.237,
+      "potential_universality": 0.42,
+      "prediction_gain": 0.454,
+      "redundancy": 0.35,
+      "replaceability": 0.477
+    },
+    "BF5751934": {
+      "composite": 0.385,
+      "compression_gain": 0.31,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.393,
+      "new_primitive_need": 0.287,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422
+    }
+  },
+  "blind_pool": [
+    {
+      "applicability": [
+        "Robust developmental systems with multi-modal feedback.",
+        "Less useful for isolated single-cell fate transitions."
+      ],
+      "blind_id": "B348AB161",
+      "definition": "A cross-modal developmental constraint preserving a tissue's reachable shape-and-fate trajectory through coupled gene-expression, mechanical, geometric, and signaling states.",
+      "examples": [
+        "Organoid recovery",
+        "embryonic regulation",
+        "mechanochemical compensation"
+      ],
+      "failure_modes": [
+        "Could rename canalization or morphogenetic field.",
+        "Needs trajectory reconstruction data."
+      ],
+      "predictions": [
+        "Perturbations preserving trajectory constraints will recover form better than single-pathway restoration.",
+        "Developmental failures will cluster by broken trajectory constraint rather than individual pathway."
+      ]
+    },
+    {
+      "applicability": [
+        "Any scientific domain.",
+        "Too broad without domain-specific constraints."
+      ],
+      "blind_id": "B4E9E6825",
+      "definition": "The underlying layer of variables from which higher-level explanations can be constructed across a domain.",
+      "examples": [
+        "Physics variables",
+        "neural features",
+        "economic agents"
+      ],
+      "failure_modes": [
+        "Nearly content-free.",
+        "Renames representation or ontology."
+      ],
+      "predictions": [
+        "Better substrates should allow more explanations to be derived with fewer assumptions."
+      ]
+    },
+    {
+      "applicability": [
+        "Communication, coding, inference, and statistical signals.",
+        "Does not by itself capture meaning or value."
+      ],
+      "blind_id": "B50ADCEB7",
+      "definition": "A meaning-independent measure of uncertainty reduction and channel-limited communication structure.",
+      "examples": [
+        "Telegraph coding",
+        "data compression",
+        "noisy channels"
+      ],
+      "failure_modes": [
+        "Semantic overextension.",
+        "Misuse when message probabilities are undefined."
+      ],
+      "predictions": [
+        "Code length and channel capacity depend on statistical uncertainty rather than semantic content.",
+        "Noise and redundancy trade off under formal limits."
+      ]
+    },
+    {
+      "applicability": [
+        "All domains by definition.",
+        "No clear falsification boundary."
+      ],
+      "blind_id": "B6108D310",
+      "definition": "A universal causal property by which all variables influence all other variables at all scales through hidden dependency paths.",
+      "examples": [
+        "Economies",
+        "brains",
+        "climate",
+        "societies"
+      ],
+      "failure_modes": [
+        "Destroys causal discrimination.",
+        "Explains everything and predicts little."
+      ],
+      "predictions": [
+        "Every system should reveal causal influence if measured at sufficient resolution."
+      ]
+    },
+    {
+      "applicability": [
+        "Interpretable systems with probe and ablation access.",
+        "Not a primitive if it only summarizes measurements."
+      ],
+      "blind_id": "B61C2F2E6",
+      "definition": "A compact signature of an internal mechanism based on its response profile to probes, ablations, and context changes.",
+      "examples": [
+        "Probe suites",
+        "ablation response maps",
+        "activation patching"
+      ],
+      "failure_modes": [
+        "Could be only a metric.",
+        "May depend heavily on probe choice."
+      ],
+      "predictions": [
+        "Mechanisms with similar fingerprints will show similar transfer behavior."
+      ]
+    },
+    {
+      "applicability": [
+        "Thermal systems with definable macroscopic states.",
+        "Less direct in far-from-equilibrium cases without additional formalism."
+      ],
+      "blind_id": "B6CD458CB",
+      "definition": "A state quantity that tracks the directionality and unavailable-work structure of thermodynamic transformations.",
+      "examples": [
+        "Heat engines",
+        "irreversible mixing",
+        "temperature-linked transformations"
+      ],
+      "failure_modes": [
+        "Can be confused with disorder metaphors.",
+        "Requires careful state-space definition."
+      ],
+      "predictions": [
+        "Reversible and irreversible heat processes separate by state-change constraints.",
+        "Heat-engine efficiency limits can be expressed without treating heat as a conserved substance."
+      ]
+    },
+    {
+      "applicability": [
+        "Neural representation and compressed distributed coding.",
+        "Less useful if representations are already disentangled."
+      ],
+      "blind_id": "B85D3A1BA",
+      "definition": "A representational regime in which more features are encoded than there are obvious orthogonal representation dimensions, creating interference and polysemantic units.",
+      "examples": [
+        "Polysemantic neurons",
+        "toy models of neural features",
+        "sparse coding"
+      ],
+      "failure_modes": [
+        "Can overexplain unrelated polysemanticity.",
+        "Depends on feature definitions."
+      ],
+      "predictions": [
+        "Sparse features can share representational dimensions.",
+        "Interference patterns will depend on feature frequency and geometry."
+      ]
+    },
+    {
+      "applicability": [
+        "Heritable biological variation.",
+        "Weak where inheritance is purely cultural or environmental."
+      ],
+      "blind_id": "B8C4ABAB2",
+      "definition": "A transmissible hereditary unit separable from visible trait expression and environmental realization.",
+      "examples": [
+        "Mendelian ratios",
+        "genotype/phenotype separation",
+        "mutation inheritance"
+      ],
+      "failure_modes": [
+        "Can be overtreated as a single fixed physical object.",
+        "Gene expression and regulation complicate simple unit language."
+      ],
+      "predictions": [
+        "Inheritance patterns can remain stable even when phenotypes vary.",
+        "Crosses should reveal latent transmissible factors distinct from appearance."
+      ]
+    },
+    {
+      "applicability": [
+        "Strategic or adaptive evaluated systems.",
+        "Less useful for static classifiers or fully observable systems."
+      ],
+      "blind_id": "B9042869F",
+      "definition": "Loss of truth-correlation in an evaluation or supervision process as the evaluated system changes its capabilities, incentives, explanations, or interaction strategy.",
+      "examples": [
+        "Scalable oversight",
+        "evaluation gaming",
+        "weak-to-strong supervision"
+      ],
+      "failure_modes": [
+        "Could rename Goodharting.",
+        "Too broad unless truth-correlation is measured."
+      ],
+      "predictions": [
+        "Static evaluations will fail when capability changes the evidence-generation process.",
+        "Explicit channel-drift probes will catch some dangerous failures earlier than accuracy-only evaluations."
+      ]
+    },
+    {
+      "applicability": [
+        "Electromagnetism, gravitation, continuum physics.",
+        "Less useful where point interactions are sufficient."
+      ],
+      "blind_id": "BAC92E0E3",
+      "definition": "A spatially distributed state assigning physically relevant quantities throughout a region rather than only at source bodies.",
+      "examples": [
+        "Magnetic lines",
+        "electromagnetic waves",
+        "gravitational fields"
+      ],
+      "failure_modes": [
+        "Can hide mechanism if treated as pure metaphor.",
+        "Requires measurable field variables."
+      ],
+      "predictions": [
+        "Influence can propagate through local spatial structure.",
+        "Patterns between bodies can predict later forces and waves."
+      ]
+    },
+    {
+      "applicability": [
+        "Trained systems with intervention access.",
+        "Does not require human-understandable labels.",
+        "Weak where roles are context-created rather than retained."
+      ],
+      "blind_id": "BB1CAC289",
+      "definition": "An equivalence class of internal states, features, subspaces, or circuits that preserves the same intervention-stable input-output role across prompts, bases, model instances, and scale.",
+      "examples": [
+        "Model editing transfer",
+        "activation steering transfer",
+        "cross-SAE mechanism comparison"
+      ],
+      "failure_modes": [
+        "May reduce to causal abstraction if too broad.",
+        "May be unmeasurable in closed models.",
+        "May add no value beyond current feature/circuit terms."
+      ],
+      "predictions": [
+        "Cross-model mechanisms with high carrier overlap will transfer steering and editing effects better than mechanisms matched only by feature labels.",
+        "Some features with different human labels will collapse into the same carrier under intervention tests.",
+        "Carrier stability will predict which explanations survive model scaling."
+      ]
+    },
+    {
+      "applicability": [
+        "Coupled systems with measured interaction pathways.",
+        "Less useful for isolated tipping elements."
+      ],
+      "blind_id": "BB2A90B32",
+      "definition": "Accumulated cross-system destabilizing burden imposed by interacting tipping elements before any one element crosses its isolated threshold.",
+      "examples": [
+        "Earth-system feedbacks",
+        "permafrost-Amazon-ocean coupling",
+        "cascade risk"
+      ],
+      "failure_modes": [
+        "Could rename tipping cascade risk.",
+        "Interaction estimates may remain too uncertain."
+      ],
+      "predictions": [
+        "Network load will predict multi-element tipping risk better than distance to the closest isolated threshold.",
+        "Sub-threshold perturbations in one element will reduce resilience in linked elements."
+      ]
+    },
+    {
+      "applicability": [
+        "Formal computation, proof procedures, machine execution.",
+        "Less direct for informal heuristics without a precise step rule."
+      ],
+      "blind_id": "BCBBE9B77",
+      "definition": "A finite, rule-governed effective procedure whose steps determine a class of computable transformations.",
+      "examples": [
+        "Decision procedures",
+        "sorting",
+        "Turing-machine computation"
+      ],
+      "failure_modes": [
+        "Can be used too loosely for any method.",
+        "Resource limits require extra complexity concepts."
+      ],
+      "predictions": [
+        "Some tasks admit mechanical procedures while others do not.",
+        "Procedure identity can be studied independently of human intuition."
+      ]
+    },
+    {
+      "applicability": [
+        "Systems where interventions can be repeated across settings.",
+        "Weak where no stable intervention target exists."
+      ],
+      "blind_id": "BE54436D4",
+      "definition": "A set of internal model components treated as identical when the same intervention produces the same downstream behavioral change across settings.",
+      "examples": [
+        "Circuit comparison",
+        "model-diffing",
+        "feature transfer"
+      ],
+      "failure_modes": [
+        "Likely duplicates causal-role or causal-abstraction language.",
+        "May collapse distinct mechanisms with same output effect."
+      ],
+      "predictions": [
+        "Matched mechanisms should transfer ablation and steering effects across contexts."
+      ]
+    },
+    {
+      "applicability": [
+        "Poorly specified self-organizing systems.",
+        "Fails where no preferred direction is justified."
+      ],
+      "blind_id": "BECA73A38",
+      "definition": "A quantity measuring how much a process tends to become more organized when observed from a preferred explanatory direction.",
+      "examples": [
+        "Crystals",
+        "development",
+        "learning systems"
+      ],
+      "failure_modes": [
+        "Confuses observer description with physical process.",
+        "Likely conflicts with existing entropy unless carefully restricted."
+      ],
+      "predictions": [
+        "Systems with high reverse entropy should spontaneously generate simpler explanations."
+      ]
+    },
+    {
+      "applicability": [
+        "Causal modeling, mechanistic explanation, abstraction in AI systems.",
+        "Needs explicit intervention semantics."
+      ],
+      "blind_id": "BF5751934",
+      "definition": "A relation between lower-level and higher-level causal models where macro variables preserve relevant intervention structure.",
+      "examples": [
+        "Neural network circuits",
+        "scientific model reduction",
+        "macro-to-micro explanations"
+      ],
+      "failure_modes": [
+        "Can become vacuous if every mapping counts.",
+        "Requires a chosen high-level variable set."
+      ],
+      "predictions": [
+        "High-level explanations transfer when interventions commute with the lower-level model.",
+        "Some coarse-grainings preserve causal role while others destroy it."
+      ]
+    }
+  ],
+  "evaluation_agreement": {
+    "agreement_score": 1.0,
+    "mean_rank_disagreement": 0.0
+  },
+  "evaluations": [
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B348AB161",
+      "compression_gain": 0.4,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.45,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.647,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B348AB161",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.45,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.607,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B348AB161",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.45,
+      "new_primitive_need": 0.32,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.647,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B4E9E6825",
+      "compression_gain": 0.265,
+      "counterexample_resistance": 0.4,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.352,
+      "new_primitive_need": 0.2,
+      "potential_universality": 0.427,
+      "prediction_gain": 0.275,
+      "redundancy": 0.79,
+      "replaceability": 0.88
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B4E9E6825",
+      "compression_gain": 0.295,
+      "counterexample_resistance": 0.4,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.352,
+      "new_primitive_need": 0.2,
+      "potential_universality": 0.427,
+      "prediction_gain": 0.235,
+      "redundancy": 0.76,
+      "replaceability": 0.9
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B4E9E6825",
+      "compression_gain": 0.295,
+      "counterexample_resistance": 0.4,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.352,
+      "new_primitive_need": 0.16,
+      "potential_universality": 0.427,
+      "prediction_gain": 0.275,
+      "redundancy": 0.76,
+      "replaceability": 0.91
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B50ADCEB7",
+      "compression_gain": 0.455,
+      "counterexample_resistance": 0.69,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.665,
+      "redundancy": 0.21,
+      "replaceability": 0.3
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B50ADCEB7",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.69,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.625,
+      "redundancy": 0.18,
+      "replaceability": 0.32
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B50ADCEB7",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.69,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.2,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.665,
+      "redundancy": 0.18,
+      "replaceability": 0.33
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B6108D310",
+      "compression_gain": 0.105,
+      "counterexample_resistance": 0.45,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.232,
+      "new_primitive_need": 0.0,
+      "potential_universality": 0.348,
+      "prediction_gain": 0.325,
+      "redundancy": 0.69,
+      "replaceability": 0.78
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B6108D310",
+      "compression_gain": 0.135,
+      "counterexample_resistance": 0.45,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.232,
+      "new_primitive_need": 0.0,
+      "potential_universality": 0.348,
+      "prediction_gain": 0.285,
+      "redundancy": 0.66,
+      "replaceability": 0.8
+    },
+    {
+      "adversarial_note": "Likely unnecessary: existing language or a nearby duplicate appears sufficient.",
+      "blind_id": "B6108D310",
+      "compression_gain": 0.135,
+      "counterexample_resistance": 0.45,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.232,
+      "new_primitive_need": 0.0,
+      "potential_universality": 0.348,
+      "prediction_gain": 0.325,
+      "redundancy": 0.66,
+      "replaceability": 0.81
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B61C2F2E6",
+      "compression_gain": 0.345,
+      "counterexample_resistance": 0.69,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.392,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.565,
+      "redundancy": 0.21,
+      "replaceability": 0.3
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B61C2F2E6",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.69,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.392,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.525,
+      "redundancy": 0.18,
+      "replaceability": 0.32
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B61C2F2E6",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.69,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.392,
+      "new_primitive_need": 0.2,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.565,
+      "redundancy": 0.18,
+      "replaceability": 0.33
+    },
+    {
+      "adversarial_note": "Provisionally useful, but must beat existing concepts in direct ablation.",
+      "blind_id": "B6CD458CB",
+      "compression_gain": 0.4,
+      "counterexample_resistance": 0.585,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.47,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.56,
+      "redundancy": 0.42,
+      "replaceability": 0.51
+    },
+    {
+      "adversarial_note": "Provisionally useful, but must beat existing concepts in direct ablation.",
+      "blind_id": "B6CD458CB",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.585,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.47,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.52,
+      "redundancy": 0.39,
+      "replaceability": 0.53
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B6CD458CB",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.585,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.47,
+      "new_primitive_need": 0.38,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.56,
+      "redundancy": 0.39,
+      "replaceability": 0.54
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B85D3A1BA",
+      "compression_gain": 0.345,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.595,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B85D3A1BA",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.555,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B85D3A1BA",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.32,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.595,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    },
+    {
+      "adversarial_note": "Provisionally useful, but must beat existing concepts in direct ablation.",
+      "blind_id": "B8C4ABAB2",
+      "compression_gain": 0.345,
+      "counterexample_resistance": 0.69,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.452,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.683,
+      "redundancy": 0.21,
+      "replaceability": 0.3
+    },
+    {
+      "adversarial_note": "Provisionally useful, but must beat existing concepts in direct ablation.",
+      "blind_id": "B8C4ABAB2",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.69,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.452,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.643,
+      "redundancy": 0.18,
+      "replaceability": 0.32
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B8C4ABAB2",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.69,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.452,
+      "new_primitive_need": 0.38,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.683,
+      "redundancy": 0.18,
+      "replaceability": 0.33
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B9042869F",
+      "compression_gain": 0.455,
+      "counterexample_resistance": 0.585,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.448,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.542,
+      "redundancy": 0.42,
+      "replaceability": 0.51
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B9042869F",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.585,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.448,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.502,
+      "redundancy": 0.39,
+      "replaceability": 0.53
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "B9042869F",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.585,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.448,
+      "new_primitive_need": 0.26,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.542,
+      "redundancy": 0.39,
+      "replaceability": 0.54
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BAC92E0E3",
+      "compression_gain": 0.345,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.595,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BAC92E0E3",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.555,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BAC92E0E3",
+      "compression_gain": 0.375,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.432,
+      "new_primitive_need": 0.32,
+      "potential_universality": 0.468,
+      "prediction_gain": 0.595,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    },
+    {
+      "adversarial_note": "Survives if intervention-transfer tests outperform feature labels, activation similarity, and generic causal abstraction.",
+      "blind_id": "BB1CAC289",
+      "compression_gain": 0.4,
+      "counterexample_resistance": 0.64,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.533,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.59,
+      "prediction_gain": 0.65,
+      "redundancy": 0.5,
+      "replaceability": 0.59
+    },
+    {
+      "adversarial_note": "Survives if intervention-transfer tests outperform feature labels, activation similarity, and generic causal abstraction.",
+      "blind_id": "BB1CAC289",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.64,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.533,
+      "new_primitive_need": 0.42,
+      "potential_universality": 0.59,
+      "prediction_gain": 0.61,
+      "redundancy": 0.47,
+      "replaceability": 0.61
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BB1CAC289",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.64,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.533,
+      "new_primitive_need": 0.38,
+      "potential_universality": 0.59,
+      "prediction_gain": 0.65,
+      "redundancy": 0.47,
+      "replaceability": 0.62
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BB2A90B32",
+      "compression_gain": 0.455,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.647,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BB2A90B32",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.24,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.607,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BB2A90B32",
+      "compression_gain": 0.485,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.428,
+      "new_primitive_need": 0.2,
+      "potential_universality": 0.522,
+      "prediction_gain": 0.647,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BCBBE9B77",
+      "compression_gain": 0.4,
+      "counterexample_resistance": 0.69,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.43,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.665,
+      "redundancy": 0.21,
+      "replaceability": 0.3
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BCBBE9B77",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.69,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.43,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.625,
+      "redundancy": 0.18,
+      "replaceability": 0.32
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BCBBE9B77",
+      "compression_gain": 0.43,
+      "counterexample_resistance": 0.69,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.43,
+      "new_primitive_need": 0.26,
+      "potential_universality": 0.495,
+      "prediction_gain": 0.665,
+      "redundancy": 0.18,
+      "replaceability": 0.33
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BE54436D4",
+      "compression_gain": 0.29,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.413,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.548,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BE54436D4",
+      "compression_gain": 0.32,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.413,
+      "new_primitive_need": 0.36,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.508,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BE54436D4",
+      "compression_gain": 0.32,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.413,
+      "new_primitive_need": 0.32,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.548,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BECA73A38",
+      "compression_gain": 0.25,
+      "counterexample_resistance": 0.61,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.363,
+      "new_primitive_need": 0.25,
+      "potential_universality": 0.42,
+      "prediction_gain": 0.467,
+      "redundancy": 0.37,
+      "replaceability": 0.46
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BECA73A38",
+      "compression_gain": 0.28,
+      "counterexample_resistance": 0.61,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.363,
+      "new_primitive_need": 0.25,
+      "potential_universality": 0.42,
+      "prediction_gain": 0.427,
+      "redundancy": 0.34,
+      "replaceability": 0.48
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BECA73A38",
+      "compression_gain": 0.28,
+      "counterexample_resistance": 0.61,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.363,
+      "new_primitive_need": 0.21,
+      "potential_universality": 0.42,
+      "prediction_gain": 0.467,
+      "redundancy": 0.34,
+      "replaceability": 0.49
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BF5751934",
+      "compression_gain": 0.29,
+      "counterexample_resistance": 0.638,
+      "evaluator": "compression_skeptic",
+      "explanatory_power": 0.393,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.595,
+      "redundancy": 0.315,
+      "replaceability": 0.405
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BF5751934",
+      "compression_gain": 0.32,
+      "counterexample_resistance": 0.638,
+      "evaluator": "prediction_skeptic",
+      "explanatory_power": 0.393,
+      "new_primitive_need": 0.3,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.555,
+      "redundancy": 0.285,
+      "replaceability": 0.425
+    },
+    {
+      "adversarial_note": "Does not yet justify a new primitive.",
+      "blind_id": "BF5751934",
+      "compression_gain": 0.32,
+      "counterexample_resistance": 0.638,
+      "evaluator": "representation_skeptic",
+      "explanatory_power": 0.393,
+      "new_primitive_need": 0.26,
+      "potential_universality": 0.44,
+      "prediction_gain": 0.595,
+      "redundancy": 0.285,
+      "replaceability": 0.435
+    }
+  ],
+  "historical_items": [
+    {
+      "blind_id": "B8C4ABAB2",
+      "composite": 0.458,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.452,
+      "family": "historical",
+      "name": "Gene",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.67,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_gene"
+    },
+    {
+      "blind_id": "B50ADCEB7",
+      "composite": 0.446,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.428,
+      "family": "historical",
+      "name": "Information",
+      "new_primitive_need": 0.227,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_information"
+    },
+    {
+      "blind_id": "BCBBE9B77",
+      "composite": 0.444,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.43,
+      "family": "historical",
+      "name": "Algorithm",
+      "new_primitive_need": 0.287,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_algorithm"
+    },
+    {
+      "blind_id": "B6CD458CB",
+      "composite": 0.43,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.47,
+      "family": "historical",
+      "name": "Entropy",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.547,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "hist_entropy"
+    },
+    {
+      "blind_id": "BAC92E0E3",
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "family": "historical",
+      "name": "Field",
+      "new_primitive_need": 0.347,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "hist_field"
+    }
+  ],
+  "ranked": [
+    {
+      "blind_id": "BB1CAC289",
+      "composite": 0.467,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.64,
+      "explanatory_power": 0.533,
+      "family": "studio",
+      "name": "Causal Role Carrier",
+      "new_primitive_need": 0.407,
+      "origin": "studio_generated",
+      "potential_universality": 0.59,
+      "prediction_gain": 0.637,
+      "redundancy": 0.48,
+      "replaceability": 0.607,
+      "true_id": "studio_causal_role_carrier"
+    },
+    {
+      "blind_id": "B8C4ABAB2",
+      "composite": 0.458,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.452,
+      "family": "historical",
+      "name": "Gene",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.67,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_gene"
+    },
+    {
+      "blind_id": "B50ADCEB7",
+      "composite": 0.446,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.428,
+      "family": "historical",
+      "name": "Information",
+      "new_primitive_need": 0.227,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_information"
+    },
+    {
+      "blind_id": "BCBBE9B77",
+      "composite": 0.444,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.43,
+      "family": "historical",
+      "name": "Algorithm",
+      "new_primitive_need": 0.287,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_algorithm"
+    },
+    {
+      "blind_id": "B348AB161",
+      "composite": 0.443,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.45,
+      "family": "studio",
+      "name": "Morphogenetic Trajectory Constraint",
+      "new_primitive_need": 0.347,
+      "origin": "studio_generated",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_morphogenetic_trajectory_constraint"
+    },
+    {
+      "blind_id": "BB2A90B32",
+      "composite": 0.432,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.428,
+      "family": "studio",
+      "name": "Tipping Load",
+      "new_primitive_need": 0.227,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_tipping_load"
+    },
+    {
+      "blind_id": "B6CD458CB",
+      "composite": 0.43,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.47,
+      "family": "historical",
+      "name": "Entropy",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.547,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "hist_entropy"
+    },
+    {
+      "blind_id": "B85D3A1BA",
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "family": "accepted",
+      "name": "Superposition",
+      "new_primitive_need": 0.347,
+      "origin": "current_accepted",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "accepted_superposition"
+    },
+    {
+      "blind_id": "BAC92E0E3",
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "family": "historical",
+      "name": "Field",
+      "new_primitive_need": 0.347,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "hist_field"
+    },
+    {
+      "blind_id": "B9042869F",
+      "composite": 0.416,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.448,
+      "family": "studio",
+      "name": "Oversight Channel Drift",
+      "new_primitive_need": 0.287,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.529,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "studio_oversight_channel_drift"
+    },
+    {
+      "blind_id": "B61C2F2E6",
+      "composite": 0.394,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.392,
+      "family": "near_duplicate",
+      "name": "Mechanism Fingerprint",
+      "new_primitive_need": 0.227,
+      "origin": "near_duplicate",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.552,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "near_duplicate_mechanism_fingerprint"
+    },
+    {
+      "blind_id": "BE54436D4",
+      "composite": 0.391,
+      "compression_gain": 0.31,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.413,
+      "family": "renaming",
+      "name": "Intervention-Stable Mechanism",
+      "new_primitive_need": 0.347,
+      "origin": "equivalent_renaming",
+      "potential_universality": 0.44,
+      "prediction_gain": 0.535,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "rename_intervention_stable_mechanism"
+    },
+    {
+      "blind_id": "BF5751934",
+      "composite": 0.385,
+      "compression_gain": 0.31,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.393,
+      "family": "accepted",
+      "name": "Causal Abstraction",
+      "new_primitive_need": 0.287,
+      "origin": "current_accepted",
+      "potential_universality": 0.44,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "accepted_causal_abstraction"
+    },
+    {
+      "blind_id": "BECA73A38",
+      "composite": 0.331,
+      "compression_gain": 0.27,
+      "counterexample_resistance": 0.61,
+      "explanatory_power": 0.363,
+      "family": "perturbed",
+      "name": "Reverse Entropy",
+      "new_primitive_need": 0.237,
+      "origin": "randomly_perturbed",
+      "potential_universality": 0.42,
+      "prediction_gain": 0.454,
+      "redundancy": 0.35,
+      "replaceability": 0.477,
+      "true_id": "perturbed_reverse_entropy"
+    },
+    {
+      "blind_id": "B4E9E6825",
+      "composite": 0.243,
+      "compression_gain": 0.285,
+      "counterexample_resistance": 0.4,
+      "explanatory_power": 0.352,
+      "family": "llm_prompt",
+      "name": "Explanatory Substrate",
+      "new_primitive_need": 0.187,
+      "origin": "ordinary_llm_prompt",
+      "potential_universality": 0.427,
+      "prediction_gain": 0.262,
+      "redundancy": 0.77,
+      "replaceability": 0.897,
+      "true_id": "llm_prompt_explanatory_substrate"
+    },
+    {
+      "blind_id": "B6108D310",
+      "composite": 0.167,
+      "compression_gain": 0.125,
+      "counterexample_resistance": 0.45,
+      "explanatory_power": 0.232,
+      "family": "distractor",
+      "name": "Omnivariant Causality",
+      "new_primitive_need": 0.0,
+      "origin": "artificial_distractor",
+      "potential_universality": 0.348,
+      "prediction_gain": 0.312,
+      "redundancy": 0.67,
+      "replaceability": 0.797,
+      "true_id": "distractor_omnivariant_causality"
+    }
+  ],
+  "studio_confused_with_historical": [
+    {
+      "blind_id": "BB1CAC289",
+      "composite": 0.467,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.64,
+      "explanatory_power": 0.533,
+      "family": "studio",
+      "name": "Causal Role Carrier",
+      "new_primitive_need": 0.407,
+      "origin": "studio_generated",
+      "potential_universality": 0.59,
+      "prediction_gain": 0.637,
+      "redundancy": 0.48,
+      "replaceability": 0.607,
+      "true_id": "studio_causal_role_carrier"
+    },
+    {
+      "blind_id": "B348AB161",
+      "composite": 0.443,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.45,
+      "family": "studio",
+      "name": "Morphogenetic Trajectory Constraint",
+      "new_primitive_need": 0.347,
+      "origin": "studio_generated",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_morphogenetic_trajectory_constraint"
+    },
+    {
+      "blind_id": "BB2A90B32",
+      "composite": 0.432,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.428,
+      "family": "studio",
+      "name": "Tipping Load",
+      "new_primitive_need": 0.227,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_tipping_load"
+    },
+    {
+      "blind_id": "B9042869F",
+      "composite": 0.416,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.448,
+      "family": "studio",
+      "name": "Oversight Channel Drift",
+      "new_primitive_need": 0.287,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.529,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "studio_oversight_channel_drift"
+    }
+  ],
+  "studio_survivors": [
+    {
+      "blind_id": "BB1CAC289",
+      "composite": 0.467,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.64,
+      "explanatory_power": 0.533,
+      "family": "studio",
+      "name": "Causal Role Carrier",
+      "new_primitive_need": 0.407,
+      "origin": "studio_generated",
+      "potential_universality": 0.59,
+      "prediction_gain": 0.637,
+      "redundancy": 0.48,
+      "replaceability": 0.607,
+      "true_id": "studio_causal_role_carrier"
+    },
+    {
+      "blind_id": "B348AB161",
+      "composite": 0.443,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.45,
+      "family": "studio",
+      "name": "Morphogenetic Trajectory Constraint",
+      "new_primitive_need": 0.347,
+      "origin": "studio_generated",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_morphogenetic_trajectory_constraint"
+    },
+    {
+      "blind_id": "BB2A90B32",
+      "composite": 0.432,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.428,
+      "family": "studio",
+      "name": "Tipping Load",
+      "new_primitive_need": 0.227,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_tipping_load"
+    },
+    {
+      "blind_id": "B9042869F",
+      "composite": 0.416,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.448,
+      "family": "studio",
+      "name": "Oversight Channel Drift",
+      "new_primitive_need": 0.287,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.529,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "studio_oversight_channel_drift"
+    }
+  ],
+  "survival_threshold": 0.402,
+  "survived": [
+    {
+      "blind_id": "BB1CAC289",
+      "composite": 0.467,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.64,
+      "explanatory_power": 0.533,
+      "family": "studio",
+      "name": "Causal Role Carrier",
+      "new_primitive_need": 0.407,
+      "origin": "studio_generated",
+      "potential_universality": 0.59,
+      "prediction_gain": 0.637,
+      "redundancy": 0.48,
+      "replaceability": 0.607,
+      "true_id": "studio_causal_role_carrier"
+    },
+    {
+      "blind_id": "B8C4ABAB2",
+      "composite": 0.458,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.452,
+      "family": "historical",
+      "name": "Gene",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.67,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_gene"
+    },
+    {
+      "blind_id": "B50ADCEB7",
+      "composite": 0.446,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.428,
+      "family": "historical",
+      "name": "Information",
+      "new_primitive_need": 0.227,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_information"
+    },
+    {
+      "blind_id": "BCBBE9B77",
+      "composite": 0.444,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.69,
+      "explanatory_power": 0.43,
+      "family": "historical",
+      "name": "Algorithm",
+      "new_primitive_need": 0.287,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.652,
+      "redundancy": 0.19,
+      "replaceability": 0.317,
+      "true_id": "hist_algorithm"
+    },
+    {
+      "blind_id": "B348AB161",
+      "composite": 0.443,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.45,
+      "family": "studio",
+      "name": "Morphogenetic Trajectory Constraint",
+      "new_primitive_need": 0.347,
+      "origin": "studio_generated",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_morphogenetic_trajectory_constraint"
+    },
+    {
+      "blind_id": "BB2A90B32",
+      "composite": 0.432,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.428,
+      "family": "studio",
+      "name": "Tipping Load",
+      "new_primitive_need": 0.227,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.634,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "studio_tipping_load"
+    },
+    {
+      "blind_id": "B6CD458CB",
+      "composite": 0.43,
+      "compression_gain": 0.42,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.47,
+      "family": "historical",
+      "name": "Entropy",
+      "new_primitive_need": 0.407,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.495,
+      "prediction_gain": 0.547,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "hist_entropy"
+    },
+    {
+      "blind_id": "B85D3A1BA",
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "family": "accepted",
+      "name": "Superposition",
+      "new_primitive_need": 0.347,
+      "origin": "current_accepted",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "accepted_superposition"
+    },
+    {
+      "blind_id": "BAC92E0E3",
+      "composite": 0.417,
+      "compression_gain": 0.365,
+      "counterexample_resistance": 0.638,
+      "explanatory_power": 0.432,
+      "family": "historical",
+      "name": "Field",
+      "new_primitive_need": 0.347,
+      "origin": "historical_breakthrough",
+      "potential_universality": 0.468,
+      "prediction_gain": 0.582,
+      "redundancy": 0.295,
+      "replaceability": 0.422,
+      "true_id": "hist_field"
+    },
+    {
+      "blind_id": "B9042869F",
+      "composite": 0.416,
+      "compression_gain": 0.475,
+      "counterexample_resistance": 0.585,
+      "explanatory_power": 0.448,
+      "family": "studio",
+      "name": "Oversight Channel Drift",
+      "new_primitive_need": 0.287,
+      "origin": "studio_generated",
+      "potential_universality": 0.522,
+      "prediction_gain": 0.529,
+      "redundancy": 0.4,
+      "replaceability": 0.527,
+      "true_id": "studio_oversight_channel_drift"
+    }
+  ],
+  "unblind_key": {
+    "B348AB161": {
+      "family": "studio",
+      "name": "Morphogenetic Trajectory Constraint",
+      "origin": "studio_generated",
+      "true_id": "studio_morphogenetic_trajectory_constraint"
+    },
+    "B4E9E6825": {
+      "family": "llm_prompt",
+      "name": "Explanatory Substrate",
+      "origin": "ordinary_llm_prompt",
+      "true_id": "llm_prompt_explanatory_substrate"
+    },
+    "B50ADCEB7": {
+      "family": "historical",
+      "name": "Information",
+      "origin": "historical_breakthrough",
+      "true_id": "hist_information"
+    },
+    "B6108D310": {
+      "family": "distractor",
+      "name": "Omnivariant Causality",
+      "origin": "artificial_distractor",
+      "true_id": "distractor_omnivariant_causality"
+    },
+    "B61C2F2E6": {
+      "family": "near_duplicate",
+      "name": "Mechanism Fingerprint",
+      "origin": "near_duplicate",
+      "true_id": "near_duplicate_mechanism_fingerprint"
+    },
+    "B6CD458CB": {
+      "family": "historical",
+      "name": "Entropy",
+      "origin": "historical_breakthrough",
+      "true_id": "hist_entropy"
+    },
+    "B85D3A1BA": {
+      "family": "accepted",
+      "name": "Superposition",
+      "origin": "current_accepted",
+      "true_id": "accepted_superposition"
+    },
+    "B8C4ABAB2": {
+      "family": "historical",
+      "name": "Gene",
+      "origin": "historical_breakthrough",
+      "true_id": "hist_gene"
+    },
+    "B9042869F": {
+      "family": "studio",
+      "name": "Oversight Channel Drift",
+      "origin": "studio_generated",
+      "true_id": "studio_oversight_channel_drift"
+    },
+    "BAC92E0E3": {
+      "family": "historical",
+      "name": "Field",
+      "origin": "historical_breakthrough",
+      "true_id": "hist_field"
+    },
+    "BB1CAC289": {
+      "family": "studio",
+      "name": "Causal Role Carrier",
+      "origin": "studio_generated",
+      "true_id": "studio_causal_role_carrier"
+    },
+    "BB2A90B32": {
+      "family": "studio",
+      "name": "Tipping Load",
+      "origin": "studio_generated",
+      "true_id": "studio_tipping_load"
+    },
+    "BCBBE9B77": {
+      "family": "historical",
+      "name": "Algorithm",
+      "origin": "historical_breakthrough",
+      "true_id": "hist_algorithm"
+    },
+    "BE54436D4": {
+      "family": "renaming",
+      "name": "Intervention-Stable Mechanism",
+      "origin": "equivalent_renaming",
+      "true_id": "rename_intervention_stable_mechanism"
+    },
+    "BECA73A38": {
+      "family": "perturbed",
+      "name": "Reverse Entropy",
+      "origin": "randomly_perturbed",
+      "true_id": "perturbed_reverse_entropy"
+    },
+    "BF5751934": {
+      "family": "accepted",
+      "name": "Causal Abstraction",
+      "origin": "current_accepted",
+      "true_id": "accepted_causal_abstraction"
+    }
+  }
+}

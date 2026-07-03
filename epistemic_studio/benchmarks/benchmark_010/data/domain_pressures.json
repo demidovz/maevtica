@@ -1,0 +1,216 @@
+[
+  {
+    "competing_theories": [
+      "features",
+      "circuits",
+      "superposition",
+      "causal abstraction",
+      "distributed representation",
+      "SAE dictionaries"
+    ],
+    "compression_pressure": 0.94,
+    "concept_fragmentation": 0.92,
+    "conceptual_holes": [
+      "No stable unit connects features, circuits, activation directions, and causal interventions across basis changes.",
+      "It is awkward to say when two different SAEs or two different models have found the same internal mechanism.",
+      "The field lacks a primitive for intervention-stable causal role rather than human-labeled feature identity."
+    ],
+    "domain": "Mechanistic interpretability of frontier neural networks",
+    "hidden_invariants": 0.88,
+    "id": "d01_mech_interp",
+    "observations": "Many activation-level observations, sparse-autoencoder features, circuits, steering vectors, model edits, and cross-model comparisons exist.",
+    "prediction_gaps": 0.9,
+    "pressure_score": 0.909,
+    "recurring_unexplained_structures": 0.93,
+    "representation_mismatch": 0.95,
+    "source_ids": [
+      "mech_interp_open_problems",
+      "sae_survey",
+      "anthropic_monosemanticity"
+    ],
+    "theory_disagreement": 0.84,
+    "vocabulary_instability": 0.91
+  },
+  {
+    "competing_theories": [
+      "outer alignment",
+      "inner alignment",
+      "scalable oversight",
+      "ELK",
+      "control",
+      "process-oriented learning"
+    ],
+    "compression_pressure": 0.9,
+    "concept_fragmentation": 0.87,
+    "conceptual_holes": [
+      "It is hard to express the loss of evaluator authority as systems become better at producing plausible evidence.",
+      "Current terms separate capability, oversight, deception, and evaluation even when the same failure is about evaluator-channel degradation.",
+      "The field lacks a clean unit for measuring when an oversight process stops tracking the target property."
+    ],
+    "domain": "AI alignment and scalable oversight",
+    "hidden_invariants": 0.76,
+    "id": "d02_ai_alignment",
+    "observations": "Oversight, process supervision, red teaming, dangerous capability evaluation, interpretability, and control are active but fragmented.",
+    "prediction_gaps": 0.92,
+    "pressure_score": 0.868,
+    "recurring_unexplained_structures": 0.84,
+    "representation_mismatch": 0.88,
+    "source_ids": [
+      "alignment_directions",
+      "mech_interp_open_problems"
+    ],
+    "theory_disagreement": 0.91,
+    "vocabulary_instability": 0.86
+  },
+  {
+    "competing_theories": [
+      "positional information",
+      "gene regulatory networks",
+      "mechanobiology",
+      "self-organization",
+      "morphogen gradients"
+    ],
+    "compression_pressure": 0.89,
+    "concept_fragmentation": 0.82,
+    "conceptual_holes": [
+      "It is difficult to express how cells preserve developmental direction through coupled mechanical, chemical, and geometric constraints.",
+      "Terms split patterning, morphogenesis, mechanics, and fate even when experiments show joint regulation.",
+      "The recurring invariant appears to be trajectory constraint, not a single signal, gene, or force."
+    ],
+    "domain": "Developmental biology and morphogenesis",
+    "hidden_invariants": 0.87,
+    "id": "d03_morphogenesis",
+    "observations": "Organoids, embryoids, live imaging, mechanics, signaling gradients, gene regulation, and self-organization are producing many partially connected observations.",
+    "prediction_gaps": 0.84,
+    "pressure_score": 0.846,
+    "recurring_unexplained_structures": 0.9,
+    "representation_mismatch": 0.9,
+    "source_ids": [
+      "morphogenesis_principles",
+      "embryoids_self_organization",
+      "tissue_mechanics"
+    ],
+    "theory_disagreement": 0.78,
+    "vocabulary_instability": 0.77
+  },
+  {
+    "competing_theories": [
+      "global workspace",
+      "integrated information",
+      "predictive processing",
+      "higher-order theory",
+      "recurrent processing"
+    ],
+    "compression_pressure": 0.88,
+    "concept_fragmentation": 0.94,
+    "conceptual_holes": [
+      "It remains hard to express the gap between access/report/control and phenomenal organization without importing a full theory.",
+      "Theories disagree partly because they use different target variables.",
+      "The missing distinction may be between information integration that is usable by the organism and integration that is report-shaped."
+    ],
+    "domain": "Consciousness science",
+    "hidden_invariants": 0.7,
+    "id": "d04_consciousness",
+    "observations": "Neural correlates, global workspace, integrated information, predictive processing, recurrent processing, reportability, and AI-consciousness debates coexist.",
+    "prediction_gaps": 0.82,
+    "pressure_score": 0.866,
+    "recurring_unexplained_structures": 0.79,
+    "representation_mismatch": 0.91,
+    "source_ids": [
+      "consciousness_frontiers",
+      "synergistic_workspace"
+    ],
+    "theory_disagreement": 0.96,
+    "vocabulary_instability": 0.93
+  },
+  {
+    "competing_theories": [
+      "tipping points",
+      "feedback loops",
+      "Earth-system models",
+      "risk cascades",
+      "model intercomparison"
+    ],
+    "compression_pressure": 0.86,
+    "concept_fragmentation": 0.7,
+    "conceptual_holes": [
+      "It is hard to express total system fragility when multiple sub-threshold elements mutually load one another.",
+      "Single-threshold language under-describes coupled, path-dependent risk.",
+      "The latent invariant is not the tipping point but the networked load carried by interacting tipping elements."
+    ],
+    "domain": "Climate tipping systems",
+    "hidden_invariants": 0.81,
+    "id": "d05_climate_tipping",
+    "observations": "Many models track individual tipping elements, feedbacks, and scenario-dependent risks, but coupled tipping interactions remain difficult.",
+    "prediction_gaps": 0.88,
+    "pressure_score": 0.794,
+    "recurring_unexplained_structures": 0.86,
+    "representation_mismatch": 0.83,
+    "source_ids": [
+      "climate_tipping_2025",
+      "tipmip"
+    ],
+    "theory_disagreement": 0.75,
+    "vocabulary_instability": 0.66
+  },
+  {
+    "competing_theories": [
+      "rational expectations",
+      "HANK",
+      "agent-based models",
+      "bounded rationality",
+      "complexity economics"
+    ],
+    "compression_pressure": 0.87,
+    "concept_fragmentation": 0.74,
+    "conceptual_holes": [
+      "It is hard to express how agents forecast aggregate states without implicitly requiring impossible distribution-level cognition.",
+      "Equilibrium-price expectations compress poorly when heterogeneity is high.",
+      "The missing primitive may measure the cognitive burden of representing aggregate distributions."
+    ],
+    "domain": "Macroeconomics with heterogeneous agents",
+    "hidden_invariants": 0.78,
+    "id": "d06_economics",
+    "observations": "Heterogeneous-agent models, expectations data, agent-based models, distributional state variables, and bounded rationality coexist uneasily.",
+    "prediction_gaps": 0.86,
+    "pressure_score": 0.801,
+    "recurring_unexplained_structures": 0.8,
+    "representation_mismatch": 0.86,
+    "source_ids": [
+      "heterogeneous_expectations",
+      "agent_based_macro"
+    ],
+    "theory_disagreement": 0.82,
+    "vocabulary_instability": 0.68
+  },
+  {
+    "competing_theories": [
+      "wisdom of crowds",
+      "swarm intelligence",
+      "group intelligence",
+      "human-AI teaming",
+      "social structure"
+    ],
+    "compression_pressure": 0.84,
+    "concept_fragmentation": 0.9,
+    "conceptual_holes": [
+      "It is hard to express when coordination structure itself performs cognition rather than merely aggregating individual cognition.",
+      "Terms alternate between group ability, platform design, communication protocol, and social structure.",
+      "The latent invariant appears to be transformation of partial information through interaction topology."
+    ],
+    "domain": "Human-AI collective intelligence",
+    "hidden_invariants": 0.8,
+    "id": "d07_collective_intelligence",
+    "observations": "Groups, platforms, swarms, markets, crowdsourcing, multi-agent AI systems, and hybrid teams show performance that is not reducible to individual intelligence.",
+    "prediction_gaps": 0.76,
+    "pressure_score": 0.823,
+    "recurring_unexplained_structures": 0.82,
+    "representation_mismatch": 0.82,
+    "source_ids": [
+      "collective_ai_review",
+      "collective_evolution"
+    ],
+    "theory_disagreement": 0.78,
+    "vocabulary_instability": 0.86
+  }
+]

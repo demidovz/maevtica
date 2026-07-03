@@ -1,0 +1,14 @@
+{
+  "states": 4800,
+  "trajectories": 400,
+  "intrinsic_dimension_85pct": 5,
+  "mean_speed": 3.792266169140057,
+  "endpoint_attractor_count": 1,
+  "limit_cycle_candidates": 5,
+  "empirical_law_r2": 0.42458010329581175,
+  "coordinate_invariance_mean": 0.7322811283977091,
+  "hypothesis_support": {
+    "no_coherent_flow": 0.3940476878192899,
+    "stable_vector_field": 0.6059523121807101
+  }
+}

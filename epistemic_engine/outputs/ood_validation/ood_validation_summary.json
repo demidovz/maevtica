@@ -1,0 +1,90 @@
+{
+  "frozen_coordinate_system": "koopman_quadratic_pca_dim2",
+  "frozen_affine_law": true,
+  "ood_suites": 27,
+  "aggregate": {
+    "suite": "aggregate_ood",
+    "states": 43200,
+    "trajectories": 4320,
+    "r2": 0.17170729376955784,
+    "mae": 3.0218619312419595,
+    "p95_error": 8.12898099234029,
+    "works": false,
+    "weak": false,
+    "fails": true
+  },
+  "prediction_accuracy_distribution": {
+    "mean": 0.1715783761987235,
+    "std": 0.08403261070829696,
+    "p05": 0.028137725999492862,
+    "p50": 0.15618800523212328,
+    "p95": 0.2838242979913341
+  },
+  "failure_count": 27,
+  "applicability_boundary": {
+    "architecture": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "architecture::reservoir_memory",
+        "architecture::tensor_factorization",
+        "architecture::proof_net",
+        "architecture::neural_cellular",
+        "architecture::causal_program_synthesizer",
+        "architecture::energy_based",
+        "architecture::swarm_protocol",
+        "architecture::category_rewriter"
+      ],
+      "mean_r2": 0.17291680610884486
+    },
+    "rule": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "rule::reinforcement_like",
+        "rule::evolutionary",
+        "rule::bayesian",
+        "rule::symbolic_theorem_proving",
+        "rule::constraint_satisfaction",
+        "rule::message_passing_ood",
+        "rule::differentiable_optimization_ood",
+        "rule::random_search",
+        "rule::hybrid_system"
+      ],
+      "mean_r2": 0.2083836818318703
+    },
+    "world": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "world::adversarial",
+        "world::changing_rules",
+        "world::delayed_consequences",
+        "world::deceptive_regularities",
+        "world::hierarchical_environment",
+        "world::sparse_observations",
+        "world::continuous_environment",
+        "world::partially_contradictory",
+        "world::self_modifying",
+        "world::no_reusable_structure"
+      ],
+      "mean_r2": 0.1373828572007943
+    }
+  },
+  "competing_models": {
+    "frozen_affine_dim2": 0.17170729376955784,
+    "frozen_polynomial_dim2": 0.15720317334478906,
+    "frozen_recurrent_proxy_dim2": 0.16676451317921714,
+    "higher_dim_koopman_dim4": 0.08380530585877921
+  },
+  "confidence_intervals": {
+    "r2": {
+      "mean": 0.1715783761987235,
+      "std": 0.08403261070829696,
+      "p05": 0.028137725999492862,
+      "p50": 0.15618800523212328,
+      "p95": 0.2838242979913341
+    }
+  },
+  "scientific_verdict": "C. law fails under broad distribution shift"
+}

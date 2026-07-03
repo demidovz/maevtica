@@ -1,0 +1,61 @@
+{
+  "artifact_ids": [
+    "art_56a15402dc71",
+    "art_7984d564422b",
+    "art_730a43ff861b",
+    "art_e9a999998bf8",
+    "art_ed95a3fb46af",
+    "art_56a15402dc71",
+    "art_7919da529b12",
+    "art_9e0f75f16b3e",
+    "art_5e00cf87b30b",
+    "art_e9149e763cc2"
+  ],
+  "completed_at": "2026-07-01T10:14:10.991003+00:00",
+  "cycle": 1,
+  "edge_ids": [
+    "edge_d5ab42079ca8",
+    "edge_a2e1183326cf",
+    "edge_b9acf78c901d",
+    "edge_921f2c3765fc",
+    "edge_4a009ccc237a",
+    "edge_f5477babe897"
+  ],
+  "frontier_id": "art_4d474b1fb721",
+  "metrics": {
+    "active_hypotheses": 1,
+    "artifact_counts": {
+      "applicability_atlas": 1,
+      "assumption": 1,
+      "contradiction": 1,
+      "counterexample": 1,
+      "derived_concept": 1,
+      "experiment": 1,
+      "frontier": 1,
+      "hypothesis": 1,
+      "process_note": 1,
+      "research_history": 1,
+      "research_question": 1,
+      "unknown_region": 1
+    },
+    "compression": 1.0,
+    "contradictions": 1,
+    "counterexample_density": 1.0,
+    "dead_hypotheses": 0,
+    "epistemic_value": 2.2,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_7984d564422b",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      }
+    ],
+    "research_velocity": {
+      "last_cycle_artifacts": 0,
+      "last_cycle_edges": 0
+    }
+  },
+  "next_frontier_id": "art_ed95a3fb46af",
+  "started_at": "2026-07-01T10:14:10.989990+00:00"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "applicability_quality": 0.28,
+    "attention_efficiency": 0.58,
+    "compression_quality": 0.42,
+    "concept_stability": 0.35,
+    "decision_quality": 0.48,
+    "description": "One pass researcher with no persistent graph, market, or agent roles.",
+    "duplicate_reduction": 0.25,
+    "epistemic_value": 0.25,
+    "knowledge_reuse": 0.18,
+    "name": "Baseline A - Single LLM",
+    "notes": [
+      "Low overhead.",
+      "Weak memory and weak independent falsification."
+    ],
+    "organizational_overhead": 0.08,
+    "question_refinement": 0.38,
+    "research_velocity": 0.72,
+    "time_to_falsification": 8.0
+  },
+  {
+    "applicability_quality": 0.4,
+    "attention_efficiency": 0.5,
+    "compression_quality": 0.51,
+    "concept_stability": 0.46,
+    "decision_quality": 0.52,
+    "description": "Explorer -> Lab -> Engine -> summary, fixed order, no market or mutable state.",
+    "duplicate_reduction": 0.42,
+    "epistemic_value": 0.348,
+    "knowledge_reuse": 0.34,
+    "name": "Baseline B - Sequential multi-agent pipeline",
+    "notes": [
+      "Role separation helps.",
+      "Fixed order cannot learn allocation policy."
+    ],
+    "organizational_overhead": 0.22,
+    "question_refinement": 0.5,
+    "research_velocity": 0.62,
+    "time_to_falsification": 5.0
+  },
+  {
+    "applicability_quality": 0.55,
+    "attention_efficiency": 0.46,
+    "compression_quality": 0.57,
+    "concept_stability": 0.62,
+    "decision_quality": 0.58,
+    "description": "Human-maintained notes and judgment, no explicit graph or automated market.",
+    "duplicate_reduction": 0.48,
+    "epistemic_value": 0.405,
+    "knowledge_reuse": 0.55,
+    "name": "Baseline C - Human researcher with notes",
+    "notes": [
+      "Good question refinement.",
+      "Poor scalability and hard-to-audit memory."
+    ],
+    "organizational_overhead": 0.18,
+    "question_refinement": 0.7,
+    "research_velocity": 0.36,
+    "time_to_falsification": 6.0
+  },
+  {
+    "applicability_quality": 0.58,
+    "attention_efficiency": 0.776,
+    "compression_quality": 0.96,
+    "concept_stability": 0.6088,
+    "decision_quality": 0.64,
+    "description": "Full artifact state, graph, attention market, agents, journal, meta-memory, and dashboard.",
+    "duplicate_reduction": 0.272,
+    "epistemic_value": 0.501,
+    "knowledge_reuse": 1.0,
+    "name": "Baseline D - Current Studio",
+    "notes": [
+      "Strong observability and falsification pressure.",
+      "High duplicate rate and heavy artifact overhead weaken the case."
+    ],
+    "organizational_overhead": 0.63,
+    "question_refinement": 0.72,
+    "research_velocity": 0.4166666666666667,
+    "time_to_falsification": 3.0
+  }
+]

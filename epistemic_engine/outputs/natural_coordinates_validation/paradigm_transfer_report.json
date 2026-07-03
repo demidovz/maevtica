@@ -1,0 +1,18 @@
+{
+  "train_paradigms": [
+    "graph_system",
+    "hypergraph",
+    "symbolic_system",
+    "sat_based",
+    "rewriting_system"
+  ],
+  "test_paradigms": [
+    "probabilistic_system",
+    "differentiable_system",
+    "cellular_automata",
+    "random_interaction"
+  ],
+  "train_r2": 0.1726143762326039,
+  "test_r2": -0.04970114061181863,
+  "test_embedding_distortion": 1.5403594013117463
+}

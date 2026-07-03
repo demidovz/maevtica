@@ -1,0 +1,85 @@
+{
+  "artifact_ids": [
+    "art_1d0b0e29888c",
+    "art_6d0f72d971f4",
+    "art_51a916202e17",
+    "art_7b471570efd7",
+    "art_fc8e37d2a1d0",
+    "art_3e6205375fc2",
+    "art_38a2fcc04f4b",
+    "art_c26b03825813",
+    "art_7e8a8eadba0f",
+    "art_9b9137414257"
+  ],
+  "completed_at": "2026-07-01T10:14:10.999271+00:00",
+  "cycle": 5,
+  "edge_ids": [
+    "edge_8138f9e44855",
+    "edge_c9ee487a6476",
+    "edge_e42f9bb0043f",
+    "edge_90830f80fa25",
+    "edge_c49cef105ddc",
+    "edge_f274fae334e2"
+  ],
+  "frontier_id": "art_91b672b11c89",
+  "metrics": {
+    "active_hypotheses": 4,
+    "artifact_counts": {
+      "applicability_atlas": 5,
+      "assumption": 1,
+      "contradiction": 5,
+      "counterexample": 5,
+      "derived_concept": 5,
+      "experiment": 5,
+      "frontier": 5,
+      "hypothesis": 5,
+      "process_note": 5,
+      "research_history": 5,
+      "research_question": 1,
+      "unknown_region": 1
+    },
+    "compression": 1.0,
+    "contradictions": 5,
+    "counterexample_density": 1.0,
+    "dead_hypotheses": 1,
+    "epistemic_value": 3.0,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_7984d564422b",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7d8b1e730d43",
+        "reuse": 1,
+        "title": "Formal handle for H2: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_68b04f9d71c2",
+        "reuse": 1,
+        "title": "Formal handle for H3: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_e0a8d7cf61da",
+        "reuse": 1,
+        "title": "Formal handle for H4: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_6d0f72d971f4",
+        "reuse": 1,
+        "title": "Formal handle for H5: Unexplored implication of Unresolved pressure on H2: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      }
+    ],
+    "research_velocity": {
+      "last_cycle_artifacts": 10,
+      "last_cycle_edges": 6
+    }
+  },
+  "next_frontier_id": "art_fc8e37d2a1d0",
+  "started_at": "2026-07-01T10:14:10.998289+00:00"
+}

@@ -1,0 +1,2777 @@
+{
+  "entries": [
+    {
+      "allocation_ids": [
+        "alloc_0a8983f1ca6d",
+        "alloc_0c478418b5cd",
+        "alloc_97f3968ea0e9"
+      ],
+      "artifact_ids": [
+        "art_4f58d81b3bd6",
+        "art_bd89a650b09e",
+        "art_ed5d2e518c51",
+        "art_8402c597a506"
+      ],
+      "bid_ids": [
+        "bid_1f3efab47938",
+        "bid_4b2f219b3472",
+        "bid_0865579a1a05",
+        "bid_cde337f31578",
+        "bid_8efe823cde14",
+        "bid_6b512fae4e9a",
+        "bid_4836e02d8608"
+      ],
+      "cycle": 1,
+      "edge_ids": [
+        "edge_8d328b23dfa1",
+        "edge_7e7e2e714d25",
+        "edge_57a6d0e4adab"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.702,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.346,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.346,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.247,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.247,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 2,
+        "artifact_counts": {
+          "applicability_atlas": 1,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 1,
+          "experiment": 1,
+          "hypothesis": 2,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.0,
+        "compression": 0.5,
+        "contradictions": 0,
+        "counterexample_density": 4.5,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.077,
+        "epistemic_value": 5.0,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 0,
+          "last_cycle_edges": 0
+        },
+        "stagnation_score": 0.0
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0001.md",
+      "timestamp": "2026-07-01T10:57:56.692272+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_81a99cc66646",
+        "alloc_151cb662eaee",
+        "alloc_3aa0ccac0408"
+      ],
+      "artifact_ids": [
+        "art_02007eb125ab",
+        "art_72e252728ae9",
+        "art_c362f6187200",
+        "art_7dbcd6e40a46"
+      ],
+      "bid_ids": [
+        "bid_9d97704aab43",
+        "bid_e45dfefc281d",
+        "bid_f2533bd30028",
+        "bid_c2b23061c120",
+        "bid_a71778c1756d",
+        "bid_3828aa44b25d",
+        "bid_e30514eac6a6"
+      ],
+      "cycle": 2,
+      "edge_ids": [
+        "edge_76f1634e51eb",
+        "edge_a5046deb59f3",
+        "edge_f1f7de8ae4a6"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.761,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.343,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.343,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.245,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.245,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 3,
+        "artifact_counts": {
+          "applicability_atlas": 2,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 2,
+          "experiment": 2,
+          "hypothesis": 3,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.25,
+        "compression": 0.667,
+        "contradictions": 0,
+        "counterexample_density": 3.0,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.167,
+        "epistemic_value": 3.667,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.0
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0002.md",
+      "timestamp": "2026-07-01T10:57:56.696064+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_75eba21b5a5e",
+        "alloc_2ae6fa04d6bf",
+        "alloc_99a4f0f28a80"
+      ],
+      "artifact_ids": [
+        "art_7cd3b60b5fdc",
+        "art_1b552f7eb095",
+        "art_c69bc55e2ceb",
+        "art_99cf52a74ccc"
+      ],
+      "bid_ids": [
+        "bid_0dc0feac781d",
+        "bid_d89d59ddf9dd",
+        "bid_a5f8f3e3d639",
+        "bid_656886bfabe4",
+        "bid_d469b73936f5",
+        "bid_b24230c53220",
+        "bid_51c4c47712ad"
+      ],
+      "cycle": 3,
+      "edge_ids": [
+        "edge_d2c59c4d12a2",
+        "edge_264d1a66c0a0",
+        "edge_c85dc793d3e6"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.798,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.34,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.34,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.243,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.243,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 4,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 3,
+          "experiment": 3,
+          "hypothesis": 4,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.289,
+        "compression": 0.75,
+        "contradictions": 0,
+        "counterexample_density": 2.25,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.235,
+        "epistemic_value": 3.0,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.0
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0003.md",
+      "timestamp": "2026-07-01T10:57:56.699430+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_75e931f8621c",
+        "alloc_ee2ea7b74bb4",
+        "alloc_4a6a95cae701"
+      ],
+      "artifact_ids": [
+        "art_31cdc1b34b9d",
+        "art_449044d8d514",
+        "art_1aa4897c74da",
+        "art_a655876f46d8"
+      ],
+      "bid_ids": [
+        "bid_68af871b8355",
+        "bid_6984449ccbf0",
+        "bid_0c71dc647fb3",
+        "bid_8a0635c8573d",
+        "bid_81b175083931",
+        "bid_e5122c52dc98",
+        "bid_4ed831acef7d"
+      ],
+      "cycle": 4,
+      "edge_ids": [
+        "edge_cc9651711722",
+        "edge_886ce162e4e2",
+        "edge_5c3a2ae5f4a2"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.822,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.337,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.337,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.241,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.241,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 5,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 4,
+          "experiment": 4,
+          "hypothesis": 5,
+          "process_note": 1,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.292,
+        "compression": 0.8,
+        "contradictions": 0,
+        "counterexample_density": 1.8,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.289,
+        "epistemic_value": 2.6,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.75
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0004.md",
+      "timestamp": "2026-07-01T10:57:56.702877+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_7f375a622697",
+        "alloc_65d4c21b9aa7",
+        "alloc_920a93a950c3"
+      ],
+      "artifact_ids": [
+        "art_7ad20e38b0d7",
+        "art_b3ead4080613",
+        "art_67efda288d70",
+        "art_8bb7bb275eb5",
+        "art_a830bb73c58e"
+      ],
+      "bid_ids": [
+        "bid_51d64c169a9b",
+        "bid_c4399227c6dd",
+        "bid_db51038e02ae",
+        "bid_10f2830a9ba4",
+        "bid_1ab5f4f5e61b",
+        "bid_d432f6e27310",
+        "bid_fdf4646ff255"
+      ],
+      "cycle": 5,
+      "edge_ids": [
+        "edge_292d65d765fc",
+        "edge_08a25a510be2",
+        "edge_93ad50b55aa4"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.837,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.334,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.334,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.239,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.239,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 6,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 5,
+          "experiment": 5,
+          "hypothesis": 6,
+          "meta_memory": 1,
+          "process_note": 2,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.285,
+        "compression": 0.833,
+        "contradictions": 0,
+        "counterexample_density": 1.5,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.326,
+        "epistemic_value": 2.333,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.7
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0005.md",
+      "timestamp": "2026-07-01T10:57:56.706965+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_8d8a306cdcd7",
+        "alloc_5cd5a3b46144",
+        "alloc_c3497aee8b8a"
+      ],
+      "artifact_ids": [
+        "art_a3a92f0867ed",
+        "art_52179aeccd01",
+        "art_f8cb0185aeaa",
+        "art_50b597dfee97"
+      ],
+      "bid_ids": [
+        "bid_758a0de44eed",
+        "bid_13e1aa31b14f",
+        "bid_529dc2174ae3",
+        "bid_dfa8fefb50b5",
+        "bid_709af5d11e05",
+        "bid_84ff1b873782",
+        "bid_9827a38f3369"
+      ],
+      "cycle": 6,
+      "edge_ids": [
+        "edge_0ad7d04f9d41",
+        "edge_033c39888572",
+        "edge_0ad80f9a1f06"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.846,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.331,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.331,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.237,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.237,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 7,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 6,
+          "experiment": 6,
+          "hypothesis": 7,
+          "meta_memory": 1,
+          "process_note": 3,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.277,
+        "compression": 0.857,
+        "contradictions": 0,
+        "counterexample_density": 1.286,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.362,
+        "epistemic_value": 2.143,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.667
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0006.md",
+      "timestamp": "2026-07-01T10:57:56.712365+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_cffcc5f2cecb",
+        "alloc_7e12378da207",
+        "alloc_bc3b19ce11ca"
+      ],
+      "artifact_ids": [
+        "art_bbaed6660eb7",
+        "art_c6eaf251d551",
+        "art_b985cb1ba7e5",
+        "art_de419f48f460"
+      ],
+      "bid_ids": [
+        "bid_ef5bcc2279a5",
+        "bid_e98d0a15a1ae",
+        "bid_cebba464ee04",
+        "bid_df7e1aea54dc",
+        "bid_20862670115a",
+        "bid_12cfd4a71e97",
+        "bid_5fb7926b435e"
+      ],
+      "cycle": 7,
+      "edge_ids": [
+        "edge_4004c799409b",
+        "edge_39f4b308811d",
+        "edge_d3a430792eaa"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.851,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.328,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.328,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.235,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.235,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 8,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 7,
+          "experiment": 7,
+          "hypothesis": 8,
+          "meta_memory": 1,
+          "process_note": 4,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.268,
+        "compression": 0.875,
+        "contradictions": 0,
+        "counterexample_density": 1.125,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.392,
+        "epistemic_value": 2.0,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.643
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0007.md",
+      "timestamp": "2026-07-01T10:57:56.717096+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_0de212054e1a",
+        "alloc_d4f188d0bd68",
+        "alloc_831f6644ec05"
+      ],
+      "artifact_ids": [
+        "art_bfd0c970e9dd",
+        "art_c836080d218b",
+        "art_cecd088a4a6e",
+        "art_be64c3774337"
+      ],
+      "bid_ids": [
+        "bid_1b0d4ab3d57c",
+        "bid_8dba6fb83eda",
+        "bid_089b57e2112a",
+        "bid_4bf47c2ed291",
+        "bid_3ff018c454ce",
+        "bid_b98c83f03f28",
+        "bid_5a51e52c96aa"
+      ],
+      "cycle": 8,
+      "edge_ids": [
+        "edge_0c4821743f85",
+        "edge_7285b3099644",
+        "edge_86efa825b874"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.852,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.325,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.325,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.233,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.233,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 9,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 8,
+          "experiment": 8,
+          "hypothesis": 9,
+          "meta_memory": 1,
+          "process_note": 5,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.259,
+        "compression": 0.889,
+        "contradictions": 0,
+        "counterexample_density": 1.0,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.418,
+        "epistemic_value": 1.889,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.625
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0008.md",
+      "timestamp": "2026-07-01T10:57:56.721830+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_3e558bd202d5",
+        "alloc_ec4afb45955a",
+        "alloc_c3fa59c09d86"
+      ],
+      "artifact_ids": [
+        "art_bb7d31965475",
+        "art_73f637fcbc88",
+        "art_3682b9fbbfc6",
+        "art_ee71eadb1f42"
+      ],
+      "bid_ids": [
+        "bid_deef3119bfc7",
+        "bid_fc7fc40de476",
+        "bid_0af206d86aff",
+        "bid_52d4405e9bb8",
+        "bid_49e75fa7f694",
+        "bid_901e0813418e",
+        "bid_d7f278631e6b"
+      ],
+      "cycle": 9,
+      "edge_ids": [
+        "edge_f534d35f68c7",
+        "edge_2fde390c262f",
+        "edge_6f15cb9f7611"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.85,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.322,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.322,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.231,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.231,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 10,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 9,
+          "experiment": 9,
+          "hypothesis": 10,
+          "meta_memory": 1,
+          "process_note": 6,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.251,
+        "compression": 0.9,
+        "contradictions": 0,
+        "counterexample_density": 0.9,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.441,
+        "epistemic_value": 1.8,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.714,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.611
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0009.md",
+      "timestamp": "2026-07-01T10:57:56.728297+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_c1fc95fecb12",
+        "alloc_55abd14cb1ee",
+        "alloc_e912d9957754"
+      ],
+      "artifact_ids": [
+        "art_00a3d7715500",
+        "art_71d31488c795",
+        "art_966b37270860",
+        "art_d4b603735b6c",
+        "art_36d968047e11"
+      ],
+      "bid_ids": [
+        "bid_8e00e8e72db7",
+        "bid_d6ecad6c16f5",
+        "bid_5d689275b49c",
+        "bid_73008c65bf12",
+        "bid_6c8262a1d8ca",
+        "bid_afaaef738c3c",
+        "bid_a58ad5f04c82"
+      ],
+      "cycle": 10,
+      "edge_ids": [
+        "edge_b96e3811ecfe",
+        "edge_018945016919",
+        "edge_63c8a9e5472d"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.846,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.319,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.319,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.229,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.229,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 11,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 10,
+          "experiment": 10,
+          "hypothesis": 11,
+          "meta_memory": 2,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.244,
+        "compression": 0.909,
+        "contradictions": 0,
+        "counterexample_density": 0.818,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.453,
+        "epistemic_value": 1.727,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 4,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.6
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0010.md",
+      "timestamp": "2026-07-01T10:57:56.733980+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_2a7c91449a9f",
+        "alloc_9fc3b6324026",
+        "alloc_2ec537639e69"
+      ],
+      "artifact_ids": [
+        "art_e506b680b362",
+        "art_2e988d93a7a7",
+        "art_7c8b67d528c0",
+        "art_f6633cce225a",
+        "art_aacf6f8582d0"
+      ],
+      "bid_ids": [
+        "bid_9a7440e435c5",
+        "bid_9b34807b0d7a",
+        "bid_88958434101c",
+        "bid_b37ec9af4565",
+        "bid_5062d376d5a8",
+        "bid_4358efa81370",
+        "bid_1e231e98d75a",
+        "bid_712881412217"
+      ],
+      "cycle": 11,
+      "edge_ids": [
+        "edge_2b78385adb6d",
+        "edge_262b6f24e959",
+        "edge_e41d266f1ddd",
+        "edge_40023e415198",
+        "edge_905788ab1659"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.841,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.316,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.316,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.227,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.227,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 12,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 12,
+          "experiment": 12,
+          "hypothesis": 12,
+          "meta_memory": 2,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.238,
+        "compression": 0.917,
+        "contradictions": 0,
+        "counterexample_density": 0.75,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.493,
+        "epistemic_value": 1.667,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 3
+        },
+        "stagnation_score": 0.591
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0011.md",
+      "timestamp": "2026-07-01T10:57:56.740333+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_26d4aac2caf6",
+        "alloc_1aafc3d102b4",
+        "alloc_e0e821514c1c"
+      ],
+      "artifact_ids": [
+        "art_cdadfd28aeb1",
+        "art_8bcbbcae5da6",
+        "art_d2548cacc6d5",
+        "art_7b02aef29719",
+        "art_28507328487b"
+      ],
+      "bid_ids": [
+        "bid_a94a932f9e81",
+        "bid_55b3983c5696",
+        "bid_44801d0a7a82",
+        "bid_77c1b1754147",
+        "bid_fdd56bd53a3d",
+        "bid_be03d5567ca8",
+        "bid_0f08095f4a8b",
+        "bid_001682922a00"
+      ],
+      "cycle": 12,
+      "edge_ids": [
+        "edge_ca93e71bb383",
+        "edge_c52be7663c6b",
+        "edge_89fdfe39452a",
+        "edge_5d02e7d82049",
+        "edge_48a809355ab3"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.834,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.313,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.313,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.225,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.225,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 13,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 14,
+          "experiment": 14,
+          "hypothesis": 13,
+          "meta_memory": 2,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.232,
+        "compression": 0.923,
+        "contradictions": 0,
+        "counterexample_density": 0.692,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.527,
+        "epistemic_value": 1.615,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.75
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0012.md",
+      "timestamp": "2026-07-01T10:57:56.747383+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_0644b90f7deb",
+        "alloc_c5c13e70e0ee",
+        "alloc_5a41a5cc5256"
+      ],
+      "artifact_ids": [
+        "art_2279a2c273da",
+        "art_966b4703cc4f",
+        "art_ed5f2c794d0e",
+        "art_4f0e7bc33039",
+        "art_cae280c5f522"
+      ],
+      "bid_ids": [
+        "bid_a662143f7494",
+        "bid_9eceb741b8dc",
+        "bid_a306d9019f9d",
+        "bid_17a524d65b26",
+        "bid_11f7168ebd3c",
+        "bid_60d9379b9c20",
+        "bid_6aac680047de",
+        "bid_fa96c54f59aa"
+      ],
+      "cycle": 13,
+      "edge_ids": [
+        "edge_6ce14c9c5a4f",
+        "edge_5f70c42bcc68",
+        "edge_736a6c5bfb47",
+        "edge_145b104b76bd",
+        "edge_a99c2efac56b"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.826,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.31,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.31,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.223,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.223,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 14,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 16,
+          "experiment": 16,
+          "hypothesis": 14,
+          "meta_memory": 2,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.226,
+        "compression": 0.929,
+        "contradictions": 0,
+        "counterexample_density": 0.643,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.557,
+        "epistemic_value": 1.571,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.827
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0013.md",
+      "timestamp": "2026-07-01T10:57:56.753912+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_ec4262e295bc",
+        "alloc_4106324b2cca",
+        "alloc_133ad92ae47b"
+      ],
+      "artifact_ids": [
+        "art_ef1f7fffd78a",
+        "art_007e728b0a47",
+        "art_63a4eb54ec97",
+        "art_009f2bcff3aa",
+        "art_2093c82c97b4"
+      ],
+      "bid_ids": [
+        "bid_4724bacee325",
+        "bid_e06da86f0a99",
+        "bid_da38b577c99e",
+        "bid_4a442e701faf",
+        "bid_1c0604af4937",
+        "bid_d06aa3a32e95",
+        "bid_87cb533e800a",
+        "bid_67577198fd6f"
+      ],
+      "cycle": 14,
+      "edge_ids": [
+        "edge_d78d4c16b4b8",
+        "edge_debeaaa07710",
+        "edge_083c01083c47",
+        "edge_2fef62aa7c89",
+        "edge_0daa60560bc3"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.817,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.307,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.307,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.221,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.221,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 15,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 18,
+          "experiment": 18,
+          "hypothesis": 15,
+          "meta_memory": 2,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.222,
+        "compression": 0.933,
+        "contradictions": 0,
+        "counterexample_density": 0.6,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.583,
+        "epistemic_value": 1.533,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.871
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0014.md",
+      "timestamp": "2026-07-01T10:57:56.761927+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_5c436d11c480",
+        "alloc_36730f9bc93e",
+        "alloc_9ba9a36617c4"
+      ],
+      "artifact_ids": [
+        "art_0cd0f79892af",
+        "art_995b21bb93d4",
+        "art_c2fbfffb301a",
+        "art_6969205d22be",
+        "art_61dfa6911721",
+        "art_50d09815c405"
+      ],
+      "bid_ids": [
+        "bid_8ef7aa758d81",
+        "bid_2f55e17e039d",
+        "bid_13f12776190c",
+        "bid_8c223b0da35b",
+        "bid_36a222cef640",
+        "bid_d62263cf9c00",
+        "bid_4ed9161159be",
+        "bid_73642645578d"
+      ],
+      "cycle": 15,
+      "edge_ids": [
+        "edge_29c1cb7eda00",
+        "edge_3515b388fbb9",
+        "edge_ba3ab22248d6",
+        "edge_4784777bca0c",
+        "edge_142037efe248"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.807,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.304,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.304,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.219,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.219,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 16,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 20,
+          "experiment": 20,
+          "hypothesis": 16,
+          "meta_memory": 3,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.217,
+        "compression": 0.938,
+        "contradictions": 0,
+        "counterexample_density": 0.562,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.6,
+        "epistemic_value": 1.5,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.9
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0015.md",
+      "timestamp": "2026-07-01T10:57:56.770076+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_cde45c9b90d5",
+        "alloc_30f8218b6f3a",
+        "alloc_44b5904c63a5"
+      ],
+      "artifact_ids": [
+        "art_ecd959f26d7e",
+        "art_5ecf4fe33abe",
+        "art_a8a1c35f9ed6",
+        "art_d2042e1b60a9",
+        "art_d5dd5cec40be"
+      ],
+      "bid_ids": [
+        "bid_da698721882d",
+        "bid_d71efad35930",
+        "bid_d8d0a0b57c99",
+        "bid_c2ca214e89e7",
+        "bid_fdf519f9b3ed",
+        "bid_8cfb080e71a6",
+        "bid_3f1f9f452971",
+        "bid_cd592daa6517"
+      ],
+      "cycle": 16,
+      "edge_ids": [
+        "edge_b5a4e941075a",
+        "edge_f43bbf3930d4",
+        "edge_d04380a0b3db",
+        "edge_bbda614536a5",
+        "edge_afa8b962712d"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.797,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.301,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.301,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.217,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.217,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 17,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 22,
+          "experiment": 22,
+          "hypothesis": 17,
+          "meta_memory": 3,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.213,
+        "compression": 0.941,
+        "contradictions": 0,
+        "counterexample_density": 0.529,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.621,
+        "epistemic_value": 1.471,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 6,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.919
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0016.md",
+      "timestamp": "2026-07-01T10:57:56.779165+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_d677ad2a82ce",
+        "alloc_ad2676bb8fdb",
+        "alloc_4193f82aaaf6"
+      ],
+      "artifact_ids": [
+        "art_679e43cfb736",
+        "art_b370d5c93af9",
+        "art_98c29d8a997c",
+        "art_3810153c8607",
+        "art_40b2dc3d17aa"
+      ],
+      "bid_ids": [
+        "bid_b50a1ec43394",
+        "bid_8316bed4f183",
+        "bid_8f066e513ba3",
+        "bid_3a9b34f12668",
+        "bid_96bcdafa9872",
+        "bid_0a4f60671708",
+        "bid_77cd5933bbca",
+        "bid_4cf9054cf5c1"
+      ],
+      "cycle": 17,
+      "edge_ids": [
+        "edge_530e9d5f392d",
+        "edge_15cca70d13e3",
+        "edge_3ea2fd31dc32",
+        "edge_5a4c163419b8",
+        "edge_31168658d917"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.786,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.298,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.298,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.215,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.215,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 18,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 24,
+          "experiment": 24,
+          "hypothesis": 18,
+          "meta_memory": 3,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.209,
+        "compression": 0.944,
+        "contradictions": 0,
+        "counterexample_density": 0.5,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.64,
+        "epistemic_value": 1.444,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.934
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0017.md",
+      "timestamp": "2026-07-01T10:57:56.787875+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_20b5ee6afbcc",
+        "alloc_c5f20d16b112",
+        "alloc_a95c4019bd4d"
+      ],
+      "artifact_ids": [
+        "art_14018a9c1adc",
+        "art_cfaf6e8b36e4",
+        "art_11b7019e8b50",
+        "art_5b51a4464862",
+        "art_643695db10c7"
+      ],
+      "bid_ids": [
+        "bid_40d689f0326c",
+        "bid_050caf7c3ca2",
+        "bid_dcc1c4a6fedd",
+        "bid_66289bbf0958",
+        "bid_065eb32b8133",
+        "bid_6e47e15eafed",
+        "bid_554962c54441",
+        "bid_d01a915a622e"
+      ],
+      "cycle": 18,
+      "edge_ids": [
+        "edge_2432e85e5b6a",
+        "edge_b232bbbd5741",
+        "edge_003e4c06547e",
+        "edge_d384b05356ac",
+        "edge_bdda3cdc537c"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.775,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.295,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.295,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.213,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.213,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 19,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 26,
+          "experiment": 26,
+          "hypothesis": 19,
+          "meta_memory": 3,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.205,
+        "compression": 0.947,
+        "contradictions": 0,
+        "counterexample_density": 0.474,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.657,
+        "epistemic_value": 1.421,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.945
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0018.md",
+      "timestamp": "2026-07-01T10:57:56.799698+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_9605ff7b8e2b",
+        "alloc_440947e6d0a6",
+        "alloc_d0184df89e3c"
+      ],
+      "artifact_ids": [
+        "art_955144ea6795",
+        "art_3a28c4f20576",
+        "art_c95d38c39011",
+        "art_ac820daadf88",
+        "art_c01589ef4a87"
+      ],
+      "bid_ids": [
+        "bid_293b8cc926d4",
+        "bid_24906cad843a",
+        "bid_c5e727276971",
+        "bid_08543cbdc4bb",
+        "bid_3dc1841e709d",
+        "bid_0898c2a9ceec",
+        "bid_0514acb56c87",
+        "bid_3b1b5b8f5687"
+      ],
+      "cycle": 19,
+      "edge_ids": [
+        "edge_f41de446e2fa",
+        "edge_e74abc4880fb",
+        "edge_e718daa36e19",
+        "edge_91cb66cb2b3d",
+        "edge_a285a8e1b39a"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.764,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.292,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.292,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.211,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.211,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 20,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 28,
+          "experiment": 28,
+          "hypothesis": 20,
+          "meta_memory": 3,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.202,
+        "compression": 0.95,
+        "contradictions": 0,
+        "counterexample_density": 0.45,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.673,
+        "epistemic_value": 1.4,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.708,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.953
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0019.md",
+      "timestamp": "2026-07-01T10:57:56.809258+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_2ee271527497",
+        "alloc_4c68090ed6ba",
+        "alloc_1bc0320707fc"
+      ],
+      "artifact_ids": [
+        "art_b60fc0541528",
+        "art_1e61c0cb5b34",
+        "art_c171cf572790",
+        "art_71519e334b5b",
+        "art_02c6b33cd052",
+        "art_e2c181585c16"
+      ],
+      "bid_ids": [
+        "bid_1188e3ee4619",
+        "bid_d81c0b0e4033",
+        "bid_85893937491d",
+        "bid_ee3d24819880",
+        "bid_70b1efdedb63",
+        "bid_4c542ab19e3d",
+        "bid_06369cb87ec6",
+        "bid_a913f35e3f50"
+      ],
+      "cycle": 20,
+      "edge_ids": [
+        "edge_61092fb2633e",
+        "edge_455117208a8a",
+        "edge_1e5c687f55b1",
+        "edge_d2b280eb5e9f",
+        "edge_eece1ca43633"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.753,
+            "status": "active"
+          },
+          {
+            "name": "agi",
+            "priority": 0.289,
+            "status": "active"
+          },
+          {
+            "name": "possible_worlds",
+            "priority": 0.289,
+            "status": "active"
+          },
+          {
+            "name": "biology",
+            "priority": 0.209,
+            "status": "active"
+          },
+          {
+            "name": "economics",
+            "priority": 0.209,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 21,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 30,
+          "experiment": 30,
+          "hypothesis": 21,
+          "meta_memory": 4,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.199,
+        "compression": 0.952,
+        "contradictions": 0,
+        "counterexample_density": 0.429,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.681,
+        "epistemic_value": 1.381,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.667,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.959
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0020.md",
+      "timestamp": "2026-07-01T10:57:56.822278+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_395b78f22d84",
+        "alloc_831448206350",
+        "alloc_dfd276e282e8"
+      ],
+      "artifact_ids": [
+        "art_4738e4194d41",
+        "art_3c61990111a7",
+        "art_09647350a2ae",
+        "art_f7ade3b05fba",
+        "art_70bac1cd26ca"
+      ],
+      "bid_ids": [
+        "bid_c41d137ec885",
+        "bid_d78b890b9ee0",
+        "bid_7b7086677c1a",
+        "bid_d60a75155a39",
+        "bid_f55334ec2eba",
+        "bid_face3d0455f5",
+        "bid_c33e1824d22d",
+        "bid_0bd5ac0b5dba",
+        "bid_ee4e1665efa2"
+      ],
+      "cycle": 21,
+      "edge_ids": [
+        "edge_c523a1e63794",
+        "edge_72d9d16c0830",
+        "edge_6a88b64c8190",
+        "edge_7906123cc19b",
+        "edge_5c5e9839d338"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.741,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 22,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 32,
+          "experiment": 32,
+          "hypothesis": 22,
+          "meta_memory": 4,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.196,
+        "compression": 0.955,
+        "contradictions": 0,
+        "counterexample_density": 0.409,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.694,
+        "epistemic_value": 1.364,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.667,
+        "research_velocity": {
+          "last_cycle_artifacts": 6,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.965
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0021.md",
+      "timestamp": "2026-07-01T10:57:56.833213+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_7ec50ef44bb0",
+        "alloc_11f38cf2c956",
+        "alloc_884de6509721"
+      ],
+      "artifact_ids": [
+        "art_a2f62adfef6b",
+        "art_5dc4a52194a5",
+        "art_6840ac509032",
+        "art_33edb60d485d",
+        "art_4aa452cfc889"
+      ],
+      "bid_ids": [
+        "bid_8b6a28b3d040",
+        "bid_dbeb26ed8fc1",
+        "bid_f63a1357fe97",
+        "bid_ebe4791fdd05",
+        "bid_199c139e84c7",
+        "bid_f7f68eb61497",
+        "bid_3ad3dd3ce6bc",
+        "bid_b3eec3a05430",
+        "bid_aeb54d11853f"
+      ],
+      "cycle": 22,
+      "edge_ids": [
+        "edge_e1c2b7cfdad3",
+        "edge_c5c5f613c5d1",
+        "edge_e2d07cd47a77",
+        "edge_d9a464bed573",
+        "edge_6c0959a55a8d"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.729,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 23,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 34,
+          "experiment": 34,
+          "hypothesis": 23,
+          "meta_memory": 4,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.193,
+        "compression": 0.957,
+        "contradictions": 0,
+        "counterexample_density": 0.391,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.706,
+        "epistemic_value": 1.348,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.667,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.968
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0022.md",
+      "timestamp": "2026-07-01T10:57:56.843710+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_75c451431a81",
+        "alloc_ff71929c8189",
+        "alloc_258ed6ee12f1"
+      ],
+      "artifact_ids": [
+        "art_1611d3d5a8e1",
+        "art_dac93ef4cb8c",
+        "art_04e9464b9f41",
+        "art_816f44615932",
+        "art_6025a698313e"
+      ],
+      "bid_ids": [
+        "bid_b8336d2ce6b9",
+        "bid_f132f21508f0",
+        "bid_0a19b9437232",
+        "bid_9657d5aea037",
+        "bid_fa407a26ced8",
+        "bid_8d339b90fe5c",
+        "bid_1043db5cc03f",
+        "bid_bf4c9ec3b5e7",
+        "bid_f1101c60023c"
+      ],
+      "cycle": 23,
+      "edge_ids": [
+        "edge_2c30575038e6",
+        "edge_8b35840806d8",
+        "edge_6b3faa9bb37e",
+        "edge_a64ab8f99876",
+        "edge_2ca2fd15fd9c"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.717,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 24,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 36,
+          "experiment": 36,
+          "hypothesis": 24,
+          "meta_memory": 4,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.191,
+        "compression": 0.958,
+        "contradictions": 0,
+        "counterexample_density": 0.375,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.718,
+        "epistemic_value": 1.333,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.667,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.972
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0023.md",
+      "timestamp": "2026-07-01T10:57:56.855165+00:00"
+    },
+    {
+      "allocation_ids": [
+        "alloc_63e85520b38b",
+        "alloc_4db24c924477",
+        "alloc_842549ec3b2c"
+      ],
+      "artifact_ids": [
+        "art_c4d61a3f2a12",
+        "art_e62ba6ee4f92",
+        "art_c33c614738b4",
+        "art_9937287d42e4",
+        "art_713c623b5967"
+      ],
+      "bid_ids": [
+        "bid_c1646873b862",
+        "bid_f22afce1783e",
+        "bid_b0a4f73b3f47",
+        "bid_86b6b3ffec52",
+        "bid_6d3f90c4a21d",
+        "bid_d5cc7ab89e2d",
+        "bid_9333b70ef7a6",
+        "bid_da536200b167",
+        "bid_4edecbe4ee5b"
+      ],
+      "cycle": 24,
+      "edge_ids": [
+        "edge_bbdd7bf45618",
+        "edge_b7154416f785",
+        "edge_9e70dd155d5f",
+        "edge_48f60b2223a8",
+        "edge_7afe41c05766"
+      ],
+      "frontier_id": "art_08fa74e90a70",
+      "metrics": {
+        "active_domains": [
+          {
+            "name": "maevtica",
+            "priority": 1.705,
+            "status": "active"
+          }
+        ],
+        "active_hypotheses": 25,
+        "artifact_counts": {
+          "applicability_atlas": 3,
+          "assumption": 9,
+          "counterexample": 9,
+          "derived_concept": 38,
+          "experiment": 38,
+          "hypothesis": 25,
+          "meta_memory": 4,
+          "process_note": 7,
+          "research_question": 2,
+          "unknown_region": 1
+        },
+        "attention_efficiency": 0.188,
+        "compression": 0.96,
+        "contradictions": 0,
+        "counterexample_density": 0.36,
+        "dead_hypotheses": 0,
+        "duplicate_rate": 0.728,
+        "epistemic_value": 1.32,
+        "most_reusable_concepts": [
+          {
+            "confidence": 0.5,
+            "id": "art_4f58d81b3bd6",
+            "reuse": 1,
+            "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_02007eb125ab",
+            "reuse": 1,
+            "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7cd3b60b5fdc",
+            "reuse": 1,
+            "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_31cdc1b34b9d",
+            "reuse": 1,
+            "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+          },
+          {
+            "confidence": 0.5,
+            "id": "art_7ad20e38b0d7",
+            "reuse": 1,
+            "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+          }
+        ],
+        "organizational_diversity": 0.667,
+        "research_velocity": {
+          "last_cycle_artifacts": 5,
+          "last_cycle_edges": 5
+        },
+        "stagnation_score": 0.975
+      },
+      "next_frontier_id": "art_08fa74e90a70",
+      "path": "cycle_0024.md",
+      "timestamp": "2026-07-01T10:57:56.866828+00:00"
+    }
+  ]
+}

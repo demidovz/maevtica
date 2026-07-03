@@ -1,0 +1,73 @@
+{
+  "artifact_ids": [
+    "art_f87c1fff565e",
+    "art_68b04f9d71c2",
+    "art_5c204227ad03",
+    "art_749eacc98016",
+    "art_75733878631f",
+    "art_56a15402dc71",
+    "art_f9b298cd4abb",
+    "art_21209b5cd50c",
+    "art_83fbdda42cdc",
+    "art_ca32b3e7146c"
+  ],
+  "completed_at": "2026-07-01T10:14:10.994517+00:00",
+  "cycle": 3,
+  "edge_ids": [
+    "edge_5e0175cf9c25",
+    "edge_5c62bb3fc054",
+    "edge_45f244a9ee3a",
+    "edge_3649e59b7904",
+    "edge_9af9aff3859b",
+    "edge_43d10eb84235"
+  ],
+  "frontier_id": "art_cd11c4c9df4a",
+  "metrics": {
+    "active_hypotheses": 2,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 1,
+      "contradiction": 3,
+      "counterexample": 3,
+      "derived_concept": 3,
+      "experiment": 3,
+      "frontier": 3,
+      "hypothesis": 3,
+      "process_note": 3,
+      "research_history": 3,
+      "research_question": 1,
+      "unknown_region": 1
+    },
+    "compression": 1.0,
+    "contradictions": 3,
+    "counterexample_density": 1.0,
+    "dead_hypotheses": 1,
+    "epistemic_value": 2.6,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_7984d564422b",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7d8b1e730d43",
+        "reuse": 1,
+        "title": "Formal handle for H2: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_68b04f9d71c2",
+        "reuse": 1,
+        "title": "Formal handle for H3: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      }
+    ],
+    "research_velocity": {
+      "last_cycle_artifacts": 10,
+      "last_cycle_edges": 6
+    }
+  },
+  "next_frontier_id": "art_75733878631f",
+  "started_at": "2026-07-01T10:14:10.993607+00:00"
+}

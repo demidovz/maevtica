@@ -1,0 +1,104 @@
+[
+  {
+    "id": "bell_noll",
+    "note": "Bell Labs as long-lived corporate research institution with durable communities and accumulated knowledge.",
+    "title": "Memories: A Personal History of Bell Telephone Laboratories",
+    "url": "https://quello.msu.edu/divi/wp-content/uploads/2015/08/Memories-Noll.pdf"
+  },
+  {
+    "id": "nasa_llis",
+    "note": "Apollo configuration control and lessons-learned evidence.",
+    "title": "NASA Apollo Lunar Module Reliability Lessons Learned",
+    "url": "https://llis.nasa.gov/lesson/1806"
+  },
+  {
+    "id": "nasa_gao",
+    "note": "NASA lessons-learned systems and weaknesses in dissemination.",
+    "title": "NASA: Better Mechanisms Needed for Sharing Lessons Learned",
+    "url": "https://www.gao.gov/products/gao-02-195"
+  },
+  {
+    "id": "manhattan_wellerstein",
+    "note": "Mega-project coordination across scientific, industrial, and military work.",
+    "title": "Manhattan Project overview",
+    "url": "https://ethos.lps.library.cmu.edu/article/id/35/"
+  },
+  {
+    "id": "linux_kernel_patches",
+    "note": "Review tags, patch discussion, and maintainer evidence for criticism and memory.",
+    "title": "Linux kernel submitting patches guide",
+    "url": "https://www.kernel.org/doc/html/v4.16/process/submitting-patches.html"
+  },
+  {
+    "id": "lkml_archive",
+    "note": "Append-like public archive of patch discussion and decisions.",
+    "title": "Linux Kernel Mailing List archive",
+    "url": "https://lkml.org/"
+  },
+  {
+    "id": "alphago_google",
+    "note": "AlphaGo combined policy/value networks, self-play, and search.",
+    "title": "Mastering the game of Go with deep neural networks and tree search",
+    "url": "https://research.google/pubs/mastering-the-game-of-go-with-deep-neural-networks-and-tree-search/"
+  },
+  {
+    "id": "crispr_nobel",
+    "note": "CRISPR/Cas9 discovery and broad impact.",
+    "title": "Nobel Prize in Chemistry 2020 press release",
+    "url": "https://www.nobelprize.org/prizes/chemistry/2020/press-release/"
+  },
+  {
+    "id": "crispr_broad",
+    "note": "Parallel discoveries, simplification into guide RNA, and incremental accumulation.",
+    "title": "CRISPR Timeline",
+    "url": "https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/crispr-timeline"
+  },
+  {
+    "id": "darwin_project",
+    "note": "Darwin notebooks as persistent memory for observations, readings, and hypotheses.",
+    "title": "Darwin's species notebooks",
+    "url": "https://www.darwinproject.ac.uk/commentary/evolution/darwin-s-species-notebooks-i-think"
+  },
+  {
+    "id": "darwin_online",
+    "note": "Detailed record of Darwin's gradual development of species questions.",
+    "title": "Darwin's notebooks and reading lists",
+    "url": "https://darwin-online.org.uk/EditorialIntroductions/vanWyhe_notebooks.html"
+  },
+  {
+    "id": "cern_open",
+    "note": "Persistent identifiers, FAIR principles, and data management.",
+    "title": "CERN Open Data",
+    "url": "https://openscience.cern/open-data"
+  },
+  {
+    "id": "cern_preservation",
+    "note": "Preservation portals for datasets, code, tools, and analyses.",
+    "title": "Open science at CERN",
+    "url": "https://cerncourier.com/a/open-science-a-vision-for-collaborative-reproducible-and-reusable-research/"
+  },
+  {
+    "id": "theranos_lessons",
+    "note": "Control case: weak validation and regulatory gaps.",
+    "title": "Lessons from Theranos",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8979578/"
+  },
+  {
+    "id": "theranos_peer_review",
+    "note": "Control case: bold claims without peer review or public data scrutiny.",
+    "title": "Theranos and peer review case study",
+    "url": "https://www.bsm.upf.edu/documents/2024-case-study-elisabeth-holmes-theranos.pdf"
+  },
+  {
+    "id": "challenger_vaughan",
+    "note": "Control case: warnings existed but failed to redirect decision-making.",
+    "title": "Challenger disaster and normalization of deviance",
+    "url": "https://magazine.columbia.edu/article/challenger-disaster-normalization-deviance"
+  },
+  {
+    "id": "replication_crisis",
+    "note": "Control case: failed replications historically hard to publish.",
+    "title": "Replication crisis in psychology",
+    "url": "https://nobaproject.com/modules/the-replication-crisis-in-psychology"
+  }
+]

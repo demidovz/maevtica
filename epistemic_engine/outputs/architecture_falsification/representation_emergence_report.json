@@ -1,0 +1,45 @@
+{
+  "variable_count": 2500,
+  "sampled": true,
+  "cluster_count": 4,
+  "noise_count": 191,
+  "clusters": {
+    "0": {
+      "size": 2166,
+      "description": [
+        "prediction:-0.26z",
+        "compression:-0.08z",
+        "stochasticity:-0.03z",
+        "constraint:-0.03z"
+      ]
+    },
+    "1": {
+      "size": 130,
+      "description": [
+        "prediction:3.27z",
+        "content:-0.40z",
+        "ambiguity:-0.33z",
+        "constraint:-0.29z"
+      ]
+    },
+    "2": {
+      "size": 8,
+      "description": [
+        "compression:3.41z",
+        "constraint:2.91z",
+        "transform:-0.57z",
+        "role:-0.53z"
+      ]
+    },
+    "3": {
+      "size": 5,
+      "description": [
+        "compression:3.88z",
+        "memory:2.12z",
+        "ambiguity:-0.56z",
+        "content:-0.54z"
+      ]
+    }
+  },
+  "note": "Clusters are discovered from variable features only; C1-C5 labels are not used."
+}

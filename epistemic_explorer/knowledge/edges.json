@@ -1,0 +1,1022 @@
+[
+  {
+    "created_at": "2026-06-29T21:50:17.016070+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0001",
+    "target_id": "h-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016123+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.8
+    },
+    "source_id": "c-0001",
+    "target_id": "h-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016169+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0001",
+    "target_id": "h-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016203+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0001",
+    "target_id": "o-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016245+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0001",
+    "target_id": "h-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016282+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0001",
+    "target_id": "k-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016315+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0001",
+    "target_id": "q-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016352+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0001",
+    "target_id": "h-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016397+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0002",
+    "target_id": "h-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016439+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0002",
+    "target_id": "h-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016472+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0002",
+    "target_id": "o-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016506+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0002",
+    "target_id": "h-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016538+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0002",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.016568+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0002",
+    "target_id": "q-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017362+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0002",
+    "target_id": "h-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017417+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.75
+    },
+    "source_id": "c-0003",
+    "target_id": "h-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017455+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0003",
+    "target_id": "h-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017486+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0003",
+    "target_id": "o-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017521+00:00",
+    "edge_type": "falsifies",
+    "metadata": {},
+    "source_id": "o-0003",
+    "target_id": "h-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017536+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0003",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017566+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0003",
+    "target_id": "q-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017599+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0002",
+    "target_id": "h-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017634+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.6
+    },
+    "source_id": "c-0004",
+    "target_id": "h-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017670+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0004",
+    "target_id": "h-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017700+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0004",
+    "target_id": "o-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017733+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0004",
+    "target_id": "h-0004"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017764+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0004",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.017795+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0004",
+    "target_id": "q-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019039+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0003",
+    "target_id": "h-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019081+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0005",
+    "target_id": "h-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019118+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0005",
+    "target_id": "h-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019149+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0005",
+    "target_id": "o-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019184+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0005",
+    "target_id": "h-0005"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019200+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0005",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019242+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0005",
+    "target_id": "q-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019284+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0003",
+    "target_id": "h-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019323+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0006",
+    "target_id": "h-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019359+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0006",
+    "target_id": "h-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019401+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0006",
+    "target_id": "o-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019435+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0006",
+    "target_id": "h-0006"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019450+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0006",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.019481+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0006",
+    "target_id": "q-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.020871+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0004",
+    "target_id": "h-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.020916+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0007",
+    "target_id": "h-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.020955+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0007",
+    "target_id": "h-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.020988+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0007",
+    "target_id": "o-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021021+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0007",
+    "target_id": "h-0007"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021035+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0007",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021068+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0007",
+    "target_id": "q-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021104+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0004",
+    "target_id": "h-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021142+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0008",
+    "target_id": "h-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021181+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0008",
+    "target_id": "h-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021213+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0008",
+    "target_id": "o-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021246+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0008",
+    "target_id": "h-0008"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021262+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0008",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.021298+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0008",
+    "target_id": "q-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.022849+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0005",
+    "target_id": "h-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.022891+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.8
+    },
+    "source_id": "c-0009",
+    "target_id": "h-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.022933+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0009",
+    "target_id": "h-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.022966+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0009",
+    "target_id": "o-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023001+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0009",
+    "target_id": "h-0009"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023017+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0009",
+    "target_id": "k-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023051+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0009",
+    "target_id": "q-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023085+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0005",
+    "target_id": "h-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023126+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0010",
+    "target_id": "h-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023165+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0010",
+    "target_id": "h-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023198+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0010",
+    "target_id": "o-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023231+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0010",
+    "target_id": "h-0010"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023245+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0010",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.023278+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0010",
+    "target_id": "q-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025085+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0006",
+    "target_id": "h-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025133+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0011",
+    "target_id": "h-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025175+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0011",
+    "target_id": "h-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025211+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0011",
+    "target_id": "o-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025246+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0011",
+    "target_id": "h-0011"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025262+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0011",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025297+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0011",
+    "target_id": "q-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025333+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0006",
+    "target_id": "h-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025370+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0012",
+    "target_id": "h-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025415+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0012",
+    "target_id": "h-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025447+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0012",
+    "target_id": "o-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025478+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0012",
+    "target_id": "h-0012"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025493+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0012",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.025527+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0012",
+    "target_id": "q-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027564+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0007",
+    "target_id": "h-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027610+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0013",
+    "target_id": "h-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027650+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0013",
+    "target_id": "h-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027685+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0013",
+    "target_id": "o-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027721+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0013",
+    "target_id": "h-0013"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027738+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0013",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027772+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0013",
+    "target_id": "q-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027810+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0007",
+    "target_id": "h-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027850+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.5
+    },
+    "source_id": "c-0014",
+    "target_id": "h-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027889+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0014",
+    "target_id": "h-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027924+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0014",
+    "target_id": "o-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027957+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0014",
+    "target_id": "h-0014"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.027972+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0014",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.028007+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0014",
+    "target_id": "q-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030319+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0008",
+    "target_id": "h-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030370+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.8
+    },
+    "source_id": "c-0015",
+    "target_id": "h-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030426+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0015",
+    "target_id": "h-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030465+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0015",
+    "target_id": "o-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030503+00:00",
+    "edge_type": "falsifies",
+    "metadata": {},
+    "source_id": "o-0015",
+    "target_id": "h-0015"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030522+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0015",
+    "target_id": "k-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030561+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0015",
+    "target_id": "q-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030601+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0008",
+    "target_id": "h-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030644+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0016",
+    "target_id": "h-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030685+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0016",
+    "target_id": "h-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030723+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0016",
+    "target_id": "o-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030760+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0016",
+    "target_id": "h-0016"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030777+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0016",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.030815+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0016",
+    "target_id": "q-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033438+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0009",
+    "target_id": "h-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033489+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.35
+    },
+    "source_id": "c-0017",
+    "target_id": "h-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033531+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0017",
+    "target_id": "h-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033569+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0017",
+    "target_id": "o-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033606+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0017",
+    "target_id": "h-0017"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033628+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0017",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033667+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0017",
+    "target_id": "q-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033709+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0009",
+    "target_id": "h-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033750+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.8
+    },
+    "source_id": "c-0018",
+    "target_id": "h-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033792+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0018",
+    "target_id": "h-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033827+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0018",
+    "target_id": "o-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033861+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0018",
+    "target_id": "h-0018"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033877+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0018",
+    "target_id": "k-0001"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.033915+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0018",
+    "target_id": "q-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.036844+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0010",
+    "target_id": "h-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.036896+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.75
+    },
+    "source_id": "c-0019",
+    "target_id": "h-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.036942+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0019",
+    "target_id": "h-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.036980+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0019",
+    "target_id": "o-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037015+00:00",
+    "edge_type": "falsifies",
+    "metadata": {},
+    "source_id": "o-0019",
+    "target_id": "h-0019"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037033+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0019",
+    "target_id": "k-0002"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037072+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0019",
+    "target_id": "q-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037112+00:00",
+    "edge_type": "asks",
+    "metadata": {},
+    "source_id": "q-0010",
+    "target_id": "h-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037155+00:00",
+    "edge_type": "falsifies",
+    "metadata": {
+      "severity": 0.6
+    },
+    "source_id": "c-0020",
+    "target_id": "h-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037198+00:00",
+    "edge_type": "tests",
+    "metadata": {},
+    "source_id": "e-0020",
+    "target_id": "h-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037234+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "e-0020",
+    "target_id": "o-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037267+00:00",
+    "edge_type": "supports",
+    "metadata": {},
+    "source_id": "o-0020",
+    "target_id": "h-0020"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037282+00:00",
+    "edge_type": "uses",
+    "metadata": {},
+    "source_id": "h-0020",
+    "target_id": "k-0003"
+  },
+  {
+    "created_at": "2026-06-29T21:50:17.037322+00:00",
+    "edge_type": "produces",
+    "metadata": {},
+    "source_id": "h-0020",
+    "target_id": "q-0021"
+  }
+]

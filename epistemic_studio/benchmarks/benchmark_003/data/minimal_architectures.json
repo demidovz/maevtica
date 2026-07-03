@@ -1,0 +1,82 @@
+[
+  {
+    "mean_score": 0.4709,
+    "mechanisms": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M7",
+      "M8",
+      "M10"
+    ],
+    "overhead": 0.41,
+    "size": 8,
+    "std_score": 0.0025
+  },
+  {
+    "mean_score": 0.4665,
+    "mechanisms": [
+      "M1",
+      "M3",
+      "M4",
+      "M5",
+      "M7",
+      "M8",
+      "M9",
+      "M10"
+    ],
+    "overhead": 0.41,
+    "size": 8,
+    "std_score": 0.0027
+  },
+  {
+    "mean_score": 0.4638,
+    "mechanisms": [
+      "M1",
+      "M2",
+      "M4",
+      "M5",
+      "M7",
+      "M8",
+      "M9",
+      "M10"
+    ],
+    "overhead": 0.39,
+    "size": 8,
+    "std_score": 0.0025
+  },
+  {
+    "mean_score": 0.4615,
+    "mechanisms": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M8",
+      "M9",
+      "M10"
+    ],
+    "overhead": 0.42,
+    "size": 8,
+    "std_score": 0.0024
+  },
+  {
+    "mean_score": 0.4541,
+    "mechanisms": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M7",
+      "M9",
+      "M10"
+    ],
+    "overhead": 0.41,
+    "size": 8,
+    "std_score": 0.002
+  }
+]

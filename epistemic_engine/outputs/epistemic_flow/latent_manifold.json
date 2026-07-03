@@ -1,0 +1,115 @@
+{
+  "explained_variance": [
+    0.4040906792303651,
+    0.19212828082626746,
+    0.14841686837148058,
+    0.07507309004259671,
+    0.057369094467461995,
+    0.03176110823317905
+  ],
+  "intrinsic_dimension_85pct": 5,
+  "top_coordinates": {
+    "pc1": [
+      {
+        "observable": "order_behavioral_entropy",
+        "weight": 0.28537468090850915
+      },
+      {
+        "observable": "order_canonical_role_count_proxy",
+        "weight": 0.28537468090850876
+      },
+      {
+        "observable": "translation_complexity",
+        "weight": 0.282167968028107
+      },
+      {
+        "observable": "convergence",
+        "weight": -0.24121265680184972
+      },
+      {
+        "observable": "order_coordination",
+        "weight": -0.2412126568018497
+      },
+      {
+        "observable": "propagation",
+        "weight": 0.2280633993454555
+      },
+      {
+        "observable": "hierarchy_emergence",
+        "weight": 0.2230585203226064
+      },
+      {
+        "observable": "order_abstraction_depth",
+        "weight": 0.22305852032260637
+      }
+    ],
+    "pc2": [
+      {
+        "observable": "order_fixed_point_density",
+        "weight": -0.38633366562115923
+      },
+      {
+        "observable": "stability",
+        "weight": -0.3863336656211591
+      },
+      {
+        "observable": "order_stability",
+        "weight": -0.3863336656211591
+      },
+      {
+        "observable": "fixed_point_strength",
+        "weight": -0.38633366562115684
+      },
+      {
+        "observable": "convergence",
+        "weight": -0.24339286201100266
+      },
+      {
+        "observable": "order_coordination",
+        "weight": -0.24339286201100266
+      },
+      {
+        "observable": "hierarchy_emergence",
+        "weight": -0.20641444162165598
+      },
+      {
+        "observable": "order_abstraction_depth",
+        "weight": -0.20641444162165593
+      }
+    ],
+    "pc3": [
+      {
+        "observable": "order_compression_ratio",
+        "weight": 0.43288847456189106
+      },
+      {
+        "observable": "abstraction_growth",
+        "weight": 0.40491756831343173
+      },
+      {
+        "observable": "compositionality",
+        "weight": 0.33566050443903794
+      },
+      {
+        "observable": "hierarchy_emergence",
+        "weight": 0.25623573399414945
+      },
+      {
+        "observable": "order_abstraction_depth",
+        "weight": 0.2562357339941493
+      },
+      {
+        "observable": "order_hierarchy_growth",
+        "weight": 0.25623573399414923
+      },
+      {
+        "observable": "order_reuse",
+        "weight": -0.23401868879227317
+      },
+      {
+        "observable": "order_transfer_efficiency",
+        "weight": -0.20682127449710955
+      }
+    ]
+  }
+}

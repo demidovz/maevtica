@@ -1,0 +1,142 @@
+[
+  {
+    "confidence": 0.672,
+    "contribution": 0.0503,
+    "full_with_score": 0.501,
+    "id": "M1",
+    "name": "Persistent Research State",
+    "strongest_metrics": [
+      "long_term_memory",
+      "knowledge_reuse",
+      "organizational_stability"
+    ],
+    "variance": 0.0026,
+    "without_score": 0.4507
+  },
+  {
+    "confidence": 0.635,
+    "contribution": 0.0404,
+    "full_with_score": 0.501,
+    "id": "M10",
+    "name": "Counterexample preservation",
+    "strongest_metrics": [
+      "counterexample_discovery",
+      "decision_quality",
+      "organizational_stability"
+    ],
+    "variance": 0.0028,
+    "without_score": 0.4606
+  },
+  {
+    "confidence": 0.642,
+    "contribution": 0.04,
+    "full_with_score": 0.501,
+    "id": "M5",
+    "name": "Append-only memory",
+    "strongest_metrics": [
+      "long_term_memory",
+      "organizational_stability",
+      "knowledge_reuse"
+    ],
+    "variance": 0.0021,
+    "without_score": 0.461
+  },
+  {
+    "confidence": 0.629,
+    "contribution": 0.0376,
+    "full_with_score": 0.501,
+    "id": "M4",
+    "name": "Knowledge Graph",
+    "strongest_metrics": [
+      "knowledge_reuse",
+      "research_compression",
+      "long_term_memory"
+    ],
+    "variance": 0.0024,
+    "without_score": 0.4634
+  },
+  {
+    "confidence": 0.626,
+    "contribution": 0.0357,
+    "full_with_score": 0.501,
+    "id": "M8",
+    "name": "Compression",
+    "strongest_metrics": [
+      "research_compression",
+      "knowledge_reuse",
+      "duplicate_reduction"
+    ],
+    "variance": 0.002,
+    "without_score": 0.4653
+  },
+  {
+    "confidence": 0.576,
+    "contribution": 0.0267,
+    "full_with_score": 0.501,
+    "id": "M7",
+    "name": "Question refinement",
+    "strongest_metrics": [
+      "question_refinement",
+      "decision_quality",
+      "attention_efficiency"
+    ],
+    "variance": 0.0027,
+    "without_score": 0.4743
+  },
+  {
+    "confidence": 0.572,
+    "contribution": 0.0242,
+    "full_with_score": 0.501,
+    "id": "M3",
+    "name": "Planner-guided prioritization",
+    "strongest_metrics": [
+      "decision_quality",
+      "attention_efficiency",
+      "question_refinement"
+    ],
+    "variance": 0.0019,
+    "without_score": 0.4768
+  },
+  {
+    "confidence": 0.565,
+    "contribution": 0.0238,
+    "full_with_score": 0.501,
+    "id": "M2",
+    "name": "Explorer separated from Engine",
+    "strongest_metrics": [
+      "counterexample_discovery",
+      "hypothesis_quality",
+      "decision_quality"
+    ],
+    "variance": 0.0023,
+    "without_score": 0.4772
+  },
+  {
+    "confidence": 0.531,
+    "contribution": 0.0179,
+    "full_with_score": 0.501,
+    "id": "M9",
+    "name": "Applicability tracking",
+    "strongest_metrics": [
+      "counterexample_discovery",
+      "decision_quality",
+      "question_refinement"
+    ],
+    "variance": 0.0022,
+    "without_score": 0.4831
+  },
+  {
+    "confidence": 0.416,
+    "contribution": 0.0046,
+    "full_with_score": 0.501,
+    "id": "M6",
+    "name": "Journal",
+    "strongest_metrics": [
+      "long_term_memory",
+      "organizational_stability",
+      "question_refinement"
+    ],
+    "variance": 0.0018,
+    "without_score": 0.4964
+  }
+]

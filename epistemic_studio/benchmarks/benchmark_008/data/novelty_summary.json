@@ -1,0 +1,430 @@
+{
+  "claims": [
+    {
+      "closest_equivalents": [
+        "sutton_barto",
+        "wiener_cybernetics",
+        "kalman_filter",
+        "pac_valiant"
+      ],
+      "confidence": 0.96,
+      "genuine_difference": "The current theory states the condition at a higher abstraction level across biological, institutional, computational, and organizational systems.",
+      "id": "c01_repeated_interaction",
+      "novelty_class": "already_known",
+      "partial_overlaps": [
+        "bayesian_sep",
+        "active_inference"
+      ],
+      "prediction": "One-shot systems cannot accumulate reliable knowledge over time except by inheriting another system's retained state.",
+      "reason": "Repeated sampling, feedback, recursive estimation, and interaction are core assumptions in existing learning, control, and cybernetic frameworks.",
+      "text": "Cumulative knowledge requires repeated interaction between system and environment."
+    },
+    {
+      "closest_equivalents": [
+        "kalman_filter",
+        "bayesian_sep",
+        "sutton_barto",
+        "nonaka_seci"
+      ],
+      "confidence": 0.78,
+      "genuine_difference": "The theory treats memory as substrate-neutral: parameters, records, genes, prices, practices, and institutions can all instantiate retention.",
+      "id": "c02_retention",
+      "novelty_class": "improved_formulation",
+      "partial_overlaps": [
+        "cap_theorem",
+        "shannon_1948"
+      ],
+      "prediction": "Systems without durable state cannot improve across cycles at the system level.",
+      "reason": "The core idea is old, but the substrate-neutral organizational framing usefully prevents confusing human-readable archives with memory itself.",
+      "text": "Cumulative knowledge requires retention: prior interaction must affect later behavior."
+    },
+    {
+      "closest_equivalents": [
+        "wiener_cybernetics",
+        "sutton_barto",
+        "bayesian_sep",
+        "kalman_filter"
+      ],
+      "confidence": 0.72,
+      "genuine_difference": "The theory packages feedback alignment as a primitive axiom for any cumulative knowledge system, not only as a loss/reward design issue.",
+      "id": "c03_truth_correlated_feedback",
+      "novelty_class": "stronger_formulation",
+      "partial_overlaps": [
+        "popper_refutations",
+        "active_inference"
+      ],
+      "prediction": "A system can have repeated interaction, retention, and feedback while converging to falsehood if feedback is biased, adversarial, or Goodharted.",
+      "reason": "Misleading signals and bad rewards are well known; making truth-correlation a cross-domain axiom is a useful unification, not a clear discovery.",
+      "text": "Feedback must be truth-correlated rather than merely present."
+    },
+    {
+      "closest_equivalents": [
+        "pac_valiant",
+        "vc_blumer",
+        "kuhn_revolutions"
+      ],
+      "confidence": 0.68,
+      "genuine_difference": "The theory makes applicability boundaries a first-class requirement rather than a downstream caveat.",
+      "id": "c04_scope_control",
+      "novelty_class": "stronger_formulation",
+      "partial_overlaps": [
+        "sutton_barto",
+        "bayesian_sep",
+        "cap_theorem"
+      ],
+      "prediction": "Systems that ignore scope will overgeneralize, transfer failures across domains, and mistake local adaptation for global knowledge.",
+      "reason": "Domain restrictions, hypothesis classes, external validity, and paradigm-relative puzzles are established; the novelty is the operational insistence that scope must be retained with knowledge artifacts.",
+      "text": "Reliable knowledge requires scope control: retained claims must carry conditions of transfer."
+    },
+    {
+      "closest_equivalents": [
+        "shannon_1948",
+        "mdl_grunwald",
+        "pac_valiant",
+        "cap_theorem"
+      ],
+      "confidence": 0.74,
+      "genuine_difference": "The theory links cost pressure to organizational attention and research strategy, not just coding length or sample complexity.",
+      "id": "c05_nonzero_cost",
+      "novelty_class": "improved_formulation",
+      "partial_overlaps": [
+        "sutton_barto",
+        "nonaka_seci"
+      ],
+      "prediction": "When observation, computation, or communication is costless, compression pressure becomes optional rather than necessary.",
+      "reason": "The cost-compression connection is classic; applying it uniformly to research organizations is a useful reformulation.",
+      "text": "Nonzero cost makes compression, reuse, and prioritization epistemically relevant."
+    },
+    {
+      "closest_equivalents": [
+        "kalman_filter",
+        "sutton_barto",
+        "cap_theorem",
+        "argyris_schon",
+        "natural_selection_sep"
+      ],
+      "confidence": 0.55,
+      "genuine_difference": "The theory elevates stability of updates from an engineering property to a minimal axiom for cumulative knowledge.",
+      "id": "c06_update_stability",
+      "novelty_class": "potentially_novel",
+      "partial_overlaps": [
+        "bayesian_sep",
+        "nonaka_seci"
+      ],
+      "prediction": "Some systems satisfying interaction, retention, feedback, scope, and cost still fail through catastrophic forgetting, oscillation, or destructive self-modification.",
+      "reason": "Every ingredient has prior art, but the exact necessity claim across all epistemic substrates appears less directly covered.",
+      "text": "Cumulative knowledge requires update stability: learning must not destroy, invert, or endlessly oscillate around valid retained knowledge faster than correction can recover it."
+    },
+    {
+      "closest_equivalents": [
+        "kalman_filter",
+        "sutton_barto",
+        "bayesian_sep",
+        "wiener_cybernetics"
+      ],
+      "confidence": 0.48,
+      "genuine_difference": "The schema is intentionally minimal and cross-substrate; it avoids assuming probabilities, symbols, rewards, agents, or explicit theories.",
+      "id": "c07_representation_theorem",
+      "novelty_class": "potentially_novel",
+      "partial_overlaps": [
+        "active_inference",
+        "nonaka_seci",
+        "cap_theorem"
+      ],
+      "prediction": "The same abstract schema should classify machine learners, evolution, institutions, markets, collectives, and symbolic reasoners.",
+      "reason": "This is mostly a synthesis. It becomes novel only if it predicts failures outside the home domains of existing frameworks better than those frameworks do.",
+      "text": "Any cumulative knowledge system can be represented as retained state, environment interaction, update operator, truth-correlated evaluation, scope relation, cost pressure, and stability constraint."
+    },
+    {
+      "closest_equivalents": [
+        "popper_refutations",
+        "kuhn_revolutions",
+        "argyris_schon",
+        "nonaka_seci"
+      ],
+      "confidence": 0.64,
+      "genuine_difference": "The theory treats failures as reusable state, not just historical narrative or local lessons learned.",
+      "id": "c08_preserved_failures",
+      "novelty_class": "improved_formulation",
+      "partial_overlaps": [
+        "cap_theorem",
+        "bayesian_sep"
+      ],
+      "prediction": "Organizations that preserve failed hypotheses should reduce duplicate exploration and improve time-to-falsification compared with equally active organizations that do not.",
+      "reason": "Failed hypotheses, anomalies, and lessons learned are well established. The stronger artifact-level prediction is testable but not obviously unprecedented.",
+      "text": "Preserved failures and counterexamples improve cumulative knowledge by preventing rediscovery and stabilizing criticism."
+    },
+    {
+      "closest_equivalents": [
+        "kuhn_revolutions",
+        "mdl_grunwald",
+        "argyris_schon",
+        "popper_refutations"
+      ],
+      "confidence": 0.66,
+      "genuine_difference": "The theory operationalizes question disappearance as a compression event in a research state.",
+      "id": "c09_question_refinement_compression",
+      "novelty_class": "improved_formulation",
+      "partial_overlaps": [
+        "active_inference",
+        "bayesian_sep"
+      ],
+      "prediction": "Research progress often deletes ill-posed questions rather than simply answering them.",
+      "reason": "The intellectual content overlaps Kuhn, MDL, and double-loop learning; the improved part is measurement and artifact tracking.",
+      "text": "Compression through question refinement is a central route of cumulative understanding."
+    }
+  ],
+  "classification_counts": {
+    "already_known": 1,
+    "improved_formulation": 4,
+    "potentially_novel": 2,
+    "stronger_formulation": 2
+  },
+  "experiments": [
+    {
+      "decision_rule": "Novelty survives only if the six-condition model predicts cross-substrate failures significantly better than each domain framework without adding domain-specific features.",
+      "design": "Build a blinded benchmark of learning systems, institutions, markets, and evolutionary simulations. Code only the six abstract conditions, then predict which systems accumulate knowledge over long horizons. Compare against PAC-only, RL-only, Bayesian-only, and organizational-learning-only feature sets.",
+      "distinguishes_from": [
+        "PAC learning",
+        "reinforcement learning",
+        "Bayesian epistemology",
+        "organizational learning"
+      ],
+      "expected_value": 0.88,
+      "id": "e01_cross_substrate_failure_prediction",
+      "target_claims": [
+        "c06_update_stability",
+        "c07_representation_theorem"
+      ]
+    },
+    {
+      "decision_rule": "The claim gains novelty if structured failure artifacts reduce duplicate hypotheses and time-to-falsification beyond ordinary notes and post-hoc summaries.",
+      "design": "Run matched research teams or LLM research collectives on multi-stage tasks with and without structured preserved failures. Hold total notes, time, and participants constant.",
+      "distinguishes_from": [
+        "Popperian criticism",
+        "ordinary lab notes",
+        "knowledge management"
+      ],
+      "expected_value": 0.74,
+      "id": "e02_preserved_failure_ablation",
+      "target_claims": [
+        "c08_preserved_failures"
+      ]
+    },
+    {
+      "decision_rule": "The Studio formulation adds value if scope metadata predicts transfer failure earlier than standard validation metrics alone.",
+      "design": "Compare model repositories, scientific claims, or organizational playbooks with explicit scope annotations against equivalent repositories without scope metadata across out-of-domain transfer tasks.",
+      "distinguishes_from": [
+        "statistical learning theory",
+        "external validity methods",
+        "RL generalization"
+      ],
+      "expected_value": 0.69,
+      "id": "e03_scope_annotation_transfer",
+      "target_claims": [
+        "c04_scope_control"
+      ]
+    },
+    {
+      "decision_rule": "Novelty survives if compression-through-question-refinement predicts future efficiency where existing complexity or impact measures do not.",
+      "design": "Track research projects over time and measure whether question-refinement compression predicts later reuse, fewer duplicates, and faster falsification after controlling for publication count, citation count, and model accuracy.",
+      "distinguishes_from": [
+        "MDL",
+        "bibliometrics",
+        "organizational learning"
+      ],
+      "expected_value": 0.71,
+      "id": "e04_compression_predicts_future_reuse",
+      "target_claims": [
+        "c05_nonzero_cost",
+        "c09_question_refinement_compression"
+      ]
+    }
+  ],
+  "final_assessment": {
+    "genuinely_new": [
+      "No claim is clearly novel on current evidence.",
+      "The best candidate is update stability as a universal condition for cumulative knowledge.",
+      "The second candidate is the six-condition cross-substrate representation theorem."
+    ],
+    "highest_value_experiment": "e01_cross_substrate_failure_prediction",
+    "improved_formulations": [
+      "Substrate-neutral retention",
+      "Truth-correlated feedback as a cross-domain axiom",
+      "Applicability boundaries as retained scope metadata",
+      "Failures as reusable research state",
+      "Question deletion as measurable compression"
+    ],
+    "rediscoveries": [
+      "Repeated interaction",
+      "Basic retention",
+      "Feedback-driven correction",
+      "Compression under cost"
+    ]
+  },
+  "potentially_novel_claims": [
+    {
+      "closest_equivalents": [
+        "kalman_filter",
+        "sutton_barto",
+        "cap_theorem",
+        "argyris_schon",
+        "natural_selection_sep"
+      ],
+      "confidence": 0.55,
+      "genuine_difference": "The theory elevates stability of updates from an engineering property to a minimal axiom for cumulative knowledge.",
+      "id": "c06_update_stability",
+      "novelty_class": "potentially_novel",
+      "partial_overlaps": [
+        "bayesian_sep",
+        "nonaka_seci"
+      ],
+      "prediction": "Some systems satisfying interaction, retention, feedback, scope, and cost still fail through catastrophic forgetting, oscillation, or destructive self-modification.",
+      "reason": "Every ingredient has prior art, but the exact necessity claim across all epistemic substrates appears less directly covered.",
+      "text": "Cumulative knowledge requires update stability: learning must not destroy, invert, or endlessly oscillate around valid retained knowledge faster than correction can recover it."
+    },
+    {
+      "closest_equivalents": [
+        "kalman_filter",
+        "sutton_barto",
+        "bayesian_sep",
+        "wiener_cybernetics"
+      ],
+      "confidence": 0.48,
+      "genuine_difference": "The schema is intentionally minimal and cross-substrate; it avoids assuming probabilities, symbols, rewards, agents, or explicit theories.",
+      "id": "c07_representation_theorem",
+      "novelty_class": "potentially_novel",
+      "partial_overlaps": [
+        "active_inference",
+        "nonaka_seci",
+        "cap_theorem"
+      ],
+      "prediction": "The same abstract schema should classify machine learners, evolution, institutions, markets, collectives, and symbolic reasoners.",
+      "reason": "This is mostly a synthesis. It becomes novel only if it predicts failures outside the home domains of existing frameworks better than those frameworks do.",
+      "text": "Any cumulative knowledge system can be represented as retained state, environment interaction, update operator, truth-correlated evaluation, scope relation, cost pressure, and stability constraint."
+    }
+  ],
+  "rediscovery_rate": 0.111,
+  "sources": [
+    {
+      "id": "shannon_1948",
+      "relevance": "Uncertainty, information, noise, channel limits, and coding efficiency.",
+      "title": "Shannon, A Mathematical Theory of Communication",
+      "tradition": "information_theory",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+    },
+    {
+      "id": "mdl_grunwald",
+      "relevance": "Compression as inductive inference and model selection.",
+      "title": "Grunwald, A Tutorial Introduction to the Minimum Description Length Principle",
+      "tradition": "information_theory",
+      "url": "https://homepages.cwi.nl/~paulv/course-kc/mdlintro.pdf"
+    },
+    {
+      "id": "pac_valiant",
+      "relevance": "Learnability under samples, error bounds, and computational cost.",
+      "title": "Valiant PAC learning overview",
+      "tradition": "statistical_learning_theory",
+      "url": "https://en.wikipedia.org/wiki/Probably_approximately_correct_learning"
+    },
+    {
+      "id": "vc_blumer",
+      "relevance": "Finite capacity as a condition for uniform learnability.",
+      "title": "Blumer et al., Learnability and the Vapnik-Chervonenkis Dimension",
+      "tradition": "statistical_learning_theory",
+      "url": "https://www.cis.upenn.edu/~danroth/Teaching/CS446-17/Papers/p929-blumer.pdf"
+    },
+    {
+      "id": "natural_selection_sep",
+      "relevance": "Heritable variation, differential reproduction, selection, and adaptation over generations.",
+      "title": "Stanford Encyclopedia of Philosophy, Natural Selection",
+      "tradition": "evolutionary_theory",
+      "url": "https://plato.stanford.edu/entries/natural-selection/"
+    },
+    {
+      "id": "wiener_cybernetics",
+      "relevance": "Feedback, control, communication, noise, and self-regulation.",
+      "title": "Wiener, Cybernetics: Control and Communication in the Animal and the Machine",
+      "tradition": "cybernetics",
+      "url": "https://direct.mit.edu/books/oa-monograph/4581/Cybernetics-or-Control-and-Communication-in-the"
+    },
+    {
+      "id": "kalman_filter",
+      "relevance": "Recursive state estimation from noisy measurements using prediction and update.",
+      "title": "Kalman filtering overview",
+      "tradition": "control_theory",
+      "url": "https://en.wikipedia.org/wiki/Kalman_filter"
+    },
+    {
+      "id": "bayesian_sep",
+      "relevance": "Conditionalization and evidential updating of credences.",
+      "title": "Stanford Encyclopedia of Philosophy, Bayesian Epistemology",
+      "tradition": "bayesian_epistemology",
+      "url": "https://plato.stanford.edu/entries/epistemology-bayesian/"
+    },
+    {
+      "id": "popper_refutations",
+      "relevance": "Scientific growth through conjectures controlled by criticism and attempted refutation.",
+      "title": "Popper, Conjectures and Refutations",
+      "tradition": "philosophy_of_science",
+      "url": "https://philpapers.org/rec/POPCAR-5"
+    },
+    {
+      "id": "kuhn_revolutions",
+      "relevance": "Anomalies, crisis, question changes, and paradigm shifts.",
+      "title": "Kuhn, The Structure of Scientific Revolutions",
+      "tradition": "philosophy_of_science",
+      "url": "https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf"
+    },
+    {
+      "id": "sutton_barto",
+      "relevance": "Repeated interaction, reward/error feedback, value updating, and control.",
+      "title": "Sutton and Barto, Reinforcement Learning: An Introduction",
+      "tradition": "reinforcement_learning",
+      "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf"
+    },
+    {
+      "id": "active_inference",
+      "relevance": "Prediction-error/free-energy minimization linking perception and action.",
+      "title": "Free energy principle and active inference overview",
+      "tradition": "active_inference",
+      "url": "https://en.wikipedia.org/wiki/Free_energy_principle"
+    },
+    {
+      "id": "cap_theorem",
+      "relevance": "Distributed trade-offs among consistency, availability, and partition tolerance.",
+      "title": "CAP theorem overview",
+      "tradition": "distributed_systems",
+      "url": "https://en.wikipedia.org/wiki/CAP_theorem"
+    },
+    {
+      "id": "nonaka_seci",
+      "relevance": "Organizational conversion between tacit and explicit knowledge.",
+      "title": "Nonaka and Takeuchi SECI model overview",
+      "tradition": "knowledge_management",
+      "url": "https://ascnhighered.org/ASCN/change_theories/collection/seci.html"
+    },
+    {
+      "id": "argyris_schon",
+      "relevance": "Organizations correct errors and revise governing assumptions.",
+      "title": "Argyris and Schon single-loop and double-loop learning overview",
+      "tradition": "organizational_learning",
+      "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=135424&section=4.2"
+    }
+  ],
+  "tradition_hits": {
+    "active_inference": 4,
+    "bayesian_epistemology": 8,
+    "control_theory": 5,
+    "cybernetics": 3,
+    "distributed_systems": 6,
+    "evolutionary_theory": 1,
+    "information_theory": 4,
+    "knowledge_management": 5,
+    "organizational_learning": 3,
+    "philosophy_of_science": 6,
+    "reinforcement_learning": 7,
+    "statistical_learning_theory": 4
+  },
+  "weighted_novelty_score": 0.27
+}

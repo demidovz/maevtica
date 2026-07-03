@@ -1,0 +1,59 @@
+{
+  "evidence_for_A": {
+    "frozen_model_rank": 3,
+    "mean_r2": -52.82854711677386,
+    "p05_r2": -172.7594810266258
+  },
+  "evidence_for_B": {
+    "breaks": {
+      "architecture": [
+        "self_rewriting_graph_machine",
+        "proof_search_memory_lattice",
+        "causal_program_synthesizer",
+        "reservoir_symbolic_hybrid",
+        "neural_constraint_solver",
+        "market_of_experts"
+      ],
+      "update_rule": [
+        "hybrid_system",
+        "constraint_satisfaction",
+        "bayesian",
+        "message_passing",
+        "reinforcement_like",
+        "differentiable_optimization_ood",
+        "evolutionary",
+        "random_search",
+        "symbolic_theorem_proving"
+      ],
+      "world": [
+        "hierarchical_environment",
+        "delayed_consequence_world",
+        "changing_rules_world",
+        "continuous_environment",
+        "self_modifying_world",
+        "deceptive_regularity_world",
+        "partially_contradictory_world",
+        "adversarial_world",
+        "sparse_observation_world",
+        "no_reusable_structure_world"
+      ]
+    },
+    "works": {
+      "architecture": [],
+      "update_rule": [],
+      "world": []
+    }
+  },
+  "evidence_for_C": {
+    "best_competing_model": "graph_latent_proxy",
+    "best_competing_r2": -0.023946624773958813,
+    "failure_rate_ci": {
+      "high": 1.0,
+      "low": 0.9986111111111111,
+      "median": 0.999537037037037
+    },
+    "frozen_2d_affine_r2": -0.35191246238002405
+  },
+  "note": "Success criterion is scope determination, not performance maximization.",
+  "verdict": "C. Artifact of the original benchmark family"
+}

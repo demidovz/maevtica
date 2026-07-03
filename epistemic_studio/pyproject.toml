@@ -1,0 +1,11 @@
+[project]
+name = "epistemic-studio"
+version = "0.1.0"
+description = "Persistent research operating system with artifact-only agent communication."
+requires-python = ">=3.11"
+
+[project.scripts]
+epistemic-studio = "epistemic_studio.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,32 @@
+[
+  {
+    "agent_name": "lifetime_reuse",
+    "observations": 180,
+    "abstractions": 35,
+    "alive_abstractions": 17,
+    "max_depth": 3,
+    "mean_lifetime": 22.17142857142857,
+    "mean_reuse": 18.0,
+    "total_life_reuse": 36155,
+    "transfer_reuse": 264,
+    "destroyed": 18,
+    "merges": 15,
+    "splits": 10,
+    "compositions": 10
+  },
+  {
+    "agent_name": "error_baseline",
+    "observations": 180,
+    "abstractions": 67,
+    "alive_abstractions": 67,
+    "max_depth": 1,
+    "mean_lifetime": 1.6865671641791045,
+    "mean_reuse": 1.6865671641791045,
+    "total_life_reuse": 293,
+    "transfer_reuse": 57,
+    "destroyed": 0,
+    "merges": 67,
+    "splits": 0,
+    "compositions": 0
+  }
+]

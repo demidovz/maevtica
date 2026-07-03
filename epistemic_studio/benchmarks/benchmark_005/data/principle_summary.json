@@ -1,0 +1,78 @@
+[
+  {
+    "counts": {
+      "dominated": 1,
+      "harmful": 3,
+      "helpful": 8,
+      "impossible": 1,
+      "neutral": 3
+    },
+    "failure_rate": 0.25,
+    "helpful_rate": 0.5,
+    "principle": "persistent_memory",
+    "universality_status": "requires_hidden_assumptions"
+  },
+  {
+    "counts": {
+      "dominated": 1,
+      "harmful": 1,
+      "helpful": 8,
+      "impossible": 1,
+      "irrelevant": 1,
+      "neutral": 4
+    },
+    "failure_rate": 0.125,
+    "helpful_rate": 0.5,
+    "principle": "institutionalized_criticism",
+    "universality_status": "requires_hidden_assumptions"
+  },
+  {
+    "counts": {
+      "dominated": 1,
+      "harmful": 4,
+      "helpful": 9,
+      "neutral": 2
+    },
+    "failure_rate": 0.25,
+    "helpful_rate": 0.562,
+    "principle": "preserved_failures",
+    "universality_status": "requires_hidden_assumptions"
+  },
+  {
+    "counts": {
+      "dominated": 2,
+      "harmful": 1,
+      "helpful": 10,
+      "impossible": 1,
+      "neutral": 2
+    },
+    "failure_rate": 0.125,
+    "helpful_rate": 0.625,
+    "principle": "question_refinement",
+    "universality_status": "requires_hidden_assumptions"
+  },
+  {
+    "counts": {
+      "dominated": 2,
+      "harmful": 5,
+      "helpful": 8,
+      "neutral": 1
+    },
+    "failure_rate": 0.312,
+    "helpful_rate": 0.5,
+    "principle": "knowledge_compression",
+    "universality_status": "requires_hidden_assumptions"
+  },
+  {
+    "counts": {
+      "dominated": 1,
+      "harmful": 1,
+      "helpful": 10,
+      "neutral": 4
+    },
+    "failure_rate": 0.062,
+    "helpful_rate": 0.625,
+    "principle": "applicability_boundaries",
+    "universality_status": "requires_hidden_assumptions"
+  }
+]

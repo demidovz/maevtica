@@ -1,0 +1,29 @@
+{
+  "successful_count": 52,
+  "high_correspondence_successes": 1,
+  "empirical_confidence_lower_bound": 0.003402720409065522,
+  "mean_correspondence": 0.46330729687675815,
+  "mean_ambiguity": 0.0009615384615384616,
+  "by_paradigm": {
+    "graph_system": {
+      "count": 35,
+      "mean_correspondence": 0.444689143160516,
+      "mean_ambiguity": 0.0
+    },
+    "probabilistic_system": {
+      "count": 2,
+      "mean_correspondence": 0.6799415212670517,
+      "mean_ambiguity": 0.025
+    },
+    "rewriting_system": {
+      "count": 1,
+      "mean_correspondence": 0.6144053678953313,
+      "mean_ambiguity": 0.0
+    },
+    "sat_based": {
+      "count": 14,
+      "mean_correspondence": 0.46811221546742354,
+      "mean_ambiguity": 0.0
+    }
+  }
+}

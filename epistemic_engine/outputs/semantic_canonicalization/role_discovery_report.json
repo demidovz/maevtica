@@ -1,0 +1,95 @@
+{
+  "role_count": 9,
+  "roles": {
+    "0": {
+      "name": "uncertainty",
+      "samples": 472,
+      "dominant_behavior_dimensions": [
+        "uncertainty_handling:0.286",
+        "convergence:-0.038",
+        "transfer:0.036",
+        "propagation:0.018"
+      ]
+    },
+    "1": {
+      "name": "compression",
+      "samples": 84,
+      "dominant_behavior_dimensions": [
+        "abstraction_growth:0.376",
+        "compositionality:0.264",
+        "hierarchy_emergence:0.212",
+        "reconstruction:0.065"
+      ]
+    },
+    "2": {
+      "name": "transport",
+      "samples": 229,
+      "dominant_behavior_dimensions": [
+        "transfer:0.180",
+        "propagation:0.149",
+        "convergence:-0.031",
+        "fixed_point_strength:0.024"
+      ]
+    },
+    "3": {
+      "name": "propagation",
+      "samples": 611,
+      "dominant_behavior_dimensions": [
+        "propagation:0.048",
+        "convergence:-0.038",
+        "reconstruction:0.035",
+        "transfer:0.018"
+      ]
+    },
+    "4": {
+      "name": "reconstruction",
+      "samples": 533,
+      "dominant_behavior_dimensions": [
+        "reconstruction:0.174",
+        "convergence:-0.040",
+        "propagation:0.037",
+        "compositionality:0.029"
+      ]
+    },
+    "5": {
+      "name": "stabilization",
+      "samples": 578,
+      "dominant_behavior_dimensions": [
+        "fixed_point_strength:0.175",
+        "stability:0.150",
+        "hierarchy_emergence:0.072",
+        "uncertainty_handling:0.023"
+      ]
+    },
+    "6": {
+      "name": "compression_2",
+      "samples": 238,
+      "dominant_behavior_dimensions": [
+        "abstraction_growth:0.245",
+        "compositionality:0.193",
+        "reconstruction:0.073",
+        "propagation:0.044"
+      ]
+    },
+    "7": {
+      "name": "compression_3",
+      "samples": 122,
+      "dominant_behavior_dimensions": [
+        "abstraction_growth:0.296",
+        "compositionality:0.171",
+        "hierarchy_emergence:0.141",
+        "transfer:0.058"
+      ]
+    },
+    "8": {
+      "name": "replacement",
+      "samples": 364,
+      "dominant_behavior_dimensions": [
+        "substitution_response:0.308",
+        "reconstruction:0.093",
+        "propagation:0.086",
+        "compositionality:0.063"
+      ]
+    }
+  }
+}

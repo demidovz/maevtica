@@ -1,0 +1,28 @@
+{
+  "breaks_on_worlds": [
+    "hierarchical_environment",
+    "delayed_consequence_world",
+    "changing_rules_world",
+    "continuous_environment",
+    "self_modifying_world",
+    "deceptive_regularity_world",
+    "partially_contradictory_world",
+    "adversarial_world",
+    "sparse_observation_world",
+    "no_reusable_structure_world"
+  ],
+  "competing_model_best": "graph_latent_proxy",
+  "failure_rate": 0.999537037037037,
+  "frozen_model_rank": 3,
+  "frozen_theory": "2D latent coordinates with affine dynamics",
+  "interpretation": "The frozen law is likely an artifact of the original benchmark family under this OOD suite.",
+  "ood_case_count": 2160,
+  "r2_distribution": {
+    "mean": -52.82854711677386,
+    "p05": -172.7594810266258,
+    "p50": -5.2960311045624096,
+    "p95": -0.08623228930279463,
+    "std": 346.0510529165231
+  },
+  "works_on_worlds": []
+}

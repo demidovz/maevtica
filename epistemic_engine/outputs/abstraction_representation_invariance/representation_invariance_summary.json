@@ -1,0 +1,142 @@
+{
+  "runs": 288,
+  "implementations": [
+    "dag",
+    "hypergraph"
+  ],
+  "selected_method": "dbscan_2.4",
+  "selected_cluster_count": 8,
+  "selected_stability_ari": 0.9934111314727575,
+  "pca_explained_variance": [
+    0.5007013029484475,
+    0.21910517040991592,
+    0.1159310949203514
+  ],
+  "cluster_descriptions": {
+    "0": [
+      "graph_compression_ratio high (1.89z)",
+      "transfer_correctness low (-1.67z)",
+      "dag_width low (-1.34z)",
+      "alive_count low (-1.32z)",
+      "deaths high (1.09z)"
+    ],
+    "1": [
+      "graph_compression_ratio high (1.89z)",
+      "transfer_correctness low (-1.67z)",
+      "abstraction_count low (-1.51z)",
+      "births low (-1.51z)",
+      "graph_depth low (-1.34z)"
+    ],
+    "2": [
+      "valid_transfer_reuse high (1.89z)",
+      "raw_transfer_reuse high (1.88z)",
+      "semantic_subsumption_ratio high (1.73z)",
+      "valid_reuse high (1.71z)",
+      "branching_factor high (1.69z)"
+    ],
+    "3": [
+      "mean_exposure_lifetime high (1.71z)",
+      "mean_reuse high (1.71z)",
+      "mean_lifetime high (1.41z)",
+      "transfer_correctness high (0.77z)",
+      "abstraction_count low (-0.64z)"
+    ],
+    "4": [
+      "semantic_subsumption_ratio high (1.73z)",
+      "graph_depth high (1.60z)",
+      "hierarchy_emergence_time high (1.29z)",
+      "abstraction_count high (1.10z)",
+      "births high (1.10z)"
+    ],
+    "5": [
+      "alive_count low (-0.79z)",
+      "dag_width low (-0.74z)",
+      "mean_lifetime high (0.61z)",
+      "semantic_subsumption_ratio low (-0.58z)",
+      "abstraction_count low (-0.57z)"
+    ],
+    "6": [
+      "dag_width high (0.86z)",
+      "abstraction_count high (0.69z)",
+      "births high (0.69z)",
+      "mean_reuse low (-0.66z)",
+      "mean_exposure_lifetime low (-0.65z)"
+    ],
+    "7": [
+      "deaths high (2.23z)",
+      "semantic_subsumption_ratio high (1.73z)",
+      "graph_depth high (1.18z)",
+      "hierarchy_emergence_time high (0.98z)",
+      "valid_reuse low (-0.88z)"
+    ]
+  },
+  "preservation": {
+    "paired_cells": 144,
+    "paired_cluster_ari": 1.0,
+    "mean_relative_feature_delta": {
+      "abstraction_count": 0.0,
+      "alive_count": 0.0,
+      "graph_depth": 0.0,
+      "dag_width": 0.0,
+      "mean_lifetime": 0.0,
+      "mean_exposure_lifetime": 0.0,
+      "mean_reuse": 0.0,
+      "valid_reuse": 0.0,
+      "raw_transfer_reuse": 0.0,
+      "valid_transfer_reuse": 0.0,
+      "transfer_correctness": 0.0,
+      "graph_compression_ratio": 0.0,
+      "semantic_subsumption_ratio": 0.0,
+      "branching_factor": 0.0,
+      "hierarchy_emergence_time": 0.0,
+      "births": 0.0,
+      "deaths": 0.0
+    },
+    "largest_feature_deltas": {
+      "abstraction_count": 0.0,
+      "alive_count": 0.0,
+      "graph_depth": 0.0,
+      "dag_width": 0.0,
+      "mean_lifetime": 0.0,
+      "mean_exposure_lifetime": 0.0,
+      "mean_reuse": 0.0,
+      "valid_reuse": 0.0
+    },
+    "cluster_implementation_mix": {
+      "0": {
+        "dag": 6,
+        "hypergraph": 6
+      },
+      "1": {
+        "dag": 25,
+        "hypergraph": 25
+      },
+      "2": {
+        "dag": 24,
+        "hypergraph": 24
+      },
+      "3": {
+        "dag": 27,
+        "hypergraph": 27
+      },
+      "4": {
+        "dag": 10,
+        "hypergraph": 10
+      },
+      "5": {
+        "dag": 8,
+        "hypergraph": 8
+      },
+      "6": {
+        "dag": 42,
+        "hypergraph": 42
+      },
+      "7": {
+        "dag": 2,
+        "hypergraph": 2
+      }
+    },
+    "implementation_balance": 1.0,
+    "interpretation": "Macro-behavior is a candidate representation-invariant signal in this run."
+  }
+}

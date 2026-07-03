@@ -1,0 +1,63 @@
+{
+  "aggregate": {
+    "suite": "aggregate_ood",
+    "states": 43200,
+    "trajectories": 4320,
+    "r2": 0.17170729376955784,
+    "mae": 3.0218619312419595,
+    "p95_error": 8.12898099234029,
+    "works": false,
+    "weak": false,
+    "fails": true
+  },
+  "boundary": {
+    "architecture": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "architecture::reservoir_memory",
+        "architecture::tensor_factorization",
+        "architecture::proof_net",
+        "architecture::neural_cellular",
+        "architecture::causal_program_synthesizer",
+        "architecture::energy_based",
+        "architecture::swarm_protocol",
+        "architecture::category_rewriter"
+      ],
+      "mean_r2": 0.17291680610884486
+    },
+    "rule": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "rule::reinforcement_like",
+        "rule::evolutionary",
+        "rule::bayesian",
+        "rule::symbolic_theorem_proving",
+        "rule::constraint_satisfaction",
+        "rule::message_passing_ood",
+        "rule::differentiable_optimization_ood",
+        "rule::random_search",
+        "rule::hybrid_system"
+      ],
+      "mean_r2": 0.2083836818318703
+    },
+    "world": {
+      "works": [],
+      "weak": [],
+      "fails": [
+        "world::adversarial",
+        "world::changing_rules",
+        "world::delayed_consequences",
+        "world::deceptive_regularities",
+        "world::hierarchical_environment",
+        "world::sparse_observations",
+        "world::continuous_environment",
+        "world::partially_contradictory",
+        "world::self_modifying",
+        "world::no_reusable_structure"
+      ],
+      "mean_r2": 0.1373828572007943
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "world": {
+      "mean_subspace_similarity": 0.9855232255305331,
+      "groups_evaluated": 4
+    },
+    "update_rule": {
+      "mean_subspace_similarity": 0.9376953794043947,
+      "groups_evaluated": 10
+    },
+    "paradigm": {
+      "mean_subspace_similarity": 0.656239848538667,
+      "groups_evaluated": 9
+    }
+  }
+}

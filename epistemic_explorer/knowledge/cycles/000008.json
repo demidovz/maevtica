@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-06-29T21:50:17.031601+00:00",
+  "critique_ids": [
+    "c-0015",
+    "c-0016"
+  ],
+  "cycle_index": 8,
+  "experiment_ids": [
+    "e-0015",
+    "e-0016"
+  ],
+  "hypothesis_ids": [
+    "h-0015",
+    "h-0016"
+  ],
+  "meta_notes": [],
+  "new_question_ids": [
+    "q-0016",
+    "q-0017"
+  ],
+  "objective_scores": [
+    {
+      "metrics": {
+        "graph_depth_delta": 0.0,
+        "hypotheses_falsified": 1.0,
+        "hypotheses_survived": 1.0,
+        "new_testable_questions": 1.0
+      },
+      "objective_name": "knowledge_growth",
+      "total_score": 3.0
+    },
+    {
+      "metrics": {
+        "concept_reuse_delta": 2.0,
+        "experiment_count": 2.0
+      },
+      "objective_name": "concept_reuse",
+      "total_score": 2.5
+    }
+  ],
+  "observation_ids": [
+    "o-0015",
+    "o-0016"
+  ],
+  "selected_question": "Can Falsification pressure improves the next cycle #4 transfer to an independent toy world?",
+  "selected_question_id": "q-0008"
+}

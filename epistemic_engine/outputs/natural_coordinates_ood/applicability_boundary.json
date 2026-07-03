@@ -1,0 +1,226 @@
+{
+  "axis_statistics": {
+    "architecture": {
+      "causal_program_synthesizer": {
+        "cases": 360,
+        "failure_rate": 1.0,
+        "mean_error": 11.434536828115045,
+        "mean_r2": -55.821167648504556,
+        "p05_r2": -225.2855225168677
+      },
+      "market_of_experts": {
+        "cases": 360,
+        "failure_rate": 1.0,
+        "mean_error": 13.66533821710788,
+        "mean_r2": -19.072519660439553,
+        "p05_r2": -68.81532015787272
+      },
+      "neural_constraint_solver": {
+        "cases": 360,
+        "failure_rate": 0.9972222222222222,
+        "mean_error": 13.92656790123815,
+        "mean_r2": -35.51384580211219,
+        "p05_r2": -64.10704179163234
+      },
+      "proof_search_memory_lattice": {
+        "cases": 360,
+        "failure_rate": 1.0,
+        "mean_error": 15.687412234210779,
+        "mean_r2": -77.14631144928892,
+        "p05_r2": -190.02277756195463
+      },
+      "reservoir_symbolic_hybrid": {
+        "cases": 360,
+        "failure_rate": 1.0,
+        "mean_error": 10.78917677373197,
+        "mean_r2": -35.74686377559326,
+        "p05_r2": -126.4081190598863
+      },
+      "self_rewriting_graph_machine": {
+        "cases": 360,
+        "failure_rate": 1.0,
+        "mean_error": 14.212429602947681,
+        "mean_r2": -93.6705743647047,
+        "p05_r2": -383.16573778353563
+      }
+    },
+    "update_rule": {
+      "bayesian": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 12.33160088684969,
+        "mean_r2": -73.96967967958044,
+        "p05_r2": -345.1787729211771
+      },
+      "constraint_satisfaction": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 13.406172968188766,
+        "mean_r2": -122.27499357085664,
+        "p05_r2": -519.2205864520628
+      },
+      "differentiable_optimization_ood": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 12.163366146743464,
+        "mean_r2": -20.03464739749363,
+        "p05_r2": -80.78368326415162
+      },
+      "evolutionary": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 14.753152531198037,
+        "mean_r2": -13.607458164196544,
+        "p05_r2": -62.39839987005497
+      },
+      "hybrid_system": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 14.460054389198257,
+        "mean_r2": -144.37689287693823,
+        "p05_r2": -437.67124414204153
+      },
+      "message_passing": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 12.491377668172014,
+        "mean_r2": -49.14334344018163,
+        "p05_r2": -231.50101507643797
+      },
+      "random_search": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 13.768459321094992,
+        "mean_r2": -11.648430566601425,
+        "p05_r2": -47.75738671206435
+      },
+      "reinforcement_like": {
+        "cases": 240,
+        "failure_rate": 0.9958333333333333,
+        "mean_error": 13.347102915669025,
+        "mean_r2": -30.34000443479265,
+        "p05_r2": -127.37009254631423
+      },
+      "symbolic_theorem_proving": {
+        "cases": 240,
+        "failure_rate": 1.0,
+        "mean_error": 12.85190550891301,
+        "mean_r2": -10.061473920323595,
+        "p05_r2": -46.12920927078142
+      }
+    },
+    "world": {
+      "adversarial_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 8.351085752540282,
+        "mean_r2": -9.622538027849558,
+        "p05_r2": -26.78650074642941
+      },
+      "changing_rules_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 10.426490789909504,
+        "mean_r2": -101.8089729476556,
+        "p05_r2": -501.9754817853405
+      },
+      "continuous_environment": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 9.336540659048339,
+        "mean_r2": -45.0671525015243,
+        "p05_r2": -172.90982689222108
+      },
+      "deceptive_regularity_world": {
+        "cases": 216,
+        "failure_rate": 0.9953703703703703,
+        "mean_error": 8.625945318714795,
+        "mean_r2": -25.04116246150767,
+        "p05_r2": -104.7145854295604
+      },
+      "delayed_consequence_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 9.66375174894094,
+        "mean_r2": -128.13519424015954,
+        "p05_r2": -426.0717645139358
+      },
+      "hierarchical_environment": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 11.067985347837775,
+        "mean_r2": -152.79156289970535,
+        "p05_r2": -435.37672972377754
+      },
+      "no_reusable_structure_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 23.868021259062647,
+        "mean_r2": -0.7610406796085241,
+        "p05_r2": -1.4743604635184415
+      },
+      "partially_contradictory_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 9.782125150964376,
+        "mean_r2": -18.441172169083963,
+        "p05_r2": -66.3778622676244
+      },
+      "self_modifying_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 9.698362762256371,
+        "mean_r2": -45.0386124241873,
+        "p05_r2": -187.2020322634047
+      },
+      "sparse_observation_world": {
+        "cases": 216,
+        "failure_rate": 1.0,
+        "mean_error": 32.038793806310814,
+        "mean_r2": -1.5780628164568316,
+        "p05_r2": -2.927810662570167
+      }
+    }
+  },
+  "summary": {
+    "breaks": {
+      "architecture": [
+        "self_rewriting_graph_machine",
+        "proof_search_memory_lattice",
+        "causal_program_synthesizer",
+        "reservoir_symbolic_hybrid",
+        "neural_constraint_solver",
+        "market_of_experts"
+      ],
+      "update_rule": [
+        "hybrid_system",
+        "constraint_satisfaction",
+        "bayesian",
+        "message_passing",
+        "reinforcement_like",
+        "differentiable_optimization_ood",
+        "evolutionary",
+        "random_search",
+        "symbolic_theorem_proving"
+      ],
+      "world": [
+        "hierarchical_environment",
+        "delayed_consequence_world",
+        "changing_rules_world",
+        "continuous_environment",
+        "self_modifying_world",
+        "deceptive_regularity_world",
+        "partially_contradictory_world",
+        "adversarial_world",
+        "sparse_observation_world",
+        "no_reusable_structure_world"
+      ]
+    },
+    "works": {
+      "architecture": [],
+      "update_rule": [],
+      "world": []
+    }
+  },
+  "threshold": 0.65
+}

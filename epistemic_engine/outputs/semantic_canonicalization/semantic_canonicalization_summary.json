@@ -1,0 +1,82 @@
+{
+  "architectures": 2050,
+  "analyzed_architectures": 650,
+  "analysis_sampled": true,
+  "generated_e_star_complete": 9,
+  "e_star_complete": 9,
+  "role_count": 9,
+  "role_vocabulary": {
+    "0": "uncertainty",
+    "1": "compression",
+    "2": "transport",
+    "3": "propagation",
+    "4": "reconstruction",
+    "5": "stabilization",
+    "6": "compression_2",
+    "7": "compression_3",
+    "8": "replacement"
+  },
+  "canonical_class_count": 528,
+  "successful_canonical_class_count": 7,
+  "role_necessity": {
+    "0": {
+      "successful_without_role": 0,
+      "empirical_necessity": 1.0,
+      "counterexample_architecture": null
+    },
+    "1": {
+      "successful_without_role": 8,
+      "empirical_necessity": 0.11111111111111116,
+      "counterexample_architecture": "a000629"
+    },
+    "2": {
+      "successful_without_role": 0,
+      "empirical_necessity": 1.0,
+      "counterexample_architecture": null
+    },
+    "3": {
+      "successful_without_role": 1,
+      "empirical_necessity": 0.8888888888888888,
+      "counterexample_architecture": "a001393"
+    },
+    "4": {
+      "successful_without_role": 0,
+      "empirical_necessity": 1.0,
+      "counterexample_architecture": null
+    },
+    "5": {
+      "successful_without_role": 0,
+      "empirical_necessity": 1.0,
+      "counterexample_architecture": null
+    },
+    "6": {
+      "successful_without_role": 8,
+      "empirical_necessity": 0.11111111111111116,
+      "counterexample_architecture": "a000629"
+    },
+    "7": {
+      "successful_without_role": 1,
+      "empirical_necessity": 0.8888888888888888,
+      "counterexample_architecture": "a001393"
+    },
+    "8": {
+      "successful_without_role": 0,
+      "empirical_necessity": 1.0,
+      "counterexample_architecture": null
+    }
+  },
+  "hypothesis_support": {
+    "H0_no_universal_architecture": 0.22429274403724792,
+    "H1_several_incompatible_architectures": 0.6077615015659753,
+    "H2_one_canonical_architecture": 0.16794575439677678
+  },
+  "semantic_isomorphism": {
+    "successful_count": 9,
+    "weakest_correspondence_counts": {
+      "weak_behavioral_equivalence": 9
+    },
+    "failed_count": 0,
+    "mean_lab_distance": 0.4473300662709202
+  },
+  "genuine_counterexamples": []
+}

@@ -1,0 +1,228 @@
+[
+  {
+    "control": false,
+    "id": "bell_labs",
+    "name": "Bell Labs",
+    "scores": {
+      "append_only_accumulation": 0.65,
+      "applicability_boundaries": 0.7,
+      "institutionalized_criticism": 0.75,
+      "knowledge_compression": 0.82,
+      "knowledge_graph_equivalent": 0.55,
+      "persistent_memory": 0.85,
+      "planning_prioritization": 0.72,
+      "preserved_failures": 0.45,
+      "question_refinement": 0.8,
+      "role_separation": 0.78
+    },
+    "sources": [
+      "bell_noll"
+    ]
+  },
+  {
+    "control": false,
+    "id": "apollo",
+    "name": "Apollo Program / NASA",
+    "scores": {
+      "append_only_accumulation": 0.72,
+      "applicability_boundaries": 0.88,
+      "institutionalized_criticism": 0.72,
+      "knowledge_compression": 0.58,
+      "knowledge_graph_equivalent": 0.62,
+      "persistent_memory": 0.78,
+      "planning_prioritization": 0.92,
+      "preserved_failures": 0.82,
+      "question_refinement": 0.62,
+      "role_separation": 0.84
+    },
+    "sources": [
+      "nasa_llis",
+      "nasa_gao"
+    ]
+  },
+  {
+    "control": false,
+    "id": "manhattan",
+    "name": "Manhattan Project",
+    "scores": {
+      "append_only_accumulation": 0.58,
+      "applicability_boundaries": 0.7,
+      "institutionalized_criticism": 0.7,
+      "knowledge_compression": 0.78,
+      "knowledge_graph_equivalent": 0.5,
+      "persistent_memory": 0.7,
+      "planning_prioritization": 0.93,
+      "preserved_failures": 0.55,
+      "question_refinement": 0.75,
+      "role_separation": 0.86
+    },
+    "sources": [
+      "manhattan_wellerstein"
+    ]
+  },
+  {
+    "control": false,
+    "id": "linux_kernel",
+    "name": "Linux kernel development",
+    "scores": {
+      "append_only_accumulation": 0.95,
+      "applicability_boundaries": 0.85,
+      "institutionalized_criticism": 0.92,
+      "knowledge_compression": 0.58,
+      "knowledge_graph_equivalent": 0.88,
+      "persistent_memory": 0.95,
+      "planning_prioritization": 0.72,
+      "preserved_failures": 0.82,
+      "question_refinement": 0.72,
+      "role_separation": 0.8
+    },
+    "sources": [
+      "linux_kernel_patches",
+      "lkml_archive"
+    ]
+  },
+  {
+    "control": false,
+    "id": "alphago",
+    "name": "AlphaGo development",
+    "scores": {
+      "append_only_accumulation": 0.55,
+      "applicability_boundaries": 0.82,
+      "institutionalized_criticism": 0.72,
+      "knowledge_compression": 0.86,
+      "knowledge_graph_equivalent": 0.45,
+      "persistent_memory": 0.65,
+      "planning_prioritization": 0.86,
+      "preserved_failures": 0.7,
+      "question_refinement": 0.78,
+      "role_separation": 0.76
+    },
+    "sources": [
+      "alphago_google"
+    ]
+  },
+  {
+    "control": false,
+    "id": "crispr",
+    "name": "CRISPR/Cas9 discovery",
+    "scores": {
+      "append_only_accumulation": 0.8,
+      "applicability_boundaries": 0.78,
+      "institutionalized_criticism": 0.78,
+      "knowledge_compression": 0.9,
+      "knowledge_graph_equivalent": 0.62,
+      "persistent_memory": 0.75,
+      "planning_prioritization": 0.68,
+      "preserved_failures": 0.55,
+      "question_refinement": 0.82,
+      "role_separation": 0.7
+    },
+    "sources": [
+      "crispr_nobel",
+      "crispr_broad"
+    ]
+  },
+  {
+    "control": false,
+    "id": "darwin",
+    "name": "Darwin's evolution research",
+    "scores": {
+      "append_only_accumulation": 0.88,
+      "applicability_boundaries": 0.78,
+      "institutionalized_criticism": 0.62,
+      "knowledge_compression": 0.95,
+      "knowledge_graph_equivalent": 0.78,
+      "persistent_memory": 0.95,
+      "planning_prioritization": 0.55,
+      "preserved_failures": 0.72,
+      "question_refinement": 0.95,
+      "role_separation": 0.45
+    },
+    "sources": [
+      "darwin_project",
+      "darwin_online"
+    ]
+  },
+  {
+    "control": false,
+    "id": "cern",
+    "name": "CERN / LHC collaborations",
+    "scores": {
+      "append_only_accumulation": 0.9,
+      "applicability_boundaries": 0.95,
+      "institutionalized_criticism": 0.95,
+      "knowledge_compression": 0.72,
+      "knowledge_graph_equivalent": 0.85,
+      "persistent_memory": 0.95,
+      "planning_prioritization": 0.86,
+      "preserved_failures": 0.8,
+      "question_refinement": 0.75,
+      "role_separation": 0.9
+    },
+    "sources": [
+      "cern_open",
+      "cern_preservation"
+    ]
+  },
+  {
+    "control": true,
+    "id": "theranos",
+    "name": "Theranos",
+    "scores": {
+      "append_only_accumulation": 0.12,
+      "applicability_boundaries": 0.12,
+      "institutionalized_criticism": 0.05,
+      "knowledge_compression": 0.08,
+      "knowledge_graph_equivalent": 0.05,
+      "persistent_memory": 0.18,
+      "planning_prioritization": 0.45,
+      "preserved_failures": 0.08,
+      "question_refinement": 0.18,
+      "role_separation": 0.25
+    },
+    "sources": [
+      "theranos_lessons",
+      "theranos_peer_review"
+    ]
+  },
+  {
+    "control": true,
+    "id": "challenger",
+    "name": "Space Shuttle Challenger decision process",
+    "scores": {
+      "append_only_accumulation": 0.6,
+      "applicability_boundaries": 0.2,
+      "institutionalized_criticism": 0.28,
+      "knowledge_compression": 0.25,
+      "knowledge_graph_equivalent": 0.35,
+      "persistent_memory": 0.7,
+      "planning_prioritization": 0.45,
+      "preserved_failures": 0.55,
+      "question_refinement": 0.25,
+      "role_separation": 0.55
+    },
+    "sources": [
+      "challenger_vaughan"
+    ]
+  },
+  {
+    "control": true,
+    "id": "replication_crisis",
+    "name": "Replication crisis in psychology",
+    "scores": {
+      "append_only_accumulation": 0.4,
+      "applicability_boundaries": 0.28,
+      "institutionalized_criticism": 0.35,
+      "knowledge_compression": 0.25,
+      "knowledge_graph_equivalent": 0.25,
+      "persistent_memory": 0.55,
+      "planning_prioritization": 0.35,
+      "preserved_failures": 0.18,
+      "question_refinement": 0.38,
+      "role_separation": 0.45
+    },
+    "sources": [
+      "replication_crisis"
+    ]
+  }
+]

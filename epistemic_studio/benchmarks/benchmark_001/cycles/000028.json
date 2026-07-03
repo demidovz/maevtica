@@ -1,0 +1,119 @@
+{
+  "allocation_ids": [
+    "alloc_8b700379ec8a",
+    "alloc_2978d164068d",
+    "alloc_cc5f83b1e118",
+    "alloc_88f2f6e45336",
+    "alloc_a9f62afd3133"
+  ],
+  "artifact_ids": [
+    "art_0110c0c5e8e0",
+    "art_e294f793d49f",
+    "art_9def2967992a",
+    "art_ce5a87fb2846",
+    "art_b4a213f853fe",
+    "art_8284e49efe27",
+    "art_037ce18d183f",
+    "art_f70401c6caa7",
+    "art_1dcbdfa2bcdd",
+    "art_037ce18d183f"
+  ],
+  "attention_budget": 16.66,
+  "attention_spent": 16.66,
+  "bid_ids": [
+    "bid_dbe91fc319b0",
+    "bid_9f92f1224af4",
+    "bid_d0971e512e6d",
+    "bid_e8cc5df12e88",
+    "bid_70688e8ef931",
+    "bid_9fa772178930",
+    "bid_f16c13f3c43d",
+    "bid_c4968c639330",
+    "bid_0034b9b796ae"
+  ],
+  "completed_at": "2026-07-01T10:43:55.084965+00:00",
+  "cycle": 28,
+  "edge_ids": [
+    "edge_ecd8b3f203e5",
+    "edge_96853e26d664",
+    "edge_a980713e300c",
+    "edge_55109dfe6de5",
+    "edge_fb484c32be11",
+    "edge_8fbfa68a885f",
+    "edge_8a9777a03f94"
+  ],
+  "frontier_id": "art_c0bee2630c73",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "agi",
+        "priority": 2.0,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 18,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 6,
+      "contradiction": 46,
+      "counterexample": 49,
+      "derived_concept": 32,
+      "experiment": 28,
+      "hypothesis": 34,
+      "meta_memory": 5,
+      "process_note": 25,
+      "research_history": 6,
+      "research_question": 2,
+      "unknown_region": 4
+    },
+    "attention_efficiency": 0.15,
+    "compression": 0.824,
+    "contradictions": 46,
+    "counterexample_density": 1.441,
+    "dead_hypotheses": 16,
+    "duplicate_rate": 0.604,
+    "epistemic_value": 3.265,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_39bcfe02638c",
+        "reuse": 1,
+        "title": "World-model-centric school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_84abd47482b5",
+        "reuse": 1,
+        "title": "Scaling-first school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_ed61228ca8a1",
+        "reuse": 1,
+        "title": "Implicit-model school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_cce002ab6cfb",
+        "reuse": 1,
+        "title": "Embodied-planning school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_a350e84f244d",
+        "reuse": 1,
+        "title": "Formal handle for Explicit world models are necessary only for long-horizon agency"
+      }
+    ],
+    "organizational_diversity": 0.63,
+    "research_velocity": {
+      "last_cycle_artifacts": 10,
+      "last_cycle_edges": 7
+    },
+    "stagnation_score": 0.932
+  },
+  "next_frontier_id": "art_1dcbdfa2bcdd",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:43:55.081292+00:00"
+}

@@ -1,0 +1,108 @@
+{
+  "allocation_ids": [
+    "alloc_63e85520b38b",
+    "alloc_4db24c924477",
+    "alloc_842549ec3b2c"
+  ],
+  "artifact_ids": [
+    "art_c4d61a3f2a12",
+    "art_e62ba6ee4f92",
+    "art_c33c614738b4",
+    "art_9937287d42e4",
+    "art_713c623b5967"
+  ],
+  "attention_budget": 10.0,
+  "attention_spent": 10.0,
+  "bid_ids": [
+    "bid_c1646873b862",
+    "bid_f22afce1783e",
+    "bid_b0a4f73b3f47",
+    "bid_86b6b3ffec52",
+    "bid_6d3f90c4a21d",
+    "bid_d5cc7ab89e2d",
+    "bid_9333b70ef7a6",
+    "bid_da536200b167",
+    "bid_4edecbe4ee5b"
+  ],
+  "completed_at": "2026-07-01T10:57:56.866828+00:00",
+  "cycle": 24,
+  "edge_ids": [
+    "edge_bbdd7bf45618",
+    "edge_b7154416f785",
+    "edge_9e70dd155d5f",
+    "edge_48f60b2223a8",
+    "edge_7afe41c05766"
+  ],
+  "frontier_id": "art_08fa74e90a70",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "maevtica",
+        "priority": 1.705,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 25,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 9,
+      "counterexample": 9,
+      "derived_concept": 38,
+      "experiment": 38,
+      "hypothesis": 25,
+      "meta_memory": 4,
+      "process_note": 7,
+      "research_question": 2,
+      "unknown_region": 1
+    },
+    "attention_efficiency": 0.188,
+    "compression": 0.96,
+    "contradictions": 0,
+    "counterexample_density": 0.36,
+    "dead_hypotheses": 0,
+    "duplicate_rate": 0.728,
+    "epistemic_value": 1.32,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_4f58d81b3bd6",
+        "reuse": 1,
+        "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_02007eb125ab",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7cd3b60b5fdc",
+        "reuse": 1,
+        "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_31cdc1b34b9d",
+        "reuse": 1,
+        "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7ad20e38b0d7",
+        "reuse": 1,
+        "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+      }
+    ],
+    "organizational_diversity": 0.667,
+    "research_velocity": {
+      "last_cycle_artifacts": 5,
+      "last_cycle_edges": 5
+    },
+    "stagnation_score": 0.975
+  },
+  "next_frontier_id": "art_08fa74e90a70",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:57:56.864588+00:00"
+}

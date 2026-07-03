@@ -1,0 +1,265 @@
+{
+  "alternative_architectures": [
+    {
+      "id": "alt01_perfect_memory_agent",
+      "name": "Perfect-memory individual learner",
+      "preserves_function": [
+        "persistent_memory",
+        "preserved_failures",
+        "applicability_boundaries"
+      ],
+      "verdict": "Can accumulate knowledge without social criticism if internal error update is unbiased.",
+      "violates": [
+        "institutionalized_criticism"
+      ]
+    },
+    {
+      "id": "alt02_hive_mind",
+      "name": "Collective hive mind",
+      "preserves_function": [
+        "persistent_memory",
+        "knowledge_compression",
+        "applicability_boundaries"
+      ],
+      "verdict": "Social mechanisms collapse into internal cognitive functions; criticism is replaceable by internal model comparison.",
+      "violates": [
+        "institutionalized_criticism",
+        "question_refinement as discourse"
+      ]
+    },
+    {
+      "id": "alt03_non_symbolic_learner",
+      "name": "Non-symbolic gradient learner",
+      "preserves_function": [
+        "temporal retention",
+        "negative error signal",
+        "compression",
+        "scope control"
+      ],
+      "verdict": "Violates human-readable forms but preserves primitive functions through weights and gradients.",
+      "violates": [
+        "journal-like memory",
+        "explicit preserved failures",
+        "verbal question refinement"
+      ]
+    },
+    {
+      "id": "alt04_evolution_only",
+      "name": "Evolution-only civilization",
+      "preserves_function": [
+        "retention in genomes",
+        "selection against failures",
+        "implicit applicability through niches"
+      ],
+      "verdict": "Cumulative adaptation occurs slowly without explicit science; it satisfies weaker knowledge accumulation but not explanatory science.",
+      "violates": [
+        "persistent explicit memory",
+        "institutionalized criticism",
+        "question refinement"
+      ]
+    },
+    {
+      "id": "alt05_quantum_broadcast",
+      "name": "Perfect quantum communication collective",
+      "preserves_function": [
+        "shared state retention",
+        "instant comparison",
+        "scope tags"
+      ],
+      "verdict": "Communication changes implementations, not primitive requirements.",
+      "violates": [
+        "append-only records",
+        "journal",
+        "role separation"
+      ]
+    },
+    {
+      "id": "alt06_bruteforce_oracle",
+      "name": "Brute-force oracle search",
+      "preserves_function": [
+        "retention",
+        "scope control"
+      ],
+      "verdict": "If exhaustive search and truth access are free, compression and refinement become convenient but unnecessary.",
+      "violates": [
+        "knowledge_compression",
+        "question_refinement"
+      ]
+    }
+  ],
+  "classification_counts": {
+    "contingent_but_expected_under_scarcity": 1,
+    "emergent_consequence": 3,
+    "necessary_function": 2
+  },
+  "dependency_edges": [
+    {
+      "from": "A1",
+      "to": "persistent_memory"
+    },
+    {
+      "from": "A2",
+      "to": "institutionalized_criticism"
+    },
+    {
+      "from": "A3",
+      "to": "institutionalized_criticism"
+    },
+    {
+      "from": "A1",
+      "to": "preserved_failures"
+    },
+    {
+      "from": "A2",
+      "to": "preserved_failures"
+    },
+    {
+      "from": "A4",
+      "to": "preserved_failures"
+    },
+    {
+      "from": "A3",
+      "to": "question_refinement"
+    },
+    {
+      "from": "A6",
+      "to": "question_refinement"
+    },
+    {
+      "from": "A5",
+      "to": "knowledge_compression"
+    },
+    {
+      "from": "A4",
+      "to": "applicability_boundaries"
+    }
+  ],
+  "derivations": [
+    {
+      "classification": "necessary_function",
+      "derivation": "From A1, some state must persist. A literal research database is replaceable, but retention is necessary.",
+      "derived_from": [
+        "A1"
+      ],
+      "lost_if_removed": "Earlier evidence cannot constrain later belief; cumulative knowledge collapses into repeated first attempts.",
+      "principle": "persistent_memory",
+      "replaceable_by": [
+        "biological weights",
+        "distributed traces",
+        "versioned records",
+        "cultural transmission"
+      ]
+    },
+    {
+      "classification": "emergent_consequence",
+      "derivation": "Criticism is one social implementation of error-sensitive update over discriminable alternatives.",
+      "derived_from": [
+        "A2",
+        "A3"
+      ],
+      "lost_if_removed": "Errors can persist without a channel that forces alternatives to compete against evidence.",
+      "principle": "institutionalized_criticism",
+      "replaceable_by": [
+        "adversarial testing",
+        "prediction markets",
+        "selection pressure",
+        "independent replication"
+      ]
+    },
+    {
+      "classification": "emergent_consequence",
+      "derivation": "Failures must affect future updates, but they need not be preserved as human-readable cases.",
+      "derived_from": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "lost_if_removed": "The system repeats known bad regions or overgeneralizes beyond defeated scope.",
+      "principle": "preserved_failures",
+      "replaceable_by": [
+        "negative gradients",
+        "test failures",
+        "replication failures",
+        "selection against bad variants"
+      ]
+    },
+    {
+      "classification": "emergent_consequence",
+      "derivation": "When alternatives are represented badly, improvement requires changing the question or representation.",
+      "derived_from": [
+        "A3",
+        "A6"
+      ],
+      "lost_if_removed": "The system remains trapped in a representation that may make improvement impossible or inefficient.",
+      "principle": "question_refinement",
+      "replaceable_by": [
+        "feature learning",
+        "model class revision",
+        "ontology update",
+        "problem decomposition"
+      ]
+    },
+    {
+      "classification": "contingent_but_expected_under_scarcity",
+      "derivation": "Compression follows from resource-bounded reuse, not from cumulative knowledge alone.",
+      "derived_from": [
+        "A5"
+      ],
+      "lost_if_removed": "Without reusable structure, the system may still learn by lookup if resources are abundant, but loses efficiency under scarcity.",
+      "principle": "knowledge_compression",
+      "replaceable_by": [
+        "cached policies",
+        "abstractions",
+        "compiled heuristics",
+        "generalized models"
+      ]
+    },
+    {
+      "classification": "necessary_function",
+      "derivation": "Any reliable cumulative learner must encode, infer, or test where learned structure applies.",
+      "derived_from": [
+        "A4"
+      ],
+      "lost_if_removed": "The system transfers claims into contexts where they do not hold, corrupting cumulative knowledge.",
+      "principle": "applicability_boundaries",
+      "replaceable_by": [
+        "context tags",
+        "confidence intervals",
+        "domain restrictions",
+        "policy guards"
+      ]
+    }
+  ],
+  "primitives": [
+    {
+      "derivation": "If performance must improve over time, information from earlier interactions must affect later interactions.",
+      "id": "A1",
+      "name": "Temporal retention"
+    },
+    {
+      "derivation": "If predictions can be wrong, the system needs a way for mismatch to change future behavior.",
+      "id": "A2",
+      "name": "Error-sensitive update"
+    },
+    {
+      "derivation": "Improvement requires distinguishing at least two possible policies, models, or explanations.",
+      "id": "A3",
+      "name": "Discriminable alternatives"
+    },
+    {
+      "derivation": "A learned claim can improve future performance only where its conditions of transfer are not completely lost.",
+      "id": "A4",
+      "name": "Scope tracking"
+    },
+    {
+      "derivation": "When learning or computation is costly, successful structure must be reused rather than rediscovered from scratch.",
+      "id": "A5",
+      "name": "Resource-bounded reuse"
+    },
+    {
+      "derivation": "If the current question or representation causes avoidable error, cumulative improvement needs a way to change it.",
+      "id": "A6",
+      "name": "Representation revision"
+    }
+  ]
+}

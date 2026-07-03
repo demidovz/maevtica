@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "embedding_distortion_by_family": {
+      "world": 0.05177360136243899,
+      "update_rule": 0.10595893131710922,
+      "paradigm": 4.618996851853243
+    },
+    "incompatible_family_axes": [
+      "paradigm"
+    ],
+    "common_space_supported": false
+  }
+}

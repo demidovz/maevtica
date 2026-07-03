@@ -1,0 +1,578 @@
+[
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w01_baseline_science"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "persistent_memory",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "institutionalized_criticism",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "preserved_failures",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "question_refinement",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "knowledge_compression",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "applicability_boundaries",
+    "reason": "Direct oracle access dominates organizational research mechanisms.",
+    "world_id": "w02_perfect_oracle"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "persistent_memory",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "institutionalized_criticism",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "preserved_failures",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "question_refinement",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "knowledge_compression",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "applicability_boundaries",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w03_heraclitean"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "persistent_memory",
+    "reason": "Stored records are less trustworthy than fresh observation.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Criticism can expose memory corruption if fresh observations remain available.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "preserved_failures",
+    "reason": "Stored records are less trustworthy than fresh observation.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w04_false_memory"
+  },
+  {
+    "outcome": "impossible",
+    "principle": "persistent_memory",
+    "reason": "No agent identity or commitment persists long enough to maintain the practice.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "impossible",
+    "principle": "institutionalized_criticism",
+    "reason": "No agent identity or commitment persists long enough to maintain the practice.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "preserved_failures",
+    "reason": "The principle has no stable organization to act on.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "impossible",
+    "principle": "question_refinement",
+    "reason": "No agent identity or commitment persists long enough to maintain the practice.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "knowledge_compression",
+    "reason": "The principle has no stable organization to act on.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "applicability_boundaries",
+    "reason": "The principle has no stable organization to act on.",
+    "world_id": "w05_no_identity"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w06_expensive_compute"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w07_perfect_individual_minds"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w08_total_transparency"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "persistent_memory",
+    "reason": "Memory helps only if protected from strategic interpretation.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "institutionalized_criticism",
+    "reason": "Criticism and failure memory become weapons rather than correction mechanisms.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "preserved_failures",
+    "reason": "Criticism and failure memory become weapons rather than correction mechanisms.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w09_hostile_social"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "persistent_memory",
+    "reason": "The principle may still organize results but is not needed for discovery.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "institutionalized_criticism",
+    "reason": "The principle may still organize results but is not needed for discovery.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "preserved_failures",
+    "reason": "The principle may still organize results but is not needed for discovery.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "question_refinement",
+    "reason": "Exhaustive search can dominate abstraction under zero cost.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "dominated",
+    "principle": "knowledge_compression",
+    "reason": "Exhaustive search can dominate abstraction under zero cost.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "applicability_boundaries",
+    "reason": "The principle may still organize results but is not needed for discovery.",
+    "world_id": "w10_infinite_resources"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Memory remains useful as a lookup table.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "question_refinement",
+    "reason": "Searching for reusable structure adds false patterns in a noncompressible world.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "knowledge_compression",
+    "reason": "Searching for reusable structure adds false patterns in a noncompressible world.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "applicability_boundaries",
+    "reason": "Searching for reusable structure adds false patterns in a noncompressible world.",
+    "world_id": "w11_noncompressible"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "institutionalized_criticism",
+    "reason": "Criticism has limited power without repeatable tests.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "One-shot evidence makes preserved failures and boundaries unusually valuable.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "One-shot evidence makes preserved failures and boundaries unusually valuable.",
+    "world_id": "w12_single_observation"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "knowledge_compression",
+    "reason": "Stable compression can erase context needed for valid local reasoning.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Boundary tracking is essential when validity is contextual.",
+    "world_id": "w13_nonmonotonic_logic"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "persistent_memory",
+    "reason": "Finite fallible agents need durable records to accumulate evidence.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "institutionalized_criticism",
+    "reason": "Fallible inference benefits from independent error search.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "knowledge_compression",
+    "reason": "Stable compression can erase context needed for valid local reasoning.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Boundary tracking is essential when validity is contextual.",
+    "world_id": "w14_many_worlds_personal_truth"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "persistent_memory",
+    "reason": "Memory is already intrinsic to the immortal collective.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "irrelevant",
+    "principle": "institutionalized_criticism",
+    "reason": "There are no separate critics unless the hive simulates disagreement.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "preserved_failures",
+    "reason": "Failed cases constrain future hypotheses.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "question_refinement",
+    "reason": "Ambiguous problems need sharper formulations to reduce waste.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "knowledge_compression",
+    "reason": "Stable reusable regularities reward compression.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "helpful",
+    "principle": "applicability_boundaries",
+    "reason": "Claims require scope conditions to transfer safely.",
+    "world_id": "w15_immortal_hive"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "persistent_memory",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w16_deceptive_demon"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "institutionalized_criticism",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w16_deceptive_demon"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "preserved_failures",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w16_deceptive_demon"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "question_refinement",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w16_deceptive_demon"
+  },
+  {
+    "outcome": "harmful",
+    "principle": "knowledge_compression",
+    "reason": "Past evidence becomes actively misleading when rules change faster than learning.",
+    "world_id": "w16_deceptive_demon"
+  },
+  {
+    "outcome": "neutral",
+    "principle": "applicability_boundaries",
+    "reason": "The principle cannot accumulate enough stable signal.",
+    "world_id": "w16_deceptive_demon"
+  }
+]

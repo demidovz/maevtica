@@ -1,0 +1,588 @@
+# The Phi Map from Test Families to Partitions
+
+This note studies the map:
+
+```text
+Phi : TestFamilies(S) -> Partitions(S)
+```
+
+where `Phi(T)` is the partition of `S` induced by equality of outcomes for all
+tests in `T`.
+
+No claims are made about concepts, intelligence, emergence, or admissibility.
+The object of study is `Phi` itself.
+
+## 1. Setup
+
+Let `S` be a finite nonempty set.
+
+A test on `S` is a total function:
+
+```text
+t: S -> R_t
+```
+
+where `R_t` is any outcome set.
+
+For this note, a test family is a finite set of tests:
+
+```text
+T = {t_1, ..., t_n}
+```
+
+The empty family is allowed.
+
+Define:
+
+```text
+s ~_T s' iff for every t in T, t(s) = t(s')
+```
+
+Then:
+
+```text
+Phi(T) = S / ~_T
+```
+
+Let `Part(S)` be the lattice of partitions of `S`, ordered by information:
+
+```text
+P <= Q
+```
+
+means `Q` refines `P`; that is, `Q` contains at least as much information as
+`P`.
+
+Under this order:
+
+1. the bottom element is the indiscrete partition `{S}`;
+2. the top element is the discrete partition;
+3. the join `P v Q` is the common refinement;
+4. the meet `P ^ Q` is the coarsest common coarsening.
+
+For a single test `t`, write:
+
+```text
+ker(t) = Phi({t})
+```
+
+This is the partition of `S` into fibers of `t`.
+
+## 2. Equivalence of Test Families
+
+Define:
+
+```text
+T_1 ~= T_2 iff Phi(T_1) = Phi(T_2)
+```
+
+This is an equivalence relation on `TestFamilies(S)`.
+
+Proof:
+
+Equality in `Part(S)` is reflexive, symmetric and transitive.
+
+The quotient:
+
+```text
+TestFamilies(S) / ~=
+```
+
+is therefore the set of all observationally equivalent test families: two
+families are equivalent exactly when they induce the same partition of `S`.
+
+The map `Phi` factors through the quotient:
+
+```text
+TestFamilies(S) -> TestFamilies(S)/~= -> Part(S)
+```
+
+The second map is injective by definition. If arbitrary tests are allowed, it is
+also surjective, because every partition `P` is induced by the block-labeling
+test:
+
+```text
+t_P(s) = the block of P containing s
+```
+
+Therefore, with arbitrary tests:
+
+```text
+TestFamilies(S)/~=  is in bijection with  Part(S).
+```
+
+This quotient space has no more and no less information than the partition
+lattice.
+
+## 3. Fibers of Phi
+
+For a partition `P in Part(S)`, the fiber of `Phi` over `P` is:
+
+```text
+Phi^{-1}(P) = {T : Phi(T) = P}
+```
+
+To characterize this fiber, define what it means for a test to be constant on
+blocks of `P`:
+
+```text
+t is P-measurable iff s and s' in the same block of P imply t(s)=t(s').
+```
+
+Equivalently:
+
+```text
+ker(t) <= P
+```
+
+because `ker(t)` is coarser than, or equal to, `P` exactly when `t` is constant
+on blocks of `P`.
+
+For a family `T`, every test in `T` is `P`-measurable iff:
+
+```text
+ker(t) <= P for every t in T.
+```
+
+But `Phi(T)=P` requires more: the tests must also separate distinct blocks of
+`P` jointly.
+
+Thus:
+
+```text
+Phi^{-1}(P)
+```
+
+is exactly the set of finite test families `T` such that:
+
+1. every `t in T` is constant on blocks of `P`;
+2. for every pair of distinct blocks `B, C in P`, there exists `t in T` and
+   states `b in B`, `c in C` such that:
+
+   ```text
+   t(b) != t(c)
+   ```
+
+Since each `t` is constant on blocks, this is equivalent to:
+
+```text
+t(B) != t(C)
+```
+
+for some `t in T`.
+
+In partition language:
+
+```text
+Phi(T) = join_{t in T} ker(t)
+```
+
+where join is common refinement in `Part(S)`.
+
+Therefore:
+
+```text
+Phi^{-1}(P) = {T : join_{t in T} ker(t) = P}.
+```
+
+This is the cleanest fiber characterization.
+
+## 4. Redundancy
+
+Let `T` be a finite test family and let `t in T`.
+
+The test `t` is redundant in `T` iff:
+
+```text
+Phi(T \ {t}) = Phi(T)
+```
+
+Equivalently:
+
+```text
+ker(t) <= Phi(T \ {t})
+```
+
+in information order. That means every distinction made by `t` is already made
+jointly by the other tests.
+
+Proof:
+
+```text
+Phi(T) = Phi(T \ {t}) v ker(t)
+```
+
+where `v` is common refinement. This equals `Phi(T \ {t})` exactly when
+`ker(t) <= Phi(T \ {t})`.
+
+### Minimal Subfamilies
+
+A subfamily `M subset T` is reduction-minimal for `T` if:
+
+```text
+Phi(M) = Phi(T)
+```
+
+and for every `m in M`:
+
+```text
+Phi(M \ {m}) != Phi(M).
+```
+
+Every finite family has at least one reduction-minimal subfamily.
+
+Proof:
+
+Starting from `T`, remove redundant tests while possible. Since `T` is finite,
+the process terminates.
+
+### Non-Uniqueness
+
+Minimal subfamilies need not be unique.
+
+Example:
+
+Let:
+
+```text
+S = {0,1}
+```
+
+Let `a` and `b` be two different injective tests:
+
+```text
+a(0)=0, a(1)=1
+b(0)=red, b(1)=blue
+```
+
+For:
+
+```text
+T = {a,b}
+```
+
+both `{a}` and `{b}` are reduction-minimal and induce the same discrete
+partition.
+
+Thus ambiguity is exactly representational: different tests, or different
+subfamilies, can generate the same join of kernels.
+
+### Characterization of Ambiguity
+
+The ambiguity of minimal reductions of `T` is the set of irredundant generating
+subsets of the finite join-semilattice generated by:
+
+```text
+{ker(t) : t in T}
+```
+
+Two minimal reductions are equivalent iff they have the same join in
+`Part(S)`.
+
+## 5. Inclusion and Monotonicity
+
+If:
+
+```text
+T_1 subset T_2
+```
+
+then:
+
+```text
+Phi(T_1) <= Phi(T_2)
+```
+
+where `<=` is information order.
+
+Proof:
+
+If two states agree on every test in `T_2`, then they agree on every test in
+`T_1`. Therefore every block of `Phi(T_2)` lies inside a block of `Phi(T_1)`,
+so `Phi(T_2)` refines `Phi(T_1)`.
+
+Thus `Phi` is monotone if test families are ordered by inclusion and partitions
+are ordered by information:
+
+```text
+T_1 subset T_2  =>  Phi(T_1) <= Phi(T_2).
+```
+
+If partitions are instead ordered by refinement, `Phi` is antitone.
+
+## 6. Algebraic Structure
+
+### 6.1 Join-Semilattice Morphism
+
+Let finite test families be ordered by inclusion and combined by union:
+
+```text
+T_1 union T_2
+```
+
+Then:
+
+```text
+Phi(T_1 union T_2) = Phi(T_1) v Phi(T_2)
+```
+
+where `v` is join in the information order, i.e. common refinement.
+
+Proof:
+
+Two states are equivalent under `T_1 union T_2` iff they are equivalent under
+`T_1` and under `T_2`. Thus the blocks are the intersections of blocks from
+`Phi(T_1)` and `Phi(T_2)`, which is the common refinement.
+
+Therefore `Phi` preserves finite joins:
+
+```text
+Phi(emptyset) = {S}
+Phi(T_1 union T_2) = Phi(T_1) v Phi(T_2)
+```
+
+So `Phi` is a join-semilattice homomorphism from finite test families under
+union to `Part(S)` under common refinement.
+
+This is the first genuinely algebraic theorem about `Phi`.
+
+### 6.2 Not a Meet Morphism in General
+
+Intersection of test families does not correspond to meet of partitions.
+
+Example:
+
+Let:
+
+```text
+T_1 = {a}
+T_2 = {b}
+```
+
+with `a` and `b` different tests. If:
+
+```text
+T_1 cap T_2 = emptyset
+```
+
+then:
+
+```text
+Phi(T_1 cap T_2) = {S}
+```
+
+But:
+
+```text
+Phi(T_1) ^ Phi(T_2)
+```
+
+need not be `{S}`. Therefore `Phi` is not generally a lattice morphism.
+
+### 6.3 Closure Operator
+
+`Phi` itself is not a closure operator because its domain and codomain differ.
+
+However, it induces a closure operator on test families:
+
+```text
+cl(T) = {t : Phi(T union {t}) = Phi(T)}
+```
+
+Equivalently:
+
+```text
+cl(T) = {t : ker(t) <= Phi(T)}
+```
+
+This is the set of all tests redundant relative to `T`.
+
+The operator `cl` is:
+
+1. extensive: `T subset cl(T)`;
+2. monotone: `T subset U` implies `cl(T) subset cl(U)`;
+3. idempotent: `cl(cl(T)) = cl(T)`.
+
+So test families modulo `~=` can also be understood as closed sets of this
+closure system.
+
+### 6.4 Galois Connection
+
+There is a natural Galois connection between test families and partitions.
+
+Define:
+
+```text
+alpha(T) = Phi(T)
+```
+
+Define:
+
+```text
+beta(P) = {t : ker(t) <= P}
+```
+
+That is, `beta(P)` is the set of all tests constant on blocks of `P`.
+
+Then:
+
+```text
+Phi(T) <= P  iff  T subset beta(P)
+```
+
+where partitions are ordered by information.
+
+Proof:
+
+`Phi(T) <= P` means `P` refines `Phi(T)`. This is equivalent to saying every
+test in `T` is constant on blocks of `P`, i.e. `T subset beta(P)`.
+
+Careful orientation:
+
+This orientation uses the information order on partitions. If partitions are
+ordered by refinement instead, the same relationship becomes order-reversing.
+
+### 6.5 Universal Construction
+
+For a test family:
+
+```text
+T = (t_i: S -> R_i)_{i in I}
+```
+
+define the joint outcome map:
+
+```text
+r_T: S -> prod_i R_i
+```
+
+Then `Phi(T)` is the kernel partition of `r_T`.
+
+Equivalently, `q_T: S -> S/~_T` is the image factor of `r_T`:
+
+```text
+S -> S/~_T -> im(r_T) subset prod_i R_i
+```
+
+where the second map is a bijection.
+
+Categorically, `q_T` is the quotient of `S` by the kernel pair of `r_T`.
+
+Thus `Phi` is best understood as:
+
+```text
+test family -> product outcome map -> kernel partition
+```
+
+This is standard mathematics: kernels of maps to products, partition lattices,
+closure systems and Galois connections.
+
+It is not necessary to force category theory, but the categorical description is
+accurate.
+
+## 7. First New Theorem About Phi
+
+The Minimal Sufficient Quotient Theorem already states that `Phi(T)` is the
+coarsest sufficient quotient for `T`.
+
+The first theorem about `Phi` itself, not merely about one fixed `T`, is the
+following.
+
+## Phi Join Theorem
+
+Let `S` be a finite nonempty set. For finite test families `T_1` and `T_2` on
+`S`:
+
+```text
+Phi(T_1 union T_2) = Phi(T_1) v Phi(T_2)
+```
+
+where `v` is join in `Part(S)` ordered by information; equivalently, `v` is
+common refinement.
+
+Therefore `Phi` is a surjective join-semilattice homomorphism from finite test
+families under union onto `Part(S)` under common refinement, provided arbitrary
+tests are allowed.
+
+### Proof
+
+For states `s, s' in S`:
+
+```text
+s ~_{T_1 union T_2} s'
+```
+
+iff:
+
+```text
+for every t in T_1 union T_2, t(s)=t(s')
+```
+
+iff both:
+
+```text
+for every t in T_1, t(s)=t(s')
+```
+
+and:
+
+```text
+for every t in T_2, t(s)=t(s')
+```
+
+iff:
+
+```text
+s ~_{T_1} s' and s ~_{T_2} s'
+```
+
+Thus the equivalence relation induced by `T_1 union T_2` is the intersection of
+the equivalence relations induced by `T_1` and `T_2`.
+
+In the partition lattice ordered by information, intersection of equivalence
+relations corresponds to common refinement, i.e. join.
+
+Therefore:
+
+```text
+Phi(T_1 union T_2) = Phi(T_1) v Phi(T_2)
+```
+
+The empty test family induces `{S}`, which is the bottom element and the neutral
+element for join under the information-order convention.
+
+Surjectivity follows because every partition `P` is induced by the block-labeling
+test `t_P`.
+
+This proves the theorem.
+
+## 8. Consequences
+
+1. `TestFamilies(S)/~=` inherits a join-semilattice structure isomorphic to
+   `Part(S)`.
+2. Redundancy is exactly membership in the closure `cl(T)`.
+3. Minimal reductions are irredundant generating sets for the same join.
+4. `Phi` is not injective before quotienting by `~=`.
+5. `Phi` is not a full lattice morphism in general.
+6. The algebra of `Phi` is the algebra of kernels of joint maps.
+
+## 9. Limitations and Open Questions
+
+1. The fiber description assumes arbitrary tests. Restricting tests to an
+   admissible class changes the image and fibers of `Phi`.
+2. Minimal reductions are not unique.
+3. Counting the size of fibers depends on allowed outcome sets. If outcome sets
+   are unrestricted, fibers are not finite in a meaningful way.
+4. The closure system `cl` depends on the universe of allowed tests.
+5. For stochastic tests, kernels must be replaced by equality of distributions
+   or another statistical indistinguishability relation.
+
+Open algebraic questions:
+
+1. If tests are restricted to constructible trace tests, what is the image of
+   `Phi`?
+2. What is the lattice-theoretic structure of that restricted image?
+3. Can minimal reductions be characterized by matroid-like exchange axioms?
+4. When does the redundancy closure form a matroid closure?
+5. How does `Phi` interact with quotient dynamics when a transition map is
+   added to `S`?

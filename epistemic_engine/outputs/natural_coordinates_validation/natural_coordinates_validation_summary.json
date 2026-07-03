@@ -1,0 +1,209 @@
+{
+  "frozen_coordinate_system": "koopman_quadratic_pca",
+  "dimension": 2,
+  "affine_dynamics": true,
+  "seeds": 100,
+  "reproducibility": {
+    "mean": 0.4707586542222192,
+    "std": 0.020975442248544716,
+    "p05": 0.43418446123584065,
+    "p50": 0.47280344249038725,
+    "p95": 0.5015864280157929
+  },
+  "coordinate_stability": {
+    "mean": 0.6297932511313519,
+    "std": 0.0059678346654951225,
+    "p05": 0.6197389525975877,
+    "p50": 0.6299184155153841,
+    "p95": 0.6390128986200027
+  },
+  "embedding_distortion": {
+    "mean": 2.9314862221619005,
+    "std": 0.05521193723990752,
+    "p05": 2.841998482366558,
+    "p50": 2.935007000161244,
+    "p95": 3.014800380903135
+  },
+  "holdout_worlds": {
+    "train_worlds": [
+      "regular",
+      "compositional"
+    ],
+    "test_worlds": [
+      "noisy",
+      "volatile"
+    ],
+    "train_r2": 0.38328139819089624,
+    "test_r2": 0.38276997685540626,
+    "test_embedding_distortion": 0.15250104628178973
+  },
+  "holdout_paradigms": {
+    "train_paradigms": [
+      "graph_system",
+      "hypergraph",
+      "symbolic_system",
+      "sat_based",
+      "rewriting_system"
+    ],
+    "test_paradigms": [
+      "probabilistic_system",
+      "differentiable_system",
+      "cellular_automata",
+      "random_interaction"
+    ],
+    "train_r2": 0.1726143762326039,
+    "test_r2": -0.04970114061181863,
+    "test_embedding_distortion": 1.5403594013117463
+  },
+  "bootstrap": {
+    "affine_r2_ci": {
+      "low": 0.4232931166472267,
+      "median": 0.4592252526320432,
+      "high": 0.4846126859917697
+    },
+    "coordinate_stability_ci": {
+      "low": 0.626617573740751,
+      "median": 0.6363564992192117,
+      "high": 0.6434263190443515
+    },
+    "hidden_dimension_ci": {
+      "low": 2.0,
+      "median": 2.0,
+      "high": 2.0
+    }
+  },
+  "sensitivity": {
+    "noise": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.4441586799143753
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4272607813164062
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.41215313527964403
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.41218004371247086
+      }
+    ],
+    "memory": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.43307162469306404
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4021324725811799
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.3756968445293445
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.35117227805581475
+      }
+    ],
+    "hierarchy": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.44331103147496875
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.41399185302926633
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.4055974756776447
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.3915804230941471
+      }
+    ],
+    "interaction_topology": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.4562085929464317
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.40549673839822586
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.3749608034951266
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.1423326052494832
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.13467431563780508
+      }
+    ],
+    "observation_budget": [
+      {
+        "level": 0.0,
+        "affine_r2": 0.45575222171069274
+      },
+      {
+        "level": 0.15,
+        "affine_r2": 0.4521569647471253
+      },
+      {
+        "level": 0.3,
+        "affine_r2": 0.4594846650861165
+      },
+      {
+        "level": 0.45,
+        "affine_r2": 0.45290553771175257
+      },
+      {
+        "level": 0.6,
+        "affine_r2": 0.4459567478180153
+      }
+    ]
+  },
+  "ablation": {
+    "full_r2": 0.45849201459175426,
+    "remove_z1": {
+      "r2": 0.0047688235981616645,
+      "collapse": 0.4537231909935926
+    },
+    "remove_z2": {
+      "r2": 0.6976275334613836,
+      "collapse": -0.23913551886962936
+    }
+  },
+  "evaluator_agreement": {
+    "affine_r2": 0.45849201459175426,
+    "persistence_r2": 0.035605627975446974,
+    "local_linear_r2": 0.47296683271019935,
+    "agreement": "disagree"
+  },
+  "false_discovery": {
+    "null_world_r2": 0.0004558680647994695,
+    "possible_overfitting": false
+  },
+  "verdict": "downgraded: discovery remains exploratory under validation stress tests."
+}

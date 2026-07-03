@@ -1,0 +1,53 @@
+{
+  "fits": {
+    "abstraction_depth": {
+      "exponent": 0.06749769556769318,
+      "r2": 4.5152419272387334e-05
+    },
+    "transfer_efficiency": {
+      "exponent": -0.16038327948374054,
+      "r2": 0.0003187277576951475
+    },
+    "behavioral_entropy": {
+      "exponent": 1.8373506796418033,
+      "r2": 0.019888599639822147
+    },
+    "compression_ratio": {
+      "exponent": 0.581956940897604,
+      "r2": 0.0019061143752238108
+    },
+    "fixed_point_density": {
+      "exponent": 2.001948236865639,
+      "r2": 0.040329222350503624
+    },
+    "stability": {
+      "exponent": 2.8274086850553264,
+      "r2": 0.05387699835710846
+    },
+    "uncertainty_persistence": {
+      "exponent": 2.1084689724776067,
+      "r2": 0.038441868986158534
+    },
+    "reuse": {
+      "exponent": 0.16115295733242305,
+      "r2": 0.000344926315765548
+    },
+    "hierarchy_growth": {
+      "exponent": 0.06749769556769229,
+      "r2": 4.515241927216529e-05
+    },
+    "canonical_role_count_proxy": {
+      "exponent": 1.8373506796418064,
+      "r2": 0.01988859963982248
+    },
+    "response_susceptibility": {
+      "exponent": 0.06825416481205303,
+      "r2": 4.882878709810967e-05
+    },
+    "coordination": {
+      "exponent": 0.875995722844247,
+      "r2": 0.009788029902028095
+    }
+  },
+  "critical_edge_count": 64
+}

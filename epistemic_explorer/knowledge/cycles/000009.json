@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-06-29T21:50:17.034852+00:00",
+  "critique_ids": [
+    "c-0017",
+    "c-0018"
+  ],
+  "cycle_index": 9,
+  "experiment_ids": [
+    "e-0017",
+    "e-0018"
+  ],
+  "hypothesis_ids": [
+    "h-0017",
+    "h-0018"
+  ],
+  "meta_notes": [],
+  "new_question_ids": [
+    "q-0018",
+    "q-0019"
+  ],
+  "objective_scores": [
+    {
+      "metrics": {
+        "graph_depth_delta": 0.0,
+        "hypotheses_falsified": 0.0,
+        "hypotheses_survived": 2.0,
+        "new_testable_questions": 1.0
+      },
+      "objective_name": "knowledge_growth",
+      "total_score": 2.6
+    },
+    {
+      "metrics": {
+        "concept_reuse_delta": 2.0,
+        "experiment_count": 2.0
+      },
+      "objective_name": "concept_reuse",
+      "total_score": 2.5
+    }
+  ],
+  "observation_ids": [
+    "o-0017",
+    "o-0018"
+  ],
+  "selected_question": "Can Meta-observation prevents local optimization #4 transfer to an independent toy world?",
+  "selected_question_id": "q-0009"
+}

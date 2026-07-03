@@ -154,6 +154,154 @@ Artifact debugging benchmark:
 python epistemic_engine\runner\run_artifact_debugging_benchmark.py --episodes 800 --seed 17
 ```
 
+Strict OOD validation for frozen natural coordinates:
+
+```powershell
+python epistemic_engine\runner\run_natural_coordinates_ood.py --cases-per-family 4 --steps 10 --seed 2026
+```
+
+Abstraction growth experiment:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_growth_experiment.py
+```
+
+Эта ветка проверяет отдельную гипотезу: появляются ли переиспользуемые
+иерархии абстракций, если оценивать абстракции по жизни и reuse, а не по
+accuracy. Подробности: `epistemic_engine/abstractions/README.md`.
+
+Abstraction phase diagram:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_phase_diagram.py --reviewer-suite --seeds 3
+```
+
+Эта ветка уже не ищет “лучший objective”, а строит карту:
+`objective x world x ablation -> режим роста знания`.
+
+Unsupervised regime discovery:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_regime_discovery.py
+```
+
+Этот этап специально игнорирует заранее заданные `regime` labels и считает
+каждый запуск точкой в пространстве объективных метрик. Он строит PCA-проекцию,
+запускает несколько кластеризаторов, проверяет bootstrap-stability и повторяет
+кластеризацию с удалением групп признаков.
+
+Continuous phase scan:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_continuous_phase_scan.py --objective lifetime_reuse --levels 0,0.25,0.5,0.75,1.0
+```
+
+Этот запуск варьирует непрерывные параметры мира: `compositionality`, `noise`,
+`regularity`, `partial_observability`, `volatility`. Выходные артефакты снова
+анализируются без использования заранее заданного classifier.
+
+Representation invariance test:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_representation_invariance.py --quick --reviewer-suite
+```
+
+Этот запуск сравнивает исходное DAG-представление абстракций с альтернативным
+hypergraph-представлением. Кластеризация строится по объединённому пространству
+метрик; затем проверяется, разделяются ли кластеры по реализации или сохраняются
+для парных запусков.
+
+Cross-paradigm invariance test:
+
+```powershell
+python epistemic_engine\runner\run_abstraction_cross_paradigm_invariance.py --quick --reviewer-suite
+```
+
+Этот запуск сравнивает принципиально разные локальные эпистемические динамики:
+`merge_driven`, `prediction_driven`, `constraint_driven`, `mdl_like`,
+`information_bottleneck_like`. Цель не выбрать лучшую динамику, а проверить,
+сохраняются ли макрорежимы и макропеременные при смене локальной теории роста.
+
+Architecture falsification program:
+
+```powershell
+python epistemic_engine\runner\run_architecture_falsification.py --quick
+```
+
+Этот запуск пытается разрушить Necessity Program: генерирует случайные
+эпистемические архитектуры из разных вычислительных парадигм, строит capability
+matrix, ищет E*-complete архитектуры с плохим соответствием `C1`-`C5`, оценивает
+ambiguity mapping, representation emergence, Pareto frontier и universality
+statistics.
+
+Semantic canonicalization program:
+
+```powershell
+python epistemic_engine\runner\run_semantic_canonicalization.py --quick
+```
+
+Этот запуск забывает имена архитектур и классов, строит behavioral fingerprints,
+кластеризует функциональные роли операторов, канонизирует role graph и проверяет,
+остаются ли counterexample candidates семантически отличными от reference
+architecture после isomorphism / simulation / quotient checks.
+
+Epistemic phase transition program:
+
+```powershell
+python epistemic_engine\runner\run_epistemic_phase_transition.py --quick
+```
+
+Этот запуск строит первую эмпирическую фазовую диаграмму пространства
+эпистемических архитектур: непрерывно варьирует параметры архитектурных семейств,
+ищет order parameters, transition boundaries, scaling laws, universality classes,
+latent coordinates и phase topology.
+
+Epistemic flow program:
+
+```powershell
+python epistemic_engine\runner\run_epistemic_flow.py --quick
+```
+
+Этот запуск забывает архитектуры как конечные объекты и рассматривает их только
+как initial conditions. Разные update rules порождают траектории в behavioral
+observable space; затем восстанавливаются latent manifold, vector field,
+attractors, approximate invariants, coordinate-independence и empirical dynamical
+law.
+
+Natural coordinates program:
+
+```powershell
+python epistemic_engine\runner\run_natural_coordinates.py
+```
+
+Этот запуск рассматривает текущие behavioral metrics только как наблюдения и
+ищет скрытые координаты, в которых динамика становится проще: PCA, slow modes,
+predictive-state coordinates, Koopman-like quadratic coordinates и control
+projection сравниваются по prediction, linearity, sparsity, curvature,
+smoothness и MDL-like penalty.
+
+Natural coordinates validation program:
+
+```powershell
+python epistemic_engine\runner\run_natural_coordinates_validation.py --seeds 100
+```
+
+Этот запуск замораживает найденную систему `koopman_quadratic_pca(dim=2)` и
+проверяет её без retuning: 100 random seeds, hold-out worlds, hold-out paradigms,
+bootstrap confidence, sensitivity curves, coordinate ablation, independent
+evaluators и false-discovery null worlds.
+
+Out-of-distribution validation program:
+
+```powershell
+python epistemic_engine\runner\run_ood_validation.py
+```
+
+Этот запуск замораживает и координаты, и affine law, затем выполняет blind
+prediction на новых мирах, архитектурных семействах и learning rules:
+adversarial/changing/delayed/deceptive/sparse/self-modifying/no-structure worlds,
+новые architecture families и OOD update mechanisms. На OOD данных нет refit.
+
 ## Что считаем успехом
 
 На первом этапе успех — не “разумность вообще”, а более узкие свойства:

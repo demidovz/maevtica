@@ -1,0 +1,674 @@
+{
+  "input": "epistemic_engine/outputs/abstraction_continuous_phase_scan/lifetime_reuse_continuous_scan.csv",
+  "points": 162,
+  "parameters": [
+    "compositionality",
+    "noise",
+    "regularity",
+    "partial_observability",
+    "volatility"
+  ],
+  "features": [
+    "abstraction_count",
+    "alive_count",
+    "graph_depth",
+    "dag_width",
+    "mean_lifetime",
+    "mean_exposure_lifetime",
+    "mean_reuse",
+    "valid_reuse",
+    "raw_transfer_reuse",
+    "valid_transfer_reuse",
+    "transfer_correctness",
+    "graph_compression_ratio",
+    "semantic_subsumption_ratio",
+    "branching_factor",
+    "hierarchy_emergence_time",
+    "births",
+    "deaths"
+  ],
+  "pca_explained_variance": [
+    0.6272764048622234,
+    0.18070099216666644,
+    0.08210801745593266
+  ],
+  "pca_components": {
+    "pc1": [
+      {
+        "feature": "alive_count",
+        "weight": 0.29522321232204607
+      },
+      {
+        "feature": "raw_transfer_reuse",
+        "weight": 0.27902852010142865
+      },
+      {
+        "feature": "mean_reuse",
+        "weight": 0.2766727993121652
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": 0.27149351984968695
+      },
+      {
+        "feature": "mean_exposure_lifetime",
+        "weight": 0.2647305179340137
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": 0.26410573557256145
+      },
+      {
+        "feature": "branching_factor",
+        "weight": 0.26387637257621716
+      },
+      {
+        "feature": "graph_depth",
+        "weight": 0.2628243320390614
+      }
+    ],
+    "pc2": [
+      {
+        "feature": "deaths",
+        "weight": -0.5121643913474608
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": -0.32847337755217976
+      },
+      {
+        "feature": "births",
+        "weight": -0.3087878053121439
+      },
+      {
+        "feature": "abstraction_count",
+        "weight": -0.30878780531214367
+      },
+      {
+        "feature": "graph_compression_ratio",
+        "weight": 0.2640640518617388
+      },
+      {
+        "feature": "mean_exposure_lifetime",
+        "weight": 0.2615705092019181
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": 0.24285355103025244
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": 0.23495796445455347
+      }
+    ],
+    "pc3": [
+      {
+        "feature": "hierarchy_emergence_time",
+        "weight": 0.5478741937051029
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": -0.4206891335055603
+      },
+      {
+        "feature": "semantic_subsumption_ratio",
+        "weight": 0.3591067132448839
+      },
+      {
+        "feature": "deaths",
+        "weight": -0.31424083816665427
+      },
+      {
+        "feature": "graph_depth",
+        "weight": 0.26028181600314254
+      },
+      {
+        "feature": "dag_width",
+        "weight": 0.25754747515776466
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": -0.19722059062901232
+      },
+      {
+        "feature": "raw_transfer_reuse",
+        "weight": -0.16129270392141043
+      }
+    ]
+  },
+  "methods": [
+    {
+      "method": "kmeans_2",
+      "cluster_count": 2,
+      "noise_count": 0,
+      "stability_ari": 0.42492445039990673
+    },
+    {
+      "method": "kmeans_3",
+      "cluster_count": 3,
+      "noise_count": 0,
+      "stability_ari": 0.8110706857881085
+    },
+    {
+      "method": "kmeans_4",
+      "cluster_count": 4,
+      "noise_count": 0,
+      "stability_ari": 0.6866197054701477
+    },
+    {
+      "method": "kmeans_5",
+      "cluster_count": 5,
+      "noise_count": 0,
+      "stability_ari": 0.5987201402316537
+    },
+    {
+      "method": "kmeans_6",
+      "cluster_count": 6,
+      "noise_count": 0,
+      "stability_ari": 0.6138492213115697
+    },
+    {
+      "method": "agglomerative_2",
+      "cluster_count": 2,
+      "noise_count": 0,
+      "stability_ari": 0.9484930840843825
+    },
+    {
+      "method": "agglomerative_3",
+      "cluster_count": 3,
+      "noise_count": 0,
+      "stability_ari": 0.8678142546886523
+    },
+    {
+      "method": "agglomerative_4",
+      "cluster_count": 4,
+      "noise_count": 0,
+      "stability_ari": 0.8230959239910444
+    },
+    {
+      "method": "agglomerative_5",
+      "cluster_count": 5,
+      "noise_count": 0,
+      "stability_ari": 0.8797762895428219
+    },
+    {
+      "method": "agglomerative_6",
+      "cluster_count": 6,
+      "noise_count": 0,
+      "stability_ari": 0.8526593748789408
+    },
+    {
+      "method": "dbscan_1.6",
+      "cluster_count": 8,
+      "noise_count": 21,
+      "stability_ari": 0.3199382827125398
+    },
+    {
+      "method": "dbscan_2.0",
+      "cluster_count": 6,
+      "noise_count": 9,
+      "stability_ari": 0.8740815264570538
+    },
+    {
+      "method": "dbscan_2.4",
+      "cluster_count": 5,
+      "noise_count": 3,
+      "stability_ari": 0.9870134495688521
+    },
+    {
+      "method": "dbscan_2.8",
+      "cluster_count": 3,
+      "noise_count": 3,
+      "stability_ari": 0.8559395497415851
+    }
+  ],
+  "selected_method": "dbscan_2.4",
+  "selected_cluster_count": 5,
+  "selected_noise_count": 3,
+  "selected_stability_ari": 0.9870134495688521,
+  "feature_ablation_ari": {
+    "without_depth": 0.3815021347501062,
+    "without_reuse": 0.3897427561434637,
+    "without_lifetime": 0.3758200918545109,
+    "without_transfer": 0.37899934285644743,
+    "without_compression": 0.37307677696311203
+  },
+  "cluster_descriptions": {
+    "0": [
+      "graph_compression_ratio high (2.81z)",
+      "abstraction_count low (-2.40z)",
+      "births low (-2.40z)",
+      "dag_width low (-2.15z)",
+      "mean_lifetime low (-1.97z)"
+    ],
+    "1": [
+      "abstraction_count low (-1.80z)",
+      "births low (-1.80z)",
+      "semantic_subsumption_ratio low (-1.36z)",
+      "mean_lifetime low (-1.35z)",
+      "transfer_correctness low (-1.32z)"
+    ],
+    "2": [
+      "semantic_subsumption_ratio high (0.74z)",
+      "graph_depth high (0.65z)",
+      "alive_count high (0.60z)",
+      "abstraction_count high (0.56z)",
+      "births high (0.56z)"
+    ],
+    "3": [
+      "semantic_subsumption_ratio low (-1.36z)",
+      "hierarchy_emergence_time low (-1.13z)",
+      "graph_depth low (-0.96z)",
+      "branching_factor low (-0.91z)",
+      "deaths high (0.86z)"
+    ],
+    "4": [
+      "hierarchy_emergence_time high (1.61z)",
+      "mean_lifetime low (-1.20z)",
+      "deaths low (-0.79z)",
+      "semantic_subsumption_ratio high (0.74z)",
+      "transfer_correctness high (0.71z)"
+    ]
+  },
+  "transition_candidates": {
+    "counts_by_parameter": {
+      "compositionality": 0,
+      "noise": 66,
+      "regularity": 36,
+      "partial_observability": 39,
+      "volatility": 36
+    },
+    "examples": [
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 2,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 3,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.5,
+          "partial_observability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": -1,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 0.5,
+          "partial_observability": 1.0,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 4,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 3,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 4,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.0,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 2,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.0,
+          "partial_observability": 1.0,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 1,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.5,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 3,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.5,
+          "partial_observability": 1.0,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": -1,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 0.5,
+          "partial_observability": 1.0,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 4,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 3,
+        "cluster_to": 2,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 4,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 0.5,
+          "regularity": 1.0,
+          "partial_observability": 0.5,
+          "volatility": 1.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 1.0,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.0
+        }
+      },
+      {
+        "parameter": "noise",
+        "from": 0.0,
+        "to": 0.5,
+        "cluster_from": 0,
+        "cluster_to": 3,
+        "context": {
+          "compositionality": 1.0,
+          "regularity": 0.0,
+          "partial_observability": 0.5,
+          "volatility": 0.5
+        }
+      }
+    ]
+  }
+}

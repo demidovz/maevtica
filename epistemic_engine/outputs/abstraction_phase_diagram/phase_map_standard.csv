@@ -1,0 +1,7 @@
+objective,anti_compositional,compositional,hierarchical,no_regularities,partial,random
+accuracy,reusable_feature_graph,mixed,mixed,collapse,mixed,collapse
+compression,reusable_feature_graph,reusable_feature_graph,reusable_feature_graph,collapse,mixed,collapse
+exact_memory,flat_memory,flat_memory,flat_memory,flat_memory,flat_memory,flat_memory
+lifetime_reuse,abstraction_dag,reusable_feature_graph,reusable_feature_graph,collapse,abstraction_dag,flat_memory
+novelty,flat_memory,flat_memory,flat_memory,collapse,mixed,flat_memory
+prediction_lifetime,abstraction_dag,reusable_feature_graph,reusable_feature_graph,collapse,abstraction_dag,mixed

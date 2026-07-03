@@ -1,0 +1,2089 @@
+{
+  "counterexample_node_ids": [
+    "art_007c91a5b869",
+    "art_01749e48489f",
+    "art_03ae32574cdb",
+    "art_07d3d2c10523",
+    "art_080acc50d0a8",
+    "art_0a2a0b11efca",
+    "art_0b3328449ff6",
+    "art_0e18512d3773",
+    "art_13f7eec820f3",
+    "art_1672b068ea5d",
+    "art_194ba124918f",
+    "art_1c4e63e96e32",
+    "art_1cd9244e7cef",
+    "art_1d7cce9fcfa4",
+    "art_1dcbdfa2bcdd",
+    "art_1ee7e0d7395d",
+    "art_23f627fed60e",
+    "art_35ff441a7f02",
+    "art_3c87d3cfdb1e",
+    "art_3f0a87ce7db3",
+    "art_3f6a20b0e1e9",
+    "art_4054b40af45f",
+    "art_413e74ff7b7f",
+    "art_42ae7fead48e",
+    "art_454555c27491",
+    "art_46862daa665a",
+    "art_49495f17805b",
+    "art_4ab0fc30ee14",
+    "art_4c3826ba9da0",
+    "art_50edf8fd8f52",
+    "art_51f5f6dd3ae1",
+    "art_596d2f048113",
+    "art_5b6c94dd574c",
+    "art_5c87cf882027",
+    "art_5ca030ca7ecc",
+    "art_5cc3a890a3ee",
+    "art_5cc7e24e45e2",
+    "art_5f67e05b0aff",
+    "art_5fd770fc13f8",
+    "art_613ae9a107de",
+    "art_61b45e905113",
+    "art_63405ac75bbf",
+    "art_638568e918af",
+    "art_6ada250b86db",
+    "art_6c56e86fb2bd",
+    "art_6d8e65400c42",
+    "art_6ff2e4936f76",
+    "art_71279bf2f354",
+    "art_730b0a43b366",
+    "art_7521c883575e",
+    "art_76371ce1d163",
+    "art_78f3f0636a9f",
+    "art_7f36cf318e2a",
+    "art_8284e49efe27",
+    "art_8489d2a69efb",
+    "art_89a7aacdeee5",
+    "art_89d269105a48",
+    "art_900754552b0f",
+    "art_90d835e3795b",
+    "art_96c92dca9332",
+    "art_97322b86aa62",
+    "art_994fd726b5de",
+    "art_99ee4fadd8a7",
+    "art_a2c1dd30cf32",
+    "art_a53a350f2c9f",
+    "art_a5b7d4ea9e50",
+    "art_a77061132c65",
+    "art_aa5ac0473541",
+    "art_ac3ee874af3b",
+    "art_acae827539ad",
+    "art_b262f77d8c8c",
+    "art_b3d2f71823f5",
+    "art_b4054e7c97bc",
+    "art_b4a213f853fe",
+    "art_bf2126471319",
+    "art_c0bee2630c73",
+    "art_c182ecaf7a8a",
+    "art_c3be411f4895",
+    "art_c3ca51a76ddb",
+    "art_c412e2d54bc7",
+    "art_cbe16973403d",
+    "art_cd99867d65c3",
+    "art_cebf011aca0c",
+    "art_cedaca4358d5",
+    "art_d19503cefa79",
+    "art_d32484043dba",
+    "art_d474a149d524",
+    "art_d5245c599675",
+    "art_d65858761686",
+    "art_def3d925918f",
+    "art_df9f8d1dbde9",
+    "art_e7872e2317de",
+    "art_e9d6eb5a5c8a",
+    "art_eb6972ff27b2",
+    "art_ef5cd95493ee",
+    "art_efea3d3f9828",
+    "art_f0c4cbc2ce1e",
+    "art_f1395829c5ed",
+    "art_f6df015c9cbe",
+    "art_f70401c6caa7",
+    "art_f8be069b2ed3",
+    "art_fb3a3652b272",
+    "art_fd286dc1fbd1"
+  ],
+  "edges": [
+    {
+      "source_id": "art_23f627fed60e",
+      "target_id": "art_72c0d1c282f0",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "benchmark_001_landscape",
+        "agent_role": "planner",
+        "cycle": 0,
+        "source": "benchmark_research_001"
+      },
+      "id": "edge_5588743a1e22",
+      "created_at": "2026-07-01T10:43:54.769355+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_46862daa665a",
+      "target_id": "art_72c0d1c282f0",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "benchmark_001_landscape",
+        "agent_role": "planner",
+        "cycle": 0,
+        "source": "benchmark_research_001"
+      },
+      "id": "edge_6444f80eece2",
+      "created_at": "2026-07-01T10:43:54.769362+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_97322b86aa62",
+      "target_id": "art_72c0d1c282f0",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "benchmark_001_landscape",
+        "agent_role": "planner",
+        "cycle": 0,
+        "source": "benchmark_research_001"
+      },
+      "id": "edge_6ddc31dd0ba2",
+      "created_at": "2026-07-01T10:43:54.769367+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_613ae9a107de",
+      "target_id": "art_a2eb7c2e0b69",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 1,
+        "source": "research_cycle"
+      },
+      "id": "edge_82c09aace594",
+      "created_at": "2026-07-01T10:43:54.772438+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0a2a0b11efca",
+      "target_id": "art_a2eb7c2e0b69",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 1,
+        "source": "research_cycle"
+      },
+      "id": "edge_0063eea48430",
+      "created_at": "2026-07-01T10:43:54.772441+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_3f6a20b0e1e9",
+      "target_id": "art_a2eb7c2e0b69",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 2,
+        "source": "research_cycle"
+      },
+      "id": "edge_8336e2ccd442",
+      "created_at": "2026-07-01T10:43:54.777001+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5fd770fc13f8",
+      "target_id": "art_a2eb7c2e0b69",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 2,
+        "source": "research_cycle"
+      },
+      "id": "edge_eebe9889327f",
+      "created_at": "2026-07-01T10:43:54.777003+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_53c7f93f0a07",
+      "target_id": "art_0a2a0b11efca",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 2,
+        "source": "research_cycle"
+      },
+      "id": "edge_1ff7d6d0176f",
+      "created_at": "2026-07-01T10:43:54.777249+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_fb3a3652b272",
+      "target_id": "art_30f53990b25a",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 3,
+        "source": "research_cycle"
+      },
+      "id": "edge_ad3139d40796",
+      "created_at": "2026-07-01T10:43:54.782087+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f0c4cbc2ce1e",
+      "target_id": "art_30f53990b25a",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 3,
+        "source": "research_cycle"
+      },
+      "id": "edge_e6dae5fec5f7",
+      "created_at": "2026-07-01T10:43:54.782094+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_9b6021720266",
+      "target_id": "art_5fd770fc13f8",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 3,
+        "source": "research_cycle"
+      },
+      "id": "edge_d9fcf0ee50f2",
+      "created_at": "2026-07-01T10:43:54.782705+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a53a350f2c9f",
+      "target_id": "art_30f53990b25a",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 4,
+        "source": "research_cycle"
+      },
+      "id": "edge_874360d01bfb",
+      "created_at": "2026-07-01T10:43:54.789980+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5cc7e24e45e2",
+      "target_id": "art_30f53990b25a",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 4,
+        "source": "research_cycle"
+      },
+      "id": "edge_007ecb4834d3",
+      "created_at": "2026-07-01T10:43:54.789983+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_b55c993481a1",
+      "target_id": "art_f0c4cbc2ce1e",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 4,
+        "source": "research_cycle"
+      },
+      "id": "edge_406e390d2a44",
+      "created_at": "2026-07-01T10:43:54.790238+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_b262f77d8c8c",
+      "target_id": "art_7ead8fce3e16",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 5,
+        "source": "research_cycle"
+      },
+      "id": "edge_db0f0ac63a6c",
+      "created_at": "2026-07-01T10:43:54.795359+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_ac3ee874af3b",
+      "target_id": "art_7ead8fce3e16",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 5,
+        "source": "research_cycle"
+      },
+      "id": "edge_f42a8172fb99",
+      "created_at": "2026-07-01T10:43:54.795362+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_91040624b5c2",
+      "target_id": "art_5cc7e24e45e2",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 5,
+        "source": "research_cycle"
+      },
+      "id": "edge_0ebea1b778db",
+      "created_at": "2026-07-01T10:43:54.795610+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_454555c27491",
+      "target_id": "art_7ead8fce3e16",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 6,
+        "source": "research_cycle"
+      },
+      "id": "edge_80c98e4c8e42",
+      "created_at": "2026-07-01T10:43:54.801850+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_01749e48489f",
+      "target_id": "art_7ead8fce3e16",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 6,
+        "source": "research_cycle"
+      },
+      "id": "edge_bbb8eeb33a8a",
+      "created_at": "2026-07-01T10:43:54.801852+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0d36850b7fd2",
+      "target_id": "art_ac3ee874af3b",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 6,
+        "source": "research_cycle"
+      },
+      "id": "edge_24ab890076d2",
+      "created_at": "2026-07-01T10:43:54.802105+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a77061132c65",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 7,
+        "source": "research_cycle"
+      },
+      "id": "edge_a87e87aae203",
+      "created_at": "2026-07-01T10:43:54.808235+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_994fd726b5de",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 7,
+        "source": "research_cycle"
+      },
+      "id": "edge_170a37c03f72",
+      "created_at": "2026-07-01T10:43:54.808238+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_93e8d329c515",
+      "target_id": "art_01749e48489f",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 7,
+        "source": "research_cycle"
+      },
+      "id": "edge_fdb20113e7d2",
+      "created_at": "2026-07-01T10:43:54.808514+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_cebf011aca0c",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 8,
+        "source": "research_cycle"
+      },
+      "id": "edge_83bf015e6835",
+      "created_at": "2026-07-01T10:43:54.814957+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6c56e86fb2bd",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 8,
+        "source": "research_cycle"
+      },
+      "id": "edge_5b9860d994f4",
+      "created_at": "2026-07-01T10:43:54.814960+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6971798eebd8",
+      "target_id": "art_994fd726b5de",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 8,
+        "source": "research_cycle"
+      },
+      "id": "edge_53937cd128be",
+      "created_at": "2026-07-01T10:43:54.815224+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_96c92dca9332",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 9,
+        "source": "research_cycle"
+      },
+      "id": "edge_7669ae5fd8bf",
+      "created_at": "2026-07-01T10:43:54.821436+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_51f5f6dd3ae1",
+      "target_id": "art_8dbdc23607fb",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 9,
+        "source": "research_cycle"
+      },
+      "id": "edge_bddea42b13de",
+      "created_at": "2026-07-01T10:43:54.821439+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_2b9c40421fc8",
+      "target_id": "art_6c56e86fb2bd",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 9,
+        "source": "research_cycle"
+      },
+      "id": "edge_83b7b74ba27b",
+      "created_at": "2026-07-01T10:43:54.821688+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a2c1dd30cf32",
+      "target_id": "art_6c233eda5a54",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 10,
+        "source": "research_cycle"
+      },
+      "id": "edge_6dd5c73f1220",
+      "created_at": "2026-07-01T10:43:54.831700+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_7521c883575e",
+      "target_id": "art_6c233eda5a54",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 10,
+        "source": "research_cycle"
+      },
+      "id": "edge_20cf15f7b9b1",
+      "created_at": "2026-07-01T10:43:54.831703+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a48bfeb34a2e",
+      "target_id": "art_51f5f6dd3ae1",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 10,
+        "source": "research_cycle"
+      },
+      "id": "edge_a160aa4e3bed",
+      "created_at": "2026-07-01T10:43:54.832314+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_49495f17805b",
+      "target_id": "art_6c233eda5a54",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 11,
+        "source": "research_cycle"
+      },
+      "id": "edge_50e6e7958800",
+      "created_at": "2026-07-01T10:43:54.839766+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_cedaca4358d5",
+      "target_id": "art_6c233eda5a54",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 11,
+        "source": "research_cycle"
+      },
+      "id": "edge_18207a7bb669",
+      "created_at": "2026-07-01T10:43:54.839769+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_4054b40af45f",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 11,
+        "source": "research_cycle"
+      },
+      "id": "edge_bbd8739530d7",
+      "created_at": "2026-07-01T10:43:54.840340+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_def3d925918f",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 11,
+        "source": "research_cycle"
+      },
+      "id": "edge_2385e25fff80",
+      "created_at": "2026-07-01T10:43:54.840343+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_037ce18d183f",
+      "target_id": "art_7521c883575e",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 11,
+        "source": "research_cycle"
+      },
+      "id": "edge_eaebdf154060",
+      "created_at": "2026-07-01T10:43:54.840790+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_42ae7fead48e",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 12,
+        "source": "research_cycle"
+      },
+      "id": "edge_b3aa0514dcf3",
+      "created_at": "2026-07-01T10:43:54.848644+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_99ee4fadd8a7",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 12,
+        "source": "research_cycle"
+      },
+      "id": "edge_c20e0d7ed5da",
+      "created_at": "2026-07-01T10:43:54.848646+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_eb6972ff27b2",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 12,
+        "source": "research_cycle"
+      },
+      "id": "edge_e5ddc2cecf1f",
+      "created_at": "2026-07-01T10:43:54.849209+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_cbe16973403d",
+      "target_id": "art_72ef815539ad",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 12,
+        "source": "research_cycle"
+      },
+      "id": "edge_17ea72988d57",
+      "created_at": "2026-07-01T10:43:54.849212+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f0a88c859d91",
+      "target_id": "art_def3d925918f",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 12,
+        "source": "research_cycle"
+      },
+      "id": "edge_1b6e61683095",
+      "created_at": "2026-07-01T10:43:54.849490+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5ca030ca7ecc",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 13,
+        "source": "research_cycle"
+      },
+      "id": "edge_d88b1333c2e2",
+      "created_at": "2026-07-01T10:43:54.857778+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_e9d6eb5a5c8a",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 13,
+        "source": "research_cycle"
+      },
+      "id": "edge_bf448f2dd101",
+      "created_at": "2026-07-01T10:43:54.857781+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_007c91a5b869",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 13,
+        "source": "research_cycle"
+      },
+      "id": "edge_b9148f6ce158",
+      "created_at": "2026-07-01T10:43:54.858094+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_3c87d3cfdb1e",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 13,
+        "source": "research_cycle"
+      },
+      "id": "edge_24d09d09a06a",
+      "created_at": "2026-07-01T10:43:54.858097+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_24d46d35c478",
+      "target_id": "art_cbe16973403d",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 13,
+        "source": "research_cycle"
+      },
+      "id": "edge_be5956f651b5",
+      "created_at": "2026-07-01T10:43:54.858424+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_7f36cf318e2a",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 14,
+        "source": "research_cycle"
+      },
+      "id": "edge_2b54affeaabc",
+      "created_at": "2026-07-01T10:43:54.867783+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5f67e05b0aff",
+      "target_id": "art_1876af89b442",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 14,
+        "source": "research_cycle"
+      },
+      "id": "edge_d81d7ebfade2",
+      "created_at": "2026-07-01T10:43:54.867786+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f8be069b2ed3",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 14,
+        "source": "research_cycle"
+      },
+      "id": "edge_c626f83721f2",
+      "created_at": "2026-07-01T10:43:54.868113+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_cd99867d65c3",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 14,
+        "source": "research_cycle"
+      },
+      "id": "edge_1620ec9bead7",
+      "created_at": "2026-07-01T10:43:54.868115+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6ada70fd1694",
+      "target_id": "art_3c87d3cfdb1e",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 14,
+        "source": "research_cycle"
+      },
+      "id": "edge_28868ea7227c",
+      "created_at": "2026-07-01T10:43:54.868750+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1c4e63e96e32",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 15,
+        "source": "research_cycle"
+      },
+      "id": "edge_d2971d84e298",
+      "created_at": "2026-07-01T10:43:54.878362+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_63405ac75bbf",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 15,
+        "source": "research_cycle"
+      },
+      "id": "edge_dfbebd29e2a1",
+      "created_at": "2026-07-01T10:43:54.878371+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_acae827539ad",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 15,
+        "source": "research_cycle"
+      },
+      "id": "edge_99bef590c188",
+      "created_at": "2026-07-01T10:43:54.879140+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f1395829c5ed",
+      "target_id": "art_53c7f93f0a07",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 15,
+        "source": "research_cycle"
+      },
+      "id": "edge_ca99d7b72c1d",
+      "created_at": "2026-07-01T10:43:54.879148+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c00826f7bc4f",
+      "target_id": "art_cd99867d65c3",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 15,
+        "source": "research_cycle"
+      },
+      "id": "edge_d3ec8abe86a2",
+      "created_at": "2026-07-01T10:43:54.879822+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_080acc50d0a8",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 16,
+        "source": "research_cycle"
+      },
+      "id": "edge_c868136b5d0d",
+      "created_at": "2026-07-01T10:43:54.891960+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_e7872e2317de",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 16,
+        "source": "research_cycle"
+      },
+      "id": "edge_e2e2b8367086",
+      "created_at": "2026-07-01T10:43:54.891963+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_8489d2a69efb",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 16,
+        "source": "research_cycle"
+      },
+      "id": "edge_85e4912e90f4",
+      "created_at": "2026-07-01T10:43:54.892291+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_730b0a43b366",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 16,
+        "source": "research_cycle"
+      },
+      "id": "edge_fd7abb022cf7",
+      "created_at": "2026-07-01T10:43:54.892293+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_beda1a75d4f7",
+      "target_id": "art_f1395829c5ed",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 16,
+        "source": "research_cycle"
+      },
+      "id": "edge_b4b9e5c31361",
+      "created_at": "2026-07-01T10:43:54.892615+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c3be411f4895",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 17,
+        "source": "research_cycle"
+      },
+      "id": "edge_7a5df18a5da9",
+      "created_at": "2026-07-01T10:43:54.904322+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_76371ce1d163",
+      "target_id": "art_9b6021720266",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 17,
+        "source": "research_cycle"
+      },
+      "id": "edge_534199a7171b",
+      "created_at": "2026-07-01T10:43:54.904325+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_3f0a87ce7db3",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 17,
+        "source": "research_cycle"
+      },
+      "id": "edge_4f40e63fdd85",
+      "created_at": "2026-07-01T10:43:54.904659+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_50edf8fd8f52",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 17,
+        "source": "research_cycle"
+      },
+      "id": "edge_5f3d6ac76a14",
+      "created_at": "2026-07-01T10:43:54.904662+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_be036c8fc171",
+      "target_id": "art_730b0a43b366",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 17,
+        "source": "research_cycle"
+      },
+      "id": "edge_c01fda0ca0eb",
+      "created_at": "2026-07-01T10:43:54.904966+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_b3d2f71823f5",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 18,
+        "source": "research_cycle"
+      },
+      "id": "edge_cc9d6850a604",
+      "created_at": "2026-07-01T10:43:54.917120+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_4ab0fc30ee14",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 18,
+        "source": "research_cycle"
+      },
+      "id": "edge_9d5b1b21f5a2",
+      "created_at": "2026-07-01T10:43:54.917123+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_900754552b0f",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 18,
+        "source": "research_cycle"
+      },
+      "id": "edge_6fff37b19ef9",
+      "created_at": "2026-07-01T10:43:54.917481+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_ef5cd95493ee",
+      "target_id": "art_b55c993481a1",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 18,
+        "source": "research_cycle"
+      },
+      "id": "edge_f7e02689fd53",
+      "created_at": "2026-07-01T10:43:54.917483+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c046b8f36d04",
+      "target_id": "art_50edf8fd8f52",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 18,
+        "source": "research_cycle"
+      },
+      "id": "edge_faddc7b40ea9",
+      "created_at": "2026-07-01T10:43:54.918186+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_efea3d3f9828",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 19,
+        "source": "research_cycle"
+      },
+      "id": "edge_69980057feff",
+      "created_at": "2026-07-01T10:43:54.931168+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d65858761686",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 19,
+        "source": "research_cycle"
+      },
+      "id": "edge_ab5e9bcece9e",
+      "created_at": "2026-07-01T10:43:54.931170+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_89a7aacdeee5",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 19,
+        "source": "research_cycle"
+      },
+      "id": "edge_aa044ccd1436",
+      "created_at": "2026-07-01T10:43:54.931546+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_61b45e905113",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 19,
+        "source": "research_cycle"
+      },
+      "id": "edge_16ef4355a9f6",
+      "created_at": "2026-07-01T10:43:54.931549+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_682bf2a28536",
+      "target_id": "art_ef5cd95493ee",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 19,
+        "source": "research_cycle"
+      },
+      "id": "edge_e7600c40d398",
+      "created_at": "2026-07-01T10:43:54.931896+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_78f3f0636a9f",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 20,
+        "source": "research_cycle"
+      },
+      "id": "edge_4ce40b0a1cfc",
+      "created_at": "2026-07-01T10:43:54.945304+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5c87cf882027",
+      "target_id": "art_91040624b5c2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 20,
+        "source": "research_cycle"
+      },
+      "id": "edge_193dfbea2e12",
+      "created_at": "2026-07-01T10:43:54.945307+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_07d3d2c10523",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 20,
+        "source": "research_cycle"
+      },
+      "id": "edge_ed19d13e3293",
+      "created_at": "2026-07-01T10:43:54.945671+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_90d835e3795b",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 20,
+        "source": "research_cycle"
+      },
+      "id": "edge_d4a6c004e4a3",
+      "created_at": "2026-07-01T10:43:54.945674+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_757d2a302825",
+      "target_id": "art_61b45e905113",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 20,
+        "source": "research_cycle"
+      },
+      "id": "edge_c968cf94fd72",
+      "created_at": "2026-07-01T10:43:54.946013+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f6df015c9cbe",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 21,
+        "source": "research_cycle"
+      },
+      "id": "edge_fcfb48524f7e",
+      "created_at": "2026-07-01T10:43:54.960190+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1d7cce9fcfa4",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 21,
+        "source": "research_cycle"
+      },
+      "id": "edge_be279197b211",
+      "created_at": "2026-07-01T10:43:54.960193+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_fd286dc1fbd1",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 21,
+        "source": "research_cycle"
+      },
+      "id": "edge_59d421004ec5",
+      "created_at": "2026-07-01T10:43:54.960574+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c182ecaf7a8a",
+      "target_id": "art_0d36850b7fd2",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 21,
+        "source": "research_cycle"
+      },
+      "id": "edge_705082b9eed0",
+      "created_at": "2026-07-01T10:43:54.960576+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_3c6782fce331",
+      "target_id": "art_90d835e3795b",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 21,
+        "source": "research_cycle"
+      },
+      "id": "edge_17ee619c2ceb",
+      "created_at": "2026-07-01T10:43:54.960921+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0c6d4bb9841d",
+      "target_id": "art_c182ecaf7a8a",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 22,
+        "source": "research_cycle"
+      },
+      "id": "edge_078df671e86f",
+      "created_at": "2026-07-01T10:43:54.973874+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6ff2e4936f76",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 22,
+        "source": "research_cycle"
+      },
+      "id": "edge_d43beea27d6c",
+      "created_at": "2026-07-01T10:43:54.975075+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6d8e65400c42",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 22,
+        "source": "research_cycle"
+      },
+      "id": "edge_cd348d00325d",
+      "created_at": "2026-07-01T10:43:54.975083+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5b6c94dd574c",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 22,
+        "source": "research_cycle"
+      },
+      "id": "edge_d95db43f60a6",
+      "created_at": "2026-07-01T10:43:54.975819+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0b3328449ff6",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 22,
+        "source": "research_cycle"
+      },
+      "id": "edge_c58883547126",
+      "created_at": "2026-07-01T10:43:54.975822+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6abe54fb802f",
+      "target_id": "art_0b3328449ff6",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 23,
+        "source": "research_cycle"
+      },
+      "id": "edge_8dca177c738e",
+      "created_at": "2026-07-01T10:43:54.988946+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_4c3826ba9da0",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 23,
+        "source": "research_cycle"
+      },
+      "id": "edge_68c924b587a0",
+      "created_at": "2026-07-01T10:43:54.990104+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_413e74ff7b7f",
+      "target_id": "art_93e8d329c515",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 23,
+        "source": "research_cycle"
+      },
+      "id": "edge_1b1a0acc6232",
+      "created_at": "2026-07-01T10:43:54.990107+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_638568e918af",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 23,
+        "source": "research_cycle"
+      },
+      "id": "edge_7de773b96926",
+      "created_at": "2026-07-01T10:43:54.990496+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d19503cefa79",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 23,
+        "source": "research_cycle"
+      },
+      "id": "edge_e5c43e477f20",
+      "created_at": "2026-07-01T10:43:54.990499+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_3e424ce3007b",
+      "target_id": "art_d19503cefa79",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 24,
+        "source": "research_cycle"
+      },
+      "id": "edge_cd6add6df01e",
+      "created_at": "2026-07-01T10:43:55.009627+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1cd9244e7cef",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 24,
+        "source": "research_cycle"
+      },
+      "id": "edge_10e30a29fceb",
+      "created_at": "2026-07-01T10:43:55.010770+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_194ba124918f",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 24,
+        "source": "research_cycle"
+      },
+      "id": "edge_fc3a56097a06",
+      "created_at": "2026-07-01T10:43:55.010772+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d474a149d524",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 24,
+        "source": "research_cycle"
+      },
+      "id": "edge_f8074a34d743",
+      "created_at": "2026-07-01T10:43:55.011147+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1ee7e0d7395d",
+      "target_id": "art_6971798eebd8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 24,
+        "source": "research_cycle"
+      },
+      "id": "edge_9771d3b34d64",
+      "created_at": "2026-07-01T10:43:55.011149+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_93a631788b4b",
+      "target_id": "art_1ee7e0d7395d",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 25,
+        "source": "research_cycle"
+      },
+      "id": "edge_df43e6bb0a93",
+      "created_at": "2026-07-01T10:43:55.026780+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d5245c599675",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 25,
+        "source": "research_cycle"
+      },
+      "id": "edge_cc7ecc96def5",
+      "created_at": "2026-07-01T10:43:55.028136+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_03ae32574cdb",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 25,
+        "source": "research_cycle"
+      },
+      "id": "edge_baa54d0b28af",
+      "created_at": "2026-07-01T10:43:55.028139+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_35ff441a7f02",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 25,
+        "source": "research_cycle"
+      },
+      "id": "edge_c65f5d54326e",
+      "created_at": "2026-07-01T10:43:55.028635+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_b4054e7c97bc",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 25,
+        "source": "research_cycle"
+      },
+      "id": "edge_02e2a1b50e32",
+      "created_at": "2026-07-01T10:43:55.028638+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_dd7f2c91e9f9",
+      "target_id": "art_b4054e7c97bc",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 26,
+        "source": "research_cycle"
+      },
+      "id": "edge_ca711df55d1a",
+      "created_at": "2026-07-01T10:43:55.044345+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1672b068ea5d",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 26,
+        "source": "research_cycle"
+      },
+      "id": "edge_bcc372640324",
+      "created_at": "2026-07-01T10:43:55.045560+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_5cc3a890a3ee",
+      "target_id": "art_2b9c40421fc8",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 26,
+        "source": "research_cycle"
+      },
+      "id": "edge_f42d58d8ef4d",
+      "created_at": "2026-07-01T10:43:55.045562+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0e18512d3773",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 26,
+        "source": "research_cycle"
+      },
+      "id": "edge_86fdffdcdd48",
+      "created_at": "2026-07-01T10:43:55.045981+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_bf2126471319",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 26,
+        "source": "research_cycle"
+      },
+      "id": "edge_46eb44fcaee1",
+      "created_at": "2026-07-01T10:43:55.045984+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_56c67d573a48",
+      "target_id": "art_bf2126471319",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 27,
+        "source": "research_cycle"
+      },
+      "id": "edge_ca22a55023f0",
+      "created_at": "2026-07-01T10:43:55.062971+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c3ca51a76ddb",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 27,
+        "source": "research_cycle"
+      },
+      "id": "edge_243e62713c5b",
+      "created_at": "2026-07-01T10:43:55.064269+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d32484043dba",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 27,
+        "source": "research_cycle"
+      },
+      "id": "edge_2a9591b7cb8b",
+      "created_at": "2026-07-01T10:43:55.064272+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c412e2d54bc7",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 27,
+        "source": "research_cycle"
+      },
+      "id": "edge_9b4efdbf1664",
+      "created_at": "2026-07-01T10:43:55.064695+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_c0bee2630c73",
+      "target_id": "art_a48bfeb34a2e",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 27,
+        "source": "research_cycle"
+      },
+      "id": "edge_063cd774762f",
+      "created_at": "2026-07-01T10:43:55.064698+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_0110c0c5e8e0",
+      "target_id": "art_c0bee2630c73",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 28,
+        "source": "research_cycle"
+      },
+      "id": "edge_ecd8b3f203e5",
+      "created_at": "2026-07-01T10:43:55.082379+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_b4a213f853fe",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 28,
+        "source": "research_cycle"
+      },
+      "id": "edge_55109dfe6de5",
+      "created_at": "2026-07-01T10:43:55.083644+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_8284e49efe27",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 28,
+        "source": "research_cycle"
+      },
+      "id": "edge_fb484c32be11",
+      "created_at": "2026-07-01T10:43:55.083646+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_f70401c6caa7",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 28,
+        "source": "research_cycle"
+      },
+      "id": "edge_8fbfa68a885f",
+      "created_at": "2026-07-01T10:43:55.084038+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_1dcbdfa2bcdd",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 28,
+        "source": "research_cycle"
+      },
+      "id": "edge_8a9777a03f94",
+      "created_at": "2026-07-01T10:43:55.084040+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_d979676f5022",
+      "target_id": "art_1dcbdfa2bcdd",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 29,
+        "source": "research_cycle"
+      },
+      "id": "edge_a72ed0b7f22e",
+      "created_at": "2026-07-01T10:43:55.100203+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_df9f8d1dbde9",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 29,
+        "source": "research_cycle"
+      },
+      "id": "edge_8e2f332be0f2",
+      "created_at": "2026-07-01T10:43:55.101548+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_71279bf2f354",
+      "target_id": "art_037ce18d183f",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 29,
+        "source": "research_cycle"
+      },
+      "id": "edge_9ada61efe88a",
+      "created_at": "2026-07-01T10:43:55.101551+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_6ada250b86db",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 29,
+        "source": "research_cycle"
+      },
+      "id": "edge_20bdd6f3d338",
+      "created_at": "2026-07-01T10:43:55.101989+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_13f7eec820f3",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 29,
+        "source": "research_cycle"
+      },
+      "id": "edge_1043a0114315",
+      "created_at": "2026-07-01T10:43:55.101992+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a4d8fb5feb93",
+      "target_id": "art_13f7eec820f3",
+      "kind": "derived_from",
+      "provenance": {
+        "agent_id": "agent_explorer",
+        "agent_role": "explorer",
+        "cycle": 30,
+        "source": "research_cycle"
+      },
+      "id": "edge_edfc207ac196",
+      "created_at": "2026-07-01T10:43:55.118710+00:00",
+      "confidence": 0.55,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_596d2f048113",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 30,
+        "source": "research_cycle"
+      },
+      "id": "edge_2fbfc17e389f",
+      "created_at": "2026-07-01T10:43:55.120084+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_a5b7d4ea9e50",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine",
+        "agent_role": "engine",
+        "cycle": 30,
+        "source": "research_cycle"
+      },
+      "id": "edge_3a13fa1f7195",
+      "created_at": "2026-07-01T10:43:55.120087+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_89d269105a48",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 30,
+        "source": "research_cycle"
+      },
+      "id": "edge_b5c4ad801e40",
+      "created_at": "2026-07-01T10:43:55.120503+00:00",
+      "confidence": 0.65,
+      "metadata": {}
+    },
+    {
+      "source_id": "art_aa5ac0473541",
+      "target_id": "art_f0a88c859d91",
+      "kind": "contradicts",
+      "provenance": {
+        "agent_id": "agent_engine_g1_10",
+        "agent_role": "engine",
+        "cycle": 30,
+        "source": "research_cycle"
+      },
+      "id": "edge_e50cb6e9fc8a",
+      "created_at": "2026-07-01T10:43:55.120506+00:00",
+      "confidence": 0.6,
+      "metadata": {}
+    }
+  ]
+}

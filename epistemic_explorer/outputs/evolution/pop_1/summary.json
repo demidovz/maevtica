@@ -1,0 +1,19 @@
+{
+  "epochs": 30,
+  "final_alive": 1,
+  "final_species_counts": {
+    "integrator": 1
+  },
+  "mean_bridge_score": 0.36666666666666664,
+  "mean_compression_score": -0.03334673365213413,
+  "mean_dead_end_rate": 0.1,
+  "mean_experiment_yield": 0.36666666666666664,
+  "mean_question_value": 0.26666666666666666,
+  "mean_research_diversity": 0.0,
+  "mean_selection_pressure": 0.26666666666666666,
+  "population_target": 1,
+  "seed": 8,
+  "total_births": 1,
+  "total_deaths": 0,
+  "total_epistemic_value": 120.19006839528645
+}

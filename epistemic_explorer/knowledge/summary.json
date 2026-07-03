@@ -1,0 +1,13 @@
+{
+  "cycles": 10,
+  "edges": 140,
+  "hypotheses_falsified": 3,
+  "hypotheses_survived": 17,
+  "max_depth": 2,
+  "nodes": 104,
+  "objective_totals": {
+    "concept_reuse": 25.0,
+    "knowledge_growth": 27.700000000000003
+  },
+  "open_questions": 11
+}

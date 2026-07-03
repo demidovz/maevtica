@@ -1,0 +1,270 @@
+{
+  "-1": {
+    "size": 832,
+    "paradigms": [
+      "cellular_automata",
+      "differentiable_system",
+      "graph_system",
+      "hypergraph",
+      "probabilistic_system",
+      "random_interaction",
+      "rewriting_system",
+      "sat_based",
+      "symbolic_system"
+    ],
+    "paradigm_count": 9,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.6628545773184804,
+      "transfer_efficiency": 0.13743057791263846,
+      "behavioral_entropy": 0.9071216336549213,
+      "compression_ratio": 0.294322968826802,
+      "fixed_point_density": 0.5760896982239286,
+      "stability": 0.6220034999813786,
+      "uncertainty_persistence": 0.30029172438614216,
+      "reuse": 0.34221022617705155,
+      "hierarchy_growth": 0.1657136443296201,
+      "canonical_role_count_proxy": 8.25697306923937,
+      "response_susceptibility": 0.08880664588440464,
+      "coordination": 0.7862063082644041
+    },
+    "implementation_invariance": 1.0
+  },
+  "0": {
+    "size": 6,
+    "paradigms": [
+      "graph_system",
+      "hypergraph",
+      "probabilistic_system",
+      "random_interaction",
+      "sat_based",
+      "symbolic_system"
+    ],
+    "paradigm_count": 6,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.6660238395674234,
+      "transfer_efficiency": 0.052722761711401896,
+      "behavioral_entropy": 0.9129398926427698,
+      "compression_ratio": 0.36904746898255353,
+      "fixed_point_density": 0.5163066616980093,
+      "stability": 0.571564813964914,
+      "uncertainty_persistence": 0.15016786209727936,
+      "reuse": 0.23410604708267244,
+      "hierarchy_growth": 0.1665059598918558,
+      "canonical_role_count_proxy": 8.303519141142159,
+      "response_susceptibility": 0.08489244469420186,
+      "coordination": 0.7843849604729706
+    },
+    "implementation_invariance": 0.6666666666666666
+  },
+  "1": {
+    "size": 6,
+    "paradigms": [
+      "graph_system",
+      "hypergraph",
+      "rewriting_system",
+      "sat_based"
+    ],
+    "paradigm_count": 4,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.5494243146435818,
+      "transfer_efficiency": 0.2543286310158066,
+      "behavioral_entropy": 0.9437970693287068,
+      "compression_ratio": 0.32161390312629184,
+      "fixed_point_density": 0.4868632093320438,
+      "stability": 0.5450703207192175,
+      "uncertainty_persistence": 0.4537719463015515,
+      "reuse": 0.35451674904337976,
+      "hierarchy_growth": 0.1373560786608955,
+      "canonical_role_count_proxy": 8.550376554629656,
+      "response_susceptibility": 0.09173684174978564,
+      "coordination": 0.7294266168294062
+    },
+    "implementation_invariance": 0.4444444444444444
+  },
+  "2": {
+    "size": 7,
+    "paradigms": [
+      "cellular_automata",
+      "differentiable_system",
+      "graph_system",
+      "hypergraph",
+      "random_interaction",
+      "symbolic_system"
+    ],
+    "paradigm_count": 6,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.8752472269044718,
+      "transfer_efficiency": 0.219824137466982,
+      "behavioral_entropy": 0.931285896512562,
+      "compression_ratio": 0.3238680090746146,
+      "fixed_point_density": 0.6126855336608583,
+      "stability": 0.6540085355124404,
+      "uncertainty_persistence": 0.12584245883624146,
+      "reuse": 0.3033703263073407,
+      "hierarchy_growth": 0.21881180672611794,
+      "canonical_role_count_proxy": 8.450287172100497,
+      "response_susceptibility": 0.08579345232840331,
+      "coordination": 0.7590314723321155
+    },
+    "implementation_invariance": 0.6666666666666666
+  },
+  "3": {
+    "size": 17,
+    "paradigms": [
+      "cellular_automata",
+      "differentiable_system",
+      "graph_system",
+      "hypergraph",
+      "probabilistic_system",
+      "random_interaction",
+      "rewriting_system",
+      "sat_based"
+    ],
+    "paradigm_count": 8,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.3114834612569477,
+      "transfer_efficiency": 0.07354740683073614,
+      "behavioral_entropy": 0.900009801062708,
+      "compression_ratio": 0.11573450135987257,
+      "fixed_point_density": 0.6259298438644648,
+      "stability": 0.6650712058399321,
+      "uncertainty_persistence": 0.1323990884680063,
+      "reuse": 0.4787369144911261,
+      "hierarchy_growth": 0.07787086531423693,
+      "canonical_role_count_proxy": 8.200078408501664,
+      "response_susceptibility": 0.08736991148364759,
+      "coordination": 0.7999677952881332
+    },
+    "implementation_invariance": 0.8888888888888888
+  },
+  "4": {
+    "size": 9,
+    "paradigms": [
+      "cellular_automata",
+      "differentiable_system",
+      "hypergraph",
+      "probabilistic_system",
+      "random_interaction",
+      "sat_based",
+      "symbolic_system"
+    ],
+    "paradigm_count": 7,
+    "mean_order_parameters": {
+      "abstraction_depth": 2.130564468341545,
+      "transfer_efficiency": 0.06533853644677264,
+      "behavioral_entropy": 0.9208337905030157,
+      "compression_ratio": 0.3632107859964766,
+      "fixed_point_density": 0.6806965347101811,
+      "stability": 0.7085897510386994,
+      "uncertainty_persistence": 0.48552973781215264,
+      "reuse": 0.26685100211161816,
+      "hierarchy_growth": 0.28264111708538614,
+      "canonical_role_count_proxy": 8.366670324024126,
+      "response_susceptibility": 0.10579802796747065,
+      "coordination": 0.8236831926446939
+    },
+    "implementation_invariance": 0.7777777777777778
+  },
+  "5": {
+    "size": 6,
+    "paradigms": [
+      "cellular_automata",
+      "graph_system",
+      "random_interaction",
+      "symbolic_system"
+    ],
+    "paradigm_count": 4,
+    "mean_order_parameters": {
+      "abstraction_depth": 2.0427945410386052,
+      "transfer_efficiency": 0.16879237362388985,
+      "behavioral_entropy": 0.9259462924376343,
+      "compression_ratio": 0.4337415958409388,
+      "fixed_point_density": 0.59485661250807,
+      "stability": 0.6319797372818586,
+      "uncertainty_persistence": 0.44658505134458676,
+      "reuse": 0.2639389419284566,
+      "hierarchy_growth": 0.26069863525965137,
+      "canonical_role_count_proxy": 8.407570339501074,
+      "response_susceptibility": 0.12155652945736979,
+      "coordination": 0.8265553934219273
+    },
+    "implementation_invariance": 0.4444444444444444
+  },
+  "6": {
+    "size": 6,
+    "paradigms": [
+      "differentiable_system",
+      "hypergraph",
+      "rewriting_system",
+      "sat_based"
+    ],
+    "paradigm_count": 4,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.6350633620597128,
+      "transfer_efficiency": 0.09555335111903879,
+      "behavioral_entropy": 0.93561610007442,
+      "compression_ratio": 0.330590920288557,
+      "fixed_point_density": 0.5155379403167639,
+      "stability": 0.5691367329537768,
+      "uncertainty_persistence": 0.4301129313581555,
+      "reuse": 0.32743043926861376,
+      "hierarchy_growth": 0.15876584051492817,
+      "canonical_role_count_proxy": 8.48492880059536,
+      "response_susceptibility": 0.09451829638862187,
+      "coordination": 0.7443804033671504
+    },
+    "implementation_invariance": 0.4444444444444444
+  },
+  "7": {
+    "size": 5,
+    "paradigms": [
+      "cellular_automata",
+      "graph_system",
+      "random_interaction",
+      "rewriting_system",
+      "sat_based"
+    ],
+    "paradigm_count": 5,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.897474734154286,
+      "transfer_efficiency": 0.19354753361340785,
+      "behavioral_entropy": 0.9462505047558821,
+      "compression_ratio": 0.3670243186742937,
+      "fixed_point_density": 0.5839914020814458,
+      "stability": 0.6234998711169716,
+      "uncertainty_persistence": 0.47906766004093077,
+      "reuse": 0.2816460667218772,
+      "hierarchy_growth": 0.22436868353857148,
+      "canonical_role_count_proxy": 8.570004038047056,
+      "response_susceptibility": 0.11722033377769184,
+      "coordination": 0.7927105157984276
+    },
+    "implementation_invariance": 0.5555555555555556
+  },
+  "8": {
+    "size": 6,
+    "paradigms": [
+      "cellular_automata",
+      "graph_system",
+      "hypergraph",
+      "random_interaction",
+      "rewriting_system"
+    ],
+    "paradigm_count": 5,
+    "mean_order_parameters": {
+      "abstraction_depth": 1.1573215530480538,
+      "transfer_efficiency": 0.08619035736580562,
+      "behavioral_entropy": 0.8638238743367745,
+      "compression_ratio": 0.07919548230314431,
+      "fixed_point_density": 0.5478841917165393,
+      "stability": 0.6011188206731325,
+      "uncertainty_persistence": 0.367568564561836,
+      "reuse": 0.2577676529116027,
+      "hierarchy_growth": 0.03933038826201347,
+      "canonical_role_count_proxy": 7.910590994694196,
+      "response_susceptibility": 0.07087763184457875,
+      "coordination": 0.8142238546212814
+    },
+    "implementation_invariance": 0.5555555555555556
+  }
+}

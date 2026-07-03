@@ -1,0 +1,25 @@
+{
+  "affine_coef": [
+    [
+      0.7994432196970267,
+      -0.1410967463721045
+    ],
+    [
+      -0.228559297307119,
+      0.10539222047347885
+    ],
+    [
+      -0.018672722174006867,
+      0.4796443941565432
+    ]
+  ],
+  "coordinate_system": "koopman_quadratic_pca",
+  "coordinate_system_path": "epistemic_engine/outputs/natural_coordinates_validation/frozen_coordinate_system.json",
+  "dynamics": "affine",
+  "latent_dimension": 2,
+  "rule_0": {
+    "no_coordinate_optimization": true,
+    "no_parameter_tuning_on_ood": true,
+    "no_retraining": true
+  }
+}

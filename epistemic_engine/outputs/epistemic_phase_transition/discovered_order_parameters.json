@@ -1,0 +1,59 @@
+{
+  "ranked_order_parameters": [
+    {
+      "name": "uncertainty_persistence",
+      "phase_separation": 0.06231888440183477
+    },
+    {
+      "name": "compression_ratio",
+      "phase_separation": 0.042186804167793815
+    },
+    {
+      "name": "canonical_role_count_proxy",
+      "phase_separation": 0.04123202260776594
+    },
+    {
+      "name": "behavioral_entropy",
+      "phase_separation": 0.04123202256629095
+    },
+    {
+      "name": "reuse",
+      "phase_separation": 0.037751187217213975
+    },
+    {
+      "name": "response_susceptibility",
+      "phase_separation": 0.03644460032455106
+    },
+    {
+      "name": "transfer_efficiency",
+      "phase_separation": 0.029637397936139166
+    },
+    {
+      "name": "abstraction_depth",
+      "phase_separation": 0.029247529650668094
+    },
+    {
+      "name": "hierarchy_growth",
+      "phase_separation": 0.029247529648870865
+    },
+    {
+      "name": "coordination",
+      "phase_separation": 0.021246674857037542
+    },
+    {
+      "name": "fixed_point_density",
+      "phase_separation": 0.011858982372580021
+    },
+    {
+      "name": "stability",
+      "phase_separation": 0.011410312529599592
+    }
+  ],
+  "top_order_parameters": [
+    "uncertainty_persistence",
+    "compression_ratio",
+    "canonical_role_count_proxy",
+    "behavioral_entropy",
+    "reuse"
+  ]
+}

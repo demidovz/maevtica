@@ -1,0 +1,241 @@
+{
+  "approx_conserved_quantities": [
+    {
+      "drift_std": 3.7611398894544985e-30,
+      "drift_mean_abs": 2.420399189841942e-30,
+      "level_std": 1.1402147704289243e-29,
+      "terms": [
+        {
+          "observable": "order_response_susceptibility",
+          "weight": -1.0
+        },
+        {
+          "observable": "order_hierarchy_growth",
+          "weight": -1.3056437313990678e-13
+        },
+        {
+          "observable": "order_abstraction_depth",
+          "weight": 3.270048441765555e-14
+        },
+        {
+          "observable": "order_stability",
+          "weight": 1.8563903395806882e-15
+        },
+        {
+          "observable": "stability",
+          "weight": -1.5206084488894804e-15
+        },
+        {
+          "observable": "order_fixed_point_density",
+          "weight": -2.662478770956322e-16
+        },
+        {
+          "observable": "hierarchy_emergence",
+          "weight": -2.375645307154101e-16
+        },
+        {
+          "observable": "order_behavioral_entropy",
+          "weight": -2.7687044474620352e-17
+        }
+      ]
+    },
+    {
+      "drift_std": 5.385281157501204e-18,
+      "drift_mean_abs": 4.06696925896468e-18,
+      "level_std": 4.957859112206648e-18,
+      "terms": [
+        {
+          "observable": "perturbation_sensitivity",
+          "weight": -0.9999176875862477
+        },
+        {
+          "observable": "order_stability",
+          "weight": -0.006594287062941914
+        },
+        {
+          "observable": "order_reuse",
+          "weight": 0.006007395572328869
+        },
+        {
+          "observable": "propagation",
+          "weight": -0.005006162976940748
+        },
+        {
+          "observable": "compositionality",
+          "weight": 0.0042909968373777705
+        },
+        {
+          "observable": "hierarchy_emergence",
+          "weight": 0.004130459661260213
+        },
+        {
+          "observable": "order_fixed_point_density",
+          "weight": 0.002714025193783204
+        },
+        {
+          "observable": "substitution_response",
+          "weight": -0.0025030814884703582
+        }
+      ]
+    },
+    {
+      "drift_std": 3.8227527830285654e-17,
+      "drift_mean_abs": 2.6442110970617296e-17,
+      "level_std": 7.603365333475227e-17,
+      "terms": [
+        {
+          "observable": "order_hierarchy_growth",
+          "weight": -0.9698757328396861
+        },
+        {
+          "observable": "order_abstraction_depth",
+          "weight": 0.24291504266098765
+        },
+        {
+          "observable": "order_stability",
+          "weight": 0.01369334909203496
+        },
+        {
+          "observable": "stability",
+          "weight": -0.011398497124011392
+        },
+        {
+          "observable": "order_fixed_point_density",
+          "weight": -0.002656505305578854
+        },
+        {
+          "observable": "hierarchy_emergence",
+          "weight": -0.0017844378042646274
+        },
+        {
+          "observable": "order_coordination",
+          "weight": 0.0015936437467029552
+        },
+        {
+          "observable": "convergence",
+          "weight": -0.0015936437467027823
+        }
+      ]
+    },
+    {
+      "drift_std": 4.730910910815135e-17,
+      "drift_mean_abs": 3.646498160437707e-17,
+      "level_std": 1.6412420445683665e-16,
+      "terms": [
+        {
+          "observable": "convergence",
+          "weight": 0.6543967674127545
+        },
+        {
+          "observable": "order_coordination",
+          "weight": -0.6543967674127522
+        },
+        {
+          "observable": "fixed_point_strength",
+          "weight": -0.2934505303368051
+        },
+        {
+          "observable": "order_fixed_point_density",
+          "weight": 0.23436321515844522
+        },
+        {
+          "observable": "stability",
+          "weight": 0.038228335597106734
+        },
+        {
+          "observable": "order_stability",
+          "weight": 0.030706865444312476
+        },
+        {
+          "observable": "hierarchy_emergence",
+          "weight": 0.007541850341652317
+        },
+        {
+          "observable": "order_hierarchy_growth",
+          "weight": -0.003296443525733262
+        }
+      ]
+    },
+    {
+      "drift_std": 6.735143991377001e-17,
+      "drift_mean_abs": 5.124811011661673e-17,
+      "level_std": 2.610910687272871e-16,
+      "terms": [
+        {
+          "observable": "stability",
+          "weight": 0.7029109906577488
+        },
+        {
+          "observable": "order_stability",
+          "weight": -0.7020443460931128
+        },
+        {
+          "observable": "order_behavioral_entropy",
+          "weight": 0.057231428104060914
+        },
+        {
+          "observable": "transfer",
+          "weight": -0.05059658041553934
+        },
+        {
+          "observable": "order_transfer_efficiency",
+          "weight": 0.05059658041553926
+        },
+        {
+          "observable": "hierarchy_emergence",
+          "weight": 0.047602010143360324
+        },
+        {
+          "observable": "fixed_point_strength",
+          "weight": -0.02668494418911612
+        },
+        {
+          "observable": "order_fixed_point_density",
+          "weight": 0.02594210599085675
+        }
+      ]
+    }
+  ],
+  "monotone_candidates": [
+    {
+      "observable": "perturbation_sensitivity",
+      "monotonicity": 1.0
+    },
+    {
+      "observable": "order_response_susceptibility",
+      "monotonicity": 1.0
+    },
+    {
+      "observable": "translation_complexity",
+      "monotonicity": 0.6059090909090908
+    },
+    {
+      "observable": "abstraction_growth",
+      "monotonicity": 0.605
+    },
+    {
+      "observable": "uncertainty_handling",
+      "monotonicity": 0.5990909090909091
+    },
+    {
+      "observable": "order_compression_ratio",
+      "monotonicity": 0.5986363636363636
+    },
+    {
+      "observable": "order_uncertainty_persistence",
+      "monotonicity": 0.5975
+    },
+    {
+      "observable": "representation_complexity",
+      "monotonicity": 0.5879545454545454
+    },
+    {
+      "observable": "compositionality",
+      "monotonicity": 0.5859090909090908
+    },
+    {
+      "observable": "transfer",
+      "monotonicity": 0.5838636363636364
+    }
+  ]
+}

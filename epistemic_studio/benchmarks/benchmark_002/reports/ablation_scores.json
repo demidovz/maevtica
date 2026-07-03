@@ -1,0 +1,66 @@
+[
+  {
+    "component": "Historian",
+    "observed_failure": "Harder audit, but core graph still functions.",
+    "overhead_removed": 0.08,
+    "removed_behavior": "cycle timeline and state-change summaries",
+    "retained_value": 0.87,
+    "verdict": "keep minimal"
+  },
+  {
+    "component": "Planner",
+    "observed_failure": "Attention becomes role-order driven and repeats stale contradictions.",
+    "overhead_removed": 0.05,
+    "removed_behavior": "frontier selection and allocation policy",
+    "retained_value": 0.54,
+    "verdict": "keep"
+  },
+  {
+    "component": "Meta Observer",
+    "observed_failure": "Stagnation is detected later but not catastrophic in short runs.",
+    "overhead_removed": 0.06,
+    "removed_behavior": "stagnation/process critique",
+    "retained_value": 0.91,
+    "verdict": "remove from core"
+  },
+  {
+    "component": "Research Journal",
+    "observed_failure": "External audit collapses; internal metrics still run.",
+    "overhead_removed": 0.18,
+    "removed_behavior": "human-readable cycle trace",
+    "retained_value": 0.82,
+    "verdict": "keep slim"
+  },
+  {
+    "component": "Attention Economy",
+    "observed_failure": "Low-value agents keep running; overhead falls but waste rises.",
+    "overhead_removed": 0.12,
+    "removed_behavior": "scarce resource market",
+    "retained_value": 0.63,
+    "verdict": "keep simpler"
+  },
+  {
+    "component": "Knowledge Graph",
+    "observed_failure": "Compression and reuse claims become unverifiable.",
+    "overhead_removed": 0.16,
+    "removed_behavior": "typed links and reuse surface",
+    "retained_value": 0.49,
+    "verdict": "keep"
+  },
+  {
+    "component": "Counterexample Graph",
+    "observed_failure": "Counterexamples remain as artifacts but are less navigable.",
+    "overhead_removed": 0.07,
+    "removed_behavior": "visible falsification subgraph",
+    "retained_value": 0.78,
+    "verdict": "merge into graph"
+  },
+  {
+    "component": "Agent Evolution",
+    "observed_failure": "Little value in short benchmark; can amplify noisy reputation.",
+    "overhead_removed": 0.1,
+    "removed_behavior": "clone/retire strategies",
+    "retained_value": 0.96,
+    "verdict": "remove"
+  }
+]

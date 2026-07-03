@@ -1,0 +1,127 @@
+{
+  "allocation_ids": [
+    "alloc_26d4aac2caf6",
+    "alloc_1aafc3d102b4",
+    "alloc_e0e821514c1c"
+  ],
+  "artifact_ids": [
+    "art_cdadfd28aeb1",
+    "art_8bcbbcae5da6",
+    "art_d2548cacc6d5",
+    "art_7b02aef29719",
+    "art_28507328487b"
+  ],
+  "attention_budget": 10.0,
+  "attention_spent": 10.0,
+  "bid_ids": [
+    "bid_a94a932f9e81",
+    "bid_55b3983c5696",
+    "bid_44801d0a7a82",
+    "bid_77c1b1754147",
+    "bid_fdd56bd53a3d",
+    "bid_be03d5567ca8",
+    "bid_0f08095f4a8b",
+    "bid_001682922a00"
+  ],
+  "completed_at": "2026-07-01T10:57:56.747383+00:00",
+  "cycle": 12,
+  "edge_ids": [
+    "edge_ca93e71bb383",
+    "edge_c52be7663c6b",
+    "edge_89fdfe39452a",
+    "edge_5d02e7d82049",
+    "edge_48a809355ab3"
+  ],
+  "frontier_id": "art_08fa74e90a70",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "maevtica",
+        "priority": 1.834,
+        "status": "active"
+      },
+      {
+        "name": "agi",
+        "priority": 0.313,
+        "status": "active"
+      },
+      {
+        "name": "possible_worlds",
+        "priority": 0.313,
+        "status": "active"
+      },
+      {
+        "name": "biology",
+        "priority": 0.225,
+        "status": "active"
+      },
+      {
+        "name": "economics",
+        "priority": 0.225,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 13,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 9,
+      "counterexample": 9,
+      "derived_concept": 14,
+      "experiment": 14,
+      "hypothesis": 13,
+      "meta_memory": 2,
+      "process_note": 7,
+      "research_question": 2,
+      "unknown_region": 1
+    },
+    "attention_efficiency": 0.232,
+    "compression": 0.923,
+    "contradictions": 0,
+    "counterexample_density": 0.692,
+    "dead_hypotheses": 0,
+    "duplicate_rate": 0.527,
+    "epistemic_value": 1.615,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_4f58d81b3bd6",
+        "reuse": 1,
+        "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_02007eb125ab",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7cd3b60b5fdc",
+        "reuse": 1,
+        "title": "Formal handle for H2: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_31cdc1b34b9d",
+        "reuse": 1,
+        "title": "Formal handle for H3: Unexplored implication of Fragile invariance under representation changes"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7ad20e38b0d7",
+        "reuse": 1,
+        "title": "Formal handle for H4: Unexplored implication of Fragile invariance under representation changes"
+      }
+    ],
+    "organizational_diversity": 0.708,
+    "research_velocity": {
+      "last_cycle_artifacts": 5,
+      "last_cycle_edges": 5
+    },
+    "stagnation_score": 0.75
+  },
+  "next_frontier_id": "art_08fa74e90a70",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:57:56.745817+00:00"
+}

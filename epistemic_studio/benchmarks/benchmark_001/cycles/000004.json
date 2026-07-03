@@ -1,0 +1,132 @@
+{
+  "allocation_ids": [
+    "alloc_60d0350f2881",
+    "alloc_b278fb2ba6bb",
+    "alloc_226b69dd276d",
+    "alloc_58616519eeca",
+    "alloc_c32b51db65b2"
+  ],
+  "artifact_ids": [
+    "art_6cd16531635d",
+    "art_6f406c8e3262",
+    "art_a53a350f2c9f",
+    "art_5cc7e24e45e2",
+    "art_30f53990b25a",
+    "art_b55c993481a1",
+    "art_3063f8fc55b0",
+    "art_e4d1f45508f0"
+  ],
+  "attention_budget": 16.66,
+  "attention_spent": 16.66,
+  "bid_ids": [
+    "bid_86cd00935b0f",
+    "bid_cc0e40435929",
+    "bid_b1ce16baec3d",
+    "bid_a12f762f6e48",
+    "bid_722679e77b32",
+    "bid_6a3c153eea69",
+    "bid_9547bacec9a7"
+  ],
+  "completed_at": "2026-07-01T10:43:54.790959+00:00",
+  "cycle": 4,
+  "edge_ids": [
+    "edge_eebaf51dfedc",
+    "edge_fcba606e9d33",
+    "edge_874360d01bfb",
+    "edge_007ecb4834d3",
+    "edge_406e390d2a44"
+  ],
+  "frontier_id": "art_f0c4cbc2ce1e",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "agi",
+        "priority": 1.493,
+        "status": "active"
+      },
+      {
+        "name": "possible_worlds",
+        "priority": 0.576,
+        "status": "active"
+      },
+      {
+        "name": "maevtica",
+        "priority": 0.48,
+        "status": "active"
+      },
+      {
+        "name": "biology",
+        "priority": 0.384,
+        "status": "active"
+      },
+      {
+        "name": "economics",
+        "priority": 0.384,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 8,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 6,
+      "contradiction": 4,
+      "counterexample": 7,
+      "derived_concept": 8,
+      "experiment": 4,
+      "hypothesis": 10,
+      "process_note": 1,
+      "research_history": 4,
+      "research_question": 2,
+      "unknown_region": 4
+    },
+    "attention_efficiency": 0.057,
+    "compression": 0.4,
+    "contradictions": 4,
+    "counterexample_density": 0.7,
+    "dead_hypotheses": 2,
+    "duplicate_rate": 0.208,
+    "epistemic_value": 1.9,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_39bcfe02638c",
+        "reuse": 1,
+        "title": "World-model-centric school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_84abd47482b5",
+        "reuse": 1,
+        "title": "Scaling-first school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_ed61228ca8a1",
+        "reuse": 1,
+        "title": "Implicit-model school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_cce002ab6cfb",
+        "reuse": 1,
+        "title": "Embodied-planning school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_a350e84f244d",
+        "reuse": 1,
+        "title": "Formal handle for Explicit world models are necessary only for long-horizon agency"
+      }
+    ],
+    "organizational_diversity": 0.714,
+    "research_velocity": {
+      "last_cycle_artifacts": 8,
+      "last_cycle_edges": 5
+    },
+    "stagnation_score": 0.81
+  },
+  "next_frontier_id": "art_5cc7e24e45e2",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:43:54.788912+00:00"
+}

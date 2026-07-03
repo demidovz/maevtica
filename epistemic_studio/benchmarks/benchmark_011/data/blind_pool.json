@@ -1,0 +1,337 @@
+[
+  {
+    "applicability": [
+      "Robust developmental systems with multi-modal feedback.",
+      "Less useful for isolated single-cell fate transitions."
+    ],
+    "blind_id": "B348AB161",
+    "definition": "A cross-modal developmental constraint preserving a tissue's reachable shape-and-fate trajectory through coupled gene-expression, mechanical, geometric, and signaling states.",
+    "examples": [
+      "Organoid recovery",
+      "embryonic regulation",
+      "mechanochemical compensation"
+    ],
+    "failure_modes": [
+      "Could rename canalization or morphogenetic field.",
+      "Needs trajectory reconstruction data."
+    ],
+    "predictions": [
+      "Perturbations preserving trajectory constraints will recover form better than single-pathway restoration.",
+      "Developmental failures will cluster by broken trajectory constraint rather than individual pathway."
+    ]
+  },
+  {
+    "applicability": [
+      "Any scientific domain.",
+      "Too broad without domain-specific constraints."
+    ],
+    "blind_id": "B4E9E6825",
+    "definition": "The underlying layer of variables from which higher-level explanations can be constructed across a domain.",
+    "examples": [
+      "Physics variables",
+      "neural features",
+      "economic agents"
+    ],
+    "failure_modes": [
+      "Nearly content-free.",
+      "Renames representation or ontology."
+    ],
+    "predictions": [
+      "Better substrates should allow more explanations to be derived with fewer assumptions."
+    ]
+  },
+  {
+    "applicability": [
+      "Communication, coding, inference, and statistical signals.",
+      "Does not by itself capture meaning or value."
+    ],
+    "blind_id": "B50ADCEB7",
+    "definition": "A meaning-independent measure of uncertainty reduction and channel-limited communication structure.",
+    "examples": [
+      "Telegraph coding",
+      "data compression",
+      "noisy channels"
+    ],
+    "failure_modes": [
+      "Semantic overextension.",
+      "Misuse when message probabilities are undefined."
+    ],
+    "predictions": [
+      "Code length and channel capacity depend on statistical uncertainty rather than semantic content.",
+      "Noise and redundancy trade off under formal limits."
+    ]
+  },
+  {
+    "applicability": [
+      "All domains by definition.",
+      "No clear falsification boundary."
+    ],
+    "blind_id": "B6108D310",
+    "definition": "A universal causal property by which all variables influence all other variables at all scales through hidden dependency paths.",
+    "examples": [
+      "Economies",
+      "brains",
+      "climate",
+      "societies"
+    ],
+    "failure_modes": [
+      "Destroys causal discrimination.",
+      "Explains everything and predicts little."
+    ],
+    "predictions": [
+      "Every system should reveal causal influence if measured at sufficient resolution."
+    ]
+  },
+  {
+    "applicability": [
+      "Interpretable systems with probe and ablation access.",
+      "Not a primitive if it only summarizes measurements."
+    ],
+    "blind_id": "B61C2F2E6",
+    "definition": "A compact signature of an internal mechanism based on its response profile to probes, ablations, and context changes.",
+    "examples": [
+      "Probe suites",
+      "ablation response maps",
+      "activation patching"
+    ],
+    "failure_modes": [
+      "Could be only a metric.",
+      "May depend heavily on probe choice."
+    ],
+    "predictions": [
+      "Mechanisms with similar fingerprints will show similar transfer behavior."
+    ]
+  },
+  {
+    "applicability": [
+      "Thermal systems with definable macroscopic states.",
+      "Less direct in far-from-equilibrium cases without additional formalism."
+    ],
+    "blind_id": "B6CD458CB",
+    "definition": "A state quantity that tracks the directionality and unavailable-work structure of thermodynamic transformations.",
+    "examples": [
+      "Heat engines",
+      "irreversible mixing",
+      "temperature-linked transformations"
+    ],
+    "failure_modes": [
+      "Can be confused with disorder metaphors.",
+      "Requires careful state-space definition."
+    ],
+    "predictions": [
+      "Reversible and irreversible heat processes separate by state-change constraints.",
+      "Heat-engine efficiency limits can be expressed without treating heat as a conserved substance."
+    ]
+  },
+  {
+    "applicability": [
+      "Neural representation and compressed distributed coding.",
+      "Less useful if representations are already disentangled."
+    ],
+    "blind_id": "B85D3A1BA",
+    "definition": "A representational regime in which more features are encoded than there are obvious orthogonal representation dimensions, creating interference and polysemantic units.",
+    "examples": [
+      "Polysemantic neurons",
+      "toy models of neural features",
+      "sparse coding"
+    ],
+    "failure_modes": [
+      "Can overexplain unrelated polysemanticity.",
+      "Depends on feature definitions."
+    ],
+    "predictions": [
+      "Sparse features can share representational dimensions.",
+      "Interference patterns will depend on feature frequency and geometry."
+    ]
+  },
+  {
+    "applicability": [
+      "Heritable biological variation.",
+      "Weak where inheritance is purely cultural or environmental."
+    ],
+    "blind_id": "B8C4ABAB2",
+    "definition": "A transmissible hereditary unit separable from visible trait expression and environmental realization.",
+    "examples": [
+      "Mendelian ratios",
+      "genotype/phenotype separation",
+      "mutation inheritance"
+    ],
+    "failure_modes": [
+      "Can be overtreated as a single fixed physical object.",
+      "Gene expression and regulation complicate simple unit language."
+    ],
+    "predictions": [
+      "Inheritance patterns can remain stable even when phenotypes vary.",
+      "Crosses should reveal latent transmissible factors distinct from appearance."
+    ]
+  },
+  {
+    "applicability": [
+      "Strategic or adaptive evaluated systems.",
+      "Less useful for static classifiers or fully observable systems."
+    ],
+    "blind_id": "B9042869F",
+    "definition": "Loss of truth-correlation in an evaluation or supervision process as the evaluated system changes its capabilities, incentives, explanations, or interaction strategy.",
+    "examples": [
+      "Scalable oversight",
+      "evaluation gaming",
+      "weak-to-strong supervision"
+    ],
+    "failure_modes": [
+      "Could rename Goodharting.",
+      "Too broad unless truth-correlation is measured."
+    ],
+    "predictions": [
+      "Static evaluations will fail when capability changes the evidence-generation process.",
+      "Explicit channel-drift probes will catch some dangerous failures earlier than accuracy-only evaluations."
+    ]
+  },
+  {
+    "applicability": [
+      "Electromagnetism, gravitation, continuum physics.",
+      "Less useful where point interactions are sufficient."
+    ],
+    "blind_id": "BAC92E0E3",
+    "definition": "A spatially distributed state assigning physically relevant quantities throughout a region rather than only at source bodies.",
+    "examples": [
+      "Magnetic lines",
+      "electromagnetic waves",
+      "gravitational fields"
+    ],
+    "failure_modes": [
+      "Can hide mechanism if treated as pure metaphor.",
+      "Requires measurable field variables."
+    ],
+    "predictions": [
+      "Influence can propagate through local spatial structure.",
+      "Patterns between bodies can predict later forces and waves."
+    ]
+  },
+  {
+    "applicability": [
+      "Trained systems with intervention access.",
+      "Does not require human-understandable labels.",
+      "Weak where roles are context-created rather than retained."
+    ],
+    "blind_id": "BB1CAC289",
+    "definition": "An equivalence class of internal states, features, subspaces, or circuits that preserves the same intervention-stable input-output role across prompts, bases, model instances, and scale.",
+    "examples": [
+      "Model editing transfer",
+      "activation steering transfer",
+      "cross-SAE mechanism comparison"
+    ],
+    "failure_modes": [
+      "May reduce to causal abstraction if too broad.",
+      "May be unmeasurable in closed models.",
+      "May add no value beyond current feature/circuit terms."
+    ],
+    "predictions": [
+      "Cross-model mechanisms with high carrier overlap will transfer steering and editing effects better than mechanisms matched only by feature labels.",
+      "Some features with different human labels will collapse into the same carrier under intervention tests.",
+      "Carrier stability will predict which explanations survive model scaling."
+    ]
+  },
+  {
+    "applicability": [
+      "Coupled systems with measured interaction pathways.",
+      "Less useful for isolated tipping elements."
+    ],
+    "blind_id": "BB2A90B32",
+    "definition": "Accumulated cross-system destabilizing burden imposed by interacting tipping elements before any one element crosses its isolated threshold.",
+    "examples": [
+      "Earth-system feedbacks",
+      "permafrost-Amazon-ocean coupling",
+      "cascade risk"
+    ],
+    "failure_modes": [
+      "Could rename tipping cascade risk.",
+      "Interaction estimates may remain too uncertain."
+    ],
+    "predictions": [
+      "Network load will predict multi-element tipping risk better than distance to the closest isolated threshold.",
+      "Sub-threshold perturbations in one element will reduce resilience in linked elements."
+    ]
+  },
+  {
+    "applicability": [
+      "Formal computation, proof procedures, machine execution.",
+      "Less direct for informal heuristics without a precise step rule."
+    ],
+    "blind_id": "BCBBE9B77",
+    "definition": "A finite, rule-governed effective procedure whose steps determine a class of computable transformations.",
+    "examples": [
+      "Decision procedures",
+      "sorting",
+      "Turing-machine computation"
+    ],
+    "failure_modes": [
+      "Can be used too loosely for any method.",
+      "Resource limits require extra complexity concepts."
+    ],
+    "predictions": [
+      "Some tasks admit mechanical procedures while others do not.",
+      "Procedure identity can be studied independently of human intuition."
+    ]
+  },
+  {
+    "applicability": [
+      "Systems where interventions can be repeated across settings.",
+      "Weak where no stable intervention target exists."
+    ],
+    "blind_id": "BE54436D4",
+    "definition": "A set of internal model components treated as identical when the same intervention produces the same downstream behavioral change across settings.",
+    "examples": [
+      "Circuit comparison",
+      "model-diffing",
+      "feature transfer"
+    ],
+    "failure_modes": [
+      "Likely duplicates causal-role or causal-abstraction language.",
+      "May collapse distinct mechanisms with same output effect."
+    ],
+    "predictions": [
+      "Matched mechanisms should transfer ablation and steering effects across contexts."
+    ]
+  },
+  {
+    "applicability": [
+      "Poorly specified self-organizing systems.",
+      "Fails where no preferred direction is justified."
+    ],
+    "blind_id": "BECA73A38",
+    "definition": "A quantity measuring how much a process tends to become more organized when observed from a preferred explanatory direction.",
+    "examples": [
+      "Crystals",
+      "development",
+      "learning systems"
+    ],
+    "failure_modes": [
+      "Confuses observer description with physical process.",
+      "Likely conflicts with existing entropy unless carefully restricted."
+    ],
+    "predictions": [
+      "Systems with high reverse entropy should spontaneously generate simpler explanations."
+    ]
+  },
+  {
+    "applicability": [
+      "Causal modeling, mechanistic explanation, abstraction in AI systems.",
+      "Needs explicit intervention semantics."
+    ],
+    "blind_id": "BF5751934",
+    "definition": "A relation between lower-level and higher-level causal models where macro variables preserve relevant intervention structure.",
+    "examples": [
+      "Neural network circuits",
+      "scientific model reduction",
+      "macro-to-micro explanations"
+    ],
+    "failure_modes": [
+      "Can become vacuous if every mapping counts.",
+      "Requires a chosen high-level variable set."
+    ],
+    "predictions": [
+      "High-level explanations transfer when interventions commute with the lower-level model.",
+      "Some coarse-grainings preserve causal role while others destroy it."
+    ]
+  }
+]

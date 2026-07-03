@@ -1,0 +1,32 @@
+# Research Timeline
+
+- Cycle 1: frontier=art_007fa96a4047, artifacts=8, edges=5, compression=0.143, attention=16.66/16.66
+- Cycle 2: frontier=art_0a2a0b11efca, artifacts=8, edges=5, compression=0.25, attention=16.66/16.66
+- Cycle 3: frontier=art_5fd770fc13f8, artifacts=8, edges=5, compression=0.333, attention=16.66/16.66
+- Cycle 4: frontier=art_f0c4cbc2ce1e, artifacts=8, edges=5, compression=0.4, attention=16.66/16.66
+- Cycle 5: frontier=art_5cc7e24e45e2, artifacts=9, edges=5, compression=0.455, attention=16.66/16.66
+- Cycle 6: frontier=art_ac3ee874af3b, artifacts=8, edges=5, compression=0.5, attention=16.66/16.66
+- Cycle 7: frontier=art_01749e48489f, artifacts=7, edges=5, compression=0.538, attention=16.659/16.66
+- Cycle 8: frontier=art_994fd726b5de, artifacts=7, edges=5, compression=0.571, attention=16.66/16.66
+- Cycle 9: frontier=art_6c56e86fb2bd, artifacts=7, edges=5, compression=0.6, attention=16.661/16.66
+- Cycle 10: frontier=art_51f5f6dd3ae1, artifacts=8, edges=5, compression=0.625, attention=16.66/16.66
+- Cycle 11: frontier=art_7521c883575e, artifacts=10, edges=7, compression=0.647, attention=16.66/16.66
+- Cycle 12: frontier=art_def3d925918f, artifacts=10, edges=7, compression=0.667, attention=16.66/16.66
+- Cycle 13: frontier=art_cbe16973403d, artifacts=10, edges=7, compression=0.684, attention=16.66/16.66
+- Cycle 14: frontier=art_3c87d3cfdb1e, artifacts=10, edges=7, compression=0.7, attention=16.66/16.66
+- Cycle 15: frontier=art_cd99867d65c3, artifacts=11, edges=7, compression=0.714, attention=16.66/16.66
+- Cycle 16: frontier=art_f1395829c5ed, artifacts=10, edges=7, compression=0.727, attention=16.66/16.66
+- Cycle 17: frontier=art_730b0a43b366, artifacts=10, edges=7, compression=0.739, attention=16.66/16.66
+- Cycle 18: frontier=art_50edf8fd8f52, artifacts=10, edges=7, compression=0.75, attention=16.66/16.66
+- Cycle 19: frontier=art_ef5cd95493ee, artifacts=10, edges=7, compression=0.76, attention=16.66/16.66
+- Cycle 20: frontier=art_61b45e905113, artifacts=11, edges=7, compression=0.769, attention=16.66/16.66
+- Cycle 21: frontier=art_90d835e3795b, artifacts=10, edges=7, compression=0.778, attention=16.66/16.66
+- Cycle 22: frontier=art_c182ecaf7a8a, artifacts=10, edges=7, compression=0.786, attention=16.66/16.66
+- Cycle 23: frontier=art_0b3328449ff6, artifacts=10, edges=7, compression=0.793, attention=16.66/16.66
+- Cycle 24: frontier=art_d19503cefa79, artifacts=10, edges=7, compression=0.8, attention=16.66/16.66
+- Cycle 25: frontier=art_1ee7e0d7395d, artifacts=11, edges=7, compression=0.806, attention=16.66/16.66
+- Cycle 26: frontier=art_b4054e7c97bc, artifacts=10, edges=7, compression=0.812, attention=16.66/16.66
+- Cycle 27: frontier=art_bf2126471319, artifacts=10, edges=7, compression=0.818, attention=16.66/16.66
+- Cycle 28: frontier=art_c0bee2630c73, artifacts=10, edges=7, compression=0.824, attention=16.66/16.66
+- Cycle 29: frontier=art_1dcbdfa2bcdd, artifacts=10, edges=7, compression=0.829, attention=16.66/16.66
+- Cycle 30: frontier=art_13f7eec820f3, artifacts=11, edges=7, compression=0.833, attention=16.66/16.66

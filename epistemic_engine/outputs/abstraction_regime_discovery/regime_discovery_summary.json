@@ -1,0 +1,295 @@
+{
+  "input": "epistemic_engine/outputs/abstraction_phase_diagram/phase_runs.csv",
+  "points": 144,
+  "features": [
+    "abstraction_count",
+    "alive_count",
+    "graph_depth",
+    "dag_width",
+    "mean_lifetime",
+    "mean_exposure_lifetime",
+    "mean_reuse",
+    "valid_reuse",
+    "raw_transfer_reuse",
+    "valid_transfer_reuse",
+    "transfer_correctness",
+    "graph_compression_ratio",
+    "semantic_subsumption_ratio",
+    "branching_factor",
+    "hierarchy_emergence_time",
+    "births",
+    "deaths"
+  ],
+  "pca_explained_variance": [
+    0.5007013029484477,
+    0.21910517040991606,
+    0.11593109492035114
+  ],
+  "pca_components": {
+    "pc1": [
+      {
+        "feature": "graph_depth",
+        "weight": 0.298493719913851
+      },
+      {
+        "feature": "raw_transfer_reuse",
+        "weight": 0.2883501508913256
+      },
+      {
+        "feature": "alive_count",
+        "weight": 0.2864031574595325
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": 0.28612816433945015
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": 0.28360205320564447
+      },
+      {
+        "feature": "births",
+        "weight": 0.2835929012277489
+      },
+      {
+        "feature": "abstraction_count",
+        "weight": 0.28359290122774883
+      },
+      {
+        "feature": "graph_compression_ratio",
+        "weight": -0.27440965312233906
+      }
+    ],
+    "pc2": [
+      {
+        "feature": "mean_reuse",
+        "weight": -0.48204635828835873
+      },
+      {
+        "feature": "mean_exposure_lifetime",
+        "weight": -0.47833517047574203
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": -0.3995853660425087
+      },
+      {
+        "feature": "births",
+        "weight": 0.2533138854743643
+      },
+      {
+        "feature": "abstraction_count",
+        "weight": 0.2533138854743639
+      },
+      {
+        "feature": "dag_width",
+        "weight": 0.2396498383963363
+      },
+      {
+        "feature": "alive_count",
+        "weight": 0.21613661662800465
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": -0.20250827590745446
+      }
+    ],
+    "pc3": [
+      {
+        "feature": "graph_compression_ratio",
+        "weight": -0.39309077077984994
+      },
+      {
+        "feature": "semantic_subsumption_ratio",
+        "weight": -0.37317652365345183
+      },
+      {
+        "feature": "branching_factor",
+        "weight": -0.3571180687066428
+      },
+      {
+        "feature": "hierarchy_emergence_time",
+        "weight": -0.3289592656741385
+      },
+      {
+        "feature": "transfer_correctness",
+        "weight": 0.2973067719765891
+      },
+      {
+        "feature": "dag_width",
+        "weight": 0.2699016359463505
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": 0.23803947499754455
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": -0.21128065061184217
+      }
+    ]
+  },
+  "methods": [
+    {
+      "method": "kmeans_2",
+      "labels": "omitted",
+      "cluster_count": 2,
+      "noise_count": 0,
+      "stability_ari": 0.07513465718256176
+    },
+    {
+      "method": "kmeans_3",
+      "labels": "omitted",
+      "cluster_count": 3,
+      "noise_count": 0,
+      "stability_ari": 0.5503949295946438
+    },
+    {
+      "method": "kmeans_4",
+      "labels": "omitted",
+      "cluster_count": 4,
+      "noise_count": 0,
+      "stability_ari": 0.8502775915223035
+    },
+    {
+      "method": "kmeans_5",
+      "labels": "omitted",
+      "cluster_count": 5,
+      "noise_count": 0,
+      "stability_ari": 0.7507824495963512
+    },
+    {
+      "method": "kmeans_6",
+      "labels": "omitted",
+      "cluster_count": 6,
+      "noise_count": 0,
+      "stability_ari": 0.6510391490472566
+    },
+    {
+      "method": "agglomerative_2",
+      "labels": "omitted",
+      "cluster_count": 2,
+      "noise_count": 0,
+      "stability_ari": 0.7533777266664726
+    },
+    {
+      "method": "agglomerative_3",
+      "labels": "omitted",
+      "cluster_count": 3,
+      "noise_count": 0,
+      "stability_ari": 0.927386358420623
+    },
+    {
+      "method": "agglomerative_4",
+      "labels": "omitted",
+      "cluster_count": 4,
+      "noise_count": 0,
+      "stability_ari": 0.7792737844681066
+    },
+    {
+      "method": "agglomerative_5",
+      "labels": "omitted",
+      "cluster_count": 5,
+      "noise_count": 0,
+      "stability_ari": 0.8102503699175821
+    },
+    {
+      "method": "agglomerative_6",
+      "labels": "omitted",
+      "cluster_count": 6,
+      "noise_count": 0,
+      "stability_ari": 0.8229325940441348
+    },
+    {
+      "method": "dbscan_1.6",
+      "labels": "omitted",
+      "cluster_count": 14,
+      "noise_count": 11,
+      "stability_ari": 0.6234998307038119
+    },
+    {
+      "method": "dbscan_2.0",
+      "labels": "omitted",
+      "cluster_count": 11,
+      "noise_count": 4,
+      "stability_ari": 0.8288149586936597
+    },
+    {
+      "method": "dbscan_2.4",
+      "labels": "omitted",
+      "cluster_count": 7,
+      "noise_count": 2,
+      "stability_ari": 0.9311053588041237
+    },
+    {
+      "method": "dbscan_2.8",
+      "labels": "omitted",
+      "cluster_count": 3,
+      "noise_count": 0,
+      "stability_ari": 0.47457025551034593
+    }
+  ],
+  "selected_method": "dbscan_2.4",
+  "selected_cluster_count": 7,
+  "selected_noise_count": 2,
+  "selected_stability_ari": 0.9311053588041237,
+  "cluster_descriptions": {
+    "0": [
+      "graph_compression_ratio high (1.89z)",
+      "transfer_correctness low (-1.67z)",
+      "dag_width low (-1.34z)",
+      "alive_count low (-1.32z)",
+      "deaths high (1.09z)"
+    ],
+    "1": [
+      "graph_compression_ratio high (1.89z)",
+      "transfer_correctness low (-1.67z)",
+      "abstraction_count low (-1.51z)",
+      "births low (-1.51z)",
+      "graph_depth low (-1.34z)"
+    ],
+    "2": [
+      "valid_transfer_reuse high (1.89z)",
+      "raw_transfer_reuse high (1.88z)",
+      "semantic_subsumption_ratio high (1.73z)",
+      "valid_reuse high (1.71z)",
+      "branching_factor high (1.69z)"
+    ],
+    "3": [
+      "mean_exposure_lifetime high (1.71z)",
+      "mean_reuse high (1.71z)",
+      "mean_lifetime high (1.41z)",
+      "transfer_correctness high (0.77z)",
+      "abstraction_count low (-0.64z)"
+    ],
+    "4": [
+      "semantic_subsumption_ratio high (1.73z)",
+      "graph_depth high (1.60z)",
+      "hierarchy_emergence_time high (1.29z)",
+      "abstraction_count high (1.10z)",
+      "births high (1.10z)"
+    ],
+    "5": [
+      "alive_count low (-0.79z)",
+      "dag_width low (-0.74z)",
+      "mean_lifetime high (0.61z)",
+      "semantic_subsumption_ratio low (-0.58z)",
+      "abstraction_count low (-0.57z)"
+    ],
+    "6": [
+      "dag_width high (0.86z)",
+      "abstraction_count high (0.69z)",
+      "births high (0.69z)",
+      "mean_reuse low (-0.66z)",
+      "mean_exposure_lifetime low (-0.65z)"
+    ]
+  },
+  "feature_ablation_ari": {
+    "without_depth": 0.632434170451076,
+    "without_reuse": 0.5388085354762665,
+    "without_lifetime": 0.5429885423385423,
+    "without_transfer": 0.5655754650678906,
+    "without_compression": 0.56398333214563
+  },
+  "interpretation": "Clusters are moderately stable across bootstrap and feature ablations in this dataset."
+}

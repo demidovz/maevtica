@@ -1,0 +1,223 @@
+[
+  {
+    "adversarial_result": "Survives. Existing terms cover parts of it, but none cleanly names the intervention-stable equivalence class across basis, scale, dictionary, and model identity.",
+    "applicability_boundaries": [
+      "Applies to trained systems with intervention access.",
+      "Does not require human-understandable labels.",
+      "May fail for mechanisms whose roles are strongly context-created rather than retained."
+    ],
+    "compression_gained": 0.91,
+    "concept_score": 0.86,
+    "definition": "An equivalence class of internal states, features, subspaces, or circuits that preserves the same intervention-stable input-output role across prompts, bases, model instances, and scale.",
+    "domain_id": "d01_mech_interp",
+    "id": "k01_causal_role_carrier",
+    "possible_failure_modes": [
+      "Could reduce to causal abstraction if formalized too broadly.",
+      "Could reduce to feature/circuit if the equivalence relation is not stricter than current practice.",
+      "May become unmeasurable in closed models without intervention access."
+    ],
+    "predictions_enabled": [
+      "Cross-model mechanisms with high causal-role-carrier overlap will transfer steering and editing effects better than mechanisms matched only by feature labels.",
+      "Some SAE features with different human labels will collapse into the same carrier under intervention tests.",
+      "Carrier stability will predict which interpretability explanations survive model scaling."
+    ],
+    "problem_solved": "Unifies feature identity, circuit identity, activation directions, SAE dictionary elements, and causal-abstraction mappings without requiring identical neurons or human labels.",
+    "reducibility_risk": 0.38,
+    "relationships_to_existing": [
+      "features",
+      "circuits",
+      "causal abstraction",
+      "representation similarity analysis",
+      "activation steering"
+    ],
+    "survival_status": "survives",
+    "working_name": "Causal Role Carrier"
+  },
+  {
+    "adversarial_result": "Partly survives. The concept compresses alignment subproblems, but the novelty is moderate because Goodhart and scalable oversight already cover much of it.",
+    "applicability_boundaries": [
+      "Applies where the object being evaluated can strategically or structurally change the evidence available to evaluators.",
+      "Less useful for static classifiers or fully observable systems."
+    ],
+    "compression_gained": 0.84,
+    "concept_score": 0.69,
+    "definition": "The degree to which an evaluation or supervision process loses truth-correlation as the evaluated system changes its capabilities, incentives, explanations, or interaction strategy.",
+    "domain_id": "d02_ai_alignment",
+    "id": "k02_oversight_channel_drift",
+    "possible_failure_modes": [
+      "Could be a renamed version of Goodharting plus scalable oversight.",
+      "May be too broad unless quantified as channel truth-correlation over capability changes."
+    ],
+    "predictions_enabled": [
+      "Benchmarks that look stable under static evaluation will fail when model capability changes the evidence-generation process.",
+      "Oversight methods with explicit channel-drift probes will catch dangerous failures earlier than accuracy-only evaluations.",
+      "Models trained to optimize explanation quality will increase apparent oversight while reducing truth-correlation in some tasks."
+    ],
+    "problem_solved": "Compresses scalable oversight, deceptive alignment, evaluation gaming, weak-to-strong supervision, and process supervision failures as degradation of the evaluator-target channel.",
+    "reducibility_risk": 0.52,
+    "relationships_to_existing": [
+      "scalable oversight",
+      "ELK",
+      "Goodhart's law",
+      "evaluation gaming",
+      "truth-correlated feedback"
+    ],
+    "survival_status": "weak_survivor",
+    "working_name": "Oversight Channel Drift"
+  },
+  {
+    "adversarial_result": "Weakly survives. It appears necessary-looking for organoids and embryogenesis, but historical terms already occupy nearby territory.",
+    "applicability_boundaries": [
+      "Applies to robust developmental systems with multi-modal feedback.",
+      "Less useful for single-cell fate transitions without geometric or mechanical coupling."
+    ],
+    "compression_gained": 0.87,
+    "concept_score": 0.713,
+    "definition": "A cross-modal developmental constraint that preserves a tissue's reachable shape-and-fate trajectory through coupled gene-expression, mechanical, geometric, and signaling states.",
+    "domain_id": "d03_morphogenesis",
+    "id": "k03_morphogenetic_trajectory_constraint",
+    "possible_failure_modes": [
+      "Could reduce to canalization or morphogenetic field.",
+      "May be too abstract unless operationalized with trajectory reconstruction from perturbation data."
+    ],
+    "predictions_enabled": [
+      "Organoid interventions that preserve trajectory constraints will recover form even after perturbing one modality.",
+      "Mechanical and signaling perturbations should be interchangeable when they restore the same trajectory constraint.",
+      "Developmental failure modes will cluster by broken trajectory constraint rather than by individual pathway."
+    ],
+    "problem_solved": "Reframes development around constrained trajectories rather than separate genes, gradients, forces, or fates.",
+    "reducibility_risk": 0.49,
+    "relationships_to_existing": [
+      "morphogenetic field",
+      "positional information",
+      "canalization",
+      "mechanobiology",
+      "self-organization"
+    ],
+    "survival_status": "weak_survivor",
+    "working_name": "Morphogenetic Trajectory Constraint"
+  },
+  {
+    "adversarial_result": "Rejected. It helps organize disputes but is too close to existing access/report distinctions.",
+    "applicability_boundaries": [
+      "Applies to empirical consciousness paradigms with separate report, control, and integration measures.",
+      "Does not solve the hard problem or define consciousness."
+    ],
+    "compression_gained": 0.72,
+    "concept_score": 0.287,
+    "definition": "A divergence between information integration available for organism-level control and information integration formatted for report, metacognition, or global access.",
+    "domain_id": "d04_consciousness",
+    "id": "k04_report_integration_shear",
+    "possible_failure_modes": [
+      "Likely reducible to access versus phenomenal consciousness or report/no-report paradigms.",
+      "May not increase compression beyond existing distinctions."
+    ],
+    "predictions_enabled": [
+      "Tasks that increase reportability can decrease local integration signatures, and vice versa.",
+      "Some neural states will be high-control but low-report, producing systematic theory disagreements."
+    ],
+    "problem_solved": "Separates access/report disputes from integration disputes in consciousness science.",
+    "reducibility_risk": 0.76,
+    "relationships_to_existing": [
+      "access consciousness",
+      "phenomenal consciousness",
+      "global workspace",
+      "integrated information",
+      "synergistic workspace"
+    ],
+    "survival_status": "rejected",
+    "working_name": "Report-Integration Shear"
+  },
+  {
+    "adversarial_result": "Partly survives as an operational metric, but its conceptual novelty is limited by existing tipping-cascade language.",
+    "applicability_boundaries": [
+      "Applies to coupled systems with measured interaction pathways.",
+      "Less useful for isolated tipping elements."
+    ],
+    "compression_gained": 0.82,
+    "concept_score": 0.634,
+    "definition": "The accumulated cross-system destabilizing burden imposed by interacting tipping elements before any one element crosses its isolated threshold.",
+    "domain_id": "d05_climate_tipping",
+    "id": "k05_tipping_load",
+    "possible_failure_modes": [
+      "Could be renamed tipping cascade risk.",
+      "Requires robust interaction estimates that may remain uncertain."
+    ],
+    "predictions_enabled": [
+      "Multi-element tipping risk will be better predicted by network load than by minimum distance to any single element's threshold.",
+      "Sub-threshold perturbations in one element will measurably reduce resilience in other elements through load transfer."
+    ],
+    "problem_solved": "Compresses coupled tipping risk, cascade risk, path dependence, and sub-threshold feedback stress into one measurable load concept.",
+    "reducibility_risk": 0.57,
+    "relationships_to_existing": [
+      "tipping cascades",
+      "resilience",
+      "network load",
+      "Earth-system feedback",
+      "risk coupling"
+    ],
+    "survival_status": "weak_survivor",
+    "working_name": "Tipping Load"
+  },
+  {
+    "adversarial_result": "Rejected as a new concept. It is useful terminology, but the literature already names most of the structure.",
+    "applicability_boundaries": [
+      "Applies to macro settings where aggregate variables depend on agent distributions.",
+      "Less useful in representative-agent or low-heterogeneity environments."
+    ],
+    "compression_gained": 0.8,
+    "concept_score": 0.344,
+    "definition": "The representational load imposed on agents by having to forecast aggregate variables whose sufficient state includes high-dimensional distributions of heterogeneous agents.",
+    "domain_id": "d06_economics",
+    "id": "k06_expectation_state_burden",
+    "possible_failure_modes": [
+      "Likely reducible to bounded rationality plus rational inattention.",
+      "May be a metric rather than a new concept."
+    ],
+    "predictions_enabled": [
+      "Models that cap expectation-state burden will fit survey expectations and macro dynamics better than full rational-expectations HANK variants in high-heterogeneity regimes.",
+      "Policy shocks that increase distributional complexity will widen expectation dispersion even when aggregate fundamentals are unchanged."
+    ],
+    "problem_solved": "Compresses rational-expectations failure, distributional-state curse of dimensionality, bounded cognition, and survey-expectation heterogeneity.",
+    "reducibility_risk": 0.69,
+    "relationships_to_existing": [
+      "bounded rationality",
+      "rational inattention",
+      "heterogeneous expectations",
+      "curse of dimensionality"
+    ],
+    "survival_status": "rejected",
+    "working_name": "Expectation State Burden"
+  },
+  {
+    "adversarial_result": "Rejected as concept birth. It is a promising organizing phrase but too reducible to existing collective-intelligence and distributed-cognition vocabulary.",
+    "applicability_boundaries": [
+      "Applies to groups where interaction topology can be observed or manipulated.",
+      "Less useful where performance is simple independent averaging."
+    ],
+    "compression_gained": 0.78,
+    "concept_score": 0.347,
+    "definition": "A repeatable interaction topology that converts distributed partial information into group-level cognitive work not available to any member alone.",
+    "domain_id": "d07_collective_intelligence",
+    "id": "k07_coordination_transform",
+    "possible_failure_modes": [
+      "Could be renamed distributed cognition or mechanism design.",
+      "Needs formal measures to avoid becoming generic."
+    ],
+    "predictions_enabled": [
+      "Changing topology while holding participants fixed will change group intelligence more than adding equally skilled participants under poor topology.",
+      "Hybrid teams will show reusable transform classes across domains, such as pooling, routing, adversarial correction, and synthesis."
+    ],
+    "problem_solved": "Unifies swarm protocols, markets, deliberation, voting, human-AI teams, and platform structures as transformations rather than aggregates.",
+    "reducibility_risk": 0.64,
+    "relationships_to_existing": [
+      "collective intelligence",
+      "swarm intelligence",
+      "social structure",
+      "aggregation mechanism",
+      "distributed cognition"
+    ],
+    "survival_status": "rejected",
+    "working_name": "Coordination Transform"
+  }
+]

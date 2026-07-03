@@ -1,0 +1,306 @@
+{
+  "failures": [
+    {
+      "suite": "world::adversarial",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.15110094279649333,
+      "mae": 2.620179440164444,
+      "p95_error": 6.819908917786992,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::changing_rules",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.107097820365048,
+      "mae": 2.8484250433718055,
+      "p95_error": 7.85047441068996,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::delayed_consequences",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.12374609286882632,
+      "mae": 2.788134922994436,
+      "p95_error": 6.898207966160592,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::deceptive_regularities",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.15618800523212328,
+      "mae": 2.7236039737497317,
+      "p95_error": 6.7609410499635185,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::hierarchical_environment",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.09901856861109937,
+      "mae": 3.1024784490093427,
+      "p95_error": 8.930711333845045,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::sparse_observations",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.11049483106381497,
+      "mae": 2.7090359802149937,
+      "p95_error": 6.736594067767169,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::continuous_environment",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.14011891476227922,
+      "mae": 3.0453456788322897,
+      "p95_error": 7.851628093135789,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::partially_contradictory",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.1373053734617744,
+      "mae": 2.801298139911383,
+      "p95_error": 6.987742926263982,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::self_modifying",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.08635412848209245,
+      "mae": 3.8334360249615664,
+      "p95_error": 10.33017368351426,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "world::no_reusable_structure",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.2624038943643915,
+      "mae": 2.6557476039457923,
+      "p95_error": 6.480462427168415,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::reservoir_memory",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.27361810419911214,
+      "mae": 2.306645838644684,
+      "p95_error": 5.673017625814302,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::tensor_factorization",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.0031878392212358886,
+      "mae": 3.819884841943737,
+      "p95_error": 10.785798062319664,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::proof_net",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.24850777654111356,
+      "mae": 2.2444362253069494,
+      "p95_error": 5.284969136323724,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::neural_cellular",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.3369347268893145,
+      "mae": 2.5308654449632906,
+      "p95_error": 5.95694697772151,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::causal_program_synthesizer",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.2881983810451435,
+      "mae": 2.4639550517096196,
+      "p95_error": 6.21061216749123,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::energy_based",
+      "states": 540,
+      "trajectories": 54,
+      "r2": -0.028653580651039068,
+      "mae": 3.570223433108168,
+      "p95_error": 8.719652745860007,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::swarm_protocol",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.11860256445203499,
+      "mae": 2.656471312225855,
+      "p95_error": 7.840964065196331,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "architecture::category_rewriter",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.14293863717384325,
+      "mae": 2.59982769611647,
+      "p95_error": 7.29056683765387,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::reinforcement_like",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.24567050175262584,
+      "mae": 3.029725190901495,
+      "p95_error": 8.595482593159213,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::evolutionary",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.11918731254545989,
+      "mae": 3.1674813194079268,
+      "p95_error": 8.056697666713134,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::bayesian",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.21339789249324925,
+      "mae": 3.0640016360201474,
+      "p95_error": 9.108014580686888,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::symbolic_theorem_proving",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.1990989409485131,
+      "mae": 3.4833276422825565,
+      "p95_error": 9.874030238940117,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::constraint_satisfaction",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.16093297215750313,
+      "mae": 3.0516241210893322,
+      "p95_error": 7.818694476955848,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::message_passing_ood",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.23275915123110757,
+      "mae": 3.5930663582717512,
+      "p95_error": 10.893302440967133,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::differentiable_optimization_ood",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.2407569819017773,
+      "mae": 3.727645483445711,
+      "p95_error": 10.751032544902953,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::random_search",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.21066969548912484,
+      "mae": 3.136456395720889,
+      "p95_error": 8.360707637421687,
+      "works": false,
+      "weak": false,
+      "fails": true
+    },
+    {
+      "suite": "rule::hybrid_system",
+      "states": 540,
+      "trajectories": 54,
+      "r2": 0.2529796879674717,
+      "mae": 3.3570038087416254,
+      "p95_error": 9.429344801065485,
+      "works": false,
+      "weak": false,
+      "fails": true
+    }
+  ],
+  "failure_patterns": {
+    "world": 10,
+    "architecture": 8,
+    "rule": 9
+  }
+}

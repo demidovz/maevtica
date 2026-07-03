@@ -1,0 +1,4306 @@
+[
+  {
+    "epoch": 1,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 2.3350278769661705,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 2.4557127710420876,
+      "epoch": 1,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 1,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.99039144972452,
+      "epoch": 1,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 1,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 3.74070761247261,
+      "epoch": 1,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 1,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 6.979224176901305,
+      "epoch": 1,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 1,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.036743847676312,
+      "epoch": 1,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 1,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.14112457400751083,
+      "dead_end_rate": 0.22509681706054777,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 1,
+      "experiment_yield": 0.8,
+      "mean_energy": 14.322336115370863,
+      "meta_notes": [
+        "Population is turning over quickly; stable species may not have emerged yet."
+      ],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.2
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 2,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 5.090740648008257,
+      "epoch": 2,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 2,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.7903914497245195,
+      "epoch": 2,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 2,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 5.54070761247261,
+      "epoch": 2,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 2,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 2.479224176901305,
+      "epoch": 2,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 2,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.036743847676312225,
+      "epoch": 2,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 2,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 2,
+      "experiment_yield": 0.6,
+      "mean_energy": 17.909897662327463,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 3,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 2.3350278769661705,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 1.255712771042087,
+      "epoch": 3,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 3,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.7903914497245195,
+      "epoch": 3,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 3,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.74070761247261,
+      "epoch": 3,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 3,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 3.779224176901305,
+      "epoch": 3,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 3,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 5.236743847676312,
+      "epoch": 3,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 3,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.22509681706054777,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 3,
+      "experiment_yield": 0.4,
+      "mean_energy": 20.67045363389083,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 4,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 5.090740648008257,
+      "epoch": 4,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 4,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 3.2903914497245195,
+      "epoch": 4,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 4,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 3.24070761247261,
+      "epoch": 4,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 4,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 1.479224176901305,
+      "epoch": 4,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 4,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.036743847676312,
+      "epoch": 4,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 4,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 4,
+      "experiment_yield": 0.4,
+      "mean_energy": 23.69801518084743,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 5,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 1.0907406480082575,
+      "epoch": 5,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 5,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 7.49039144972452,
+      "epoch": 5,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 5,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.04070761247261,
+      "epoch": 5,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 5,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": -0.020775823098694968,
+      "epoch": 5,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 5,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 9.536743847676313,
+      "epoch": 5,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 5,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 5,
+      "experiment_yield": 0.6,
+      "mean_energy": 27.725576727804032,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 6,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 5.790740648008256,
+      "epoch": 6,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 6,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.7903914497245195,
+      "epoch": 6,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 6,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 7.04070761247261,
+      "epoch": 6,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 6,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 8.979224176901305,
+      "epoch": 6,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 6,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 7.036743847676312,
+      "epoch": 6,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 6,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 1.0,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 6,
+      "experiment_yield": 0.6,
+      "mean_energy": 34.45313827476063,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 1.0,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 7,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 1.0907406480082575,
+      "epoch": 7,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 7,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.4903914497245196,
+      "epoch": 7,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 7,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.5407076124726098,
+      "epoch": 7,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 7,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 8.979224176901305,
+      "epoch": 7,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 7,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": -1.7632561523236878,
+      "epoch": 7,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 7,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 7,
+      "experiment_yield": 0.4,
+      "mean_energy": 36.72069982171723,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.4
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 8,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 4.290740648008258,
+      "epoch": 8,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 8,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.9903914497245196,
+      "epoch": 8,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 8,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 4.04070761247261,
+      "epoch": 8,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 8,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": -0.020775823098694968,
+      "epoch": 8,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 8,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 2.736743847676312,
+      "epoch": 8,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 8,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.0,
+      "compression_score": 0.14112457400751083,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 8,
+      "experiment_yield": 0.8,
+      "mean_energy": 39.72826136867384,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.3333333333333333
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 9,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 3.7907406480082577,
+      "epoch": 9,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 9,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.7903914497245195,
+      "epoch": 9,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 9,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.04070761247261,
+      "epoch": 9,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 9,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 6.479224176901305,
+      "epoch": 9,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 9,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 4.736743847676312,
+      "epoch": 9,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 9,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 9,
+      "experiment_yield": 0.6,
+      "mean_energy": 43.89582291563043,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.625
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 10,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 4.090740648008257,
+      "epoch": 10,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 10,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.7903914497245195,
+      "epoch": 10,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 10,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.24070761247260952,
+      "epoch": 10,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 10,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 3.279224176901305,
+      "epoch": 10,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 10,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": -1.4632561523236878,
+      "epoch": 10,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 10,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 10,
+      "experiment_yield": 0.2,
+      "mean_energy": 45.683384462587036,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 11,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 1.2907406480082573,
+      "epoch": 11,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 11,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 1.9903914497245196,
+      "epoch": 11,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 11,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 7.240707612472609,
+      "epoch": 11,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 11,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 4.779224176901305,
+      "epoch": 11,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 11,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 4.036743847676312,
+      "epoch": 11,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 11,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 11,
+      "experiment_yield": 0.6,
+      "mean_energy": 49.55094600954364,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 12,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 1.5907406480082575,
+      "epoch": 12,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 12,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.2903914497245195,
+      "epoch": 12,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 12,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.24070761247260952,
+      "epoch": 12,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 12,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 5.279224176901305,
+      "epoch": 12,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 12,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.036743847676312,
+      "epoch": 12,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 12,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 12,
+      "experiment_yield": 0.4,
+      "mean_energy": 52.038507556500235,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.75
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 13,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": -1.9092593519917425,
+      "epoch": 13,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 13,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.49039144972452,
+      "epoch": 13,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 13,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 3.04070761247261,
+      "epoch": 13,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 13,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.779224176901305,
+      "epoch": 13,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 13,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 7.036743847676312,
+      "epoch": 13,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 13,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 13,
+      "experiment_yield": 0.2,
+      "mean_energy": 55.126069103456835,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.8
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 14,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 4.290740648008258,
+      "epoch": 14,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 14,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.4903914497245196,
+      "epoch": 14,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 14,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.24070761247261,
+      "epoch": 14,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 14,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.779224176901305,
+      "epoch": 14,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 14,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.036743847676312,
+      "epoch": 14,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 14,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 14,
+      "experiment_yield": 0.6,
+      "mean_energy": 58.29363065041345,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 15,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 7.090740648008257,
+      "epoch": 15,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 15,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.29039144972451947,
+      "epoch": 15,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 15,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.04070761247260957,
+      "epoch": 15,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 15,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.0882612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 4.979224176901305,
+      "epoch": 15,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 15,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 5.536743847676312,
+      "epoch": 15,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 15,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 15,
+      "experiment_yield": 0.6,
+      "mean_energy": 61.88119219737005,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 16,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 5.090740648008257,
+      "epoch": 16,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 16,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.4903914497245196,
+      "epoch": 16,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 16,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.04070761247261,
+      "epoch": 16,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 16,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 4.279224176901305,
+      "epoch": 16,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 16,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.736743847676312,
+      "epoch": 16,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 16,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 16,
+      "experiment_yield": 0.2,
+      "mean_energy": 65.20875374432664,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 17,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 4.790740648008258,
+      "epoch": 17,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 17,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.49039144972452,
+      "epoch": 17,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 17,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 1.7407076124726095,
+      "epoch": 17,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 17,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 5.779224176901305,
+      "epoch": 17,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 17,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 2.1107732597523077,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.12597058792400428,
+      "epoch": 17,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 17,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.6,
+      "compression_score": 0.14112457400751083,
+      "dead_end_rate": 0.2034786595028068,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 17,
+      "experiment_yield": 0.4,
+      "mean_energy": 68.59416063933278,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.0
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 18,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 1.0907406480082575,
+      "epoch": 18,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 18,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 4.2903914497245195,
+      "epoch": 18,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 18,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 9.540707612472609,
+      "epoch": 18,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 18,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": -1.7207758230986951,
+      "epoch": 18,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 18,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.736743847676312,
+      "epoch": 18,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 18,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 18,
+      "experiment_yield": 0.8,
+      "mean_energy": 71.98172218628939,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.2,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 19,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 2.7907406480082577,
+      "epoch": 19,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 19,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 7.49039144972452,
+      "epoch": 19,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 19,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 4.04070761247261,
+      "epoch": 19,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 19,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 5.779224176901305,
+      "epoch": 19,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 19,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 4.036743847676312,
+      "epoch": 19,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 19,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 19,
+      "experiment_yield": 0.8,
+      "mean_energy": 76.80928373324599,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 20,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 2.2907406480082577,
+      "epoch": 20,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 20,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 3.9903914497245196,
+      "epoch": 20,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 20,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 9.540707612472609,
+      "epoch": 20,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 20,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.27922417690130485,
+      "epoch": 20,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 20,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.236743847676312,
+      "epoch": 20,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 20,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 20,
+      "experiment_yield": 0.4,
+      "mean_energy": 80.47684528020258,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 21,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 0.09074064800825754,
+      "epoch": 21,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 21,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": -0.009608550275480354,
+      "epoch": 21,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 21,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.54070761247261,
+      "epoch": 21,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 21,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 7.779224176901305,
+      "epoch": 21,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 21,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 2.1107732597523077,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.425970587924004,
+      "epoch": 21,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 21,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.2034786595028068,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 21,
+      "experiment_yield": 0.2,
+      "mean_energy": 83.04225217520873,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 22,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 3.0907406480082575,
+      "epoch": 22,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 22,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.9903914497245196,
+      "epoch": 22,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 22,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.5407076124726098,
+      "epoch": 22,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 22,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.279224176901305,
+      "epoch": 22,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 22,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 2.1107732597523077,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 2.925970587924004,
+      "epoch": 22,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 22,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.2034786595028068,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 22,
+      "experiment_yield": 0.4,
+      "mean_energy": 85.40765907021486,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.2,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.8
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 23,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 2.3350278769661705,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 2.7557127710420866,
+      "epoch": 23,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 23,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 3.2903914497245195,
+      "epoch": 23,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 23,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.5407076124726098,
+      "epoch": 23,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 23,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 4.279224176901305,
+      "epoch": 23,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 23,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.236743847676312,
+      "epoch": 23,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment",
+        "bridge_created"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 23,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.22509681706054777,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 23,
+      "experiment_yield": 0.4,
+      "mean_energy": 88.22821504177823,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 24,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 3.7907406480082577,
+      "epoch": 24,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 24,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 1.4903914497245196,
+      "epoch": 24,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 24,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 6.04070761247261,
+      "epoch": 24,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 24,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 5.279224176901305,
+      "epoch": 24,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 24,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.536743847676312,
+      "epoch": 24,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 24,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.6,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 24,
+      "experiment_yield": 0.8,
+      "mean_energy": 92.25577658873483,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.2,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.5
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 25,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 5.090740648008257,
+      "epoch": 25,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 25,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.7903914497245195,
+      "epoch": 25,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 25,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 3.74070761247261,
+      "epoch": 25,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 25,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.27922417690130485,
+      "epoch": 25,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 25,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 4.036743847676312,
+      "epoch": 25,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 25,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.4,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 25,
+      "experiment_yield": 0.4,
+      "mean_energy": 95.04333813569143,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 26,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 4.590740648008257,
+      "epoch": 26,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 26,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.2903914497245195,
+      "epoch": 26,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 26,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 1.7407076124726095,
+      "epoch": 26,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 26,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 1.7792241769013049,
+      "epoch": 26,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 26,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.7367438476763124,
+      "epoch": 26,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 26,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.20112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 26,
+      "experiment_yield": 0.2,
+      "mean_energy": 97.47089968264802,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.6,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 27,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 0.7907406480082573,
+      "epoch": 27,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 27,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 0.9903914497245196,
+      "epoch": 27,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 27,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.04070761247261,
+      "epoch": 27,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 27,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "counterexample",
+      "energy_delta": 1.2792241769013049,
+      "epoch": 27,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 27,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": 2.736743847676312,
+      "epoch": 27,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "bridge_created"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 27,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.2,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 27,
+      "experiment_yield": 0.4,
+      "mean_energy": 99.03846122960462,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.2,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.25
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 28,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 1.2907406480082573,
+      "epoch": 28,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 28,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 5.49039144972452,
+      "epoch": 28,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 28,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 1.7407076124726095,
+      "epoch": 28,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 28,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.279224176901305,
+      "epoch": 28,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 28,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.236743847676312,
+      "epoch": 28,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 28,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.0,
+      "compression_score": 0.14112457400751083,
+      "dead_end_rate": 0.0,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 28,
+      "experiment_yield": 0.4,
+      "mean_energy": 101.84602277656123,
+      "meta_notes": [],
+      "population_size": 5,
+      "question_value": 0.8,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.42857142857142855
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 29,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.21288426248721398,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "experiment",
+      "energy_delta": 0.09074064800825754,
+      "epoch": 29,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 29,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.37172289974533934,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 1.953054349766159,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 4.337337099958361,
+      "epoch": 29,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 29,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.008995894357703343,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.24070761247261,
+      "epoch": 29,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found",
+        "bridge_created"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 29,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 2.1972983425646704,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": -3.9180741656633655,
+      "epoch": 29,
+      "failure_events": [
+        "dead_end",
+        "no_epistemic_value"
+      ],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 29,
+    "result": {
+      "bridges_created": 1,
+      "compression_delta": 0.32375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 9.536743847676313,
+      "epoch": 29,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment",
+        "bridge_created",
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 29,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.8,
+      "compression_score": 0.23112457400751082,
+      "dead_end_rate": 0.4000942301109322,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 29,
+      "experiment_yield": 0.4,
+      "mean_energy": 104.30351378505165,
+      "meta_notes": [
+        "Dead-end resource burn is high; selection pressure should increase."
+      ],
+      "population_size": 5,
+      "question_value": 0.2,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.6666666666666666
+    },
+    "type": "epoch_completed"
+  },
+  {
+    "epoch": 30,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.06288426248721399,
+      "cost": 2.3350278769661705,
+      "dead_end_cost": 2.3350278769661705,
+      "discriminating_experiments": 1,
+      "domain": "experiment",
+      "energy_delta": 0.9557127710420872,
+      "epoch": 30,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00001",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 30,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.22172289974533935,
+      "cost": 1.953054349766159,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "integration",
+      "energy_delta": -0.009608550275480354,
+      "epoch": 30,
+      "failure_events": [],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00002",
+      "success_events": [
+        "graph_compressed"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 30,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.15899589435770334,
+      "cost": 1.777284176242797,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 0.5407076124726098,
+      "epoch": 30,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 0,
+      "strategy_id": "s-00003",
+      "success_events": [
+        "counterexample_found"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 30,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.2382612597329876,
+      "cost": 2.1972983425646704,
+      "dead_end_cost": 0.0,
+      "discriminating_experiments": 0,
+      "domain": "counterexample",
+      "energy_delta": 2.779224176901305,
+      "epoch": 30,
+      "failure_events": [],
+      "hypotheses_created": 0,
+      "hypotheses_falsified": 1,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00004",
+      "success_events": [
+        "counterexample_found",
+        "hypothesis_survived_strong_test",
+        "graph_compressed"
+      ],
+      "valuable_questions": 0
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 30,
+    "result": {
+      "bridges_created": 0,
+      "compression_delta": 0.17375855371430995,
+      "cost": 2.1107732597523077,
+      "dead_end_cost": 2.1107732597523077,
+      "discriminating_experiments": 1,
+      "domain": "integration",
+      "energy_delta": 3.1259705879240043,
+      "epoch": 30,
+      "failure_events": [
+        "dead_end"
+      ],
+      "hypotheses_created": 1,
+      "hypotheses_falsified": 0,
+      "hypotheses_survived_strong_test": 1,
+      "strategy_id": "s-00005",
+      "success_events": [
+        "hypothesis_survived_strong_test",
+        "discriminating_experiment"
+      ],
+      "valuable_questions": 1
+    },
+    "type": "strategy_result"
+  },
+  {
+    "epoch": 30,
+    "metrics": {
+      "alive_count": 5,
+      "births": 0,
+      "bridge_score": 0.0,
+      "compression_score": 0.17112457400751085,
+      "dead_end_rate": 0.42857547656335454,
+      "deaths": 0,
+      "dominant_species_share": 0.6,
+      "epoch": 30,
+      "experiment_yield": 0.4,
+      "mean_energy": 105.78191510466459,
+      "meta_notes": [
+        "Dead-end resource burn is high; selection pressure should increase."
+      ],
+      "population_size": 5,
+      "question_value": 0.4,
+      "research_diversity": 0.8649735207179272,
+      "selection_pressure": 0.4
+    },
+    "type": "epoch_completed"
+  }
+]

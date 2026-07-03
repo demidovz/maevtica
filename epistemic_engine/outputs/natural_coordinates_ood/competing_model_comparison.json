@@ -1,0 +1,32 @@
+{
+  "models": {
+    "discovery_trained_4d_affine": {
+      "r2": -0.44953996204913205,
+      "rmse": 9.33050982299234
+    },
+    "frozen_2d_affine": {
+      "r2": -0.35191246238002405,
+      "rmse": 13.320313145724421
+    },
+    "frozen_2d_nonlinear_quadratic": {
+      "r2": -1.751015606674065,
+      "rmse": 19.001447061565194
+    },
+    "frozen_2d_recurrent_delta": {
+      "r2": -0.21772288290523711,
+      "rmse": 12.641959147102826
+    },
+    "graph_latent_proxy": {
+      "note": "fixed graph-family message-passing evaluator; uses OOD graph grouping but no OOD target fitting",
+      "r2": -0.023946624773958813,
+      "rmse": 11.592545478815675
+    }
+  },
+  "rule": "all competing models are trained on discovery reference data or are fixed evaluators; no model is fit on OOD targets",
+  "summary": {
+    "best_model": "graph_latent_proxy",
+    "best_r2": -0.023946624773958813,
+    "frozen_2d_affine_r2": -0.35191246238002405,
+    "frozen_rank": 3
+  }
+}

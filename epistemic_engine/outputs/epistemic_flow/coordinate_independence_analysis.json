@@ -1,0 +1,24 @@
+{
+  "pca": {
+    "speed_correlation_with_pca": 1.0,
+    "mean_speed": 3.792266169140057
+  },
+  "random_projection": {
+    "speed_correlation_with_pca": 0.6842782878079474,
+    "mean_speed": 1.7116845301816503
+  },
+  "autoencoder_linear_proxy": {
+    "speed_correlation_with_pca": 0.7835852713890684,
+    "mean_speed": 1.4793413788055259
+  },
+  "diffusion_map_proxy": {
+    "sampled": true,
+    "sample_size": 500,
+    "distance_correlation_with_pca": 0.9231942575815715
+  },
+  "spectral_embedding_proxy": {
+    "sampled": true,
+    "sample_size": 500,
+    "distance_correlation_with_pca": 0.2703478252099577
+  }
+}

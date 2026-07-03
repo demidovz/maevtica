@@ -1,0 +1,29 @@
+[
+  {
+    "age": 0,
+    "alive": true,
+    "created_at": "2026-06-29T22:16:58.389018+00:00",
+    "energy": 12.98312764179783,
+    "existence_cost": 0.9153385053456093,
+    "failures": [],
+    "genome": {
+      "analogy_bias": 0.7048169228716079,
+      "collaboration_bias": 0.45313243113814283,
+      "counterexample_bias": 0.08518526805075266,
+      "criticality": 0.2267058593810488,
+      "formalization_bias": 0.9622950358343828,
+      "merge_bias": 0.24744098492908506,
+      "meta_bias": 0.4949826938891777,
+      "quick_check_bias": 0.641868435072107,
+      "reasoning_depth": 0.2093976318889128,
+      "risk_tolerance": 0.4591337627723967,
+      "simulation_bias": 0.12633089865085956,
+      "split_bias": 0.999128539162579
+    },
+    "mutation_history": [],
+    "parent_id": null,
+    "species_hint": "integrator",
+    "strategy_id": "s-00001",
+    "successes": []
+  }
+]

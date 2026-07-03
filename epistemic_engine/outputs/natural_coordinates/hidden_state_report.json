@@ -1,0 +1,103 @@
+{
+  "best_predictive_r2": 0.9805315086507181,
+  "minimum_viable_dimension": 1,
+  "previous_estimate": 5,
+  "dimension_table": {
+    "1": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 1,
+      "dynamics": "affine",
+      "predictive_r2": 0.967693521176084,
+      "simplicity_score": 1.107955129676839,
+      "sparsity": 0.0,
+      "curvature": 1.960353815840031,
+      "smoothness": 0.2554627728824857,
+      "variance_score": 1.0,
+      "mdl_cost": 3.089579731135695
+    },
+    "2": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 2,
+      "dynamics": "affine",
+      "predictive_r2": 0.9765057603604728,
+      "simplicity_score": 1.1255378341998845,
+      "sparsity": 0.3333333333333333,
+      "curvature": 1.86864644000511,
+      "smoothness": 0.23557892716801979,
+      "variance_score": 1.0,
+      "mdl_cost": 3.6292900652298856
+    },
+    "3": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 3,
+      "dynamics": "affine",
+      "predictive_r2": 0.9723181869082651,
+      "simplicity_score": 1.0211000199511235,
+      "sparsity": 0.16666666666666666,
+      "curvature": 1.850901945989774,
+      "smoothness": 0.22036140799966103,
+      "variance_score": 1.0,
+      "mdl_cost": 4.711629198356714
+    },
+    "4": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 4,
+      "dynamics": "affine",
+      "predictive_r2": 0.970790675028775,
+      "simplicity_score": 0.9403940665634645,
+      "sparsity": 0.1,
+      "curvature": 1.8470345220826467,
+      "smoothness": 0.20845677706315768,
+      "variance_score": 1.0,
+      "mdl_cost": 5.763871821967546
+    },
+    "5": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 5,
+      "dynamics": "affine",
+      "predictive_r2": 0.9719135996954098,
+      "simplicity_score": 0.8700479506853187,
+      "sparsity": 0.06666666666666667,
+      "curvature": 1.8354807425645738,
+      "smoothness": 0.19913682402917748,
+      "variance_score": 1.0,
+      "mdl_cost": 6.781159677116268
+    },
+    "6": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 6,
+      "dynamics": "affine",
+      "predictive_r2": 0.9716293185022901,
+      "simplicity_score": 0.813738459039039,
+      "sparsity": 0.09523809523809523,
+      "curvature": 1.8180864339791987,
+      "smoothness": 0.19179318266083284,
+      "variance_score": 1.0,
+      "mdl_cost": 7.645854874255752
+    },
+    "7": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 7,
+      "dynamics": "affine",
+      "predictive_r2": 0.9481031741868935,
+      "simplicity_score": 0.7185607833714402,
+      "sparsity": 0.07142857142857142,
+      "curvature": 1.8572357025786397,
+      "smoothness": 0.18649193127369812,
+      "variance_score": 1.0,
+      "mdl_cost": 8.814823005831066
+    },
+    "8": {
+      "name": "koopman_quadratic_pca",
+      "dimension": 8,
+      "dynamics": "affine",
+      "predictive_r2": 0.9353363679990242,
+      "simplicity_score": 0.637055121022551,
+      "sparsity": 0.05555555555555555,
+      "curvature": 1.876955344510498,
+      "smoothness": 0.18155387261046813,
+      "variance_score": 1.0,
+      "mdl_cost": 9.91338765029218
+    }
+  }
+}

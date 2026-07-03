@@ -1,0 +1,36 @@
+{
+  "architectures": [
+    "reservoir_symbolic_hybrid",
+    "causal_program_synthesizer",
+    "neural_constraint_solver",
+    "market_of_experts",
+    "proof_search_memory_lattice",
+    "self_rewriting_graph_machine"
+  ],
+  "learning_rules": [
+    "reinforcement_like",
+    "evolutionary",
+    "bayesian",
+    "symbolic_theorem_proving",
+    "constraint_satisfaction",
+    "message_passing",
+    "differentiable_optimization_ood",
+    "random_search",
+    "hybrid_system"
+  ],
+  "never_reuses_discovery_worlds": true,
+  "state_count": 21600,
+  "trajectory_count": 2160,
+  "worlds": [
+    "adversarial_world",
+    "changing_rules_world",
+    "delayed_consequence_world",
+    "deceptive_regularity_world",
+    "hierarchical_environment",
+    "sparse_observation_world",
+    "continuous_environment",
+    "partially_contradictory_world",
+    "self_modifying_world",
+    "no_reusable_structure_world"
+  ]
+}

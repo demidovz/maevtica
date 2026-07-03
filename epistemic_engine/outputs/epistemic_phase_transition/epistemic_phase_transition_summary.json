@@ -1,0 +1,24 @@
+{
+  "points": 900,
+  "phase_count": 9,
+  "noise_fraction": 0.9244444444444444,
+  "critical_edges": 64,
+  "phase_change_rate": 0.16203703703703703,
+  "top_order_parameters": [
+    "uncertainty_persistence",
+    "compression_ratio",
+    "canonical_role_count_proxy",
+    "behavioral_entropy",
+    "reuse"
+  ],
+  "intrinsic_dimension_85pct": 5,
+  "confidence_estimates": {
+    "bootstrap_phase_ari": 0.0012713059177274916,
+    "phase_count": 9
+  },
+  "hypothesis_support": {
+    "finite_robust_phase_structure": 5.32160809769763e-05,
+    "essentially_continuous_space": 0.5013276661066561,
+    "fragmented_or_underresolved_phase_structure": 0.49861911781236684
+  }
+}

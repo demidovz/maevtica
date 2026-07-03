@@ -1,0 +1,120 @@
+{
+  "allocation_ids": [
+    "alloc_d1749a659e7b",
+    "alloc_67ea146a9b8b",
+    "alloc_ea25035dd870",
+    "alloc_733ccc5edd9e",
+    "alloc_dec2b5b38671"
+  ],
+  "artifact_ids": [
+    "art_93a631788b4b",
+    "art_1f82885169b1",
+    "art_1af4ef795664",
+    "art_6fa70206b4cb",
+    "art_d5245c599675",
+    "art_03ae32574cdb",
+    "art_2b9c40421fc8",
+    "art_35ff441a7f02",
+    "art_b4054e7c97bc",
+    "art_2b9c40421fc8",
+    "art_b8d0aa172d9a"
+  ],
+  "attention_budget": 16.66,
+  "attention_spent": 16.66,
+  "bid_ids": [
+    "bid_186761750503",
+    "bid_3e66a81b57c1",
+    "bid_092a43f44aa9",
+    "bid_1a5bc71dcbd2",
+    "bid_b7b37a4ed26a",
+    "bid_2f10d57cacd9",
+    "bid_e4fbe8d73ac2",
+    "bid_93ebaf36956f",
+    "bid_b08327c685ff"
+  ],
+  "completed_at": "2026-07-01T10:43:55.029865+00:00",
+  "cycle": 25,
+  "edge_ids": [
+    "edge_df43e6bb0a93",
+    "edge_958139e5bf0f",
+    "edge_da9c3920e22a",
+    "edge_cc7ecc96def5",
+    "edge_baa54d0b28af",
+    "edge_c65f5d54326e",
+    "edge_02e2a1b50e32"
+  ],
+  "frontier_id": "art_1ee7e0d7395d",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "agi",
+        "priority": 2.0,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 17,
+    "artifact_counts": {
+      "applicability_atlas": 3,
+      "assumption": 6,
+      "contradiction": 40,
+      "counterexample": 43,
+      "derived_concept": 29,
+      "experiment": 25,
+      "hypothesis": 31,
+      "meta_memory": 5,
+      "process_note": 22,
+      "research_history": 6,
+      "research_question": 2,
+      "unknown_region": 4
+    },
+    "attention_efficiency": 0.145,
+    "compression": 0.806,
+    "contradictions": 40,
+    "counterexample_density": 1.387,
+    "dead_hypotheses": 14,
+    "duplicate_rate": 0.583,
+    "epistemic_value": 3.194,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_39bcfe02638c",
+        "reuse": 1,
+        "title": "World-model-centric school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_84abd47482b5",
+        "reuse": 1,
+        "title": "Scaling-first school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_ed61228ca8a1",
+        "reuse": 1,
+        "title": "Implicit-model school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_cce002ab6cfb",
+        "reuse": 1,
+        "title": "Embodied-planning school"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_a350e84f244d",
+        "reuse": 1,
+        "title": "Formal handle for Explicit world models are necessary only for long-horizon agency"
+      }
+    ],
+    "organizational_diversity": 0.63,
+    "research_velocity": {
+      "last_cycle_artifacts": 10,
+      "last_cycle_edges": 7
+    },
+    "stagnation_score": 0.914
+  },
+  "next_frontier_id": "art_b4054e7c97bc",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:43:55.025829+00:00"
+}

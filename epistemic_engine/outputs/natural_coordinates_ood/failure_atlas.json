@@ -1,0 +1,891 @@
+{
+  "by_architecture": {
+    "causal_program_synthesizer": {
+      "cases": 360,
+      "failure_rate": 1.0,
+      "mean_error": 11.434536828115045,
+      "mean_r2": -55.821167648504556,
+      "p05_r2": -225.2855225168677
+    },
+    "market_of_experts": {
+      "cases": 360,
+      "failure_rate": 1.0,
+      "mean_error": 13.66533821710788,
+      "mean_r2": -19.072519660439553,
+      "p05_r2": -68.81532015787272
+    },
+    "neural_constraint_solver": {
+      "cases": 360,
+      "failure_rate": 0.9972222222222222,
+      "mean_error": 13.92656790123815,
+      "mean_r2": -35.51384580211219,
+      "p05_r2": -64.10704179163234
+    },
+    "proof_search_memory_lattice": {
+      "cases": 360,
+      "failure_rate": 1.0,
+      "mean_error": 15.687412234210779,
+      "mean_r2": -77.14631144928892,
+      "p05_r2": -190.02277756195463
+    },
+    "reservoir_symbolic_hybrid": {
+      "cases": 360,
+      "failure_rate": 1.0,
+      "mean_error": 10.78917677373197,
+      "mean_r2": -35.74686377559326,
+      "p05_r2": -126.4081190598863
+    },
+    "self_rewriting_graph_machine": {
+      "cases": 360,
+      "failure_rate": 1.0,
+      "mean_error": 14.212429602947681,
+      "mean_r2": -93.6705743647047,
+      "p05_r2": -383.16573778353563
+    }
+  },
+  "by_update_rule": {
+    "bayesian": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 12.33160088684969,
+      "mean_r2": -73.96967967958044,
+      "p05_r2": -345.1787729211771
+    },
+    "constraint_satisfaction": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 13.406172968188766,
+      "mean_r2": -122.27499357085664,
+      "p05_r2": -519.2205864520628
+    },
+    "differentiable_optimization_ood": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 12.163366146743464,
+      "mean_r2": -20.03464739749363,
+      "p05_r2": -80.78368326415162
+    },
+    "evolutionary": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 14.753152531198037,
+      "mean_r2": -13.607458164196544,
+      "p05_r2": -62.39839987005497
+    },
+    "hybrid_system": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 14.460054389198257,
+      "mean_r2": -144.37689287693823,
+      "p05_r2": -437.67124414204153
+    },
+    "message_passing": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 12.491377668172014,
+      "mean_r2": -49.14334344018163,
+      "p05_r2": -231.50101507643797
+    },
+    "random_search": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 13.768459321094992,
+      "mean_r2": -11.648430566601425,
+      "p05_r2": -47.75738671206435
+    },
+    "reinforcement_like": {
+      "cases": 240,
+      "failure_rate": 0.9958333333333333,
+      "mean_error": 13.347102915669025,
+      "mean_r2": -30.34000443479265,
+      "p05_r2": -127.37009254631423
+    },
+    "symbolic_theorem_proving": {
+      "cases": 240,
+      "failure_rate": 1.0,
+      "mean_error": 12.85190550891301,
+      "mean_r2": -10.061473920323595,
+      "p05_r2": -46.12920927078142
+    }
+  },
+  "by_world": {
+    "adversarial_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 8.351085752540282,
+      "mean_r2": -9.622538027849558,
+      "p05_r2": -26.78650074642941
+    },
+    "changing_rules_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 10.426490789909504,
+      "mean_r2": -101.8089729476556,
+      "p05_r2": -501.9754817853405
+    },
+    "continuous_environment": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 9.336540659048339,
+      "mean_r2": -45.0671525015243,
+      "p05_r2": -172.90982689222108
+    },
+    "deceptive_regularity_world": {
+      "cases": 216,
+      "failure_rate": 0.9953703703703703,
+      "mean_error": 8.625945318714795,
+      "mean_r2": -25.04116246150767,
+      "p05_r2": -104.7145854295604
+    },
+    "delayed_consequence_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 9.66375174894094,
+      "mean_r2": -128.13519424015954,
+      "p05_r2": -426.0717645139358
+    },
+    "hierarchical_environment": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 11.067985347837775,
+      "mean_r2": -152.79156289970535,
+      "p05_r2": -435.37672972377754
+    },
+    "no_reusable_structure_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 23.868021259062647,
+      "mean_r2": -0.7610406796085241,
+      "p05_r2": -1.4743604635184415
+    },
+    "partially_contradictory_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 9.782125150964376,
+      "mean_r2": -18.441172169083963,
+      "p05_r2": -66.3778622676244
+    },
+    "self_modifying_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 9.698362762256371,
+      "mean_r2": -45.0386124241873,
+      "p05_r2": -187.2020322634047
+    },
+    "sparse_observation_world": {
+      "cases": 216,
+      "failure_rate": 1.0,
+      "mean_error": 32.038793806310814,
+      "mean_r2": -1.5780628164568316,
+      "p05_r2": -2.927810662570167
+    }
+  },
+  "summary": {
+    "cases": 2160,
+    "failure_modes": {
+      "contradictory_observations": 54,
+      "coordinate_extrapolation": 1335,
+      "delayed_state_dependency": 44,
+      "large_affine_residual": 148,
+      "no_major_failure": 21,
+      "no_reusable_structure": 216,
+      "nonlinear_curvature": 21,
+      "nonstationary_dynamics": 105,
+      "sparse_observation_collapse": 216
+    },
+    "failure_rate": 0.999537037037037,
+    "failures": 2159
+  },
+  "worst_cases": [
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_01044_hierarchical_environment_proof_search_memory_lattice_hybrid_system_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -11473.960744336366,
+      "frozen_affine_rmse": 32.65459457900253,
+      "max_coordinate_norm": 68.85471910793441,
+      "mean_prediction_error": 46.178921531960995,
+      "p95_prediction_error": 46.757821831091086,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00645_delayed_consequence_world_self_rewriting_graph_machine_hybrid_system_0",
+      "failure_mode": "delayed_state_dependency",
+      "frozen_affine_r2": -5729.556993826288,
+      "frozen_affine_rmse": 5.78660725683283,
+      "max_coordinate_norm": 8.476980115127118,
+      "mean_prediction_error": 8.183086779442096,
+      "p95_prediction_error": 8.259471347955099,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "causal_program_synthesizer",
+      "case_id": "ood_00488_delayed_consequence_world_causal_program_synthesizer_constraint_satisfaction_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -5605.03424510665,
+      "frozen_affine_rmse": 7.968281400852732,
+      "max_coordinate_norm": 16.409631952213626,
+      "mean_prediction_error": 11.268784073647332,
+      "p95_prediction_error": 11.313359756995037,
+      "properties": {
+        "architecture_family": "causal_program_synthesizer",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "neural_constraint_solver",
+      "case_id": "ood_00956_hierarchical_environment_neural_constraint_solver_constraint_satisfaction_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -5021.7122966449615,
+      "frozen_affine_rmse": 24.560211724436698,
+      "max_coordinate_norm": 41.05798928241336,
+      "mean_prediction_error": 34.73072381795321,
+      "p95_prediction_error": 35.10979832085596,
+      "properties": {
+        "architecture_family": "neural_constraint_solver",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00415_changing_rules_world_self_rewriting_graph_machine_constraint_satisfaction_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -2402.7028161428143,
+      "frozen_affine_rmse": 20.661819587460403,
+      "max_coordinate_norm": 36.407917905498266,
+      "mean_prediction_error": 29.217326847906723,
+      "p95_prediction_error": 29.765076971495954,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "neural_constraint_solver",
+      "case_id": "ood_00972_hierarchical_environment_neural_constraint_solver_hybrid_system_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1795.2781740851547,
+      "frozen_affine_rmse": 20.942645055519268,
+      "max_coordinate_norm": 36.38151582283858,
+      "mean_prediction_error": 29.614326355036447,
+      "p95_prediction_error": 30.016190356817756,
+      "properties": {
+        "architecture_family": "neural_constraint_solver",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00632_delayed_consequence_world_self_rewriting_graph_machine_constraint_satisfaction_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1655.2768338675148,
+      "frozen_affine_rmse": 12.738231318705541,
+      "max_coordinate_norm": 20.659208828480462,
+      "mean_prediction_error": 18.014085701915313,
+      "p95_prediction_error": 18.142907339677464,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_01018_hierarchical_environment_proof_search_memory_lattice_bayesian_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1499.2942386982213,
+      "frozen_affine_rmse": 7.189953809159258,
+      "max_coordinate_norm": 17.24849487287197,
+      "mean_prediction_error": 10.168034805791565,
+      "p95_prediction_error": 10.247110091966569,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_01027_hierarchical_environment_proof_search_memory_lattice_constraint_satisfaction_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1364.4293839356214,
+      "frozen_affine_rmse": 18.84863476111155,
+      "max_coordinate_norm": 49.71011217857167,
+      "mean_prediction_error": 26.647589288794123,
+      "p95_prediction_error": 27.516844320517407,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "reservoir_symbolic_hybrid",
+      "case_id": "ood_00468_delayed_consequence_world_reservoir_symbolic_hybrid_hybrid_system_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1338.8628972141246,
+      "frozen_affine_rmse": 8.285114104560188,
+      "max_coordinate_norm": 16.185195855514895,
+      "mean_prediction_error": 11.716718536841,
+      "p95_prediction_error": 11.792692566064238,
+      "properties": {
+        "architecture_family": "reservoir_symbolic_hybrid",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_00371_changing_rules_world_proof_search_memory_lattice_bayesian_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1304.484237217281,
+      "frozen_affine_rmse": 6.490765840581185,
+      "max_coordinate_norm": 13.408411775993082,
+      "mean_prediction_error": 9.176772136998393,
+      "p95_prediction_error": 9.567050287390792,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "neural_constraint_solver",
+      "case_id": "ood_00514_delayed_consequence_world_neural_constraint_solver_bayesian_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1228.7400045468069,
+      "frozen_affine_rmse": 4.762239350257858,
+      "max_coordinate_norm": 12.049721416280674,
+      "mean_prediction_error": 6.734446979630884,
+      "p95_prediction_error": 6.818247095496639,
+      "properties": {
+        "architecture_family": "neural_constraint_solver",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_01477_continuous_environment_self_rewriting_graph_machine_reinforcement_like_0",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -1020.2769538152367,
+      "frozen_affine_rmse": 19.982309779202033,
+      "max_coordinate_norm": 34.929971062418026,
+      "mean_prediction_error": 28.249307735308907,
+      "p95_prediction_error": 29.475038733214422,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "reinforcement_like",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "continuous_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "reinforcement_like",
+      "world": "continuous_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_01478_continuous_environment_self_rewriting_graph_machine_reinforcement_like_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -907.3098957552415,
+      "frozen_affine_rmse": 19.671184569714462,
+      "max_coordinate_norm": 34.38077421088417,
+      "mean_prediction_error": 27.80952813659097,
+      "p95_prediction_error": 28.844884305507644,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "reinforcement_like",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "continuous_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "reinforcement_like",
+      "world": "continuous_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00420_changing_rules_world_self_rewriting_graph_machine_message_passing_3",
+      "failure_mode": "nonstationary_dynamics",
+      "frozen_affine_r2": -906.5314334670659,
+      "frozen_affine_rmse": 5.777454767088382,
+      "max_coordinate_norm": 8.73086633624163,
+      "mean_prediction_error": 8.168740951262187,
+      "p95_prediction_error": 8.460349693477225,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "message_passing",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "message_passing",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_00369_changing_rules_world_proof_search_memory_lattice_bayesian_0",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -902.0986534789503,
+      "frozen_affine_rmse": 6.903970240191199,
+      "max_coordinate_norm": 15.055487820209521,
+      "mean_prediction_error": 9.759340080398186,
+      "p95_prediction_error": 10.241181742478403,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00863_deceptive_regularity_world_self_rewriting_graph_machine_hybrid_system_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -862.761495886686,
+      "frozen_affine_rmse": 23.16417541418961,
+      "max_coordinate_norm": 42.35351678123523,
+      "mean_prediction_error": 32.756084962147185,
+      "p95_prediction_error": 33.27193016973867,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "deceptive_regularity_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "deceptive_regularity_world"
+    },
+    {
+      "architecture": "market_of_experts",
+      "case_id": "ood_01644_partially_contradictory_world_market_of_experts_message_passing_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -853.3510882001895,
+      "frozen_affine_rmse": 12.411858830193918,
+      "max_coordinate_norm": 31.84511252746722,
+      "mean_prediction_error": 17.54897744129468,
+      "p95_prediction_error": 17.879099982530402,
+      "properties": {
+        "architecture_family": "market_of_experts",
+        "contradictory": true,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "message_passing",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "partially_contradictory_world"
+      },
+      "transition_count": 9,
+      "update_rule": "message_passing",
+      "world": "partially_contradictory_world"
+    },
+    {
+      "architecture": "reservoir_symbolic_hybrid",
+      "case_id": "ood_00226_changing_rules_world_reservoir_symbolic_hybrid_bayesian_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -816.4630606946442,
+      "frozen_affine_rmse": 6.946185101881658,
+      "max_coordinate_norm": 13.941116488116421,
+      "mean_prediction_error": 9.818974281563763,
+      "p95_prediction_error": 10.243441545329494,
+      "properties": {
+        "architecture_family": "reservoir_symbolic_hybrid",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_01475_continuous_environment_proof_search_memory_lattice_hybrid_system_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -791.5689907908926,
+      "frozen_affine_rmse": 15.842626357359814,
+      "max_coordinate_norm": 30.948444857624143,
+      "mean_prediction_error": 22.397194358117652,
+      "p95_prediction_error": 23.370525404945486,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "continuous_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "continuous_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00408_changing_rules_world_self_rewriting_graph_machine_bayesian_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -767.5389406966324,
+      "frozen_affine_rmse": 8.046122177402856,
+      "max_coordinate_norm": 14.32365000274644,
+      "mean_prediction_error": 11.37381363951318,
+      "p95_prediction_error": 11.84843734708001,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "causal_program_synthesizer",
+      "case_id": "ood_00285_changing_rules_world_causal_program_synthesizer_hybrid_system_0",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -760.0297450553383,
+      "frozen_affine_rmse": 7.078153773837841,
+      "max_coordinate_norm": 15.772011741061478,
+      "mean_prediction_error": 10.006005896634807,
+      "p95_prediction_error": 10.414062227379512,
+      "properties": {
+        "architecture_family": "causal_program_synthesizer",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_01067_hierarchical_environment_self_rewriting_graph_machine_message_passing_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -747.6922226054769,
+      "frozen_affine_rmse": 13.667532690584842,
+      "max_coordinate_norm": 22.425950384427374,
+      "mean_prediction_error": 19.327587300130705,
+      "p95_prediction_error": 19.66479073509077,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "message_passing",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "message_passing",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00630_delayed_consequence_world_self_rewriting_graph_machine_constraint_satisfaction_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -715.9674431331597,
+      "frozen_affine_rmse": 9.887687153540197,
+      "max_coordinate_norm": 16.24579208013785,
+      "mean_prediction_error": 13.976580047284891,
+      "p95_prediction_error": 14.571374689420434,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "causal_program_synthesizer",
+      "case_id": "ood_00477_delayed_consequence_world_causal_program_synthesizer_bayesian_0",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -683.0873896920039,
+      "frozen_affine_rmse": 4.708190685360141,
+      "max_coordinate_norm": 11.154803536078722,
+      "mean_prediction_error": 6.656357979545543,
+      "p95_prediction_error": 6.884298551128062,
+      "properties": {
+        "architecture_family": "causal_program_synthesizer",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "self_rewriting_graph_machine",
+      "case_id": "ood_00430_changing_rules_world_self_rewriting_graph_machine_hybrid_system_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -682.8905223423868,
+      "frozen_affine_rmse": 14.285445964488172,
+      "max_coordinate_norm": 24.275094644855457,
+      "mean_prediction_error": 20.198057000305365,
+      "p95_prediction_error": 20.752114039089957,
+      "properties": {
+        "architecture_family": "self_rewriting_graph_machine",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "reservoir_symbolic_hybrid",
+      "case_id": "ood_00443_delayed_consequence_world_reservoir_symbolic_hybrid_bayesian_2",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -681.0586734977753,
+      "frozen_affine_rmse": 5.6979599292188805,
+      "max_coordinate_norm": 13.30877599806372,
+      "mean_prediction_error": 8.055972775959518,
+      "p95_prediction_error": 8.32013722753254,
+      "properties": {
+        "architecture_family": "reservoir_symbolic_hybrid",
+        "contradictory": false,
+        "has_delay": true,
+        "has_rule_change": false,
+        "learning_rule_family": "bayesian",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "delayed_consequence_world"
+      },
+      "transition_count": 9,
+      "update_rule": "bayesian",
+      "world": "delayed_consequence_world"
+    },
+    {
+      "architecture": "causal_program_synthesizer",
+      "case_id": "ood_00272_changing_rules_world_causal_program_synthesizer_constraint_satisfaction_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -680.4022829425561,
+      "frozen_affine_rmse": 6.127383020996489,
+      "max_coordinate_norm": 12.791621800856923,
+      "mean_prediction_error": 8.661092323203286,
+      "p95_prediction_error": 9.035611629511601,
+      "properties": {
+        "architecture_family": "causal_program_synthesizer",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "changing_rules_world"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "changing_rules_world"
+    },
+    {
+      "architecture": "proof_search_memory_lattice",
+      "case_id": "ood_01028_hierarchical_environment_proof_search_memory_lattice_constraint_satisfaction_3",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -631.8051115988675,
+      "frozen_affine_rmse": 17.922672433489627,
+      "max_coordinate_norm": 39.41114087412616,
+      "mean_prediction_error": 25.33176063492812,
+      "p95_prediction_error": 26.487020210311012,
+      "properties": {
+        "architecture_family": "proof_search_memory_lattice",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": false,
+        "learning_rule_family": "constraint_satisfaction",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "hierarchical_environment"
+      },
+      "transition_count": 9,
+      "update_rule": "constraint_satisfaction",
+      "world": "hierarchical_environment"
+    },
+    {
+      "architecture": "reservoir_symbolic_hybrid",
+      "case_id": "ood_01762_self_modifying_world_reservoir_symbolic_hybrid_hybrid_system_1",
+      "failure_mode": "coordinate_extrapolation",
+      "frozen_affine_r2": -609.8777019366952,
+      "frozen_affine_rmse": 11.371547562879337,
+      "max_coordinate_norm": 20.491122742006613,
+      "mean_prediction_error": 16.07224080222974,
+      "p95_prediction_error": 16.857500129530393,
+      "properties": {
+        "architecture_family": "reservoir_symbolic_hybrid",
+        "contradictory": false,
+        "has_delay": false,
+        "has_rule_change": true,
+        "learning_rule_family": "hybrid_system",
+        "no_reusable_structure": false,
+        "sparse_observations": false,
+        "world_family": "self_modifying_world"
+      },
+      "transition_count": 9,
+      "update_rule": "hybrid_system",
+      "world": "self_modifying_world"
+    }
+  ]
+}

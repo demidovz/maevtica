@@ -1,0 +1,13 @@
+{
+  "train_worlds": [
+    "regular",
+    "compositional"
+  ],
+  "test_worlds": [
+    "noisy",
+    "volatile"
+  ],
+  "train_r2": 0.38328139819089624,
+  "test_r2": 0.38276997685540626,
+  "test_embedding_distortion": 0.15250104628178973
+}

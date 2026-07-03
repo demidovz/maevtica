@@ -1,0 +1,140 @@
+{
+  "allocation_ids": [
+    "alloc_78b521298f18",
+    "alloc_c4cd9b98575a",
+    "alloc_fe4df282ec26",
+    "alloc_63182cfdb835",
+    "alloc_3490b6650ce3",
+    "alloc_99f092df5950",
+    "alloc_e9907f2bf1d9"
+  ],
+  "artifact_ids": [
+    "art_2cee1d855dd0",
+    "art_31761c547954",
+    "art_b30aba998f79",
+    "art_a29701f445ce",
+    "art_b779ccf9319f",
+    "art_86313f8e734e",
+    "art_87cfc59d3966",
+    "art_2ff5a7544c79",
+    "art_dd167f9abbf1",
+    "art_15fcb58cf3ee",
+    "art_180cb51c5c03"
+  ],
+  "attention_budget": 100.0,
+  "attention_spent": 87.959,
+  "bid_ids": [
+    "bid_e84cd00b2c0c",
+    "bid_69f1b6cbd398",
+    "bid_88b4a0bd095a",
+    "bid_a8fc2aa51cc7",
+    "bid_4c9b58aea3e4",
+    "bid_9f864ee3b4ca",
+    "bid_d2122608bd4e"
+  ],
+  "completed_at": "2026-07-01T10:21:35.494603+00:00",
+  "cycle": 10,
+  "edge_ids": [
+    "edge_bbb228d57094",
+    "edge_8aaeae38ac3a",
+    "edge_7cb0ff41f627",
+    "edge_0ff5bc57477b",
+    "edge_15b7ec05def0",
+    "edge_0254bf90c5d3"
+  ],
+  "frontier_id": "art_7de0eb318f84",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "possible_worlds",
+        "priority": 1.275,
+        "status": "active"
+      },
+      {
+        "name": "agi",
+        "priority": 0.95,
+        "status": "active"
+      },
+      {
+        "name": "biology",
+        "priority": 0.95,
+        "status": "active"
+      },
+      {
+        "name": "economics",
+        "priority": 0.95,
+        "status": "active"
+      },
+      {
+        "name": "maevtica",
+        "priority": 0.95,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 7,
+    "artifact_counts": {
+      "applicability_atlas": 10,
+      "assumption": 1,
+      "contradiction": 10,
+      "counterexample": 10,
+      "derived_concept": 10,
+      "experiment": 10,
+      "frontier": 10,
+      "hypothesis": 10,
+      "meta_memory": 1,
+      "process_note": 10,
+      "research_history": 10,
+      "research_question": 1,
+      "unknown_region": 1
+    },
+    "attention_efficiency": 0.059,
+    "compression": 0.9,
+    "contradictions": 10,
+    "counterexample_density": 1.0,
+    "dead_hypotheses": 3,
+    "duplicate_rate": 0.585,
+    "epistemic_value": 2.9,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_7984d564422b",
+        "reuse": 1,
+        "title": "Formal handle for H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_7d8b1e730d43",
+        "reuse": 1,
+        "title": "Formal handle for H2: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_68b04f9d71c2",
+        "reuse": 1,
+        "title": "Formal handle for H3: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_e0a8d7cf61da",
+        "reuse": 1,
+        "title": "Formal handle for H4: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      },
+      {
+        "confidence": 0.5,
+        "id": "art_6d0f72d971f4",
+        "reuse": 1,
+        "title": "Formal handle for H5: Unexplored implication of Unresolved pressure on H2: Unexplored implication of Unresolved pressure on H1: Unexplored implication of Boundary between model simplification and lost distinctions"
+      }
+    ],
+    "organizational_diversity": 0.429,
+    "research_velocity": {
+      "last_cycle_artifacts": 10,
+      "last_cycle_edges": 6
+    },
+    "stagnation_score": 0.889
+  },
+  "next_frontier_id": "art_86313f8e734e",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:21:35.491794+00:00"
+}

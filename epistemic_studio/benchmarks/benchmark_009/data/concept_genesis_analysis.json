@@ -1,0 +1,587 @@
+{
+  "average_compression": 0.918,
+  "average_prediction_gain": 0.898,
+  "average_structural_similarity": 0.893,
+  "cases": [
+    {
+      "approximate_birth": "1850s",
+      "compression_achieved": 0.92,
+      "concept": "Entropy",
+      "domain": "thermodynamics",
+      "generated_candidate_before_reveal": "A conserved-or-monotonic state quantity for heat transformations that tracks unavailable work and distinguishes reversible from irreversible processes.",
+      "historical_solution": "Entropy as a state function whose change organizes reversible heat transfer and the directionality of thermodynamic processes.",
+      "id": "c01_entropy",
+      "insufficiency": "Heat-engine limits, irreversibility, and temperature scales could not be compressed by a simple substance-like heat representation.",
+      "pre_world": "Heat was analyzed through engines, temperature, caloric remnants, and reversible cycles. Carnot had a performance limit, but no state quantity explained irreversible direction.",
+      "predictive_improvement": 0.88,
+      "pressures": [
+        "prediction_failure",
+        "excessive_model_complexity",
+        "unexplained_regularities",
+        "representation_mismatch"
+      ],
+      "source_ids": [
+        "entropy_history",
+        "second_law"
+      ],
+      "stages": [
+        "anomaly_accumulation",
+        "invariant_search",
+        "representation_crisis",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.86,
+      "transition_types": [
+        "new_invariant",
+        "new_coordinate_system",
+        "new_optimization_objective"
+      ]
+    },
+    {
+      "approximate_birth": "1909",
+      "compression_achieved": 0.87,
+      "concept": "Gene",
+      "domain": "biology",
+      "generated_candidate_before_reveal": "An abstract hereditary unit separated from observable trait expression, allowing inheritance to be tracked independently from phenotype.",
+      "historical_solution": "Gene as a unit of heredity, paired with genotype/phenotype distinctions.",
+      "id": "c02_gene",
+      "insufficiency": "Breeding regularities required a stable transmissible unit distinct from appearance, development, and environment.",
+      "pre_world": "Heredity was described through traits, breeding ratios, germ plasm, and Mendelian factors, but visible traits and inherited determinants were conflated.",
+      "predictive_improvement": 0.84,
+      "pressures": [
+        "conflicting_theories",
+        "communication_failure",
+        "representation_mismatch",
+        "too_many_exceptions"
+      ],
+      "source_ids": [
+        "gene_genome",
+        "johannsen_holist"
+      ],
+      "stages": [
+        "language_failure",
+        "distinction_search",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.91,
+      "transition_types": [
+        "new_distinction",
+        "new_causal_abstraction"
+      ]
+    },
+    {
+      "approximate_birth": "1830s-1860s",
+      "compression_achieved": 0.91,
+      "concept": "Field",
+      "domain": "physics",
+      "generated_candidate_before_reveal": "A spatially distributed physical state assigning influence to every point, so the region between bodies becomes part of the explanation.",
+      "historical_solution": "Field as a real or mathematically represented spatial quantity mediating electromagnetic phenomena.",
+      "id": "c03_field",
+      "insufficiency": "Induction, propagation, and spatial patterns between sources made source-only representation awkward.",
+      "pre_world": "Electricity and magnetism were often represented through sources, forces, action at a distance, fluids, and mechanical analogies.",
+      "predictive_improvement": 0.9,
+      "pressures": [
+        "representation_mismatch",
+        "unexplained_regularities",
+        "conflicting_theories",
+        "excessive_model_complexity"
+      ],
+      "source_ids": [
+        "field_faraday_maxwell",
+        "field_history"
+      ],
+      "stages": [
+        "anomaly_accumulation",
+        "language_failure",
+        "representation_crisis",
+        "new_primitive",
+        "compression"
+      ],
+      "structural_similarity": 0.89,
+      "transition_types": [
+        "new_coordinate_system",
+        "new_causal_abstraction",
+        "new_symmetry"
+      ]
+    },
+    {
+      "approximate_birth": "1948",
+      "compression_achieved": 0.95,
+      "concept": "Information",
+      "domain": "communication engineering",
+      "generated_candidate_before_reveal": "A statistical measure of uncertainty reduction in a message source, tied to channel limits and coding efficiency.",
+      "historical_solution": "Information entropy, channel capacity, redundancy, and coding theorems.",
+      "id": "c04_information",
+      "insufficiency": "Communication systems needed a meaning-independent quantity governing compression, redundancy, noise, and capacity.",
+      "pre_world": "Telegraph and telephone engineering had bandwidth, signals, noise, and codes, but lacked a general measure independent of message meaning.",
+      "predictive_improvement": 0.94,
+      "pressures": [
+        "communication_failure",
+        "excessive_model_complexity",
+        "unexplained_regularities",
+        "prediction_failure"
+      ],
+      "source_ids": [
+        "shannon_1948",
+        "information_history"
+      ],
+      "stages": [
+        "engineering_pressure",
+        "invariant_search",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.93,
+      "transition_types": [
+        "new_invariant",
+        "new_optimization_objective",
+        "new_coordinate_system"
+      ]
+    },
+    {
+      "approximate_birth": "1859",
+      "compression_achieved": 0.94,
+      "concept": "Natural Selection",
+      "domain": "evolutionary biology",
+      "generated_candidate_before_reveal": "A population-level filter that accumulates heritable variations because some variants reproduce more successfully in local conditions.",
+      "historical_solution": "Natural selection as differential survival and reproduction of heritable variation.",
+      "id": "c05_natural_selection",
+      "insufficiency": "Adapted complexity and branching diversity required a mechanism linking small heritable variation to large-scale change.",
+      "pre_world": "Species resemblance, adaptation, domestication, fossils, and biogeography were known, but species fixity and separate creation left patterns disconnected.",
+      "predictive_improvement": 0.91,
+      "pressures": [
+        "unexplained_regularities",
+        "conflicting_theories",
+        "excessive_model_complexity",
+        "too_many_exceptions"
+      ],
+      "source_ids": [
+        "darwin_origin",
+        "natural_selection_sep"
+      ],
+      "stages": [
+        "anomaly_accumulation",
+        "mechanism_search",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.9,
+      "transition_types": [
+        "new_causal_abstraction",
+        "new_optimization_objective",
+        "new_invariant"
+      ]
+    },
+    {
+      "approximate_birth": "1907-1908",
+      "compression_achieved": 0.9,
+      "concept": "Space-Time",
+      "domain": "relativity",
+      "generated_candidate_before_reveal": "A unified geometric manifold where space and time coordinates transform together and invariant intervals replace separate absolutes.",
+      "historical_solution": "Minkowski spacetime as a four-dimensional geometric structure for relativity.",
+      "id": "c06_spacetime",
+      "insufficiency": "Relativity made separate absolute space and absolute time a poor coordinate system for invariant physical laws.",
+      "pre_world": "Electrodynamics and mechanics had separate space and time variables. Lorentz transformations worked mathematically, but their geometry was not yet the primitive representation.",
+      "predictive_improvement": 0.89,
+      "pressures": [
+        "representation_mismatch",
+        "conflicting_theories",
+        "prediction_failure",
+        "unexplained_regularities"
+      ],
+      "source_ids": [
+        "spacetime_origins",
+        "minkowski_history"
+      ],
+      "stages": [
+        "mathematical_pressure",
+        "invariant_search",
+        "representation_crisis",
+        "new_primitive",
+        "compression"
+      ],
+      "structural_similarity": 0.88,
+      "transition_types": [
+        "new_coordinate_system",
+        "new_invariant",
+        "new_symmetry"
+      ]
+    },
+    {
+      "approximate_birth": "1930s formalization",
+      "compression_achieved": 0.93,
+      "concept": "Algorithm / Computability",
+      "domain": "mathematics and computer science",
+      "generated_candidate_before_reveal": "A formal machine-like procedure with discrete states and steps that defines effective calculability and its limits.",
+      "historical_solution": "Turing-machine computability and related formalizations of algorithmic procedure.",
+      "id": "c07_algorithm_computability",
+      "insufficiency": "Hilbert-style decision questions required a representation of what any mechanical method could do.",
+      "pre_world": "Mathematicians used procedures, calculability, proof search, and decision problems, but effective procedure was not sharply delimited.",
+      "predictive_improvement": 0.95,
+      "pressures": [
+        "language_failure",
+        "representation_mismatch",
+        "prediction_failure",
+        "communication_failure"
+      ],
+      "source_ids": [
+        "algorithm_history",
+        "turing_1936"
+      ],
+      "stages": [
+        "language_failure",
+        "formalization_pressure",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.87,
+      "transition_types": [
+        "new_causal_abstraction",
+        "new_coordinate_system",
+        "new_distinction"
+      ]
+    },
+    {
+      "approximate_birth": "1650s",
+      "compression_achieved": 0.89,
+      "concept": "Probability",
+      "domain": "mathematics",
+      "generated_candidate_before_reveal": "A normalized measure over possible outcomes that supports fair expectation and systematic calculation under uncertainty.",
+      "historical_solution": "Probability and expectation as mathematical tools for chance and uncertain judgment.",
+      "id": "c08_probability",
+      "insufficiency": "Fair division and risk pricing required a quantitative representation of uncertain possibilities.",
+      "pre_world": "Uncertainty existed in gambling, law, insurance, and astronomy, but there was no general calculus of chance or fair expectation.",
+      "predictive_improvement": 0.86,
+      "pressures": [
+        "communication_failure",
+        "prediction_failure",
+        "excessive_model_complexity",
+        "unexplained_regularities"
+      ],
+      "source_ids": [
+        "probability_history",
+        "pascal_probability"
+      ],
+      "stages": [
+        "practical_pressure",
+        "formalization_pressure",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.88,
+      "transition_types": [
+        "new_coordinate_system",
+        "new_optimization_objective",
+        "new_distinction"
+      ]
+    },
+    {
+      "approximate_birth": "1840s-1850s",
+      "compression_achieved": 0.95,
+      "concept": "Energy",
+      "domain": "physics",
+      "generated_candidate_before_reveal": "A conserved transformable quantity that appears in multiple forms and permits cross-domain accounting.",
+      "historical_solution": "Energy as a conserved quantity unifying mechanical work, heat, and other physical processes.",
+      "id": "c09_energy",
+      "insufficiency": "Conversions among heat, work, electricity, and motion demanded a common accounting variable.",
+      "pre_world": "Mechanics had work, vis viva, heat, chemical affinity, electricity, and motion, but no accepted conserved transformable quantity spanning them.",
+      "predictive_improvement": 0.91,
+      "pressures": [
+        "unexplained_regularities",
+        "conflicting_theories",
+        "excessive_model_complexity",
+        "representation_mismatch"
+      ],
+      "source_ids": [
+        "energy_history",
+        "energy_pmc"
+      ],
+      "stages": [
+        "cross_domain_conversion",
+        "invariant_search",
+        "new_primitive",
+        "compression",
+        "applicability_expansion"
+      ],
+      "structural_similarity": 0.92,
+      "transition_types": [
+        "new_invariant",
+        "new_causal_abstraction",
+        "new_coordinate_system"
+      ]
+    }
+  ],
+  "concept_values": {
+    "c01_entropy": 0.831,
+    "c02_gene": 0.796,
+    "c03_field": 0.838,
+    "c04_information": 0.87,
+    "c05_natural_selection": 0.853,
+    "c06_spacetime": 0.83,
+    "c07_algorithm_computability": 0.854,
+    "c08_probability": 0.819,
+    "c09_energy": 0.861
+  },
+  "counterexamples": [
+    {
+      "id": "x01_neptune",
+      "name": "Discovery of Neptune",
+      "result": "Concept genesis is not required for every major discovery; some discoveries exploit existing concepts with high precision.",
+      "type": "major discovery without new primitive",
+      "why_it_matters": "It improved astronomy through prediction from existing Newtonian mechanics rather than by inventing a new representation."
+    },
+    {
+      "id": "x02_higgs_boson",
+      "name": "Higgs boson detection",
+      "result": "Large epistemic gain can occur without a new primitive at discovery time.",
+      "type": "fact confirmation rather than concept birth",
+      "why_it_matters": "The experimental discovery confirmed a theoretical entity already embedded in an existing conceptual framework."
+    },
+    {
+      "id": "x03_phlogiston",
+      "name": "Phlogiston",
+      "result": "A concept can be useful locally yet lose long-term value if it fails cross-domain transfer and predictive correction.",
+      "type": "low-value invented concept",
+      "why_it_matters": "It compressed some combustion language temporarily but blocked better oxygen and conservation-based representations."
+    },
+    {
+      "id": "x04_vital_force",
+      "name": "Vital force",
+      "result": "Naming a gap is not concept birth unless the representation increases compression and future discovery.",
+      "type": "low-value invented concept",
+      "why_it_matters": "It named biological difficulty without producing enough durable prediction or mechanistic compression."
+    }
+  ],
+  "predictions": [
+    {
+      "expected_observation": "Concept births should cluster where representation mismatch, unexplained regularity, and complexity pressure co-occur.",
+      "falsification_test": "Score pre-discovery periods across fields blind to the later concept; compare major concept births with ordinary discoveries.",
+      "id": "p01_pressure_threshold",
+      "text": "Major concept births will be preceded by at least three independent pressure families, not just one anomaly."
+    },
+    {
+      "expected_observation": "High-value generated primitives should match historical concepts by transition type, not by name.",
+      "falsification_test": "Give researchers only pre-discovery evidence and pressure labels; ask them to propose a primitive before revealing history.",
+      "id": "p02_candidate_shape",
+      "text": "Generated pre-discovery concepts will resemble historical concepts structurally when the dominant pressure is correctly identified."
+    },
+    {
+      "expected_observation": "Durable concepts should gain transfer domains; weak concepts should require protective exceptions.",
+      "falsification_test": "Compare early phlogiston/vital-force-like concepts against entropy/gene/field-like concepts over later domains.",
+      "id": "p03_false_concept_filter",
+      "text": "Invented concepts with low long-term value will show weak applicability expansion after initial compression."
+    },
+    {
+      "expected_observation": "The protocol should increase structurally new primitives per unit attention while reducing mere synonym invention.",
+      "falsification_test": "Run matched AGI or human research labs on unsolved domains with and without this concept-genesis protocol.",
+      "id": "p04_acceleration",
+      "text": "Concept birth can be accelerated by forcing pre-concept reconstruction, pressure classification, invariant search, and candidate primitive generation before hypothesis generation."
+    }
+  ],
+  "pressure_counts": {
+    "communication_failure": 4,
+    "conflicting_theories": 5,
+    "excessive_model_complexity": 6,
+    "language_failure": 1,
+    "prediction_failure": 5,
+    "representation_mismatch": 6,
+    "too_many_exceptions": 2,
+    "unexplained_regularities": 7
+  },
+  "pressure_to_concepts": {
+    "communication_failure": [
+      "Gene",
+      "Information",
+      "Algorithm / Computability",
+      "Probability"
+    ],
+    "conflicting_theories": [
+      "Gene",
+      "Field",
+      "Natural Selection",
+      "Space-Time",
+      "Energy"
+    ],
+    "excessive_model_complexity": [
+      "Entropy",
+      "Field",
+      "Information",
+      "Natural Selection",
+      "Probability",
+      "Energy"
+    ],
+    "language_failure": [
+      "Algorithm / Computability"
+    ],
+    "prediction_failure": [
+      "Entropy",
+      "Information",
+      "Space-Time",
+      "Algorithm / Computability",
+      "Probability"
+    ],
+    "representation_mismatch": [
+      "Entropy",
+      "Gene",
+      "Field",
+      "Space-Time",
+      "Algorithm / Computability",
+      "Energy"
+    ],
+    "too_many_exceptions": [
+      "Gene",
+      "Natural Selection"
+    ],
+    "unexplained_regularities": [
+      "Entropy",
+      "Field",
+      "Information",
+      "Natural Selection",
+      "Space-Time",
+      "Probability",
+      "Energy"
+    ]
+  },
+  "sources": [
+    {
+      "id": "entropy_history",
+      "note": "Thermodynamics developed through Carnot, Kelvin, Clausius, heat engines, and the second law.",
+      "title": "A History of Thermodynamics: The Missing Manual",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516509/"
+    },
+    {
+      "id": "second_law",
+      "note": "Carnot's heat-engine limit preceded Clausius's rigorous entropy-based formulation.",
+      "title": "Second law of thermodynamics overview",
+      "url": "https://en.wikipedia.org/wiki/Second_law_of_thermodynamics"
+    },
+    {
+      "id": "gene_genome",
+      "note": "Johannsen coined gene and distinguished genotype from phenotype.",
+      "title": "1909: The Word Gene Coined",
+      "url": "https://www.genome.gov/25520244/online-education-kit-1909-the-word-gene-coined"
+    },
+    {
+      "id": "johannsen_holist",
+      "note": "Johannsen's genotype/phenotype distinction reframed hereditary factors.",
+      "title": "The holist tradition in twentieth century genetics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4048101/"
+    },
+    {
+      "id": "field_faraday_maxwell",
+      "note": "Faraday and Maxwell are treated as modern initiators of the field concept.",
+      "title": "The field concepts of Faraday and Maxwell",
+      "url": "https://www.ifi.unicamp.br/~assis/The-field-concepts-of-Faraday-and-Maxwell%282009%29.pdf"
+    },
+    {
+      "id": "field_history",
+      "note": "Maxwell used Faraday's conceptualization to unify electricity, magnetism, and waves.",
+      "title": "History of classical field theory",
+      "url": "https://en.wikipedia.org/wiki/History_of_classical_field_theory"
+    },
+    {
+      "id": "shannon_1948",
+      "note": "Information was formalized statistically through entropy, channel capacity, and coding.",
+      "title": "Shannon, A Mathematical Theory of Communication",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+    },
+    {
+      "id": "information_history",
+      "note": "Pre-Shannon telegraphy and communication engineering lacked the general statistical measure.",
+      "title": "Information theory overview",
+      "url": "https://en.wikipedia.org/wiki/Information_theory"
+    },
+    {
+      "id": "darwin_origin",
+      "note": "Natural selection compressed diverse adaptation, variation, and biogeography into one mechanism.",
+      "title": "Darwin Online: On the Origin of Species",
+      "url": "https://darwin-online.org.uk/contents.html#origin"
+    },
+    {
+      "id": "natural_selection_sep",
+      "note": "Natural selection depends on variation, differential reproduction, and inheritance.",
+      "title": "Stanford Encyclopedia of Philosophy: Natural Selection",
+      "url": "https://plato.stanford.edu/entries/natural-selection/"
+    },
+    {
+      "id": "spacetime_origins",
+      "note": "Minkowski's spacetime reframed Lorentz transformations geometrically.",
+      "title": "The Historical Origins of Spacetime",
+      "url": "https://shs.hal.science/halshs-01234449/document"
+    },
+    {
+      "id": "minkowski_history",
+      "note": "Minkowski introduced a geometric reading of relativity after Einstein's 1905 work.",
+      "title": "Hermann Minkowski's Spacetime",
+      "url": "https://galileo-unbound.blog/2021/04/24/hermann-minkowskis-spacetime-the-theory-that-einstein-overlooked/"
+    },
+    {
+      "id": "algorithm_history",
+      "note": "The algorithm concept moved from calculation procedures to formal computability.",
+      "title": "Algorithms: From Al-Khwarizmi to Turing and Beyond",
+      "url": "https://www.researchgate.net/publication/303329677_Algorithms_From_Al-Khwarizmi_to_Turing_and_Beyond"
+    },
+    {
+      "id": "turing_1936",
+      "note": "Turing gave a formal model of effective procedure and computability.",
+      "title": "Turing, On Computable Numbers",
+      "url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf"
+    },
+    {
+      "id": "probability_history",
+      "note": "Gambling, insurance, and fair division problems preceded formal probability.",
+      "title": "History of probability",
+      "url": "https://en.wikipedia.org/wiki/History_of_probability"
+    },
+    {
+      "id": "pascal_probability",
+      "note": "Pascal and Fermat's problem of points helped create mathematical expectation.",
+      "title": "Pascal and the Invention of Probability Theory",
+      "url": "https://www.ms.uky.edu/~dmu228/ma320/pascal_invention_probability.pdf"
+    },
+    {
+      "id": "energy_history",
+      "note": "Work on vis viva, heat, mechanics, and conservation preceded the unified energy concept.",
+      "title": "Conservation of Energy",
+      "url": "https://en.wikipedia.org/wiki/Conservation_of_energy"
+    },
+    {
+      "id": "energy_pmc",
+      "note": "Joule, Mayer, Helmholtz, and others linked heat and mechanical work.",
+      "title": "Conservation of Energy: Missing Features in Its Nature and Justification",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8570307/"
+    }
+  ],
+  "stage_counts": {
+    "anomaly_accumulation": 3,
+    "applicability_expansion": 7,
+    "compression": 9,
+    "cross_domain_conversion": 1,
+    "distinction_search": 1,
+    "engineering_pressure": 1,
+    "formalization_pressure": 2,
+    "invariant_search": 4,
+    "language_failure": 3,
+    "mathematical_pressure": 1,
+    "mechanism_search": 1,
+    "new_primitive": 9,
+    "practical_pressure": 1,
+    "representation_crisis": 3
+  },
+  "transition_counts": {
+    "new_causal_abstraction": 5,
+    "new_coordinate_system": 7,
+    "new_distinction": 3,
+    "new_invariant": 5,
+    "new_optimization_objective": 4,
+    "new_symmetry": 2
+  }
+}

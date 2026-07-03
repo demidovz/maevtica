@@ -1,0 +1,107 @@
+[
+  {
+    "id": "shannon_1948",
+    "relevance": "Uncertainty, information, noise, channel limits, and coding efficiency.",
+    "title": "Shannon, A Mathematical Theory of Communication",
+    "tradition": "information_theory",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+  },
+  {
+    "id": "mdl_grunwald",
+    "relevance": "Compression as inductive inference and model selection.",
+    "title": "Grunwald, A Tutorial Introduction to the Minimum Description Length Principle",
+    "tradition": "information_theory",
+    "url": "https://homepages.cwi.nl/~paulv/course-kc/mdlintro.pdf"
+  },
+  {
+    "id": "pac_valiant",
+    "relevance": "Learnability under samples, error bounds, and computational cost.",
+    "title": "Valiant PAC learning overview",
+    "tradition": "statistical_learning_theory",
+    "url": "https://en.wikipedia.org/wiki/Probably_approximately_correct_learning"
+  },
+  {
+    "id": "vc_blumer",
+    "relevance": "Finite capacity as a condition for uniform learnability.",
+    "title": "Blumer et al., Learnability and the Vapnik-Chervonenkis Dimension",
+    "tradition": "statistical_learning_theory",
+    "url": "https://www.cis.upenn.edu/~danroth/Teaching/CS446-17/Papers/p929-blumer.pdf"
+  },
+  {
+    "id": "natural_selection_sep",
+    "relevance": "Heritable variation, differential reproduction, selection, and adaptation over generations.",
+    "title": "Stanford Encyclopedia of Philosophy, Natural Selection",
+    "tradition": "evolutionary_theory",
+    "url": "https://plato.stanford.edu/entries/natural-selection/"
+  },
+  {
+    "id": "wiener_cybernetics",
+    "relevance": "Feedback, control, communication, noise, and self-regulation.",
+    "title": "Wiener, Cybernetics: Control and Communication in the Animal and the Machine",
+    "tradition": "cybernetics",
+    "url": "https://direct.mit.edu/books/oa-monograph/4581/Cybernetics-or-Control-and-Communication-in-the"
+  },
+  {
+    "id": "kalman_filter",
+    "relevance": "Recursive state estimation from noisy measurements using prediction and update.",
+    "title": "Kalman filtering overview",
+    "tradition": "control_theory",
+    "url": "https://en.wikipedia.org/wiki/Kalman_filter"
+  },
+  {
+    "id": "bayesian_sep",
+    "relevance": "Conditionalization and evidential updating of credences.",
+    "title": "Stanford Encyclopedia of Philosophy, Bayesian Epistemology",
+    "tradition": "bayesian_epistemology",
+    "url": "https://plato.stanford.edu/entries/epistemology-bayesian/"
+  },
+  {
+    "id": "popper_refutations",
+    "relevance": "Scientific growth through conjectures controlled by criticism and attempted refutation.",
+    "title": "Popper, Conjectures and Refutations",
+    "tradition": "philosophy_of_science",
+    "url": "https://philpapers.org/rec/POPCAR-5"
+  },
+  {
+    "id": "kuhn_revolutions",
+    "relevance": "Anomalies, crisis, question changes, and paradigm shifts.",
+    "title": "Kuhn, The Structure of Scientific Revolutions",
+    "tradition": "philosophy_of_science",
+    "url": "https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf"
+  },
+  {
+    "id": "sutton_barto",
+    "relevance": "Repeated interaction, reward/error feedback, value updating, and control.",
+    "title": "Sutton and Barto, Reinforcement Learning: An Introduction",
+    "tradition": "reinforcement_learning",
+    "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf"
+  },
+  {
+    "id": "active_inference",
+    "relevance": "Prediction-error/free-energy minimization linking perception and action.",
+    "title": "Free energy principle and active inference overview",
+    "tradition": "active_inference",
+    "url": "https://en.wikipedia.org/wiki/Free_energy_principle"
+  },
+  {
+    "id": "cap_theorem",
+    "relevance": "Distributed trade-offs among consistency, availability, and partition tolerance.",
+    "title": "CAP theorem overview",
+    "tradition": "distributed_systems",
+    "url": "https://en.wikipedia.org/wiki/CAP_theorem"
+  },
+  {
+    "id": "nonaka_seci",
+    "relevance": "Organizational conversion between tacit and explicit knowledge.",
+    "title": "Nonaka and Takeuchi SECI model overview",
+    "tradition": "knowledge_management",
+    "url": "https://ascnhighered.org/ASCN/change_theories/collection/seci.html"
+  },
+  {
+    "id": "argyris_schon",
+    "relevance": "Organizations correct errors and revise governing assumptions.",
+    "title": "Argyris and Schon single-loop and double-loop learning overview",
+    "tradition": "organizational_learning",
+    "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=135424&section=4.2"
+  }
+]

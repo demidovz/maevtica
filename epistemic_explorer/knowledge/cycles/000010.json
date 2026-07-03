@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-06-29T21:50:17.038248+00:00",
+  "critique_ids": [
+    "c-0019",
+    "c-0020"
+  ],
+  "cycle_index": 10,
+  "experiment_ids": [
+    "e-0019",
+    "e-0020"
+  ],
+  "hypothesis_ids": [
+    "h-0019",
+    "h-0020"
+  ],
+  "meta_notes": [
+    "Survival dominates falsification; check whether hypotheses are too vague."
+  ],
+  "new_question_ids": [
+    "q-0020",
+    "q-0021"
+  ],
+  "objective_scores": [
+    {
+      "metrics": {
+        "graph_depth_delta": 0.0,
+        "hypotheses_falsified": 1.0,
+        "hypotheses_survived": 1.0,
+        "new_testable_questions": 1.0
+      },
+      "objective_name": "knowledge_growth",
+      "total_score": 3.0
+    },
+    {
+      "metrics": {
+        "concept_reuse_delta": 2.0,
+        "experiment_count": 2.0
+      },
+      "objective_name": "concept_reuse",
+      "total_score": 2.5
+    }
+  ],
+  "observation_ids": [
+    "o-0019",
+    "o-0020"
+  ],
+  "selected_question": "Can Reusable concepts are stronger than surviving hypotheses #5 transfer to an independent toy world?",
+  "selected_question_id": "q-0010"
+}

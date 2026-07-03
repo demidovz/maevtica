@@ -1,0 +1,115 @@
+{
+  "explained_variance": [
+    0.2892574601311797,
+    0.22929074196328406,
+    0.16340459112310982,
+    0.09418795500736053,
+    0.09155847097500992,
+    0.06216270735434697
+  ],
+  "intrinsic_dimension_85pct": 5,
+  "top_coordinates": {
+    "pc1": [
+      {
+        "feature": "behavioral_entropy",
+        "weight": -0.3352957058102304
+      },
+      {
+        "feature": "canonical_role_count_proxy",
+        "weight": -0.3352957058102304
+      },
+      {
+        "feature": "hierarchy_emergence",
+        "weight": -0.3065642370508239
+      },
+      {
+        "feature": "abstraction_depth",
+        "weight": -0.3065642370508239
+      },
+      {
+        "feature": "hierarchy_growth",
+        "weight": -0.3065642370508239
+      },
+      {
+        "feature": "compositionality",
+        "weight": -0.2951008833037199
+      },
+      {
+        "feature": "abstraction_growth",
+        "weight": -0.2880669274257714
+      },
+      {
+        "feature": "compression_ratio",
+        "weight": -0.26385416420151414
+      }
+    ],
+    "pc2": [
+      {
+        "feature": "stability",
+        "weight": -0.3935714836137722
+      },
+      {
+        "feature": "stability",
+        "weight": -0.3935714836137722
+      },
+      {
+        "feature": "fixed_point_strength",
+        "weight": -0.39327154144379267
+      },
+      {
+        "feature": "fixed_point_density",
+        "weight": -0.39327154144379245
+      },
+      {
+        "feature": "convergence",
+        "weight": -0.24867945499865926
+      },
+      {
+        "feature": "coordination",
+        "weight": -0.24867945499865926
+      },
+      {
+        "feature": "hierarchy_growth",
+        "weight": -0.18514396371481978
+      },
+      {
+        "feature": "abstraction_depth",
+        "weight": -0.18514396371481975
+      }
+    ],
+    "pc3": [
+      {
+        "feature": "reuse",
+        "weight": -0.3471601070505739
+      },
+      {
+        "feature": "propagation",
+        "weight": -0.33067975874420197
+      },
+      {
+        "feature": "compression_ratio",
+        "weight": 0.2913477791201184
+      },
+      {
+        "feature": "transfer_efficiency",
+        "weight": -0.2884282828757152
+      },
+      {
+        "feature": "transfer",
+        "weight": -0.2884282828757151
+      },
+      {
+        "feature": "abstraction_growth",
+        "weight": 0.24540637704571513
+      },
+      {
+        "feature": "convergence",
+        "weight": 0.23430855978016873
+      },
+      {
+        "feature": "coordination",
+        "weight": 0.23430855978016868
+      }
+    ]
+  }
+}

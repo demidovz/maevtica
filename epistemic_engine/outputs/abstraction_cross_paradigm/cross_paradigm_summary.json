@@ -1,0 +1,244 @@
+{
+  "runs": 120,
+  "selected_method": "dbscan_2.0",
+  "selected_cluster_count": 6,
+  "selected_stability_ari": 0.9416818162065492,
+  "pca_explained_variance": [
+    0.5559975638351873,
+    0.24685344792227018,
+    0.08845966801310798
+  ],
+  "pca_components": {
+    "pc1": [
+      {
+        "feature": "alive_count",
+        "weight": -0.3047866534271445
+      },
+      {
+        "feature": "dag_width",
+        "weight": -0.3027402495587448
+      },
+      {
+        "feature": "graph_depth",
+        "weight": -0.29222766052530463
+      },
+      {
+        "feature": "raw_transfer_reuse",
+        "weight": -0.29161816470496704
+      },
+      {
+        "feature": "births",
+        "weight": -0.2906554631454785
+      },
+      {
+        "feature": "abstraction_count",
+        "weight": -0.29065546314547813
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": -0.279896513174711
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": -0.2717192710473435
+      }
+    ],
+    "pc2": [
+      {
+        "feature": "mean_reuse",
+        "weight": -0.47720075109445176
+      },
+      {
+        "feature": "mean_exposure_lifetime",
+        "weight": -0.47664198366245153
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": -0.4438089461410908
+      },
+      {
+        "feature": "transfer_correctness",
+        "weight": -0.3262821041839585
+      },
+      {
+        "feature": "deaths",
+        "weight": 0.23629813099989108
+      },
+      {
+        "feature": "births",
+        "weight": 0.17908389515877512
+      },
+      {
+        "feature": "abstraction_count",
+        "weight": 0.17908389515877504
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": -0.16821578054227565
+      }
+    ],
+    "pc3": [
+      {
+        "feature": "deaths",
+        "weight": -0.5832031280854054
+      },
+      {
+        "feature": "graph_compression_ratio",
+        "weight": 0.3520580284683124
+      },
+      {
+        "feature": "valid_transfer_reuse",
+        "weight": 0.3374802549964704
+      },
+      {
+        "feature": "valid_reuse",
+        "weight": 0.3017193929693619
+      },
+      {
+        "feature": "mean_lifetime",
+        "weight": -0.27659584563989
+      },
+      {
+        "feature": "raw_transfer_reuse",
+        "weight": 0.2736668905287381
+      },
+      {
+        "feature": "branching_factor",
+        "weight": 0.2611425100891502
+      },
+      {
+        "feature": "graph_depth",
+        "weight": -0.1742038304129673
+      }
+    ]
+  },
+  "feature_ablation_ari": {
+    "without_depth": 0.40900440395462756,
+    "without_reuse": 0.42519706553368214,
+    "without_lifetime": 0.5957920664136154,
+    "without_transfer": 0.4729239058290711,
+    "without_compression": 0.4640544078440869
+  },
+  "cluster_descriptions": {
+    "0": [
+      "deaths high (2.73z)",
+      "semantic_subsumption_ratio high (1.41z)",
+      "abstraction_count high (1.16z)",
+      "births high (1.16z)",
+      "valid_reuse low (-1.00z)"
+    ],
+    "1": [
+      "graph_compression_ratio high (1.89z)",
+      "transfer_correctness low (-1.73z)",
+      "mean_lifetime low (-1.36z)",
+      "graph_depth low (-1.28z)",
+      "valid_reuse low (-1.10z)"
+    ],
+    "2": [
+      "branching_factor high (2.41z)",
+      "valid_transfer_reuse high (2.25z)",
+      "raw_transfer_reuse high (2.22z)",
+      "alive_count high (2.02z)",
+      "valid_reuse high (1.98z)"
+    ],
+    "3": [
+      "semantic_subsumption_ratio low (-0.71z)",
+      "mean_lifetime high (0.69z)",
+      "mean_reuse high (0.59z)",
+      "hierarchy_emergence_time low (-0.58z)",
+      "mean_exposure_lifetime high (0.57z)"
+    ],
+    "4": [
+      "dag_width high (1.91z)",
+      "abstraction_count high (1.62z)",
+      "births high (1.62z)",
+      "alive_count high (1.52z)",
+      "graph_depth high (1.47z)"
+    ],
+    "5": [
+      "hierarchy_emergence_time high (2.82z)",
+      "semantic_subsumption_ratio high (1.41z)",
+      "mean_exposure_lifetime high (0.90z)",
+      "mean_reuse high (0.90z)",
+      "graph_depth high (0.88z)"
+    ]
+  },
+  "cross_paradigm": {
+    "paradigms": [
+      "constraint_driven",
+      "information_bottleneck_like",
+      "mdl_like",
+      "merge_driven",
+      "prediction_driven"
+    ],
+    "cluster_paradigm_mix": {
+      "0": {
+        "constraint_driven": 2,
+        "information_bottleneck_like": 2,
+        "mdl_like": 0,
+        "merge_driven": 2,
+        "prediction_driven": 0
+      },
+      "1": {
+        "constraint_driven": 5,
+        "information_bottleneck_like": 5,
+        "mdl_like": 5,
+        "merge_driven": 5,
+        "prediction_driven": 5
+      },
+      "3": {
+        "constraint_driven": 9,
+        "information_bottleneck_like": 9,
+        "mdl_like": 15,
+        "merge_driven": 9,
+        "prediction_driven": 13
+      },
+      "2": {
+        "constraint_driven": 6,
+        "information_bottleneck_like": 2,
+        "mdl_like": 0,
+        "merge_driven": 6,
+        "prediction_driven": 0
+      },
+      "4": {
+        "constraint_driven": 0,
+        "information_bottleneck_like": 6,
+        "mdl_like": 0,
+        "merge_driven": 2,
+        "prediction_driven": 0
+      },
+      "5": {
+        "constraint_driven": 0,
+        "information_bottleneck_like": 0,
+        "mdl_like": 4,
+        "merge_driven": 0,
+        "prediction_driven": 4
+      }
+    },
+    "paradigm_mixing": 0.6666666666666666,
+    "pairwise_cluster_ari": {
+      "constraint_driven|information_bottleneck_like": 0.8354571875698636,
+      "constraint_driven|mdl_like": 0.42529123754853965,
+      "constraint_driven|merge_driven": 1.0,
+      "constraint_driven|prediction_driven": 0.5812630381187179,
+      "information_bottleneck_like|mdl_like": 0.42529123754853965,
+      "information_bottleneck_like|merge_driven": 0.8354571875698636,
+      "information_bottleneck_like|prediction_driven": 0.5812630381187179,
+      "mdl_like|merge_driven": 0.42529123754853965,
+      "mdl_like|prediction_driven": 0.8040736089117022,
+      "merge_driven|prediction_driven": 0.5812630381187179
+    },
+    "mean_pairwise_cluster_ari": 0.6494650811053202,
+    "largest_macro_variable_spread": {
+      "valid_reuse": 42.208333333333336,
+      "raw_transfer_reuse": 36.79166666666667,
+      "valid_transfer_reuse": 34.45833333333333,
+      "abstraction_count": 17.541666666666664,
+      "births": 17.541666666666664,
+      "alive_count": 13.25,
+      "dag_width": 9.666666666666668,
+      "deaths": 6.458333333333334
+    },
+    "interpretation": "Some macro-regimes survive, but major macro-variable shifts remain: abstraction_count, valid_reuse, raw_transfer_reuse, valid_transfer_reuse, births"
+  }
+}

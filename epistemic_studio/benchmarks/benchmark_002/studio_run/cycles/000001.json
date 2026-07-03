@@ -1,0 +1,97 @@
+{
+  "allocation_ids": [
+    "alloc_0a8983f1ca6d",
+    "alloc_0c478418b5cd",
+    "alloc_97f3968ea0e9"
+  ],
+  "artifact_ids": [
+    "art_4f58d81b3bd6",
+    "art_bd89a650b09e",
+    "art_ed5d2e518c51",
+    "art_8402c597a506"
+  ],
+  "attention_budget": 10.0,
+  "attention_spent": 10.0,
+  "bid_ids": [
+    "bid_1f3efab47938",
+    "bid_4b2f219b3472",
+    "bid_0865579a1a05",
+    "bid_cde337f31578",
+    "bid_8efe823cde14",
+    "bid_6b512fae4e9a",
+    "bid_4836e02d8608"
+  ],
+  "completed_at": "2026-07-01T10:57:56.692272+00:00",
+  "cycle": 1,
+  "edge_ids": [
+    "edge_8d328b23dfa1",
+    "edge_7e7e2e714d25",
+    "edge_57a6d0e4adab"
+  ],
+  "frontier_id": "art_08fa74e90a70",
+  "health_report_id": null,
+  "metrics": {
+    "active_domains": [
+      {
+        "name": "maevtica",
+        "priority": 1.702,
+        "status": "active"
+      },
+      {
+        "name": "agi",
+        "priority": 0.346,
+        "status": "active"
+      },
+      {
+        "name": "possible_worlds",
+        "priority": 0.346,
+        "status": "active"
+      },
+      {
+        "name": "biology",
+        "priority": 0.247,
+        "status": "active"
+      },
+      {
+        "name": "economics",
+        "priority": 0.247,
+        "status": "active"
+      }
+    ],
+    "active_hypotheses": 2,
+    "artifact_counts": {
+      "applicability_atlas": 1,
+      "assumption": 9,
+      "counterexample": 9,
+      "derived_concept": 1,
+      "experiment": 1,
+      "hypothesis": 2,
+      "research_question": 2,
+      "unknown_region": 1
+    },
+    "attention_efficiency": 0.0,
+    "compression": 0.5,
+    "contradictions": 0,
+    "counterexample_density": 4.5,
+    "dead_hypotheses": 0,
+    "duplicate_rate": 0.077,
+    "epistemic_value": 5.0,
+    "most_reusable_concepts": [
+      {
+        "confidence": 0.5,
+        "id": "art_4f58d81b3bd6",
+        "reuse": 1,
+        "title": "Formal handle for Null: Studio has no significant advantage over simpler workflows"
+      }
+    ],
+    "organizational_diversity": 0.714,
+    "research_velocity": {
+      "last_cycle_artifacts": 0,
+      "last_cycle_edges": 0
+    },
+    "stagnation_score": 0.0
+  },
+  "next_frontier_id": "art_08fa74e90a70",
+  "organization_action_ids": [],
+  "started_at": "2026-07-01T10:57:56.690987+00:00"
+}

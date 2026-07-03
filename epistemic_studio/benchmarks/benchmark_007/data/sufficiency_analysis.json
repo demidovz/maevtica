@@ -1,0 +1,324 @@
+{
+  "classification_counts": {
+    "fails": 4,
+    "produces_cumulative_knowledge": 6,
+    "requires_additional_assumptions": 3,
+    "unknown": 1
+  },
+  "failure_modes": {
+    "Goodharted_feedback": 1,
+    "communication_failure": 1,
+    "false_convergence": 1,
+    "identity_drift": 1,
+    "knowledge_collapse": 1,
+    "local_trap": 1,
+    "permanent_oscillation": 1,
+    "scale_dependent": 1
+  },
+  "missing_assumptions": {
+    "adequate_exploration": 1,
+    "ergodic_coverage": 1,
+    "feedback_truth_correlation": 1,
+    "goal_preservation": 1,
+    "incentive_compatibility": 1,
+    "integration_channel": 1,
+    "non_destructive_retention": 1,
+    "stable_update_dynamics": 1
+  },
+  "systems": [
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Repeated error feedback updates retained parameters within scope; cost favors reusable representations.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "aligned",
+        "update_rule": "contractive"
+      },
+      "failure_mode": "none",
+      "id": "s01_gradient_learner",
+      "missing_assumption": "none",
+      "name": "Stable gradient learner",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "machine learner"
+    },
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Genetic retention plus selection accumulates environment-correlated adaptation within niches.",
+      "extra_properties": {
+        "exploration": "mutation",
+        "feedback_alignment": "fitness_correlated",
+        "update_rule": "selection"
+      },
+      "failure_mode": "none",
+      "id": "s02_biological_population",
+      "missing_assumption": "none",
+      "name": "Adaptive biological population",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "evolution"
+    },
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Records, tests, scoped claims, and costly inquiry produce cumulative improvements.",
+      "extra_properties": {
+        "exploration": "planned",
+        "feedback_alignment": "mostly_aligned",
+        "update_rule": "peer_correction"
+      },
+      "failure_mode": "none",
+      "id": "s03_scientific_institution",
+      "missing_assumption": "none",
+      "name": "Minimal scientific institution",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "institution"
+    },
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Retained prices and settlement feedback accumulate predictive information when incentives are aligned.",
+      "extra_properties": {
+        "exploration": "trader_diversity",
+        "feedback_alignment": "settlement_correlated",
+        "update_rule": "price_update"
+      },
+      "failure_mode": "none",
+      "id": "s04_prediction_market",
+      "missing_assumption": "none",
+      "name": "Calibrated prediction market",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "market"
+    },
+    {
+      "classification": "fails",
+      "explanation": "The system receives error feedback, but it is systematically misleading, so retained updates accumulate falsehood.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "anti_correlated",
+        "update_rule": "reinforcement"
+      },
+      "failure_mode": "false_convergence",
+      "id": "s05_biased_feedback_loop",
+      "missing_assumption": "feedback_truth_correlation",
+      "name": "Biased feedback learner",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "machine learner"
+    },
+    {
+      "classification": "requires_additional_assumptions",
+      "explanation": "The population improves locally but cannot reach better regions because variation never crosses the valley.",
+      "extra_properties": {
+        "exploration": "too_narrow",
+        "feedback_alignment": "local_fitness",
+        "update_rule": "selection"
+      },
+      "failure_mode": "local_trap",
+      "id": "s06_local_trap_population",
+      "missing_assumption": "adequate_exploration",
+      "name": "Local-trap evolutionary population",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "evolution"
+    },
+    {
+      "classification": "fails",
+      "explanation": "Retention exists, but updates overwrite prior competencies faster than they consolidate.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "aligned",
+        "update_rule": "destructive_overwrite"
+      },
+      "failure_mode": "knowledge_collapse",
+      "id": "s07_catastrophic_forgetting_net",
+      "missing_assumption": "non_destructive_retention",
+      "name": "Catastrophic forgetting learner",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "neural system"
+    },
+    {
+      "classification": "fails",
+      "explanation": "The collective reacts to delayed feedback with overcorrection, cycling between incompatible policies.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "delayed",
+        "update_rule": "overcorrection"
+      },
+      "failure_mode": "permanent_oscillation",
+      "id": "s08_oscillating_collective",
+      "missing_assumption": "stable_update_dynamics",
+      "name": "Oscillating research collective",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "distributed collective"
+    },
+    {
+      "classification": "requires_additional_assumptions",
+      "explanation": "Subgroups learn locally, but no integration channel lets local knowledge become civilization-level knowledge.",
+      "extra_properties": {
+        "exploration": "parallel",
+        "feedback_alignment": "aligned",
+        "update_rule": "isolated_silos"
+      },
+      "failure_mode": "communication_failure",
+      "id": "s09_fragmented_alien_civilization",
+      "missing_assumption": "integration_channel",
+      "name": "Fragmented alien civilization",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "alien civilization"
+    },
+    {
+      "classification": "fails",
+      "explanation": "Agents satisfy the axioms but manipulate feedback, so retained knowledge tracks payoffs rather than truth.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "strategically_manipulated",
+        "update_rule": "best_response"
+      },
+      "failure_mode": "Goodharted_feedback",
+      "id": "s10_adversarial_game_agents",
+      "missing_assumption": "incentive_compatibility",
+      "name": "Adversarial game-theoretic agents",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "game-theoretic agents"
+    },
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Sound revision over scoped propositions accumulates reliable explanations.",
+      "extra_properties": {
+        "exploration": "systematic",
+        "feedback_alignment": "aligned",
+        "update_rule": "belief_revision"
+      },
+      "failure_mode": "none",
+      "id": "s11_symbolic_reasoner",
+      "missing_assumption": "none",
+      "name": "Sound symbolic reasoner with experiments",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "symbolic reasoner"
+    },
+    {
+      "classification": "unknown",
+      "explanation": "Local cumulative knowledge may emerge, but global knowledge depends on whether local patterns cover enough state space.",
+      "extra_properties": {
+        "exploration": "spatial_diffusion",
+        "feedback_alignment": "local",
+        "update_rule": "local_rule_update"
+      },
+      "failure_mode": "scale_dependent",
+      "id": "s12_cellular_automaton_scientists",
+      "missing_assumption": "ergodic_coverage",
+      "name": "Cellular automaton colonies",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "cellular automata"
+    },
+    {
+      "classification": "requires_additional_assumptions",
+      "explanation": "The system accumulates knowledge only if self-modification preserves the criterion of improvement.",
+      "extra_properties": {
+        "exploration": "adequate",
+        "feedback_alignment": "initially_aligned",
+        "update_rule": "self_modification"
+      },
+      "failure_mode": "identity_drift",
+      "id": "s13_self_modifying_agent",
+      "missing_assumption": "goal_preservation",
+      "name": "Self-modifying agent",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "self-modifying agent"
+    },
+    {
+      "classification": "produces_cumulative_knowledge",
+      "explanation": "Diverse search plus retained scoped feedback supports cumulative knowledge.",
+      "extra_properties": {
+        "exploration": "broad",
+        "feedback_alignment": "mostly_aligned",
+        "update_rule": "human_ai_review"
+      },
+      "failure_mode": "none",
+      "id": "s14_hybrid_human_ai_lab",
+      "missing_assumption": "none",
+      "name": "Hybrid human-AI lab",
+      "satisfies_axioms": [
+        "repeated_interaction",
+        "retention",
+        "error_feedback",
+        "scope_control",
+        "nonzero_cost"
+      ],
+      "system_type": "hybrid system"
+    }
+  ]
+}

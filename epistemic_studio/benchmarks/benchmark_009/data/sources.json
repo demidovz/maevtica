@@ -1,0 +1,110 @@
+[
+  {
+    "id": "entropy_history",
+    "note": "Thermodynamics developed through Carnot, Kelvin, Clausius, heat engines, and the second law.",
+    "title": "A History of Thermodynamics: The Missing Manual",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7516509/"
+  },
+  {
+    "id": "second_law",
+    "note": "Carnot's heat-engine limit preceded Clausius's rigorous entropy-based formulation.",
+    "title": "Second law of thermodynamics overview",
+    "url": "https://en.wikipedia.org/wiki/Second_law_of_thermodynamics"
+  },
+  {
+    "id": "gene_genome",
+    "note": "Johannsen coined gene and distinguished genotype from phenotype.",
+    "title": "1909: The Word Gene Coined",
+    "url": "https://www.genome.gov/25520244/online-education-kit-1909-the-word-gene-coined"
+  },
+  {
+    "id": "johannsen_holist",
+    "note": "Johannsen's genotype/phenotype distinction reframed hereditary factors.",
+    "title": "The holist tradition in twentieth century genetics",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4048101/"
+  },
+  {
+    "id": "field_faraday_maxwell",
+    "note": "Faraday and Maxwell are treated as modern initiators of the field concept.",
+    "title": "The field concepts of Faraday and Maxwell",
+    "url": "https://www.ifi.unicamp.br/~assis/The-field-concepts-of-Faraday-and-Maxwell%282009%29.pdf"
+  },
+  {
+    "id": "field_history",
+    "note": "Maxwell used Faraday's conceptualization to unify electricity, magnetism, and waves.",
+    "title": "History of classical field theory",
+    "url": "https://en.wikipedia.org/wiki/History_of_classical_field_theory"
+  },
+  {
+    "id": "shannon_1948",
+    "note": "Information was formalized statistically through entropy, channel capacity, and coding.",
+    "title": "Shannon, A Mathematical Theory of Communication",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+  },
+  {
+    "id": "information_history",
+    "note": "Pre-Shannon telegraphy and communication engineering lacked the general statistical measure.",
+    "title": "Information theory overview",
+    "url": "https://en.wikipedia.org/wiki/Information_theory"
+  },
+  {
+    "id": "darwin_origin",
+    "note": "Natural selection compressed diverse adaptation, variation, and biogeography into one mechanism.",
+    "title": "Darwin Online: On the Origin of Species",
+    "url": "https://darwin-online.org.uk/contents.html#origin"
+  },
+  {
+    "id": "natural_selection_sep",
+    "note": "Natural selection depends on variation, differential reproduction, and inheritance.",
+    "title": "Stanford Encyclopedia of Philosophy: Natural Selection",
+    "url": "https://plato.stanford.edu/entries/natural-selection/"
+  },
+  {
+    "id": "spacetime_origins",
+    "note": "Minkowski's spacetime reframed Lorentz transformations geometrically.",
+    "title": "The Historical Origins of Spacetime",
+    "url": "https://shs.hal.science/halshs-01234449/document"
+  },
+  {
+    "id": "minkowski_history",
+    "note": "Minkowski introduced a geometric reading of relativity after Einstein's 1905 work.",
+    "title": "Hermann Minkowski's Spacetime",
+    "url": "https://galileo-unbound.blog/2021/04/24/hermann-minkowskis-spacetime-the-theory-that-einstein-overlooked/"
+  },
+  {
+    "id": "algorithm_history",
+    "note": "The algorithm concept moved from calculation procedures to formal computability.",
+    "title": "Algorithms: From Al-Khwarizmi to Turing and Beyond",
+    "url": "https://www.researchgate.net/publication/303329677_Algorithms_From_Al-Khwarizmi_to_Turing_and_Beyond"
+  },
+  {
+    "id": "turing_1936",
+    "note": "Turing gave a formal model of effective procedure and computability.",
+    "title": "Turing, On Computable Numbers",
+    "url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf"
+  },
+  {
+    "id": "probability_history",
+    "note": "Gambling, insurance, and fair division problems preceded formal probability.",
+    "title": "History of probability",
+    "url": "https://en.wikipedia.org/wiki/History_of_probability"
+  },
+  {
+    "id": "pascal_probability",
+    "note": "Pascal and Fermat's problem of points helped create mathematical expectation.",
+    "title": "Pascal and the Invention of Probability Theory",
+    "url": "https://www.ms.uky.edu/~dmu228/ma320/pascal_invention_probability.pdf"
+  },
+  {
+    "id": "energy_history",
+    "note": "Work on vis viva, heat, mechanics, and conservation preceded the unified energy concept.",
+    "title": "Conservation of Energy",
+    "url": "https://en.wikipedia.org/wiki/Conservation_of_energy"
+  },
+  {
+    "id": "energy_pmc",
+    "note": "Joule, Mayer, Helmholtz, and others linked heat and mechanical work.",
+    "title": "Conservation of Energy: Missing Features in Its Nature and Justification",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8570307/"
+  }
+]

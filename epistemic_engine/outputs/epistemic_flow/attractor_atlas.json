@@ -1,0 +1,21 @@
+{
+  "endpoint_attractor_count": 1,
+  "endpoint_noise_count": 0,
+  "stable_fixed_point_candidates": 0,
+  "limit_cycle_candidates": 5,
+  "slow_manifold_candidates": 0,
+  "attractor_sizes": {
+    "0": 400
+  },
+  "examples": {
+    "fixed": [],
+    "cycles": [
+      "tr_0000_prediction_driven_noisy",
+      "tr_0000_random_interaction_regular",
+      "tr_0009_prediction_driven_volatile",
+      "tr_0009_constraint_driven_noisy",
+      "tr_0009_random_interaction_compositional"
+    ],
+    "slow": []
+  }
+}

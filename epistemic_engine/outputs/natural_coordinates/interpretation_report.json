@@ -1,0 +1,89 @@
+{
+  "coordinate_interpretations": {
+    "z1": [
+      {
+        "observable": "order_behavioral_entropy",
+        "correlation": 0.7266062900281516
+      },
+      {
+        "observable": "order_canonical_role_count_proxy",
+        "correlation": 0.726606290028151
+      },
+      {
+        "observable": "prediction_horizon",
+        "correlation": 0.6433242176561146
+      },
+      {
+        "observable": "environmental_regularity",
+        "correlation": 0.6298388339061891
+      },
+      {
+        "observable": "translation_complexity",
+        "correlation": 0.5641559360782091
+      },
+      {
+        "observable": "communication_bandwidth",
+        "correlation": 0.5567222815149415
+      },
+      {
+        "observable": "representation_complexity",
+        "correlation": 0.5485821117937792
+      },
+      {
+        "observable": "feedback_strength",
+        "correlation": 0.5453435885714636
+      },
+      {
+        "observable": "abstraction_budget",
+        "correlation": 0.5385110378290535
+      },
+      {
+        "observable": "convergence",
+        "correlation": -0.5349508066728483
+      }
+    ],
+    "z2": [
+      {
+        "observable": "memory_capacity",
+        "correlation": -0.5836408425552271
+      },
+      {
+        "observable": "interaction_locality",
+        "correlation": -0.5709813895722278
+      },
+      {
+        "observable": "feedback_strength",
+        "correlation": -0.4873708601054969
+      },
+      {
+        "observable": "hierarchy_depth",
+        "correlation": 0.4803581711763721
+      },
+      {
+        "observable": "constraint_density",
+        "correlation": 0.4463156860605231
+      },
+      {
+        "observable": "communication_bandwidth",
+        "correlation": -0.41019132802760994
+      },
+      {
+        "observable": "graph_connectivity",
+        "correlation": 0.40886907968131764
+      },
+      {
+        "observable": "computational_budget",
+        "correlation": 0.25899514089341347
+      },
+      {
+        "observable": "abstraction_budget",
+        "correlation": -0.2568781970185051
+      },
+      {
+        "observable": "stochasticity",
+        "correlation": 0.24731557130940615
+      }
+    ]
+  },
+  "note": "Names are post-hoc correlations with observations, not imposed semantic labels."
+}

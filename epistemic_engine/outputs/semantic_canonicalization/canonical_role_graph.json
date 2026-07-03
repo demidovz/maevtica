@@ -1,0 +1,253 @@
+{
+  "nodes": [
+    {
+      "role": 0,
+      "name": "uncertainty",
+      "support": 10
+    },
+    {
+      "role": 1,
+      "name": "compression",
+      "support": 1
+    },
+    {
+      "role": 2,
+      "name": "transport",
+      "support": 9
+    },
+    {
+      "role": 3,
+      "name": "propagation",
+      "support": 15
+    },
+    {
+      "role": 4,
+      "name": "reconstruction",
+      "support": 10
+    },
+    {
+      "role": 5,
+      "name": "stabilization",
+      "support": 10
+    },
+    {
+      "role": 6,
+      "name": "compression_2",
+      "support": 1
+    },
+    {
+      "role": 7,
+      "name": "compression_3",
+      "support": 8
+    },
+    {
+      "role": 8,
+      "name": "replacement",
+      "support": 15
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2,
+      "support": 1
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "support": 2
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "support": 2
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "support": 5
+    },
+    {
+      "source": 1,
+      "target": 0,
+      "support": 1
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "support": 1
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "support": 2
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "support": 3
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "support": 3
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "support": 8
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "support": 1
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "support": 6
+    },
+    {
+      "source": 3,
+      "target": 0,
+      "support": 5
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "support": 5
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "support": 6
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "support": 2
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "support": 7
+    },
+    {
+      "source": 4,
+      "target": 0,
+      "support": 3
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "support": 2
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "support": 4
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "support": 1
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "support": 3
+    },
+    {
+      "source": 5,
+      "target": 1,
+      "support": 1
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "support": 1
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "support": 6
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "support": 1
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "support": 2
+    },
+    {
+      "source": 6,
+      "target": 3,
+      "support": 1
+    },
+    {
+      "source": 6,
+      "target": 4,
+      "support": 1
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "support": 1
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "support": 1
+    },
+    {
+      "source": 7,
+      "target": 2,
+      "support": 7
+    },
+    {
+      "source": 7,
+      "target": 3,
+      "support": 6
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "support": 2
+    },
+    {
+      "source": 7,
+      "target": 5,
+      "support": 6
+    },
+    {
+      "source": 7,
+      "target": 6,
+      "support": 1
+    },
+    {
+      "source": 8,
+      "target": 2,
+      "support": 5
+    },
+    {
+      "source": 8,
+      "target": 3,
+      "support": 1
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "support": 4
+    },
+    {
+      "source": 8,
+      "target": 5,
+      "support": 5
+    }
+  ],
+  "support_threshold": 1,
+  "successful_architectures": 9
+}

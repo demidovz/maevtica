@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mech_interp_open_problems",
+    "note": "Forward-looking review of open problems in mechanistic interpretability.",
+    "title": "Open Problems in Mechanistic Interpretability",
+    "url": "https://arxiv.org/html/2501.16496v1"
+  },
+  {
+    "id": "sae_survey",
+    "note": "Surveys SAEs, monosemanticity, feature decomposition, and interpretability methods.",
+    "title": "A Survey on Sparse Autoencoders: Interpreting the Internal Mechanisms of Large Language Models",
+    "url": "https://arxiv.org/html/2503.05613v3"
+  },
+  {
+    "id": "anthropic_monosemanticity",
+    "note": "Shows large-scale sparse-autoencoder feature extraction in a frontier LLM.",
+    "title": "Extracting Interpretable Features from Claude 3 Sonnet",
+    "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/"
+  },
+  {
+    "id": "alignment_directions",
+    "note": "Lists scalable oversight, process-oriented learning, dangerous-failure evaluation, and interpretability directions.",
+    "title": "Recommendations for Technical AI Safety Research Directions",
+    "url": "https://alignment.anthropic.com/2025/recommended-directions/"
+  },
+  {
+    "id": "morphogenesis_principles",
+    "note": "Recent review on physical principles, quantitative experiments, and mathematical theory in morphogenesis.",
+    "title": "Searching for physical principles of morphogenesis",
+    "url": "https://journals.biologists.com/dev/article/152/21/dev204894/369751/Searching-for-physical-principles-of-morphogenesis"
+  },
+  {
+    "id": "embryoids_self_organization",
+    "note": "Frames embryonic development as guided self-organization.",
+    "title": "From embryos to embryoids: external signals and self-organization",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8185431/"
+  },
+  {
+    "id": "tissue_mechanics",
+    "note": "Reports robust, self-organized mechanical regulation in early development.",
+    "title": "Self-organized tissue mechanics underlie embryonic regulation",
+    "url": "https://www.nature.com/articles/s41586-024-07934-8"
+  },
+  {
+    "id": "consciousness_frontiers",
+    "note": "Reviews contemporary consciousness science and theory-testing challenges.",
+    "title": "Consciousness science: where are we, where are we going, and what are the challenges ahead?",
+    "url": "https://www.frontiersin.org/journals/science/articles/10.3389/fsci.2025.1546279/full"
+  },
+  {
+    "id": "synergistic_workspace",
+    "note": "Connects global-workspace ideas with information-theoretic synergy.",
+    "title": "A synergistic workspace for human consciousness revealed by integrated information decomposition",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11257694/"
+  },
+  {
+    "id": "climate_tipping_2025",
+    "note": "Analyzes probabilities of triggering climate tipping points under emissions scenarios.",
+    "title": "High probability of triggering climate tipping points under current policies",
+    "url": "https://esd.copernicus.org/articles/16/565/2025/"
+  },
+  {
+    "id": "tipmip",
+    "note": "Proposes systematic multi-model assessment of Earth-system tipping interactions.",
+    "title": "The Tipping Points Modelling Intercomparison Project",
+    "url": "https://ntrs.nasa.gov/api/citations/20250006500/downloads/ARomanouESDTippingPreprint.pdf"
+  },
+  {
+    "id": "heterogeneous_expectations",
+    "note": "Argues rational expectations about equilibrium prices become unrealistic in heterogeneous-agent macroeconomics.",
+    "title": "Trouble with Rational Expectations in Heterogeneous Agent Models",
+    "url": "https://academic.oup.com/ej/article/136/676/1173/8323145"
+  },
+  {
+    "id": "agent_based_macro",
+    "note": "Presents agent-based modeling as a different way to model economic systems.",
+    "title": "Quantitative agent-based models: a promising alternative for macroeconomics",
+    "url": "https://academic.oup.com/oxrep/article/41/2/571/8281854"
+  },
+  {
+    "id": "collective_ai_review",
+    "note": "Reviews human-AI collective intelligence and notes theoretical gaps.",
+    "title": "AI-enhanced collective intelligence",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11573907/"
+  },
+  {
+    "id": "collective_evolution",
+    "note": "Frames collective intelligence across biological and future artificial systems.",
+    "title": "The evolutionary past and future of collective intelligence",
+    "url": "https://royalsocietypublishing.org/doi/10.1098/rstb.2024.0439"
+  }
+]

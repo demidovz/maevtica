@@ -1,0 +1,98 @@
+{
+  "B348AB161": {
+    "family": "studio",
+    "name": "Morphogenetic Trajectory Constraint",
+    "origin": "studio_generated",
+    "true_id": "studio_morphogenetic_trajectory_constraint"
+  },
+  "B4E9E6825": {
+    "family": "llm_prompt",
+    "name": "Explanatory Substrate",
+    "origin": "ordinary_llm_prompt",
+    "true_id": "llm_prompt_explanatory_substrate"
+  },
+  "B50ADCEB7": {
+    "family": "historical",
+    "name": "Information",
+    "origin": "historical_breakthrough",
+    "true_id": "hist_information"
+  },
+  "B6108D310": {
+    "family": "distractor",
+    "name": "Omnivariant Causality",
+    "origin": "artificial_distractor",
+    "true_id": "distractor_omnivariant_causality"
+  },
+  "B61C2F2E6": {
+    "family": "near_duplicate",
+    "name": "Mechanism Fingerprint",
+    "origin": "near_duplicate",
+    "true_id": "near_duplicate_mechanism_fingerprint"
+  },
+  "B6CD458CB": {
+    "family": "historical",
+    "name": "Entropy",
+    "origin": "historical_breakthrough",
+    "true_id": "hist_entropy"
+  },
+  "B85D3A1BA": {
+    "family": "accepted",
+    "name": "Superposition",
+    "origin": "current_accepted",
+    "true_id": "accepted_superposition"
+  },
+  "B8C4ABAB2": {
+    "family": "historical",
+    "name": "Gene",
+    "origin": "historical_breakthrough",
+    "true_id": "hist_gene"
+  },
+  "B9042869F": {
+    "family": "studio",
+    "name": "Oversight Channel Drift",
+    "origin": "studio_generated",
+    "true_id": "studio_oversight_channel_drift"
+  },
+  "BAC92E0E3": {
+    "family": "historical",
+    "name": "Field",
+    "origin": "historical_breakthrough",
+    "true_id": "hist_field"
+  },
+  "BB1CAC289": {
+    "family": "studio",
+    "name": "Causal Role Carrier",
+    "origin": "studio_generated",
+    "true_id": "studio_causal_role_carrier"
+  },
+  "BB2A90B32": {
+    "family": "studio",
+    "name": "Tipping Load",
+    "origin": "studio_generated",
+    "true_id": "studio_tipping_load"
+  },
+  "BCBBE9B77": {
+    "family": "historical",
+    "name": "Algorithm",
+    "origin": "historical_breakthrough",
+    "true_id": "hist_algorithm"
+  },
+  "BE54436D4": {
+    "family": "renaming",
+    "name": "Intervention-Stable Mechanism",
+    "origin": "equivalent_renaming",
+    "true_id": "rename_intervention_stable_mechanism"
+  },
+  "BECA73A38": {
+    "family": "perturbed",
+    "name": "Reverse Entropy",
+    "origin": "randomly_perturbed",
+    "true_id": "perturbed_reverse_entropy"
+  },
+  "BF5751934": {
+    "family": "accepted",
+    "name": "Causal Abstraction",
+    "origin": "current_accepted",
+    "true_id": "accepted_causal_abstraction"
+  }
+}

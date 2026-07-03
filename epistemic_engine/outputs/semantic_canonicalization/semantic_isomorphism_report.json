@@ -1,0 +1,8 @@
+{
+  "successful_count": 9,
+  "weakest_correspondence_counts": {
+    "weak_behavioral_equivalence": 9
+  },
+  "failed_count": 0,
+  "mean_lab_distance": 0.4473300662709202
+}

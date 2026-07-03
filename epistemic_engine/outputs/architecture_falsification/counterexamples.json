@@ -1,0 +1,999 @@
+[
+  {
+    "architecture_id": "e001129",
+    "paradigm": "graph_system",
+    "primitives": [
+      "constraint_propagation",
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.36624171753496837,
+    "correspondence_score": 0.39538386137329884,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.22143565306000357,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001055",
+    "paradigm": "graph_system",
+    "primitives": [
+      "constraint_propagation",
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.36624171753496837,
+    "correspondence_score": 0.39850886233344085,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.22029114734106273,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001265",
+    "paradigm": "graph_system",
+    "primitives": [
+      "constraint_propagation",
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.36624171753496837,
+    "correspondence_score": 0.39850886233344085,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.22029114734106273,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001232",
+    "paradigm": "graph_system",
+    "primitives": [
+      "constraint_propagation",
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.36624171753496837,
+    "correspondence_score": 0.40594709373945675,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21756695669550094,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001167",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.370023340756897,
+    "correspondence_score": 0.41561037438502224,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21623780157372638,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001202",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3861691158946966,
+    "correspondence_score": 0.4406186192217135,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2160158132631055,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000989",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "graph_rewrite",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.4072933934936023,
+    "correspondence_score": 0.4700435662025373,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21584775432513617,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e001154",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "graph_rewrite",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.4072933934936023,
+    "correspondence_score": 0.4700435662025373,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21584775432513617,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e001185",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "graph_rewrite",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.4072933934936023,
+    "correspondence_score": 0.47005651468235454,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2158424804948508,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e000769",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.38415215985876583,
+    "correspondence_score": 0.44590418273553717,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2128571049708514,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001212",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3833219647400914,
+    "correspondence_score": 0.44525666861187574,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2126453037141594,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001276",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.413092000425707,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21235155838940678,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001147",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3812876709200602,
+    "correspondence_score": 0.44613983316441025,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21118005302813803,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001143",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.44453462816654754,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21110865730807218,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001253",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.444799692448283,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21100791769862937,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001179",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3798456233602959,
+    "correspondence_score": 0.44546818785279385,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21063648185817005,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001165",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3849022103169957,
+    "correspondence_score": 0.4532424944072339,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.21044817241006278,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001139",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.42009341312331544,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.209818348928396,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001008",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.42149163678787394,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20931245196607598,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001242",
+    "paradigm": "graph_system",
+    "primitives": [
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.42149163678787394,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20931245196607598,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001048",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3597811543234942,
+    "correspondence_score": 0.41886736728165025,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20908056941445907,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001254",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.4231162749462364,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20872463505951244,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001144",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3593955553220306,
+    "correspondence_score": 0.42225163657841874,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20764019390829352,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001274",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "recurrence",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.4280881949649477,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20692572455748032,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001085",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.45704489801390524,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20635403820135814,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000944",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.38460327987508125,
+    "correspondence_score": 0.46834873257168974,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20447482120267207,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001018",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3812910452225776,
+    "correspondence_score": 0.4638269160888739,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20443799558468606,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001043",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "recurrence",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.37630368894561317,
+    "correspondence_score": 0.45961292048986113,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20334965147821163,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e000961",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "recurrence",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.37630368894561317,
+    "correspondence_score": 0.459766597830712,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2032918221279421,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e001013",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3779801313196013,
+    "correspondence_score": 0.4622932589635754,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2032424645883826,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000962",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4667528039827668,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20266447788260278,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001024",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.4410667978976335,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20222988370938796,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e000814",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3618140467388987,
+    "correspondence_score": 0.44126532131506624,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2021580551483542,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "e001050",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.38137855648991437,
+    "correspondence_score": 0.4718848927741508,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20141177725431073,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001037",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4704309277835025,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20126658016231253,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001058",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4712101739607112,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.2009704219812184,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000815",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4714512669588545,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20087879283257065,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001101",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4714512669588545,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20087879283257065,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000925",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3822872709326567,
+    "correspondence_score": 0.47474103896588415,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20079981474665481,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000880",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3779801313196013,
+    "correspondence_score": 0.46888461283322613,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20075106378715807,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001118",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3811606869372751,
+    "correspondence_score": 0.47474103896588415,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.200208066407723,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001033",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3822872709326567,
+    "correspondence_score": 0.4763982550737861,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.20016628212341933,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000964",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3780503105820783,
+    "correspondence_score": 0.472460096633924,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.19943662431198456,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e001092",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "recurrence",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.383190322039931,
+    "correspondence_score": 0.47963156545721963,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.19940014801186276,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e001036",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "recurrence",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.383190322039931,
+    "correspondence_score": 0.4799696351555669,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.19927060297528112,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e000852",
+    "paradigm": "sat_based",
+    "primitives": [
+      "constraint_propagation",
+      "counterexample_search",
+      "finite_automata",
+      "local_replacement",
+      "merge",
+      "probabilistic_grammar",
+      "program_synthesis",
+      "recurrence",
+      "sat_constraints",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.383190322039931,
+    "correspondence_score": 0.4802309330500729,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.199170476150937,
+    "primitive_count": 10
+  },
+  {
+    "architecture_id": "e000855",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.38138184178758416,
+    "correspondence_score": 0.4936441385239373,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.19311493104967964,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000410",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "operator_composition",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3800572781184455,
+    "correspondence_score": 0.4920982975967216,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.1930317385671147,
+    "primitive_count": 9
+  },
+  {
+    "architecture_id": "e000876",
+    "paradigm": "graph_system",
+    "primitives": [
+      "graph_rewrite",
+      "invariant_detection",
+      "merge",
+      "message_passing",
+      "prediction",
+      "sat_constraints",
+      "schema_alignment",
+      "stochastic_memory"
+    ],
+    "e_star_score": 0.3777817819311847,
+    "correspondence_score": 0.4899254705591023,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.19269686464989288,
+    "primitive_count": 8
+  },
+  {
+    "architecture_id": "a001393",
+    "paradigm": "rewriting_system",
+    "primitives": [
+      "attention",
+      "counterexample_search",
+      "invariant_detection",
+      "merge",
+      "probabilistic_grammar",
+      "recurrence",
+      "rewriting_system"
+    ],
+    "e_star_score": 0.35449159113928386,
+    "correspondence_score": 0.6144053678953313,
+    "mapping_ambiguity": 0.0,
+    "counterexample_score": 0.1366900546695508,
+    "primitive_count": 7
+  }
+]

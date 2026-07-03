@@ -1,0 +1,317 @@
+[
+  {
+    "approximate_birth": "1850s",
+    "compression_achieved": 0.92,
+    "concept": "Entropy",
+    "domain": "thermodynamics",
+    "generated_candidate_before_reveal": "A conserved-or-monotonic state quantity for heat transformations that tracks unavailable work and distinguishes reversible from irreversible processes.",
+    "historical_solution": "Entropy as a state function whose change organizes reversible heat transfer and the directionality of thermodynamic processes.",
+    "id": "c01_entropy",
+    "insufficiency": "Heat-engine limits, irreversibility, and temperature scales could not be compressed by a simple substance-like heat representation.",
+    "pre_world": "Heat was analyzed through engines, temperature, caloric remnants, and reversible cycles. Carnot had a performance limit, but no state quantity explained irreversible direction.",
+    "predictive_improvement": 0.88,
+    "pressures": [
+      "prediction_failure",
+      "excessive_model_complexity",
+      "unexplained_regularities",
+      "representation_mismatch"
+    ],
+    "source_ids": [
+      "entropy_history",
+      "second_law"
+    ],
+    "stages": [
+      "anomaly_accumulation",
+      "invariant_search",
+      "representation_crisis",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.86,
+    "transition_types": [
+      "new_invariant",
+      "new_coordinate_system",
+      "new_optimization_objective"
+    ]
+  },
+  {
+    "approximate_birth": "1909",
+    "compression_achieved": 0.87,
+    "concept": "Gene",
+    "domain": "biology",
+    "generated_candidate_before_reveal": "An abstract hereditary unit separated from observable trait expression, allowing inheritance to be tracked independently from phenotype.",
+    "historical_solution": "Gene as a unit of heredity, paired with genotype/phenotype distinctions.",
+    "id": "c02_gene",
+    "insufficiency": "Breeding regularities required a stable transmissible unit distinct from appearance, development, and environment.",
+    "pre_world": "Heredity was described through traits, breeding ratios, germ plasm, and Mendelian factors, but visible traits and inherited determinants were conflated.",
+    "predictive_improvement": 0.84,
+    "pressures": [
+      "conflicting_theories",
+      "communication_failure",
+      "representation_mismatch",
+      "too_many_exceptions"
+    ],
+    "source_ids": [
+      "gene_genome",
+      "johannsen_holist"
+    ],
+    "stages": [
+      "language_failure",
+      "distinction_search",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.91,
+    "transition_types": [
+      "new_distinction",
+      "new_causal_abstraction"
+    ]
+  },
+  {
+    "approximate_birth": "1830s-1860s",
+    "compression_achieved": 0.91,
+    "concept": "Field",
+    "domain": "physics",
+    "generated_candidate_before_reveal": "A spatially distributed physical state assigning influence to every point, so the region between bodies becomes part of the explanation.",
+    "historical_solution": "Field as a real or mathematically represented spatial quantity mediating electromagnetic phenomena.",
+    "id": "c03_field",
+    "insufficiency": "Induction, propagation, and spatial patterns between sources made source-only representation awkward.",
+    "pre_world": "Electricity and magnetism were often represented through sources, forces, action at a distance, fluids, and mechanical analogies.",
+    "predictive_improvement": 0.9,
+    "pressures": [
+      "representation_mismatch",
+      "unexplained_regularities",
+      "conflicting_theories",
+      "excessive_model_complexity"
+    ],
+    "source_ids": [
+      "field_faraday_maxwell",
+      "field_history"
+    ],
+    "stages": [
+      "anomaly_accumulation",
+      "language_failure",
+      "representation_crisis",
+      "new_primitive",
+      "compression"
+    ],
+    "structural_similarity": 0.89,
+    "transition_types": [
+      "new_coordinate_system",
+      "new_causal_abstraction",
+      "new_symmetry"
+    ]
+  },
+  {
+    "approximate_birth": "1948",
+    "compression_achieved": 0.95,
+    "concept": "Information",
+    "domain": "communication engineering",
+    "generated_candidate_before_reveal": "A statistical measure of uncertainty reduction in a message source, tied to channel limits and coding efficiency.",
+    "historical_solution": "Information entropy, channel capacity, redundancy, and coding theorems.",
+    "id": "c04_information",
+    "insufficiency": "Communication systems needed a meaning-independent quantity governing compression, redundancy, noise, and capacity.",
+    "pre_world": "Telegraph and telephone engineering had bandwidth, signals, noise, and codes, but lacked a general measure independent of message meaning.",
+    "predictive_improvement": 0.94,
+    "pressures": [
+      "communication_failure",
+      "excessive_model_complexity",
+      "unexplained_regularities",
+      "prediction_failure"
+    ],
+    "source_ids": [
+      "shannon_1948",
+      "information_history"
+    ],
+    "stages": [
+      "engineering_pressure",
+      "invariant_search",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.93,
+    "transition_types": [
+      "new_invariant",
+      "new_optimization_objective",
+      "new_coordinate_system"
+    ]
+  },
+  {
+    "approximate_birth": "1859",
+    "compression_achieved": 0.94,
+    "concept": "Natural Selection",
+    "domain": "evolutionary biology",
+    "generated_candidate_before_reveal": "A population-level filter that accumulates heritable variations because some variants reproduce more successfully in local conditions.",
+    "historical_solution": "Natural selection as differential survival and reproduction of heritable variation.",
+    "id": "c05_natural_selection",
+    "insufficiency": "Adapted complexity and branching diversity required a mechanism linking small heritable variation to large-scale change.",
+    "pre_world": "Species resemblance, adaptation, domestication, fossils, and biogeography were known, but species fixity and separate creation left patterns disconnected.",
+    "predictive_improvement": 0.91,
+    "pressures": [
+      "unexplained_regularities",
+      "conflicting_theories",
+      "excessive_model_complexity",
+      "too_many_exceptions"
+    ],
+    "source_ids": [
+      "darwin_origin",
+      "natural_selection_sep"
+    ],
+    "stages": [
+      "anomaly_accumulation",
+      "mechanism_search",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.9,
+    "transition_types": [
+      "new_causal_abstraction",
+      "new_optimization_objective",
+      "new_invariant"
+    ]
+  },
+  {
+    "approximate_birth": "1907-1908",
+    "compression_achieved": 0.9,
+    "concept": "Space-Time",
+    "domain": "relativity",
+    "generated_candidate_before_reveal": "A unified geometric manifold where space and time coordinates transform together and invariant intervals replace separate absolutes.",
+    "historical_solution": "Minkowski spacetime as a four-dimensional geometric structure for relativity.",
+    "id": "c06_spacetime",
+    "insufficiency": "Relativity made separate absolute space and absolute time a poor coordinate system for invariant physical laws.",
+    "pre_world": "Electrodynamics and mechanics had separate space and time variables. Lorentz transformations worked mathematically, but their geometry was not yet the primitive representation.",
+    "predictive_improvement": 0.89,
+    "pressures": [
+      "representation_mismatch",
+      "conflicting_theories",
+      "prediction_failure",
+      "unexplained_regularities"
+    ],
+    "source_ids": [
+      "spacetime_origins",
+      "minkowski_history"
+    ],
+    "stages": [
+      "mathematical_pressure",
+      "invariant_search",
+      "representation_crisis",
+      "new_primitive",
+      "compression"
+    ],
+    "structural_similarity": 0.88,
+    "transition_types": [
+      "new_coordinate_system",
+      "new_invariant",
+      "new_symmetry"
+    ]
+  },
+  {
+    "approximate_birth": "1930s formalization",
+    "compression_achieved": 0.93,
+    "concept": "Algorithm / Computability",
+    "domain": "mathematics and computer science",
+    "generated_candidate_before_reveal": "A formal machine-like procedure with discrete states and steps that defines effective calculability and its limits.",
+    "historical_solution": "Turing-machine computability and related formalizations of algorithmic procedure.",
+    "id": "c07_algorithm_computability",
+    "insufficiency": "Hilbert-style decision questions required a representation of what any mechanical method could do.",
+    "pre_world": "Mathematicians used procedures, calculability, proof search, and decision problems, but effective procedure was not sharply delimited.",
+    "predictive_improvement": 0.95,
+    "pressures": [
+      "language_failure",
+      "representation_mismatch",
+      "prediction_failure",
+      "communication_failure"
+    ],
+    "source_ids": [
+      "algorithm_history",
+      "turing_1936"
+    ],
+    "stages": [
+      "language_failure",
+      "formalization_pressure",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.87,
+    "transition_types": [
+      "new_causal_abstraction",
+      "new_coordinate_system",
+      "new_distinction"
+    ]
+  },
+  {
+    "approximate_birth": "1650s",
+    "compression_achieved": 0.89,
+    "concept": "Probability",
+    "domain": "mathematics",
+    "generated_candidate_before_reveal": "A normalized measure over possible outcomes that supports fair expectation and systematic calculation under uncertainty.",
+    "historical_solution": "Probability and expectation as mathematical tools for chance and uncertain judgment.",
+    "id": "c08_probability",
+    "insufficiency": "Fair division and risk pricing required a quantitative representation of uncertain possibilities.",
+    "pre_world": "Uncertainty existed in gambling, law, insurance, and astronomy, but there was no general calculus of chance or fair expectation.",
+    "predictive_improvement": 0.86,
+    "pressures": [
+      "communication_failure",
+      "prediction_failure",
+      "excessive_model_complexity",
+      "unexplained_regularities"
+    ],
+    "source_ids": [
+      "probability_history",
+      "pascal_probability"
+    ],
+    "stages": [
+      "practical_pressure",
+      "formalization_pressure",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.88,
+    "transition_types": [
+      "new_coordinate_system",
+      "new_optimization_objective",
+      "new_distinction"
+    ]
+  },
+  {
+    "approximate_birth": "1840s-1850s",
+    "compression_achieved": 0.95,
+    "concept": "Energy",
+    "domain": "physics",
+    "generated_candidate_before_reveal": "A conserved transformable quantity that appears in multiple forms and permits cross-domain accounting.",
+    "historical_solution": "Energy as a conserved quantity unifying mechanical work, heat, and other physical processes.",
+    "id": "c09_energy",
+    "insufficiency": "Conversions among heat, work, electricity, and motion demanded a common accounting variable.",
+    "pre_world": "Mechanics had work, vis viva, heat, chemical affinity, electricity, and motion, but no accepted conserved transformable quantity spanning them.",
+    "predictive_improvement": 0.91,
+    "pressures": [
+      "unexplained_regularities",
+      "conflicting_theories",
+      "excessive_model_complexity",
+      "representation_mismatch"
+    ],
+    "source_ids": [
+      "energy_history",
+      "energy_pmc"
+    ],
+    "stages": [
+      "cross_domain_conversion",
+      "invariant_search",
+      "new_primitive",
+      "compression",
+      "applicability_expansion"
+    ],
+    "structural_similarity": 0.92,
+    "transition_types": [
+      "new_invariant",
+      "new_causal_abstraction",
+      "new_coordinate_system"
+    ]
+  }
+]
