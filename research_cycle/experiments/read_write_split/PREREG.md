@@ -58,6 +58,12 @@ qualification of d_nm as "decodable-but-non-mediating" (AUC(d_nm) >= 0.8 and
 - O1 effect exists: mean E_full over groups >= 0.5 logit.
 - O2 patch code correct: m(Delta-hat) must equal 1 by construction;
   median |m(Delta-hat) - 1| <= 0.10.
+  AMENDMENT (2026-07-04, after O2 tripped BROKEN_MEASUREMENT on run 1): the
+  "by construction" identity only holds for the PER-PROMPT Delta-hat_i =
+  unit(x_src - x_base_i); run 1 wrongly computed O2 from the mean-diff
+  direction (a legitimate pool candidate, not an identity). O2 is now
+  computed per-prompt. NO decision threshold changed; run-1 primary numbers
+  were not used to choose anything.
 - O3 AUC pipeline: mean AUC(p) >= 0.85 held-out; mean AUC(random) in [0.3,0.7].
 (Guards the 2026-07-03 .norm-bug class: a broken projection/metric shows up as
 O2 or O3 failing, not as a concept verdict.)

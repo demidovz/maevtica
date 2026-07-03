@@ -1,0 +1,25 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 18979.33it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded pretrained model gpt2 into HookedTransformer
+L5 colors     E_full   2.269 m_o2 1.000 m(delta) 0.444 recovery 0.049 m(probe) 0.005 m(d_nm) -0.006 auc_p 1.000 auc_nm 1.000
+L5 animals    E_full   2.102 m_o2 1.000 m(delta) 0.325 recovery 0.037 m(probe) 0.148 m(d_nm) 0.016 auc_p 0.994 auc_nm 0.991
+L5 fruits     E_full   2.811 m_o2 1.000 m(delta) 0.522 recovery 0.166 m(probe) 0.103 m(d_nm) 0.007 auc_p 0.997 auc_nm 0.997
+L5 countries  E_full   6.956 m_o2 1.000 m(delta) 0.660 recovery 0.018 m(probe) 0.083 m(d_nm) 0.013 auc_p 1.000 auc_nm 1.000
+L5 drinks     E_full   3.286 m_o2 1.000 m(delta) 0.563 recovery 0.096 m(probe) 0.047 m(d_nm) 0.002 auc_p 1.000 auc_nm 1.000
+L5 body       E_full   3.422 m_o2 1.000 m(delta) 0.480 recovery 0.038 m(probe) 0.021 m(d_nm) 0.004 auc_p 1.000 auc_nm 1.000
+L8 colors     E_full   4.056 m_o2 1.000 m(delta) 0.727 recovery 0.207 m(probe) 0.334 m(d_nm) 0.022 auc_p 1.000 auc_nm 1.000
+L8 animals    E_full   3.622 m_o2 1.000 m(delta) 0.673 recovery 0.262 m(probe) 0.383 m(d_nm) 0.022 auc_p 0.975 auc_nm 0.969
+L8 fruits     E_full   4.134 m_o2 1.000 m(delta) 0.825 recovery 0.298 m(probe) 0.329 m(d_nm) 0.045 auc_p 0.919 auc_nm 0.938
+L8 countries  E_full   9.500 m_o2 1.000 m(delta) 0.795 recovery 0.260 m(probe) 0.234 m(d_nm) 0.010 auc_p 1.000 auc_nm 1.000
+L8 drinks     E_full   4.223 m_o2 1.000 m(delta) 0.860 recovery 0.440 m(probe) 0.268 m(d_nm) 0.003 auc_p 0.950 auc_nm 0.975
+L8 body       E_full   5.716 m_o2 1.000 m(delta) 0.725 recovery 0.173 m(probe) 0.333 m(d_nm) 0.095 auc_p 1.000 auc_nm 1.000
+
+n=144 points, 12 groups
+O1 mean E_full 4.341 | O2 median|m(delta)-1| 0.0000 | O3 auc_probe 0.986 auc_rand 0.695
+R2_read 0.100 | R2_auc 0.052 | R2_both 0.120 | dR2_auc 0.020
+[secondary] R2_bilinear (d.Delta)(d.r) = 0.629
+RECOVERY median E(r)/E_full = 0.170 (per-group: [0.05, 0.04, 0.17, 0.02, 0.1, 0.04, 0.21, 0.26, 0.3, 0.26, 0.44, 0.17])
+d_nm qualifies decodable-non-mediating: 12/12
+pearson(cos2,m) 0.316 (p=0.00011) | pearson(auc,m) 0.228 (p=0.006)
+
+VERDICT REFUTED
