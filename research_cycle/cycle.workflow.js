@@ -24,7 +24,9 @@ const RESERVE = 0.12  // stop with ~12% of the slice unspent, for the report its
 // 2026-07-03 shakedown caught: the cap silently didn't apply and the loop ran
 // free for 5 rounds / 51 agents). Gate on spent() so the cap is always enforced.
 const CAP = A.capTokens || null
-const underBudget = () => !CAP || budget.spent() < CAP * (1 - RESERVE)
+const spent0 = budget.spent()  // baseline: budget.spent() is the WHOLE-TURN shared pool, not per-workflow. Meter THIS campaign from its own start (2026-07-03: a 500k cap was already blown by the evening's prior work → loop ran 0 rounds)
+const campaignSpent = () => budget.spent() - spent0
+const underBudget = () => !CAP || campaignSpent() < CAP * (1 - RESERVE)
 
 // ── structured-output schemas ───────────────────────────────────────────────
 const S_STRESS = { type: 'object', required: ['stress_points'], properties: { stress_points: { type: 'array', items: { type: 'object', required: ['where', 'why', 'testable'], properties: {
