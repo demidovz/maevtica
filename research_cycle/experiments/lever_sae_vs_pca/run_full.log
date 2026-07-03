@@ -1,0 +1,111 @@
+loading gpt2 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 27951.95it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+collecting activations ...
+Ntok=392 mean_norm=553.5 D=80.0 doses=[ 0. 20. 40. 80.]
+SAE live features=4440/24576  selected top-512
+evaluating SAE ...
+evaluating PCA ...
+evaluating RANDOM ...
+evaluating ORACLE ...
+=== REPORT ===
+{
+ "config": {
+  "L": 7,
+  "N": 512,
+  "TAU": 3.0,
+  "MIN_ORACLE": 3.0,
+  "D": 80.0,
+  "mean_norm": 553.4569702148438,
+  "sae_live": 4440
+ },
+ "behaviors": {
+  "dog": {
+   "oracle_best": 5.526,
+   "sae": {
+    "count": 1,
+    "best": 3.284,
+    "ci": [
+     2.908,
+     3.609
+    ]
+   },
+   "pca": {
+    "count": 1,
+    "best": 3.364,
+    "ci": [
+     2.996,
+     3.806
+    ]
+   },
+   "random": {
+    "count": 0,
+    "best": 1.905
+   },
+   "sae_within_pca_ci": true,
+   "pca_wins": true,
+   "strictly_more": false,
+   "strictly_stronger": false,
+   "refuted": false
+  },
+  "war": {
+   "oracle_best": 3.72,
+   "sae": {
+    "count": 3,
+    "best": 4.741,
+    "ci": [
+     3.561,
+     5.887
+    ]
+   },
+   "pca": {
+    "count": 0,
+    "best": 2.253,
+    "ci": [
+     1.556,
+     2.927
+    ]
+   },
+   "random": {
+    "count": 0,
+    "best": 2.174
+   },
+   "sae_within_pca_ci": false,
+   "pca_wins": false,
+   "strictly_more": false,
+   "strictly_stronger": true,
+   "refuted": true
+  },
+  "love": {
+   "oracle_best": 4.857,
+   "sae": {
+    "count": 2,
+    "best": 4.181,
+    "ci": [
+     3.487,
+     5.068
+    ]
+   },
+   "pca": {
+    "count": 0,
+    "best": 2.329,
+    "ci": [
+     1.808,
+     2.722
+    ]
+   },
+   "random": {
+    "count": 0,
+    "best": 2.459
+   },
+   "sae_within_pca_ci": false,
+   "pca_wins": false,
+   "strictly_more": false,
+   "strictly_stronger": true,
+   "refuted": true
+  }
+ },
+ "oracle_min": 3.72,
+ "verdict": "REFUTED"
+}

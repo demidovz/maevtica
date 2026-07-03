@@ -1,0 +1,7 @@
+d_sae 24576 d_in 768 sparsity key sparsity logfreq range -10.0 -0.9131642
+O1 lam_max 823.940 lam_min -1.32014e-07 rho_top 28.7043 rho_bot 0 ratio 28704346942866.63
+O1 rho_rand mean 6.9432 (expect ~sqrt(tr/d)= 6.9480)
+O2 self 1.0000 perm -0.0044
+dec_norm mean/std 1.0000455 3.0660463e-05
+PRIMARY spearman(salience,rho) -0.0232  pearson 0.0614  spearman(freq,rho) -0.0232
+VERDICT SUPPORTED
