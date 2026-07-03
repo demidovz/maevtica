@@ -35,8 +35,10 @@ const S_CANDS = { type: 'object', required: ['candidates'], properties: { candid
 const S_ADV = { type: 'object', required: ['survives', 'counterexample', 'is_rename'], properties: {
   survives: { type: 'boolean' }, counterexample: { type: 'string', description: 'concrete case that breaks it, or "none found"' },
   is_rename: { type: 'boolean', description: 'true if it is just existing concept X under a new name' }, reason: { type: 'string' } } }
-const S_HIST = { type: 'object', required: ['is_rediscovery', 'prior_art'], properties: {
-  is_rediscovery: { type: 'boolean' }, prior_art: { type: 'array', items: { type: 'string' }, description: 'named prior concepts/fields covering this' }, novelty: { type: 'string' } } }
+const S_HIST = { type: 'object', required: ['is_rediscovery', 'prior_art', 'separable_prediction'], properties: {
+  is_rediscovery: { type: 'boolean' }, prior_art: { type: 'array', items: { type: 'string' }, description: 'named prior concepts/fields covering this' },
+  separable_prediction: { type: 'boolean', description: 'does THIS concept predict something that DIVERGES from the prior art, such that a concrete experiment could tell them apart? true even if is_rediscovery=true when the sharpened version has a testable difference' },
+  novelty: { type: 'string' } } }
 const S_TEST = { type: 'object', required: ['status', 'verdict'], properties: {
   status: { type: 'string', enum: ['ran', 'designed_not_run', 'not_computable'] },
   verdict: { type: 'string', enum: ['supported', 'refuted', 'inconclusive', 'n/a'] },
@@ -51,7 +53,7 @@ const P = {
   explorer: (seen) => `You are the EXPLORER for domain: "${DOMAIN}". Find REPRESENTATION STRESS — places where the field's current concepts strain: exceptions pile up, predictions fail, one word is overloaded with many meanings, or practitioners keep patching. Prefer stress points where a new concept could make a prediction checkable by a real experiment. Do NOT repeat already-scanned points: ${JSON.stringify(seen).slice(0, 1500)}. Return the schema.`,
   generator: (stress, killed) => `You are the GENERATOR for "${DOMAIN}". Given this stress point: ${JSON.stringify(stress)}. Propose 2-4 candidate NEW representations that would relieve it. Each MUST have (a) an OPERATIONAL definition (measurable, not poetry), (b) a concrete FALSIFIABLE prediction (ideally computable), (c) the nearest existing concept it might just be renaming. Avoid ideas already killed: ${JSON.stringify(killed).slice(0, 1200)}. Facts are cheap, representations are expensive — only propose what earns its keep.`,
   adversary: (c) => `You are the ADVERSARY. Try HARD to KILL this concept, do not be charitable: "${c.name}" — ${c.definition}. Prediction: ${c.prediction}. Find a concrete counterexample. Decide: is it just "${c.reduces_to}" renamed? Default to survives=false if you cannot find a real, non-trivial, hard-to-replace distinction. A concept survives only if it compresses multiple phenomena AND makes a distinctive prediction AND has clear failure boundaries.`,
-  historian: (c) => `You are the HISTORIAN. Has science already got "${c.name}" (${c.definition}) under another name? Search prior art across relevant fields (information theory, RL, statistics, the domain's own literature, adjacent disciplines). Benchmark-008 lesson: most "new" ideas are rediscoveries — bias toward is_rediscovery=true unless the novelty is specific and defensible.`,
+  historian: (c) => `You are the HISTORIAN. Has science already got "${c.name}" (${c.definition}) under another name? Search prior art across relevant fields (information theory, RL, statistics, the domain's own literature, adjacent disciplines). Benchmark-008 lesson: most "new" ideas are rediscoveries — bias toward is_rediscovery=true unless the novelty is specific and defensible. SEPARATELY judge separable_prediction: does this concept's prediction ("${c.prediction}") DIVERGE from what the named prior art predicts, enough that a concrete experiment could tell them apart? Set it true even when is_rediscovery=true — a sharpened/extended version with a testable difference earns a real test rather than an armchair kill (this is how Causal Role Carrier earned its place: "just steering vectors" by name, but its prediction beat the geometry baseline on data).`,
   tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03).'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
   control: () => `You are the CONTROL. Calibrate the judges: take 2 concepts KNOWN to be real (e.g. entropy, gene) and 2 obvious DISTRACTORS (vague/renamed) for "${DOMAIN}", run them through the same adversary+historian bar this campaign uses, and report whether the known-good passed and the distractors were killed. If the judges can't tell them apart, the campaign's verdicts are untrustworthy.`,
   report: (journal) => `You are the REPORTER. Write a BEAUTIFUL, HONEST report for a non-technical boss from this campaign journal: ${JSON.stringify(journal).slice(0, 12000)}. Structure: (1) where we shone the flashlight and why; (2) the interesting thoughts we found; (3) what we tried to build and REFUTED, and how (this is the valuable part — most pans are empty, say so plainly); (4) the survivors, with honest caveats ("survived our tests" ≠ "proven"); (5) what a next campaign should chase. No jargon-dumping; put technical detail under a "детали по запросу" tail. Register: the reader is a boss, not a co-developer.`,
@@ -82,10 +84,16 @@ while (round < MAX_ROUNDS && underBudget()) {
     ]).then(([adv, hist]) => ({ c, adv, hist }))
   ))).filter(Boolean)
 
+  // Gate (2026-07-03 fix): don't let the armchair adversary pre-kill ideas that
+  // have a distinctive TESTABLE prediction — route those to the teeth and let
+  // data decide (CRC would have been wrongly killed as "just steering" here).
+  // Kill in-chair ONLY genuine relabels: rename/rediscovery AND no separable prediction.
   const survivors = [], killed = []
   for (const j of judged) {
-    const ok = j.adv && j.adv.survives && !j.adv.is_rename && j.hist && !j.hist.is_rediscovery
-    if (ok) survivors.push(j); else killed.push({ name: j.c.name, why: (j.adv && j.adv.counterexample) || (j.hist && j.hist.prior_art) })
+    const clearlyNovel = j.adv && j.adv.survives && !j.adv.is_rename && j.hist && !j.hist.is_rediscovery
+    const separable = j.hist && j.hist.separable_prediction === true
+    if (clearlyNovel || separable) survivors.push({ ...j, route: clearlyNovel ? 'novel' : 'separable-prediction' })
+    else killed.push({ name: j.c.name, why: (j.adv && j.adv.counterexample) || (j.hist && j.hist.prior_art) })
   }
   journal.killed.push(...killed.map(k => k.name))
 
