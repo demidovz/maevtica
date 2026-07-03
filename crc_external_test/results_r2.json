@@ -1,0 +1,70 @@
+{
+  "round": 2,
+  "models": [
+    "pythia-160m",
+    "pythia-410m"
+  ],
+  "K": 12,
+  "categories": [
+    "animals",
+    "fruits",
+    "vegetables",
+    "colors",
+    "metals",
+    "numbers",
+    "countries",
+    "cities",
+    "body",
+    "clothing",
+    "furniture",
+    "weather"
+  ],
+  "chance": 0.08333333333333333,
+  "steer_layers": {
+    "A": 6,
+    "B": 12
+  },
+  "match_accuracy": {
+    "crc_decoupled_mean": 1.0,
+    "crc_decoupled_std": 0.0,
+    "crc_decoupled_point": 1.0,
+    "crc_categorytokens_point": 0.9166666666666666,
+    "geometry_strong": 0.75
+  },
+  "transfer_effect_logit": {
+    "crc_decoupled": 6.825153390566508,
+    "geometry": 5.862164010604222,
+    "oracle": 6.825153390566508
+  },
+  "crc_decoupled_minus_geometry": 0.25,
+  "verdict_on_decoupled_metric": "SUPPORTED",
+  "crc_decoupled_predictions": [
+    "animals",
+    "fruits",
+    "vegetables",
+    "colors",
+    "metals",
+    "numbers",
+    "countries",
+    "cities",
+    "body",
+    "clothing",
+    "furniture",
+    "weather"
+  ],
+  "geometry_predictions": [
+    "animals",
+    "animals",
+    "vegetables",
+    "colors",
+    "metals",
+    "numbers",
+    "countries",
+    "countries",
+    "body",
+    "animals",
+    "furniture",
+    "weather"
+  ],
+  "seconds": 168.0
+}
