@@ -1,0 +1,26 @@
+{
+ "model": "pythia-160m",
+ "n_prompts": 24,
+ "n_heads": 132,
+ "clean_mean_logprob": -4.266732692718506,
+ "oracle_closure_median": 2.2351741790771484e-06,
+ "oracle_closure_p99": 7.685031741857523e-06,
+ "oracle_frozen_clean": 1.9073486328125e-06,
+ "oracle_max_abs_TE": 0.22543781995773315,
+ "n_strong_repair_heads": 9,
+ "oracle_ok": true,
+ "phenomenon": false,
+ "R2_primary": 0.20369145157066582,
+ "pearson_r": -0.4513218935202079,
+ "slope": -0.062084153747225056,
+ "R2_abs_secondary": 0.2602184932101598,
+ "zero_rownorm_clause_frac": 0.8461538461538461,
+ "ln_share_of_repair": 1.162236755925922,
+ "repair_stats": {
+  "mean": -0.00957906733319852,
+  "std": 0.03919570706298766,
+  "min": -0.19056451173188785,
+  "max": 0.1284410020452924
+ },
+ "verdict": "NO_PHENOMENON->inconclusive"
+}

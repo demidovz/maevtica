@@ -1,0 +1,35 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 6633.51it/s]
+Loaded pretrained model pythia-160m into HookedTransformer
+clean done 0.6s  mean logprob -4.267  frozen-check 1.91e-06
+[1/132] L0H0 TE=+0.0399 DE=+0.0229 rep=-0.0170 rown=1.2545 dln=-0.0138 closure_max=6.68e-06  1s
+[25/132] L2H0 TE=+0.0272 DE=+0.0126 rep=-0.0146 rown=0.5364 dln=+0.0136 closure_max=5.56e-06  23s
+[49/132] L4H0 TE=+0.0658 DE=+0.0104 rep=-0.0554 rown=0.4752 dln=-0.0534 closure_max=7.05e-06  44s
+[73/132] L6H0 TE=-0.0055 DE=-0.0067 rep=-0.0012 rown=0.3414 dln=+0.0057 closure_max=5.08e-06  74s
+[97/132] L8H0 TE=+0.0133 DE=+0.0199 rep=+0.0066 rown=0.2500 dln=-0.1487 closure_max=6.20e-06  104s
+[121/132] L10H0 TE=+0.0040 DE=+0.0025 rep=-0.0015 rown=0.0108 dln=+0.0016 closure_max=7.63e-06  134s
+{
+ "model": "pythia-160m",
+ "n_prompts": 24,
+ "n_heads": 132,
+ "clean_mean_logprob": -4.266732692718506,
+ "oracle_closure_median": 2.2351741790771484e-06,
+ "oracle_closure_p99": 7.685031741857523e-06,
+ "oracle_frozen_clean": 1.9073486328125e-06,
+ "oracle_max_abs_TE": 0.22543781995773315,
+ "n_strong_repair_heads": 9,
+ "oracle_ok": true,
+ "phenomenon": false,
+ "R2_primary": 0.20369145157066582,
+ "pearson_r": -0.4513218935202079,
+ "slope": -0.062084153747225056,
+ "R2_abs_secondary": 0.2602184932101598,
+ "zero_rownorm_clause_frac": 0.8461538461538461,
+ "ln_share_of_repair": 1.162236755925922,
+ "repair_stats": {
+  "mean": -0.00957906733319852,
+  "std": 0.03919570706298766,
+  "min": -0.19056451173188785,
+  "max": 0.1284410020452924
+ },
+ "verdict": "NO_PHENOMENON->inconclusive"
+}
