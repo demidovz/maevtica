@@ -16,8 +16,8 @@ def log(*a): print(f"[{time.time()-T0:7.1f}s]", *a, flush=True)
 PAIRS = [("John","Mary"),("Tom","Sarah"),("James","Anna"),("Paul","Kate"),
          ("Mark","Alice"),("Dan","Emma"),("Peter","Rose"),("Jack","Mary")]
 
-S1 = [(9,6),(9,9),(9,0),(9,7)]
-S2 = [(10,0),(10,10),(10,6),(10,2),(10,1),(11,2)]
+S1 = [(9,9),(9,0),(10,2),(10,1)]        # AMENDMENT 1
+S2 = [(9,6),(10,0),(10,10),(10,6),(11,2),(9,7)]
 LAYERS = sorted({l for l,_ in S1+S2})
 EDIT_HOOK = "blocks.11.hook_resid_post"
 K = 8

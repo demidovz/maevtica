@@ -1,0 +1,21 @@
+{
+  "clean_acc": 1.0,
+  "swap_clean_acc": 1.0,
+  "noop_floor": 0.0,
+  "oracle_full_resid": 1.0,
+  "S1_full": 1.0,
+  "S2_full": 0.375,
+  "own_S1sub_on_S1": 1.0,
+  "own_S2sub_on_S2": 0.375,
+  "cross_S2sub_on_S1": 0.75,
+  "cross_S1sub_on_S2": 0.0625,
+  "mis_on_S1": 0.0,
+  "mis_on_S2": 0.0,
+  "rnd_on_S1": 0.0,
+  "rnd_on_S2": 0.0,
+  "subspace_overlap_S1S2": 0.5261337757110596,
+  "subspace_overlap_S1mis": 0.1859091967344284,
+  "verdict": "INCONCLUSIVE_regime_not_reproduced",
+  "prereg_commit": "1c22b59",
+  "wall_s": 57.0
+}

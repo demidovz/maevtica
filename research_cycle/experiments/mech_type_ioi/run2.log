@@ -1,0 +1,20 @@
+[    0.0s] loading gpt2
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 21869.19it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded pretrained model gpt2 into HookedTransformer
+[   10.1s] clean_acc=1.000 swap_clean_acc=1.000 noop_floor=0.000
+[   55.4s] clean_acc              1.000
+[   55.4s] swap_clean_acc         1.000
+[   55.4s] noop_floor             0.000
+[   55.4s] oracle_full_resid      1.000
+[   55.4s] S1_full                1.000
+[   55.4s] S2_full                1.000
+[   55.4s] own_S1sub_on_S1        1.000
+[   55.4s] own_S2sub_on_S2        0.875
+[   55.4s] cross_S2sub_on_S1      0.062
+[   55.4s] cross_S1sub_on_S2      0.000
+[   55.4s] mis_on_S1              0.000
+[   55.4s] mis_on_S2              0.000
+[   55.4s] rnd_on_S1              0.000
+[   55.4s] rnd_on_S2              0.000
+[   55.4s] VERDICT: REFUTED
