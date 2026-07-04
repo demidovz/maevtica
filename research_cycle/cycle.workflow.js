@@ -35,6 +35,7 @@ const underBudget = () => !CAP || campaignSpent() < CAP * (1 - RESERVE)
 // were simply dropped and the flashlight always wandered to fresh ground.
 const BACKLOG = Array.isArray(A.backlog) ? A.backlog.slice() : []
 const CAMPAIGN = A.campaign || null
+const RUNTAG = A.runTag ? String(A.runTag).replace(/[^a-z0-9_-]/gi, '') + '-' : ''  // prefix round files so successive runs don't clobber each other (run 2 overwrote run 1's round1.json on 2026-07-04)
 const REPO = '/home/friemann/workspace/repos-demidovz/maevtica/research_cycle'
 let persistedSpent = 0
 async function archive(round, payload) {
@@ -43,7 +44,7 @@ async function archive(round, payload) {
   if (!CAMPAIGN) return
   const delta = Math.max(0, campaignSpent() - persistedSpent)
   persistedSpent = campaignSpent()
-  await agent(`You are the ARCHIVIST — a mechanical persistence step, no analysis, no commentary. Do exactly this: (1) Bash: mkdir -p ${REPO}/campaigns/${CAMPAIGN} ; (2) use the Write tool to write the following JSON verbatim to ${REPO}/campaigns/${CAMPAIGN}/round${round}.json : ${JSON.stringify(payload).slice(0, 30000)} ; (3) Bash: python3 ${REPO}/treasurer.py spend ${CAMPAIGN} --tokens ${delta} --stage round${round} ; (4) reply with the single word ok.`,
+  await agent(`You are the ARCHIVIST — a mechanical persistence step, no analysis, no commentary. Do exactly this: (1) Bash: mkdir -p ${REPO}/campaigns/${CAMPAIGN} ; (2) use the Write tool to write the following JSON verbatim to ${REPO}/campaigns/${CAMPAIGN}/${RUNTAG}round${round}.json : ${JSON.stringify(payload).slice(0, 30000)} ; (3) Bash: python3 ${REPO}/treasurer.py spend ${CAMPAIGN} --tokens ${delta} --stage ${RUNTAG}round${round} ; (4) reply with the single word ok.`,
     { label: `archive#${round}`, phase: 'Archive', effort: 'low' })
 }
 
