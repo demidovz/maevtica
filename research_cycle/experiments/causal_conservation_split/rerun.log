@@ -1,0 +1,17 @@
+data torch.Size([19968, 768]) scale=7.01
+parent W=128 L0=12.1 FVE=0.941 | daughters 2W=256 L0=18.1 FVE=0.949 t=13.4s
+#split parents (>=2 daughters) = 89; daughter-count hist: [0, 38, 55, 28, 6]
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 10284.24it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+mean_resid_norm=90.33 alpha=45.16 steer_norm=45.16
+probes P=12 L=6 vocab=50257
+signatures: 89 parents + 218 daughters in 264.1s
+ORACLE(a) median parent-steer KL=0.2420 nats | random-dir KL=0.1209
+ORACLE(b) median split-half signature cosine=0.823
+
+#splits=89 median cos_true=0.828 median cos_rand=0.176 Delta=0.652
+[premise] median reconstruction-share CV across daughters=0.18 (high => shares vary wildly)
+[geom ctrl] median cos(sum d_daughters, d_parent)=0.742
+
+VERDICT (frozen rule): SUPPORTED
+saved result.json
