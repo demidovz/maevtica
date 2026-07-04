@@ -1,2 +1,13 @@
 /home/friemann/workspace/repos-demidovz/maevtica/research_cycle/experiments/shape_forecast/shape_forecast.py:102: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
   self.blocks = nn.TransformerEncoder(blk, nl)
+/home/friemann/workspace/repos-demidovz/maevtica/research_cycle/experiments/shape_forecast/shape_forecast.py:102: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.blocks = nn.TransformerEncoder(blk, nl)
+clock12  CE=0.9918 truth=0.9877 dCE=+0.0040 learned=True pred=(1, 1) got=(1, 1) H1r=0.600 match=True
+clock8   CE=0.9958 truth=0.9858 dCE=+0.0100 learned=True pred=(1, 1) got=(1, 1) H1r=0.507 match=True
+flag     CE=0.5712 truth=0.5712 dCE=+0.0000 learned=True pred=(2, 0) got=(2, 0) H1r=0.000 match=True
+counter  CE=0.4886 truth=0.4869 dCE=+0.0017 learned=True pred=(1, 0) got=(1, 0) H1r=0.000 match=True
+twoflag  CE=1.2763 truth=1.2746 dCE=+0.0017 learned=True pred=(4, 0) got=(4, 0) H1r=0.000 match=True
+
+learned k=5, matches m=5, binomial p (null 1/4) = 0.00098
+falsifier (circle process, matched loss, no loop): False
+VERDICT: SUPPORTED
