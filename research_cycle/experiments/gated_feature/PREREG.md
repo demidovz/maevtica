@@ -64,6 +64,17 @@ distribution at the last position (nats).
   INCONCLUSIVE_OVERFIT instead of SUPPORTED. (REFUTED is immune: shuffle
   only guards fake positives.)
 
+## AMENDMENT 1 (2026-07-04, after run 1 tripped the oracle — measurement fix ONLY)
+Run 1 (exp.py, result.json.run1): oracle_topq_median = 0.0016 < 0.005 =>
+BROKEN_MEASUREMENT. Cause: KL was read only at the LAST position while
+latents mostly fire mid-prompt; the effect attenuates before the final
+token, so even strong latents barely register. Fix (exp2.py):
+effect[i,p] = MAX over non-BOS positions t >= first firing position of i
+of KL(clean || ablated) of the next-token distribution at position t.
+Noise floor likewise max over positions. NOTHING ELSE CHANGES: decision
+rule (25% / 5%), gate family, precision 0.7, 3x LayerMedian, splits,
+seeds, oracle thresholds all stay as preregistered above.
+
 ## Regime / honesty limits
 gpt2 only, layer 7 only, one corpus of 120 short prompts, one ablation type
 (decoder-row subtraction), prompt-level contexts. "Survived" != proven.

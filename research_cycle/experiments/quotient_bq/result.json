@@ -1,0 +1,45 @@
+{
+  "model": "gpt2-small",
+  "layer": 6,
+  "alpha": 45.61921691894531,
+  "n_sample": 256,
+  "noise_floor": 0.0,
+  "mean_effect_norm": {
+    "32k": 192.18048095703125,
+    "128k": 195.45370483398438
+  },
+  "oracle": {
+    "o1_splithalf_median": 0.8282032608985901,
+    "o2_mode": "rescale_1.1alpha",
+    "o2_median": 0.9986027181148529,
+    "o2_n": 20,
+    "broken": false
+  },
+  "clause_i": {
+    "k90_32k": 96,
+    "k90_128k": 93,
+    "ratio": 1.032258064516129,
+    "rel_diff": 0.03225806451612903,
+    "decoder_k90_32k": 148,
+    "decoder_k90_128k": 143,
+    "sample_limited": false,
+    "verdict": "supported"
+  },
+  "clause_ii": {
+    "n_pairs": 0,
+    "dominance_thr": 0.4,
+    "K": 96,
+    "median_signed_cos": null,
+    "null_median": 0.12917418777942657,
+    "n_dominant": 0,
+    "verdict": "inconclusive_no_pairs"
+  },
+  "exploratory_not_decisive": {
+    "n_pairs": 500,
+    "spearman_qsim_vs_effectcos": 0.522709423197902,
+    "n_qsim_gt_08": 3,
+    "median_effectcos_when_qsim_gt_08": 0.32445409893989563,
+    "median_effectcos_all": 0.06261497735977173
+  },
+  "verdict": "INCONCLUSIVE"
+}

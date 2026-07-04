@@ -83,7 +83,7 @@ const P = {
 }
 
 // ── the loop ────────────────────────────────────────────────────────────────
-const journal = { domain: DOMAIN, seenStress: [], rounds: [], survivors: [], killed: [], controls: [] }
+const journal = { domain: DOMAIN, seenStress: Array.isArray(A.seenStress) ? A.seenStress.slice() : [], rounds: [], survivors: [], killed: [], controls: [] }  // seed with stress points already mined by earlier runs — night run 1 re-discovered the same 'feature' stress because this was empty
 let round = 0
 log(`flashlight → "${DOMAIN}" · cap≈${(CAP || 0).toLocaleString()} out-tok · rounds≤${MAX_ROUNDS} · test≤${MAX_TEST}/round · dry=${DRY} (args ${typeof args})`)
 

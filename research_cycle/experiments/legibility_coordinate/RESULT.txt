@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 5008.53it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+corpus: 1399 texts, stat (64, 128) causal (8, 128)
+alive atoms: 3043 / 24576
+O1 synthetic-legible λ = 1.000 (need >0.9) | noise λ = -0.008 (need <0.15)
+O2 std(λ) = 0.198 (need >0.03) | λ range [-0.008, 0.999]
+O3 rho_top 28.704 rho_bot 0 ratio 28704346942866.63 rho_rand 6.940 (expect 6.948)
+  causal 0/200 elapsed 52s
+  causal 25/200 elapsed 215s

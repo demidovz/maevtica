@@ -1,0 +1,23 @@
+{
+ "config": {
+  "L": 7,
+  "M": 134,
+  "P": 120,
+  "min_fire": 25,
+  "HIGH_MULT": 3.0,
+  "PREC": 0.7,
+  "MAX_LIT": 5
+ },
+ "layer_median": 0.000304,
+ "q20": 9.8e-05,
+ "oracle_max": 0.03058,
+ "oracle_topq_median": 0.00159,
+ "noise_floor": 0.0,
+ "n_dead": 27,
+ "rescued": 0,
+ "rescue_rate": 0.0,
+ "shuffle_rescued": 0,
+ "shuffle_rate": 0.0,
+ "verdict": "BROKEN_MEASUREMENT",
+ "gate_details": []
+}
