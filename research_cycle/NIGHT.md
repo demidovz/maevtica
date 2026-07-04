@@ -47,21 +47,30 @@
 {
   "domain": "mechanistic interpretability",
   "campaign": "night-2026-07-04",
-  "maxRounds": 4,
+  "runTag": "run3",
+  "maxRounds": 2,
   "maxTest": 2,
   "controlEvery": 2,
-  "capTokens": 2500000,
+  "capTokens": 1500000,
   "backlog": [
     {
-      "name": "Gated Feature (direction x context contract)",
-      "definition": "A feature is a pair (v, g): direction v plus a sparse gate g — a predicate of <= 5 literals over co-occurring SAE-latent activity ('latent j active / inactive') — such that the mediation effect of patching along v conditional on g(x)=1 exceeds threshold theta, with g fit by decision tree / lasso on conditional-patching outcomes and validated on held-out inputs (precision >= 0.7). The four senses of 'feature' are predicted to coincide inside the gate and dissociate outside it; an ungated direction is not a feature, it is a marginal average over contexts.",
-      "prediction": "For >= 25% of SAE latents whose unconditional mediation effect falls in the bottom quintile of their layer, there exists a learnable gate (<= 5 literals, held-out precision >= 0.7) under which their mediation effect exceeds the layer median by >= 3x — i.e., most 'causally dead but interpretable' latents are context-marginalization artifacts. Directly computable with conditional activation patching. Falsified if conditional patching rescues < 5% of dead latents.",
-      "reduces_to": "Circuits / feature-interaction analysis (input-conditional feature effects in attribution graphs) — possibly just renaming 'a feature only matters inside its circuit' with a fitting procedure attached."
+      "name": "Causal Quotient Feature (intervention-equivalence class)",
+      "definition": "Fix layer L and a behavior metric m (e.g. logit-diff on an eval set). Declare two perturbations equivalent, d1 ~ d2, iff max over eval contexts |m(h+d1) - m(h+d2)| <= epsilon. The representation of a concept is the equivalence class of the minimal-norm perturbation achieving a target behavioral shift, reported as (effective causal rank k = number of non-negligible singular values of the local perturbation-to-effect Jacobian, canonical representative = its top singular vector). 'Which direction IS the representation' becomes a category error: probe/steer/SAE vectors are different coset representatives of one quotient class.",
+      "prediction": "Computable: for concepts where probe direction, difference-of-means steering vector, and matched SAE decoder row have pairwise cosine < 0.6 (the field's current embarrassment), >= 90% of the squared norm of their pairwise DIFFERENCE vectors lies in the causal null space (bottom singular subspace of the perturbation-effect Jacobian), and projecting all three onto the top-k causal subspace raises pairwise cosines to >= 0.9. FALSIFIED if the difference vectors carry substantial causal effect (i.e., the three objects genuinely do different things rather than being null-space-shifted copies).",
+      "reduces_to": "Causal abstraction / DAS (Geiger et al.) and activation patching — risk it is causal mediation analysis wearing a quotient-space costume."
+    },
+    {
+      "name": "Process-Pullback Geometry (shape law: the data process decides, not the model)",
+      "definition": "The representation of a concept is the affine pullback into activation space of the belief-state coordinates of the minimal generative model (epsilon-machine / mixed-state presentation) of the relevant sublanguage of the training distribution: fit an affine map from activations to belief-simplex coordinates; the concept's geometry (line, circle, fractal, simplex face) is DEFINED as the image of the belief set under the inverse map. This converts the LRH from an hypothesis about models into a computable function of the data: linear features are exactly the concepts whose minimal process has a 1-simplex belief set.",
+      "prediction": "Pre-registered shape forecasting: pick >= 5 structured domains where the mixed-state geometry is computable before touching the network (e.g. base-12 clock arithmetic -> circle; a 3-state Mess3-style HMM -> fractal; a binary flag process -> line). Predict, in advance, the intrinsic dimension and topology (Betti numbers via persistent homology) of the activation manifold a transformer trained on that domain will exhibit for the concept. Match rate must beat chance with p < 0.01. FALSIFIED by a single clean case of a model reaching the same next-token loss while representing a provably-circular process on a line (or vice versa) — that would show model-internal factors, not data geometry, set the shape.",
+      "reduces_to": "Shai et al. belief-state fractal geometry itself — the only delta is promoting it from post-hoc explanation of one experiment to a forward-predictive definition of 'the representation'; if that promotion fails, it renamed nothing."
     }
   ],
   "seenStress": [
     "The word 'feature' itself: used simultaneously for (a) a direction in activation space, (b) an SAE dictionary latent, (c) a human-interpretable concept, (d) a causal mediator of behavior",
-    "The word \"feature\" (Anthropic circuits program, SAE literature)"
+    "The word \"feature\" (Anthropic circuits program, SAE literature)",
+    "Ablation/activation-patching as the field's causal ground truth — Hydra Effect (arXiv:2307.15771), Explorations of Self-Repair (arXiv:2402.15390)",
+    "The Linear Representation Hypothesis / 'one concept = one direction' (Park et al. LRH; Arditi et al. 2024 'Refusal is mediated by a single direction'; Engels et al. 2024 'Not All Language Model Features Are Linear'; Wollschläger et al. 2025 'The Geometry of Refusal'; Shai et al. belief-state fractal geometry)"
   ]
 }
 ```
