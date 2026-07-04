@@ -1,0 +1,20 @@
+{
+  "domain": "self-improvement via reflection routing in language models",
+  "campaign": "reflect-route",
+  "runTag": "rr1",
+  "maxRounds": 2,
+  "maxTest": 2,
+  "controlEvery": 2,
+  "capTokens": 1600000,
+  "backlog": [
+    {
+      "name": "Interp-guided reflection routing (do internal states locate errors better than output confidence, at fixed reflection budget?)",
+      "definition": "A reflection loop re-computes/re-decodes a model's answer on SOME steps under a fixed budget B (re-do at most B of N steps). Question: does choosing WHICH steps to reflect on using an INTERNAL-activation signal beat choosing by the model's own OUTPUT confidence? Operationalize on a small open model (gpt2 / pythia-160m) on a task with checkable answers (e.g. 2-3 digit addition, or a multi-step templated reasoning task) where the base model errs on a measurable fraction. Signals to rank steps by likely-wrongness: (INTERNAL) a linear probe trained on residual activations to predict step-correctness; (OUTPUT) token logit-margin / entropy. Reflection action = re-decode that step with a fixed corrective procedure (self-consistency vote or re-prompt). Budget B fixed equal for all arms.",
+      "prediction": "At fixed budget B (e.g. reflect on 20% of steps), INTERNAL-probe routing yields higher final accuracy than OUTPUT-confidence routing by a preregistered margin (>= 3 points, bootstrap CI excludes 0), and both beat RANDOM routing. Ordering predicted: oracle (reflect exactly the wrong steps) > internal-probe > output-confidence > random > no-reflection. FALSIFIED if internal-probe routing is within noise of output-confidence routing (internal states carry no extra where-to-look signal beyond the output) OR if no routing beats random (reflection itself is useless here).",
+      "reduces_to": "Probing for truthfulness/errors from hidden states (Azaria & Mitchell 2023; Burns et al. CCS 2022) + inference-time reflection (Reflexion/self-refine). Risk: 'hidden states know errors' restated. Earns keep ONLY by showing internal-signal BUDGET ROUTING beats output-confidence routing at equal compute — a self-improvement efficiency claim neither prior line makes."
+    }
+  ],
+  "seenStress": [
+    "Reflection loops improve LM outputs but spend compute uniformly; whether the model's own INTERNAL states can route a fixed reflection budget to the right steps better than its output confidence is open and directly testable."
+  ]
+}
