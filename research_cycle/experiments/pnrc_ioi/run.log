@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 19634.27it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+layer 0 done 102.7s
+layer 1 done 221.2s
+layer 2 done 330.2s
+layer 3 done 427.7s
+layer 4 done 539.7s
+layer 5 done 643.1s
+layer 6 done 760.4s
+layer 7 done 880.8s
+layer 8 done 994.1s
+layer 9 done 1095.1s
+layer 10 done 1204.8s
+layer 11 done 1310.9s
+ORACLE clean_ld=3.889 acc=1.00 mech_norm=0.00e+00 nm_max_full_effect=1.338 ok=True
+effect heads: 117 | collapse frac: 0.803 | median R2: 0.9983147525456094
+sign-flip: ['10.1', '9.3']
+non-collapse: ['0.5', '10.0', '10.1', '10.10', '10.2', '10.6', '10.7', '10.9', '11.1', '11.10', '11.11', '11.2', '11.3', '11.6', '3.5', '3.6', '4.3', '4.4', '7.3', '8.10', '8.5', '9.7', '9.9']
+jaccard(F,NC): 0.042 | median matched-eps gap: 0.10166534036397934
+VERDICT p1: SUPPORTED | p2: REFUTED | overall: REFUTED
+wrote /home/friemann/workspace/repos-demidovz/maevtica/research_cycle/experiments/pnrc_ioi/result.json

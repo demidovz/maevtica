@@ -1,0 +1,18 @@
+{
+  "model": "pythia-160m",
+  "n_heads_tested": 72,
+  "n_eligible": 37,
+  "oracle_ln_recon": 0.0018310546875,
+  "oracle_l11_identity": 0.0003662109375,
+  "oracle_max_DE": 17.28245633840561,
+  "pearson_Rhat_RF": 0.250485004737833,
+  "spearman_Rhat_RF": 0.12399241346609766,
+  "pearson_RLN_only": 0.1856295088642414,
+  "pearson_Rdown_only": 0.1920611352146714,
+  "falsification_clause_fired": false,
+  "agg_LN_share": 0.9900651655323004,
+  "pearson_RLN_vs_LNrepair": -0.11774745311532517,
+  "mean_SR_eligible": 2.5206298758555046,
+  "mean_RF": 1.1147272858596389,
+  "verdict": "BROKEN_MEASUREMENT"
+}
