@@ -1,0 +1,31 @@
+Category-slot detachability — gpt2, 2026-07-04
+See PREREG.md for frozen decision rule.
+
+SANITY / clean baselines:
+  apple category logitdiff (veg-fruit) mean=-1.11 (5/6 probes prefer 'fruit') -> model knows apple=fruit, so a flip is meaningful.
+  neutral entropy clean = 5.041
+  identity argmax correct on all 5 probes.
+
+ORACLE (positive control, add +veg-direction to REAL vegetables' category probe):
+  max oracle across grid = +5.06 logit; already +0.97..+2.74 at moderate alpha.
+  >> min_oracle 1.0  => MEASUREMENT WORKS (guards the .norm-bug class).
+
+RANDOM CONTROL @ L=8 alpha=6 (gaussian unit vec, SAME norm): FLIP=0.00, PRES=0.80, cohR=0.92
+  => noise of equal norm does NOT flip category. The flip is direction-specific.
+
+WINDOWS meeting FLIP>=0.7 & PRES>=0.7 & coherence within 20%:
+  L=8  alpha=6 : FLIP=0.83 PRES=0.80 cohR=0.99 oracle=+2.74
+  L=8  alpha=8 : FLIP=0.83 PRES=0.80 cohR=1.00
+  L=10 alpha=2 : FLIP=0.83 PRES=1.00 cohR=1.00 oracle=+2.30  <- cleanest (full identity preserved)
+  L=10 alpha=4 : FLIP=0.83 PRES=1.00 cohR=1.01
+  (FLIP ceiling 0.83 = 5/6, set by clean baseline: 1 probe already veg-leaning so cannot 'flip'.)
+  PRES is a LIVE metric: at L=10 alpha=8 PRES drops to 0.60 -> overdrive breaks identity.
+
+VERDICT: SUPPORTED (per prereg). A clean reclassification window exists: apple is
+pushed to 'vegetable' while red/round/sweet/juicy/tree identity rides along and
+general coherence is untouched (cohR~1.0). Oracle passes; random control fails to flip.
+
+HONEST LIMITS: one concept (apple), one model (gpt2), one intervention (last-token
+resid add), one operationalization. PRESERVE = argmax-within-5-candidates (lenient).
+Coherence = last-token entropy on neutral prompts (not full-generation coherence).
+"Survived the test" != "proven"; regime-limited.

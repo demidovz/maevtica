@@ -1,0 +1,46 @@
+Causal hierarchy containment — gpt2, 2026-07-04
+See PREREG.md for the frozen decision rule. ONE intervention: project the
+`fruit` direction (fruit-exemplars minus veg-exemplars, diff-in-means, decoupled
+from apple) OUT of resid_post at ALL positions of layer L. No magnitude knob.
+
+CLEAN baselines:
+  apple membership fruit-pref  M0 = 0.718  (>0.5 => model knows apple = fruit; a knockout is meaningful)
+  apple identity score         I0 = 0.658  (model's own answers: red / flat / sweet / hard / tree)
+  neutral entropy = 5.041
+  oracle clean logit(fruit) on known fruits (banana/orange/grape/peach) ~ 12.8..16.8
+
+Grid (L in {4,6,8,10}), read at frozen L* = argmax oracle:
+   L  oracle  M(abl)  I(abl)     md    idd    ret   cohR
+   4   +3.32   0.016   0.600  +0.98  +0.09   0.91   1.00   <- L* (strongest ablation)
+   6   +0.22   0.731   0.656  -0.02  +0.00   1.00   1.00
+   8   -0.24   0.904   0.660  -0.26  -0.00   1.00   1.01
+  10   +2.09   0.086   0.695  +0.88  -0.06   1.06   0.99   (replicates the pattern)
+
+ORACLE (positive control, decoupled target): at L*=4 the SAME ablation drops
+fruit-logit on KNOWN non-apple fruits by +3.32 logit (>> min_oracle 1.0).
+=> the measurement WORKS; the membership knockout is not a broken pipeline
+(guards the .norm-bug / zero-effect-ablation class).
+
+RANDOM-DIR CONTROL @ L=4 (5 gaussian unit dirs, same projection ablation):
+  membership_drop mean=+0.001, max=+0.035; identity_drop mean=+0.002.
+  => ablating a RANDOM rank-1 direction does NOT collapse membership. The
+  fruit-direction's +0.98 knockout is direction-specific, not generic damage.
+
+DECISION at L*=4: oracle +3.32 (pass); membership_drop +0.98 >= 3 x identity_drop
++0.09 (= 0.27); identity_retained 0.91 >= 0.6; coherence ratio 1.00 (general text
+untouched).
+
+VERDICT: SUPPORTED (per prereg). Ablating the parent `fruit` axis knocks apple's
+fruit-membership from 0.72 -> 0.02 (98% relative drop) while apple's identity
+(red/round/sweet/juicy/tree) rides along at 91% of clean and general coherence is
+untouched. Replicates at L=10. Causal evidence apple = fruit-component +
+largely-independent identity.
+
+HONEST LIMITS: one concept (apple), one model (gpt2), one intervention (rank-1
+projection ablation of a diff-in-means axis), one operationalization. Identity =
+candidate-normalised argmax-retention over 5 fixed sets (lenient; the model's
+clean answers include "flat"/"hard", not the ideal round/juicy — we test
+retention of the MODEL's own answers, not correctness). Coherence = neutral
+last-token entropy, not full-generation coherence. Effect is layer-dependent
+(vanishes at L6/8 where the axis is not linearly ablatable at resid_post).
+"Survived my best attempt to kill it" != "proven".
