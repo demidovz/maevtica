@@ -80,3 +80,16 @@ systematically fail cross-alignment.
 
 No downloads (gpt2 cached). ~15 batched CPU forwards on 16 short prompts.
 Target < 10 min wall clock.
+
+## AMENDMENT 1 (2026-07-04, before run 2; committed before run 2)
+
+Run 1 (prereg 1c22b59) hit INCONCLUSIVE_regime_not_reproduced: the
+layer-based split gave S2 (backup movers only) full-interchange 0.375 —
+backups barely carry the variable in the clean run, so the "equally
+faithful disjoint subgraphs" premise was not instantiated. Oracle was 1.0
+(measurement fine). Re-instantiate the premise with a balanced disjoint
+split chosen ONLY by full-interchange faithfulness (diagnostic on
+qualification metric, cross metric never looked at):
+  S1 = {9.9, 9.0, 10.2, 10.1}   (full interchange 1.0)
+  S2 = {9.6, 10.0, 10.10, 10.6, 11.2, 9.7}   (full interchange 1.0)
+All other design elements and ALL decision-rule thresholds unchanged.
