@@ -1,0 +1,37 @@
+[    0.0s] valid edges: 11611
+[    0.0s] loading gpt2 (model A)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights:   3%|▎         | 4/148 [00:00<00:03, 38.92it/s]Loading weights:  28%|██▊       | 41/148 [00:00<00:00, 179.00it/s]Loading weights:  94%|█████████▍| 139/148 [00:00<00:00, 489.81it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 414.99it/s]
+Loaded pretrained model gpt2 into HookedTransformer
+[   25.2s] A clean LD 3.889 acc 1.0
+[   33.4s] |CORE| 15 |UNIQUE| 118 union 449
+[   37.3s] oracle edge a9.9 -> logits drop 3.446
+[   95.6s] core drops done
+[  247.3s] uniq drops done
+[  247.3s] loading model B (alias-gpt2-small-x21)
+Loading weights:   0%|          | 0/149 [00:00<?, ?it/s]Loading weights:  23%|██▎       | 35/149 [00:00<00:00, 344.14it/s]Loading weights: 100%|██████████| 149/149 [00:00<00:00, 782.93it/s]
+Loaded pretrained model stanford-crfm/alias-gpt2-small-x21 into HookedTransformer
+[  274.7s] B clean LD 5.971 acc 1.0
+[  281.8s] {
+  "prereg_commit": "1e82498",
+  "clean_ld_A": 3.889012336730957,
+  "acc_A": 1.0,
+  "n_core": 15,
+  "n_unique": 118,
+  "n_union": 449,
+  "oracle_edge": "a9.9->logits",
+  "oracle_drop": 3.445517838001251,
+  "oracle_ok": true,
+  "mean_drop_core": 0.2857078274091085,
+  "mean_drop_unique": 0.005918329954147339,
+  "median_drop_core": 0.2251415252685547,
+  "median_drop_unique": 0.009706854820251465,
+  "n_core_tested": 15,
+  "n_unique_tested": 40,
+  "spearman_absEAP_vs_absdrop": 0.8502164502164503,
+  "sup_a": true,
+  "verdict": "SUPPORTED",
+  "wall_s": 281.8
+}
+[  281.8s] part_b: {"clean_ld": 5.97105073928833, "acc": 1.0, "computable": true, "rate_core": 0.5333333333333333, "max_spec_rate": 0.46, "RB_size": 430, "sup_b": true}
+[  281.8s] VERDICT: SUPPORTED
