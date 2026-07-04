@@ -53,23 +53,15 @@
   "capTokens": 2500000,
   "backlog": [
     {
-      "name": "Coding sparsity (native firing statistics of a property)",
-      "definition": "For a probed property P, take its best linear-probe direction d_P and compute the distribution of d_P·activation over a token corpus. Coding sparsity κ(P) = heavy-tailedness of that distribution (excess kurtosis, or Gini/L0 of thresholded activations, or 1 − firing-rate). High κ = P fires rarely with heavy tails (matches an SAE's L1/L0 sparsity prior); low κ = P is dense/near-Gaussian (mismatches the prior, so the SAE splits or absorbs it). Measurable from probes alone, before training the SAE.",
-      "prediction": "SAE-atom recovery of P — max cosine between any trained atom and d_P — increases monotonically with κ(P). Concrete computable split: properties below median κ get max-cosine <0.5 (SAE misses them, exactly the class that 'fails to beat probes' in arXiv:2502.16681); properties above median κ get max-cosine >0.8. Falsified if recovery is flat or non-monotone in κ.",
-      "reduces_to": "Superposition sparsity + feature splitting/absorption (Chanin et al. 2024). Risk: 'how sparse is the property's activation' renamed. Earns keep as an a-priori per-property scalar that predicts SAE recoverability instead of a post-hoc failure label."
-    },
-    {
-      "name": "Carrier rank (representational dimensionality of a property)",
-      "definition": "For property P, carrier rank ρ(P) = number of orthogonal probe directions needed to reach 95% of the maximum achievable probe accuracy, measured by iterative nullspace projection (INLP) or the participation ratio of between-class mean differences. ρ=1 means P genuinely lives on a single direction (the 'one direction' assumption of SAEs holds); ρ>1 means P is a subspace/polytope that no single atom can capture. Computed from probes, before the SAE.",
-      "prediction": "The count of SAE atoms significantly aligned with P (cosine>0.3) grows with ρ(P), while single-atom max-cosine recovery falls as ρ grows. Concrete: ρ=1 properties have exactly one dominant matching atom (cos>0.8); ρ≥3 properties have no atom above 0.5 and instead spread across ≥ρ atoms (measured feature-splitting count ≈ ρ). Falsified if split-count is independent of ρ, or if high-ρ properties are still captured by a single atom.",
-      "reduces_to": "Feature splitting and multi-dimensional/manifold features (Engels et al. 2024). Risk of renaming 'feature splitting'. Earns keep as an a-priori geometric scalar predicting how many atoms a property fragments into."
-    },
-    {
-      "name": "Legibility coordinate (auto-interp fidelity as its own axis)",
-      "definition": "Legibility λ(atom) = simulate-and-score fidelity of the atom's natural-language label: correlation (or F1) between activations predicted from the label and true activations (Bills/EleutherAI auto-interp protocol). The ~38% auto-interp failure rate = fraction with λ below threshold. The representational move: treat λ as a coordinate ORTHOGONAL to read-fraction and coding sparsity — it isolates human-nameability from the causal and sparsity senses of 'feature'.",
-      "prediction": "Across atoms, λ is near-independent of read-fraction R and of coding sparsity κ: predict |Pearson r| < 0.2 for both. Corollaries: (i) among top-decile most-causal atoms a substantial share are illegible ('dark computation'); (ii) among the most legible atoms a substantial share are causally inert. Falsified if λ correlates strongly (|r|>0.5) with R or κ. NB: needs label simulation — if no cheap local path exists, designed_not_run with the design written down is the honest outcome.",
-      "reduces_to": "Auto-interp / explanation scoring (Bills et al.). Only new content is the asserted orthogonality to the causal and sparsity axes."
+      "name": "Gated Feature (direction x context contract)",
+      "definition": "A feature is a pair (v, g): direction v plus a sparse gate g — a predicate of <= 5 literals over co-occurring SAE-latent activity ('latent j active / inactive') — such that the mediation effect of patching along v conditional on g(x)=1 exceeds threshold theta, with g fit by decision tree / lasso on conditional-patching outcomes and validated on held-out inputs (precision >= 0.7). The four senses of 'feature' are predicted to coincide inside the gate and dissociate outside it; an ungated direction is not a feature, it is a marginal average over contexts.",
+      "prediction": "For >= 25% of SAE latents whose unconditional mediation effect falls in the bottom quintile of their layer, there exists a learnable gate (<= 5 literals, held-out precision >= 0.7) under which their mediation effect exceeds the layer median by >= 3x — i.e., most 'causally dead but interpretable' latents are context-marginalization artifacts. Directly computable with conditional activation patching. Falsified if conditional patching rescues < 5% of dead latents.",
+      "reduces_to": "Circuits / feature-interaction analysis (input-conditional feature effects in attribution graphs) — possibly just renaming 'a feature only matters inside its circuit' with a fitting procedure attached."
     }
+  ],
+  "seenStress": [
+    "The word 'feature' itself: used simultaneously for (a) a direction in activation space, (b) an SAE dictionary latent, (c) a human-interpretable concept, (d) a causal mediator of behavior",
+    "The word \"feature\" (Anthropic circuits program, SAE literature)"
   ]
 }
 ```
