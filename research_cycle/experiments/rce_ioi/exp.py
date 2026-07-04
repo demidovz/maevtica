@@ -43,8 +43,7 @@ z_mean  = {L: z_clean[L].mean(0, keepdim=True) for L in range(nL)}
 perm = torch.roll(ar, 1)
 
 U = m.W_U  # [d_model, vocab]
-udiff = (U[:, io_ids] - U[:, s_ids]).T.float()   # [b, d_model]
-w_ln = m.ln_final.w.float()
+udiff = (U[:, io_ids] - U[:, s_ids]).T.float()   # [b, d_model]; LN w folded into W_U (LayerNormPre)
 
 def dla_from_cache(c):
     """[nL,nH] mean DLA to logit diff."""
@@ -53,7 +52,7 @@ def dla_from_cache(c):
     for L in range(nL):
         r = c[f"blocks.{L}.attn.hook_result"][:, -1].float() # [b,head,d_model]
         r = r - r.mean(-1, keepdim=True)
-        r = r / scale.unsqueeze(1) * w_ln
+        r = r / scale.unsqueeze(1)
         out[L] = (r * udiff.unsqueeze(1)).sum(-1).mean(0).numpy()
     return out
 
