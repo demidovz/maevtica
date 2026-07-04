@@ -1,20 +1,20 @@
 {
-  "domain": "predicting the boundary of clean concept-detachment in language models",
-  "campaign": "sep-boundary",
-  "runTag": "sb1",
-  "maxRounds": 1,
-  "maxTest": 1,
-  "controlEvery": 2,
-  "capTokens": 1800000,
-  "backlog": [
-    {
-      "name": "Separability-failure predictor (forecast from internals WHERE clean concept-detachment holds vs breaks, and BEAT the orthogonality baseline)",
-      "definition": "Reuses the working steering harness (research_cycle/experiments/category_slot/) on gpt2 / pythia-160m (CPU). Build MANY configs (entity E, swap category C->C', preserved attribute A) across domains (e.g. apple:fruit->vegetable keep red/sweet/round; tomato:vegetable<->fruit; whale:fish->mammal keep big/swims; bat:bird->mammal keep flies; ...), aim >=30-40 (E,C->C',A) triples. For each, EMPIRICALLY map clean-detachment: sweep steering strength alpha; record FLIP(alpha)=category moved to C', PRESERVE_A(alpha)=attribute A survived, COHERENCE(alpha)=perplexity in band. Derive per-config OUTCOME scalars: clean-window width = range of alpha with FLIP>=0.7 AND PRESERVE>=0.7 AND coherent; break-alpha = strength where it collapses. GOAL: predict these outcomes from the model's INTERNALS computed WITHOUT the full sweep. Candidate predictors: (BASELINE = Park's theory) cosine/angle between dir(C->C') and dir(A) under the causal inner product — orthogonal => separable; (OURS to test) causal-read overlap = do the SAME downstream components (heads/MLPs) read from both directions (attribution/gradient overlap), and superposition/probe-interference of A near the C axis. Fit predictors on a TRAIN split of configs, test on a DISJOINT split.",
-      "prediction": "On held-out configs, the best INTERNAL predictor forecasts the empirical clean-window (or break-alpha) with Spearman >= 0.5 AND beats the pure-orthogonality (Park) baseline by a preregistered margin (delta-Spearman >= 0.15, bootstrap 95% CI excludes 0). FALSIFIED-as-rediscovery if NO predictor beats the orthogonality baseline (then we add nothing over Park). FALSIFIED-null if nothing beats a random predictor (internals carry no boundary signal). Oracle: the steering positive control (add +C' to a real C'-member intensifies C') must pass, else BROKEN_MEASUREMENT.",
-      "reduces_to": "PRIOR ART IS STIPULATED — historian: treat these as GIVEN, do NOT re-derive or flag them, the experiment already concedes them: Park et al. 2024 'Geometry of Categorical and Hierarchical Concepts' (categorical simplices, hierarchy orthogonality, orthogonal => independent intervention) [arXiv:2406.01506]; the Linear Representation Hypothesis + 'causal separability' (Park/Choe/Veitch); RAVEL benchmark for entity-attribute disentanglement [arXiv:2402.17700]; ActAdd/activation steering [arXiv:2308.10248]; 'Understanding Unreliability of Steering Vectors' [arXiv:2602.17881]. The bare claims 'categories are separable coordinates' and 'orthogonality => clean separation' are GIVEN. This concept EARNS KEEP ONLY IF it does BOTH: (1) characterizes the FAILURE BOUNDARY — where/at what strength clean detachment breaks — which the success-oriented literature and RAVEL's aggregate scores do NOT map; AND (2) provides an a-priori internal predictor of that boundary that BEATS the orthogonality baseline. If it merely re-confirms orthogonality=>separability, that IS the refuted-as-rediscovery outcome, report it as such."
-    }
-  ],
-  "seenStress": [
-    "PRIOR ART GIVEN (do not re-mine): Park et al. hierarchy geometry [2406.01506], LRH + causal separability, RAVEL disentanglement benchmark [2402.17700], ActAdd steering [2308.10248]. OPEN GAP we target: the literature idealizes or aggregate-scores separability; the FAILURE BOUNDARY (which concept pairs break, at what strength) and an a-priori INTERNAL predictor of it that beats the orthogonality baseline are not established."
-  ]
+ "domain": "predicting the boundary of clean concept-detachment in language models",
+ "campaign": "sep-boundary",
+ "runTag": "sb1",
+ "maxRounds": 1,
+ "maxTest": 1,
+ "controlEvery": 2,
+ "capTokens": 1800000,
+ "backlog": [
+  {
+   "name": "Separability-failure predictor: forecast from internals WHERE clean concept-detachment holds vs breaks, and BEAT the orthogonality baseline",
+   "definition": "Reuses the working steering harness (research_cycle/experiments/category_slot/) on gpt2 or pythia-160m (CPU). Build MANY configs (entity E, swap category C into Cprime, preserved attribute A) across domains: apple fruit->vegetable keep red/sweet/round; tomato vegetable vs fruit; whale fish->mammal keep big/swims; bat bird->mammal keep flies; and more, aim 30-40 triples. For each, EMPIRICALLY map clean-detachment: sweep steering strength alpha; record FLIP (category moved to Cprime), PRESERVE_A (attribute A survived), COHERENCE (perplexity in band). Derive per-config OUTCOME scalars: clean-window width (range of alpha with FLIP high AND PRESERVE high AND coherent) and break-alpha (strength where it collapses). GOAL: predict these outcomes from the model internals computed WITHOUT the full sweep. Candidate predictors: BASELINE (Park theory) = cosine/angle between the category-swap direction and the attribute direction under the causal inner product (orthogonal implies separable); OURS to test = causal-read overlap (do the SAME downstream components read from both directions, via attribution/gradient overlap) and superposition/probe-interference of A near the C axis. Fit predictors on a TRAIN split of configs, test on a DISJOINT split.",
+   "prediction": "On held-out configs, the best INTERNAL predictor forecasts the empirical clean-window (or break-alpha) with Spearman at least 0.5 AND beats the pure-orthogonality (Park) baseline by a preregistered margin (delta-Spearman at least 0.15, bootstrap 95pct CI excludes 0). FALSIFIED-as-rediscovery if NO predictor beats the orthogonality baseline (we add nothing over Park). FALSIFIED-null if nothing beats a random predictor. Oracle: the steering positive control (adding the Cprime direction to a real Cprime-member intensifies Cprime) must pass, else BROKEN_MEASUREMENT.",
+   "reduces_to": "PRIOR ART IS STIPULATED. Historian: treat these as GIVEN, do NOT re-derive or flag them, the experiment already concedes them: Park et al 2024 Geometry of Categorical and Hierarchical Concepts (categorical simplices, hierarchy orthogonality, orthogonal implies independent intervention), arXiv 2406.01506; the Linear Representation Hypothesis plus causal separability (Park, Choe, Veitch); RAVEL benchmark for entity-attribute disentanglement, arXiv 2402.17700; ActAdd activation steering, arXiv 2308.10248; Understanding Unreliability of Steering Vectors, arXiv 2602.17881. The bare claims that categories are separable coordinates and that orthogonality implies clean separation are GIVEN. This concept EARNS KEEP ONLY IF it does BOTH: (1) characterizes the FAILURE BOUNDARY, where and at what strength clean detachment breaks, which the success-oriented literature and RAVEL aggregate scores do NOT map; AND (2) provides an a-priori internal predictor of that boundary that BEATS the orthogonality baseline. If it merely re-confirms orthogonality implies separability, that IS the refuted-as-rediscovery outcome, report it as such."
+  }
+ ],
+ "seenStress": [
+  "PRIOR ART GIVEN (do not re-mine): Park et al hierarchy geometry arXiv 2406.01506, LRH plus causal separability, RAVEL disentanglement benchmark arXiv 2402.17700, ActAdd steering arXiv 2308.10248. OPEN GAP we target: the literature idealizes or aggregate-scores separability; the FAILURE BOUNDARY (which concept pairs break, at what strength) and an a-priori INTERNAL predictor of it that beats the orthogonality baseline are not established."
+ ]
 }
