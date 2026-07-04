@@ -1,0 +1,20 @@
+{
+  "domain": "self-improvement by distilling verified loop outputs back into weights (STaR-style, on-box GPU)",
+  "campaign": "self-distill",
+  "runTag": "sd1",
+  "maxRounds": 1,
+  "maxTest": 1,
+  "controlEvery": 2,
+  "capTokens": 2000000,
+  "backlog": [
+    {
+      "name": "Self-distillation lift (does baking VERIFIED loop outputs into weights beat spending the same compute on inference-time sampling?)",
+      "definition": "GPU fine-tuning experiment. Use gpu-venv (~/.local/state/mst/gpu-venv/bin/python, torch cu121, RTX 3050 4GB, socksio installed so HF downloads work; HF_HOME=~/.local/state/mst/hf-cache). Pick a SMALL model that fits (gpt2-124M full-FT ~2.5GB, or pythia-410m via LoRA/peft) and a task with EXTERNALLY CHECKABLE answers where the base model's single-sample accuracy sits in a workable 10-70% band (headroom + enough correct samples to learn from) — e.g. multi-digit addition with digit-by-digit chain-of-thought, last-letter concatenation, parity, or small modular arithmetic. FIRST verify and preregister the base rate; if <~10%, seed with STaR-rationalization (condition on the correct answer to generate a rationale, keep only rationales that re-derive it) so a cold start doesn't block bootstrapping. LOOP: for each TRAIN problem sample K (temp>0) chain-of-thought answers, keep ONLY those whose final answer is verified correct by external truth (this is the anti-self-fooling anchor — we never train on unverified outputs). DISTILL: fine-tune (LoRA or full) on the kept (problem -> correct-rationale) pairs on the 3050. EVAL: single greedy sample accuracy on a HELD-OUT problem set (disjoint from train). 1-2 self-distillation rounds.",
+      "prediction": "After 1-2 rounds, held-out single-sample accuracy rises by a preregistered margin (>= +10 points, bootstrap CI excludes 0) over the base model at single-sample. DECISIVE CONTROL: it must also match-or-beat the base model given the SAME total compute spent instead on inference-time sampling (best-of-N with N chosen so base compute == distill compute). FALSIFIED if (a) held-out accuracy does not rise (self-distillation does not generalize at this scale — an honest, valuable negative), OR (b) the gain is fully explained by inference-time sampling (the weight update buys nothing over just sampling more). CONTROLS: (i) held-out is disjoint from train (generalization, not memorization); (ii) distilling UNFILTERED samples (no correctness check) must do WORSE than verified-only — proves the external-truth anchor matters and we are not amplifying the model's own errors; (iii) matched-compute best-of-N baseline.",
+      "reduces_to": "STaR / rejection-sampling fine-tuning / self-taught reasoner (Zelikman et al. 2022), RFT. HONEST: the method is published. Earns keep NOT by novelty of the method but by (1) the matched-compute control — 'smarter weights vs smarter loop at equal compute', the question STaR does not isolate; (2) establishing on-box self-improvement as a reusable studio capability; (3) it is the direct, falsifiable test of the VISION_reflection_intelligence bet. The interp-guided variant (route/filter by internal signal, see queued/reflection_routing.json) is the natural follow-up if this base claim holds."
+    }
+  ],
+  "seenStress": [
+    "Can a small model on our box be made smarter by distilling its own VERIFIED-correct reasoning back into its weights, and is that worth more than spending the same compute on inference-time sampling? Directly testable now that the RTX 3050 fine-tunes GPT-2 (GPU.md)."
+  ]
+}
