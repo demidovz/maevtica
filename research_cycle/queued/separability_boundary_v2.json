@@ -1,0 +1,20 @@
+{
+ "domain": "predicting the separability-failure boundary (bigger model, more configs)",
+ "campaign": "sep-boundary",
+ "runTag": "sb2",
+ "maxRounds": 1,
+ "maxTest": 1,
+ "controlEvery": 2,
+ "capTokens": 2200000,
+ "backlog": [
+  {
+   "name": "Separability-failure predictor v2 (pythia-410m, ~250 diverse configs)",
+   "definition": "Rerun the sep-boundary test with MORE POWER (prior run research_cycle/campaigns/sep-boundary/sb1_final.json was REFUTED but our grad-overlap predictor had the right sign and out-predicted Park, just underpowered at gpt2/32 configs). Use pythia-410m (mid layer ~12 of 24) and 200-300 configs spanning DIVERSE concept swaps, not just fruit-to-veg: animal class (whale fish-to-mammal keep swims, bat bird-to-mammal keep flies), size, material, country-to-continent attribute preservation, profession, etc. Reuse the steering-harness pattern in research_cycle/experiments/category_slot/ adapted to pythia-410m. Per config sweep steering strength alpha; outcome = clean-window width (FLIP and PRESERVE and COHERENT). Predictors computed WITHOUT the sweep: BASELINE Park = abs cos(swap-dir, attr-dir) under causal inner product; OURS = grad-overlap abs cos(grad(category-margin), grad(attr-margin)) plus probe-interference. Fit on train configs, test on disjoint.",
+   "prediction": "On held-out configs the best internal predictor reaches abs Spearman >= 0.5 AND beats Park by delta >= 0.15 (bootstrap CI excludes 0) AND clears the random-permutation floor. REFUTED-null if below the random floor; REFUTED-as-rediscovery if nothing beats Park. Oracle: steering positive control must pass else BROKEN_MEASUREMENT. The specific question: does more power (410m plus ~250 configs) lift ours past the floor that n=32 could not.",
+   "reduces_to": "PRIOR ART GIVEN, do not re-flag: Park 2024 hierarchy geometry (arXiv 2406.01506), LRH causal separability, RAVEL (arXiv 2402.17700), ActAdd (arXiv 2308.10248). Earns keep ONLY by mapping the FAILURE boundary AND an internal predictor beating the orthogonality baseline above chance. Re-confirming orthogonality-implies-separability is refuted-as-rediscovery."
+  }
+ ],
+ "seenStress": [
+  "Prior sep-boundary run (n=32, gpt2) REFUTED but OURS out-predicted a near-null Park with the right sign, underpowered. Retest with pythia-410m and ~250 diverse configs. GIVEN prior art: Park, LRH, RAVEL, ActAdd."
+ ]
+}

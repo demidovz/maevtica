@@ -1,0 +1,53 @@
+{
+ "n": 25,
+ "window_mean": 1.04,
+ "window_sd": 0.9583318840568752,
+ "window_dist": {
+  "0": 9,
+  "1": 8,
+  "2": 6,
+  "3": 2
+ },
+ "rho_OURS": -0.40006538741962233,
+ "rho_PARK": -0.2131680032224444,
+ "abs_rho_OURS": 0.40006538741962233,
+ "abs_rho_PARK": 0.2131680032224444,
+ "delta_abs": 0.18689738419717794,
+ "delta_CI": [
+  -0.1392554387234057,
+  0.41172032146636894
+ ],
+ "perm_floor95": 0.39723949669112857,
+ "oracle": 1.7330169677734375,
+ "ours_range": [
+  0.004876997321844101,
+  0.3033784329891205
+ ],
+ "random_flip": "0/4",
+ "verdict": "PROXY_SUPPORTS_V2",
+ "prereg_mechanical_verdict": "PROXY_SUPPORTS_V2",
+ "SANITY_DECOMPOSITION": {
+  "fruit_only_n": 21,
+  "fruit_only_rho_OURS": -0.127,
+  "fruit_only_rho_PARK": 0.157,
+  "fruit_only_floor95": 0.436,
+  "bird_n": 4,
+  "bird_ours_range": [
+   0.268,
+   0.303
+  ],
+  "bird_windows": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "fruit_ours_range": [
+   0.005,
+   0.134
+  ],
+  "note": "pooled rho is a between-family offset artifact (Simpson). Bird ours-scale non-overlapping with fruit; all 4 bird windows=0. Within fruit, OURS=-0.127 BELOW its floor 0.436 and weaker than prior sb1 (-0.324). Park pooled sign also artifact (fruit-only park=+0.157, wrong sign, matches prior)."
+ },
+ "HONEST_VERDICT": "REFUTED_AT_PROXY: apparent pooled lift is a cross-family scale artifact, not genuine predictive power. Within-family OURS degraded below floor. Even artifact-inflated pooled delta-over-Park CI [-0.14,+0.41] includes 0 and |rho|=0.40<0.5, so full v2 bar unmet. Faithful 410m/250-config run designed_not_run; but v2 analysis plan must rank/demean WITHIN family or its pooled Spearman is confounded.",
+ "oracle_pass": true
+}
