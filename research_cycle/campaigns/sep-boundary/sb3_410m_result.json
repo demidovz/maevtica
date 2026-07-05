@@ -1,0 +1,51 @@
+{
+ "model": "pythia-410m",
+ "layer": 9,
+ "mults": [
+  1.0,
+  1.5,
+  2.0,
+  3.0,
+  4.0
+ ],
+ "n_total": 62,
+ "families_qualified": [
+  "fruit",
+  "country"
+ ],
+ "by_family": {
+  "fruit": {
+   "n": 18,
+   "rho_OURS": 0.32234436530101873,
+   "rho_PARK": 0.347569054469721,
+   "window_mean": 1.7222222222222223,
+   "oracle": 3.133615493774414,
+   "random_flip": "0/2"
+  },
+  "country": {
+   "n": 15,
+   "rho_OURS": 0.10092383415602023,
+   "rho_PARK": -0.7931657091082941,
+   "window_mean": 2.0,
+   "oracle": 3.763476530710856,
+   "random_flip": "0/2"
+  }
+ },
+ "mean_absrho_OURS": 0.2116340997285195,
+ "mean_absrho_PARK": 0.5703673817890076,
+ "neg_frac_OURS": 0.0,
+ "within_family_floor95": 0.408159258508996,
+ "delta_CI": [
+  -0.6456148783012305,
+  0.09188826810701108
+ ],
+ "mean_oracle": 3.448546012242635,
+ "all_oracles": {
+  "fruit": 3.133615493774414,
+  "bird": -0.32720216115315753,
+  "country": 3.763476530710856,
+  "tree": 4.116231123606364,
+  "insect": 1.8116291364034016
+ },
+ "verdict": "REFUTED"
+}
