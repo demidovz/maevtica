@@ -1,0 +1,38 @@
+{
+ "model": "gpt2",
+ "task": "addition (mixed 1-2 digit), per-answer-digit steps",
+ "N": 1034,
+ "n_err": 920,
+ "err_rate": 0.8897485493230174,
+ "best_internal_layer": 6,
+ "internal_AUC_by_layer": {
+  "3": 0.7783562166285279,
+  "6": 0.785645499618612,
+  "9": 0.7811022120518689,
+  "11": 0.7752669717772692
+ },
+ "AUC": {
+  "oracle": 1.0,
+  "internal": 0.785645499618612,
+  "conf-probe": 0.5073035850495804,
+  "output": 0.48794813119755914,
+  "random": 0.47824180015255535
+ },
+ "primary_internal_minus_output_AUC": 0.2976973684210528,
+ "AUC_delta_CI": [
+  0.20682395408367332,
+  0.3883526561195802
+ ],
+ "permutation_control_AUC": 0.5203470633104501,
+ "final_acc": {
+  "oracle": 0.3104448742746615,
+  "internal": 0.3027079303675048,
+  "conf-probe": 0.28239845261121854,
+  "output": 0.2736943907156673,
+  "random": 0.2775628626692456,
+  "no_reflection": 0.1102514506769826
+ },
+ "secondary_internal_minus_output_pts": 2.9013539651837505,
+ "oracle_lift_pts": 20.01934235976789,
+ "verdict": "REFUTED"
+}

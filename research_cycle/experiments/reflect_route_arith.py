@@ -11,18 +11,29 @@ QUESTION: at a FIXED reflection budget B, does routing the budget to the steps a
 INTERNAL-activation probe scores as most-likely-wrong beat routing by the model's
 OUTPUT confidence (and both beat random)? Step = one answer DIGIT position.
 
+rr3 CORRECTION (frozen before this run): rr2 used final-acc@B as primary, but a
+91.6% error rate SATURATED it (oracle−random dynamic range ~2pt, so the +3pt bar
+was unreachable regardless of the true effect — a design flaw). The a-priori-correct
+metric for "do internal states LOCATE errors better than output confidence" is the
+error-detection AUC, which is NOT budget-saturated. rr3 makes AUC the PRIMARY rule,
+adds a label-permutation leakage control, uses fresh data (seed 1) + an easier
+difficulty mix to un-saturate the secondary final-acc. This is a metric correction
+(not goalpost-moving): AUC is the right lens, the rule is frozen before running,
+fresh data, plus a negative control.
+
 PREREGISTERED DECISION RULE (frozen before running):
   arms: oracle(true error label) | internal-probe(oof 5-fold logistic on resid,
-        layer swept 3/6/9/11) | output(entropy over the 10 digit tokens, the
-        natural untrained baseline) | conf-probe(oof logistic on {maxprob,entropy,
-        margin}, fairness control) | random.
-  per arm: rank steps by wrongness, fix the true errors among the top-B (B=20%);
-  final_acc = (orig_correct + true_errors_caught_in_topB)/N ; also error-det AUC.
-  * BROKEN_MEASUREMENT if oracle does not top the ranking OR oracle lift < 1pt
-    OR either class (<20 correct or <20 wrong) too small.
-  * SUPPORTED  iff internal_final - output_final >= +3.0 pts AND paired-bootstrap
-               95% CI (2000 resamples over steps) excludes 0 AND both beat random.
-  * REFUTED    iff |internal-output| < 3 or CI includes 0, or nothing beats random.
+        layer swept 3/6/9/11) | output(entropy over the 10 digit tokens, natural
+        untrained baseline) | conf-probe(oof logistic on {maxprob,entropy,margin}) | random.
+  PRIMARY metric = error-detection AUC per arm. SECONDARY = final-acc@B=20%.
+  * BROKEN_MEASUREMENT if oracle AUC < 0.98 OR oracle final-lift < 1pt OR either
+    class (<20 correct or <20 wrong) too small OR permutation-control AUC > 0.60
+    (probe leaks on shuffled labels → pipeline invalid).
+  * SUPPORTED  iff internal_AUC - output_AUC >= +0.05 AND paired-bootstrap 95% CI
+               (2000 resamples over steps) excludes 0 AND internal_AUC > 0.55 AND
+               output_AUC > 0.50.
+  * REFUTED    iff internal within noise of output (CI includes 0) or internal_AUC
+               <= chance or the +0.05 margin is not met.
 Error label uses the model's best-DIGIT guess (argmax over the 10 digit tokens) vs
 the true digit — the faithful "which digit does the model think it is" for arithmetic.
 """
@@ -39,7 +50,7 @@ print(f"[load] {MODEL} (offline)...", flush=True)
 m = HookedTransformer.from_pretrained(MODEL, device="cpu"); m.eval()
 assert m.cfg.n_layers == 12, f"unexpected model: {m.cfg.n_layers} layers"
 DIG=[m.to_single_token(" "+str(d)) for d in range(10)]   # single-token digits
-rng=np.random.default_rng(0)
+rng=np.random.default_rng(1)                              # rr3: FRESH data, not rr2's steps
 
 def sd(n): return " ".join(list(str(n)))   # space-separated digits -> one token each
 
@@ -50,7 +61,11 @@ def collect():
     hooks=[f"blocks.{L}.hook_resid_post" for L in LAYERS]
     done=0
     for _ in range(N_PROB):
-        a=int(rng.integers(0,100)); b=int(rng.integers(0,100)); s=a+b
+        if rng.random()<0.5:                              # rr3 difficulty MIX to un-saturate error rate
+            a=int(rng.integers(0,10)); b=int(rng.integers(0,10))
+        else:
+            a=int(rng.integers(0,50)); b=int(rng.integers(0,50))
+        s=a+b
         prompt=f"{sd(a)} + {sd(b)} ="
         ans=[int(c) for c in str(s)]
         pids=m.to_tokens(prompt)[0]                      # includes BOS
@@ -125,35 +140,44 @@ print("\n=== arms (final acc @B=20% · error-det AUC) ===")
 print(f"  no-reflection      acc={no_reflect*100:.2f}")
 for a in arms: print(f"  {a:16} acc={fa[a]*100:.2f}  AUC={aucs[a]:.3f}")
 
-# paired bootstrap on internal_final - output_final (resample steps, re-rank)
-diffs=[]
-idx=np.arange(N)
+# ---- PRIMARY: paired bootstrap on internal_AUC - output_AUC (resample steps) ----
+si=scores["internal"]; so=scores["output"]; idx=np.arange(N)
+adiffs=[]
 for _ in range(2000):
-    bi=rng.choice(idx,N,replace=True)
-    e=err[bi]
-    if e.sum()==0 or e.sum()==len(e): continue
-    fi=final_acc(scores["internal"][bi],e,B); fo=final_acc(scores["output"][bi],e,B)
-    diffs.append((fi-fo)*100)
-ci=(float(np.percentile(diffs,2.5)),float(np.percentile(diffs,97.5))) if diffs else (float('nan'),)*2
+    bi=rng.choice(idx,N,replace=True); e=err[bi]
+    if e.sum()<2 or (len(e)-e.sum())<2: continue
+    try: adiffs.append(roc_auc_score(e,si[bi])-roc_auc_score(e,so[bi]))
+    except Exception: pass
+auc_ci=(float(np.percentile(adiffs,2.5)),float(np.percentile(adiffs,97.5))) if adiffs else (float('nan'),)*2
+auc_delta=aucs["internal"]-aucs["output"]
+
+# NEGATIVE CONTROL: train the internal probe on SHUFFLED labels — must collapse to ~chance
+yperm=rng.permutation(err)
+Xbest=np.array([s["resid"][best_L] for s in steps])
+try: perm_auc=float(roc_auc_score(yperm,oof_scores(Xbest,yperm)))
+except Exception: perm_auc=float('nan')
+
+# SECONDARY: final-acc@B (informative once un-saturated)
 delta=(fa["internal"]-fa["output"])*100
 oracle_lift=(fa["oracle"]-no_reflect)*100
-internal_beats_rand=fa["internal"]>fa["random"]; output_beats_rand=fa["output"]>fa["random"]
 
-if fa["oracle"]<max(fa["internal"],fa["output"],fa["random"]) or oracle_lift<1.0 or n_ok<20 or n_err<20:
+if aucs["oracle"]<0.98 or oracle_lift<1.0 or n_ok<20 or n_err<20 or perm_auc>0.60:
     verdict="BROKEN_MEASUREMENT"
-elif delta>=3.0 and ci[0]>0 and internal_beats_rand and output_beats_rand:
+elif auc_delta>=0.05 and auc_ci[0]>0 and aucs["internal"]>0.55 and aucs["output"]>0.50:
     verdict="SUPPORTED"
 else:
     verdict="REFUTED"
 
-out=dict(model=MODEL,task="2-3 digit addition, per-answer-digit steps",N=N,n_err=n_err,
+out=dict(model=MODEL,task="addition (mixed 1-2 digit), per-answer-digit steps",N=N,n_err=n_err,err_rate=n_err/N,
          best_internal_layer=best_L,internal_AUC_by_layer={L:auc(internal_by_L[L]) for L in LAYERS},
-         final_acc={**{a:fa[a] for a in arms},"no_reflection":no_reflect},
          AUC={a:aucs[a] for a in arms},
-         internal_minus_output_pts=delta,delta_CI=ci,oracle_lift_pts=oracle_lift,
-         internal_beats_random=bool(internal_beats_rand),output_beats_random=bool(output_beats_rand),
+         primary_internal_minus_output_AUC=auc_delta, AUC_delta_CI=auc_ci,
+         permutation_control_AUC=perm_auc,
+         final_acc={**{a:fa[a] for a in arms},"no_reflection":no_reflect},
+         secondary_internal_minus_output_pts=delta, oracle_lift_pts=oracle_lift,
          verdict=verdict)
+print(f"\n[neg-control] internal probe on shuffled labels: AUC={perm_auc:.3f} (must be ~0.5)", flush=True)
 print("\n=== NUMBERS ==="); print(json.dumps(out,indent=1))
-print("\n=== VERDICT ===",verdict,f"| internal-output={delta:+.2f}pts CI[{ci[0]:+.2f},{ci[1]:+.2f}] oracle_lift={oracle_lift:+.2f}")
-dst=os.path.join(os.path.dirname(__file__),"..","campaigns","reflect-route","rr2_arith_result.json")
+print("\n=== VERDICT ===",verdict,f"| PRIMARY internal_AUC-output_AUC={auc_delta:+.3f} CI[{auc_ci[0]:+.3f},{auc_ci[1]:+.3f}] · oracle_AUC={aucs['oracle']:.3f} perm={perm_auc:.3f}")
+dst=os.path.join(os.path.dirname(__file__),"..","campaigns","reflect-route","rr3_arith_result.json")
 json.dump(out,open(dst,"w"),indent=1); print("[saved]",os.path.abspath(dst),flush=True)
