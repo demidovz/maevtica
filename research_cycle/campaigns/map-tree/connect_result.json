@@ -1,0 +1,17 @@
+{
+ "model": "gpt2",
+ "layer": 9,
+ "N": 50,
+ "n_miscategorized": 8,
+ "err_rate": 0.16,
+ "MAP_AUC": 0.6011904761904762,
+ "OUTPUT_AUC": 0.8660714285714286,
+ "random_AUC": 0.3869047619047619,
+ "oracle_AUC": 1.0,
+ "map_minus_output_AUC": -0.26488095238095244,
+ "delta_CI": [
+  -0.5191761363636364,
+  -0.019474380790319545
+ ],
+ "verdict": "REFUTED"
+}

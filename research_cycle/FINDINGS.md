@@ -76,11 +76,19 @@ goes in the 5-year-old register — see `../../maestratica/CLAUDE.md`.
 
 ---
 
-## NEXT: connect the two bricks
-**Question:** does a MAP-based signal — "this token's concept has drifted off its clean
-branch" (distance/ambiguity in the tree geometry) — route reflection to the model's errors
-better than output confidence, ESPECIALLY in the confidently-wrong regime where Brick 1 says
-internal signals win? I.e. use the *map* (Brick 2) as the *where-to-reflect* signal (Brick 1).
-Preregister; oracle canary; compare map-signal vs output-confidence vs internal-probe vs random;
-run in the confidently-wrong regime (base model) AND the competent regime (fine-tuned) to see
-if the map signal, unlike a raw internal probe, still helps once the model is competent.
+## Connecting the two bricks — DONE (2026-07-06): REFUTED, and it CONFIRMS the boundary
+`campaigns/map-tree/connect_result.json`. Used the MAP geometry (Brick 2) as the
+where-to-reflect signal for the model's own concept-mistakes (miscategorizations).
+- MAP-drift signal caught miscategorizations at AUC **0.60**; the model's OUTPUT confidence
+  at **0.87**. MAP − OUTPUT = −0.265 (CI excludes 0, wrong side) → **REFUTED**.
+- Not surprising — it CONFIRMS Brick 1's regime boundary from a new angle: this
+  categorization task is EASY for gpt2 (only 16% error = the COMPETENT regime), and there
+  the voice already knows where it's wrong. Same law now from 3 angles (rr4 base / rr5
+  fine-tuned / connect-categorization): internal & geometric signals beat output confidence
+  ONLY when the model is confidently wrong; whenever it's competent, the voice wins.
+
+## Refined open question (only place the map signal could still win)
+Test the MAP signal in a CONFIDENTLY-WRONG categorization regime — tricky/ambiguous/rare
+entities, or a partially-trained model that mis-sorts common ones — where output confidence
+should go blind. If the map signal beats the voice THERE, it's a real tool for the
+overconfident regime; if not, the map adds nothing over output confidence for error-routing.
