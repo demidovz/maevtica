@@ -63,14 +63,25 @@ const S_HIST = { type: 'object', required: ['is_rediscovery', 'prior_art', 'sepa
   is_rediscovery: { type: 'boolean' }, prior_art: { type: 'array', items: { type: 'string' }, description: 'named prior concepts/fields covering this' },
   separable_prediction: { type: 'boolean', description: 'does THIS concept predict something that DIVERGES from the prior art, such that a concrete experiment could tell them apart? true even if is_rediscovery=true when the sharpened version has a testable difference' },
   novelty: { type: 'string' } } }
-const S_TEST = { type: 'object', required: ['status', 'verdict'], properties: {
+const S_TEST = { type: 'object', required: ['status', 'verdict', 'ran_model', 'deviated_from_request'], properties: {
   status: { type: 'string', enum: ['ran', 'designed_not_run', 'not_computable'] },
   verdict: { type: 'string', enum: ['supported', 'refuted', 'inconclusive', 'n/a'] },
   design: { type: 'string', description: 'the falsification design + preregistered decision rule' },
   numbers: { type: 'string', description: 'key measured numbers, or why none' },
-  sanity: { type: 'string', description: 'oracle/positive-control check — did the measurement even work? (guards the .norm-bug class of error)' } } }
+  sanity: { type: 'string', description: 'oracle/positive-control check — did the measurement even work? (guards the .norm-bug class of error)' },
+  // anti-substitution declaration (2026-07-06): a tester once swapped the ordered
+  // 410m/250-configs for a gpt2/25 proxy on the FALSE premise "410m not cached".
+  // Force it to declare exactly what ran; a VERIFIER cross-checks against the order.
+  ran_model: { type: 'string', description: 'exact model id you loaded (or "none" if nothing ran)' },
+  n_samples: { type: 'integer', description: 'how many configs/samples actually ran (0 if none)' },
+  oracle_value: { type: 'string', description: 'the positive-control number you measured' },
+  deviated_from_request: { type: 'boolean', description: 'TRUE if you ran anything weaker/different than the concept ordered (smaller model, a proxy, far fewer samples)' },
+  deviation_proof: { type: 'string', description: 'if deviated_from_request: the PASTED command output proving the ordered design was impossible (e.g. an ls showing the model absent). Empty otherwise — a deviation without proof is voided.' } } }
 const S_CONTROL = { type: 'object', required: ['judges_trustworthy'], properties: {
   judges_trustworthy: { type: 'boolean', description: 'did known-good concepts pass and planted distractors get killed?' }, notes: { type: 'string' } } }
+const S_VERIFY = { type: 'object', required: ['substitution_detected', 'unproven_claim'], properties: {
+  substitution_detected: { type: 'boolean', description: 'tester ran a materially weaker/different design than ordered, WITHOUT verified proof it was necessary' },
+  unproven_claim: { type: 'boolean', description: 'verdict rests on a load-bearing factual claim with no pasted command-output proof' }, note: { type: 'string' } } }
 
 // ── stage prompts (falsification-first; encode today's lessons) ──────────────
 const P = {
@@ -78,9 +89,27 @@ const P = {
   generator: (stress, killed) => `You are the GENERATOR for "${DOMAIN}". Given this stress point: ${JSON.stringify(stress)}. Propose 2-4 candidate NEW representations that would relieve it. Each MUST have (a) an OPERATIONAL definition (measurable, not poetry), (b) a concrete FALSIFIABLE prediction (ideally computable), (c) the nearest existing concept it might just be renaming. Avoid ideas already killed: ${JSON.stringify(killed).slice(0, 1200)}. Facts are cheap, representations are expensive — only propose what earns its keep.`,
   adversary: (c) => `You are the ADVERSARY. Try HARD to KILL this concept, do not be charitable: "${c.name}" — ${c.definition}. Prediction: ${c.prediction}. Find a concrete counterexample. Decide: is it just "${c.reduces_to}" renamed? Default to survives=false if you cannot find a real, non-trivial, hard-to-replace distinction. A concept survives only if it compresses multiple phenomena AND makes a distinctive prediction AND has clear failure boundaries.`,
   historian: (c) => `You are the HISTORIAN. Has science already got "${c.name}" (${c.definition}) under another name? Search prior art across relevant fields (information theory, RL, statistics, the domain's own literature, adjacent disciplines). Benchmark-008 lesson: most "new" ideas are rediscoveries — bias toward is_rediscovery=true unless the novelty is specific and defensible. SEPARATELY judge separable_prediction: does this concept's prediction ("${c.prediction}") DIVERGE from what the named prior art predicts, enough that a concrete experiment could tell them apart? Set it true even when is_rediscovery=true — a sharpened/extended version with a testable difference earns a real test rather than an armchair kill (this is how Causal Role Carrier earned its place: "just steering vectors" by name, but its prediction beat the geometry baseline on data).`,
-  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03). Keep it TIGHT and time-boxed: smallest model (gpt2 or pythia-160m), fewest categories, ONE intervention — a minimal decisive test in a handful of runs, NOT a sprawling study; do not install heavy deps unless unavoidable.'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down.`,
+  tester: (c) => `You are the TESTER — the TEETH. Concept: "${c.name}", prediction: "${c.prediction}". ${DRY ? 'SHAKEDOWN MODE: DESIGN ONLY — do NOT run anything, do NOT touch Bash or models. Return status=designed_not_run with the falsification design + preregistered decision rule + the oracle/positive-control you WOULD check.' : 'If the prediction is computable, DESIGN a minimal falsification (preregister a decision rule BEFORE running), then run it with Bash on local open models (template + protocol in research_cycle/experiments/; venv ~/.local/state/mst/crc-venv311). MANDATORY sanity: report an oracle / positive-control number proving the measurement actually worked — a near-zero oracle means the run is broken, NOT that the concept failed (this exact check caught a .norm bug on 2026-07-03). Keep it TIGHT and time-boxed: smallest model (gpt2 or pythia-160m), fewest categories, ONE intervention — a minimal decisive test in a handful of runs, NOT a sprawling study; do not install heavy deps unless unavoidable.'} Be honest: "survived my test" ≠ "proven". If not computable in-budget, status=designed_not_run or not_computable with the design written down. DECLARE in the schema what you ACTUALLY ran: ran_model (exact id you loaded), n_samples, oracle_value, and deviated_from_request — set TRUE if you ran anything weaker/different than ordered (smaller model, a proxy, fewer samples). If deviated_from_request, deviation_proof MUST hold the pasted command output proving the ordered design was impossible (e.g. an ls showing the model absent). An independent VERIFIER checks this and VOIDS any deviation lacking proof — a shortcut on a false premise wins you nothing, so run what was ordered or show the receipt.`,
+  verifier: (c, t) => `You are the VERIFIER — an anti-substitution check, independent of the tester. THE ORDER (what must be tested): "${c.name}" — ${c.definition} · prediction: ${c.prediction}. WHAT THE TESTER REPORTS IT RAN: model=${t.ran_model || '?'}, n_samples=${t.n_samples ?? '?'}, oracle=${t.oracle_value ?? '?'}, deviated=${t.deviated_from_request}, deviation_proof="${(t.deviation_proof || '').slice(0, 400)}", numbers="${(t.numbers || '').slice(0, 500)}". Judge: (1) substitution_detected — did it run a MATERIALLY weaker/different design than ordered (smaller model, a proxy, far fewer samples, a different metric) WITHOUT a verified command-output proof the ordered design was impossible? (2) unproven_claim — does a load-bearing factual claim (e.g. "model X not available") have no pasted command-output proof? You MAY run ONE cheap Bash check yourself to verify such a claim (e.g. ls ~/.local/state/mst/hf-cache/hub). Default substitution_detected=true whenever the tester deviated and showed no receipt — an honest reduction must prove it was forced.`,
   control: () => `You are the CONTROL. Calibrate the judges: take 2 concepts KNOWN to be real (e.g. entropy, gene) and 2 obvious DISTRACTORS (vague/renamed) for "${DOMAIN}", run them through the same adversary+historian bar this campaign uses, and report whether the known-good passed and the distractors were killed. If the judges can't tell them apart, the campaign's verdicts are untrustworthy.`,
   report: (journal) => `You are the REPORTER. Write a BEAUTIFUL, HONEST report for a non-technical boss from this campaign journal: ${JSON.stringify(journal).slice(0, 12000)}. Structure: (1) where we shone the flashlight and why; (2) the interesting thoughts we found; (3) what we tried to build and REFUTED, and how (this is the valuable part — most pans are empty, say so plainly); (4) the survivors, with honest caveats ("survived our tests" ≠ "proven"); (5) what a next campaign should chase. No jargon-dumping; put technical detail under a "детали по запросу" tail. Register: the reader is a boss, not a co-developer.`,
+}
+
+// ── tester + anti-substitution verifier (2026-07-06) ────────────────────────
+// The teeth run, then an INDEPENDENT verifier checks the tester actually ran what
+// the concept ORDERED — not a cheaper proxy on a false premise. A flagged run can
+// never count as refuted OR supported; its verdict is voided to inconclusive.
+async function runTest(c) {
+  const t = await agent(P.tester(c), { label: `test:${c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
+  if (t && t.status === 'ran') {
+    const v = await agent(P.verifier(c, t), { label: `verify:${c.name}`, phase: 'Test', schema: S_VERIFY, effort: 'low' })
+    if (v && (v.substitution_detected || v.unproven_claim)) {
+      log(`round ${round}: ⚠ VERIFIER flagged "${c.name}"${v.substitution_detected ? ' SUBSTITUTION' : ''}${v.unproven_claim ? ' UNPROVEN-CLAIM' : ''} — ${v.note || ''}. Verdict "${t.verdict}" → inconclusive.`)
+      t.substitution_flag = { ...v, original_verdict: t.verdict }
+      t.verdict = 'inconclusive'
+    } else if (v) t.verified = true
+  }
+  return { name: c.name, concept: c, test: t }
 }
 
 // ── the loop ────────────────────────────────────────────────────────────────
@@ -96,10 +125,7 @@ while (round < MAX_ROUNDS && underBudget()) {
     phase('Test')
     const toTest = BACKLOG.splice(0, MAX_TEST)
     const tested = []
-    for (const c of toTest) {
-      const t = await agent(P.tester(c), { label: `test:${c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
-      tested.push({ name: c.name, concept: c, test: t })
-    }
+    for (const c of toTest) tested.push(await runTest(c))
     for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push({ ...t, route: 'backlog' })
     const rec = { round, source: 'backlog', tested, backlogLeft: BACKLOG.map(b => b.name) }
     journal.rounds.push(rec)
@@ -150,10 +176,7 @@ while (round < MAX_ROUNDS && underBudget()) {
   const toTest = survivors.slice(0, MAX_TEST)
   BACKLOG.push(...survivors.slice(MAX_TEST).map(s => s.c))  // deferred queue for later rounds instead of being dropped
   const tested = []
-  for (const s of toTest) {   // SEQUENTIAL — heavy experiments must not contend on one CPU box (2026-07-03 stall: 4 in parallel overwhelmed it, never reached Report)
-    const t = await agent(P.tester(s.c), { label: `test:${s.c.name}`, phase: 'Test', schema: S_TEST, effort: 'high' })
-    tested.push({ name: s.c.name, concept: s.c, test: t })
-  }
+  for (const s of toTest) tested.push(await runTest(s.c))   // SEQUENTIAL — heavy experiments must not contend on one CPU box (2026-07-03 stall: 4 in parallel overwhelmed it); runTest adds the anti-substitution verifier
 
   // a survivor is only "kept" if its test didn't refute it
   for (const t of tested) if (!t.test || t.test.verdict !== 'refuted') journal.survivors.push(t)
