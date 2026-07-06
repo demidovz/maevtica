@@ -1,0 +1,57 @@
+{
+ "model": "gpt2",
+ "layer": 9,
+ "oracle_lift": 3.1170570055643716,
+ "tree_LOO_acc": 0.6666666666666666,
+ "tree_insample_acc": 0.7777777777777778,
+ "tree_chance": 0.16666666666666666,
+ "mean_pairwise_cos": 0.338723821255068,
+ "tree_supported": true,
+ "walk_sweep": [
+  {
+   "mult": 0.25,
+   "swap_to_B": 0.945,
+   "random_away": 0.0
+  },
+  {
+   "mult": 0.5,
+   "swap_to_B": 1.0,
+   "random_away": 0.118
+  },
+  {
+   "mult": 0.75,
+   "swap_to_B": 1.0,
+   "random_away": 0.353
+  },
+  {
+   "mult": 1.0,
+   "swap_to_B": 1.0,
+   "random_away": 0.353
+  },
+  {
+   "mult": 1.5,
+   "swap_to_B": 1.0,
+   "random_away": 0.647
+  },
+  {
+   "mult": 2.0,
+   "swap_to_B": 1.0,
+   "random_away": 0.588
+  }
+ ],
+ "walk_clean_window": {
+  "mult": 0.5,
+  "swap_to_B": 1.0,
+  "random_away": 0.118
+ },
+ "walk_supported": true,
+ "categories": [
+  "fruit",
+  "vegetable",
+  "bird",
+  "fish",
+  "tree",
+  "flower"
+ ],
+ "verdict": "SUPPORTED"
+}
