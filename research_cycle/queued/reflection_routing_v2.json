@@ -1,0 +1,20 @@
+{
+ "domain": "reflection-routing self-improvement in LMs",
+ "campaign": "reflect-route",
+ "runTag": "rr1",
+ "maxRounds": 2,
+ "maxTest": 2,
+ "controlEvery": 2,
+ "capTokens": 1600000,
+ "backlog": [
+  {
+   "name": "Interp-guided reflection routing: internal states vs output confidence for where to reflect, fixed budget",
+   "definition": "Reflection loop re-does at most B of N answer-steps under a FIXED budget. Does picking WHICH steps to reflect on by an INTERNAL-activation signal beat picking by OUTPUT confidence, at equal B? Run on gpt2/pythia-160m on a checkable task (2-3 digit addition) where the base model errs measurably. Rank steps by likely-wrongness: INTERNAL=linear probe on residual activations predicting step-correctness; OUTPUT=logit-margin/entropy. Reflect action=re-decode that step with a fixed corrective procedure. Budget B equal across ALL arms.",
+   "prediction": "At fixed B (e.g. 20% of steps), INTERNAL-probe routing beats OUTPUT-confidence routing on final accuracy by a preregistered margin >=3 points (bootstrap CI excludes 0), and both beat RANDOM. Predicted order: oracle(reflect exactly the wrong steps) > internal-probe > output-confidence > random > no-reflection. REFUTED if internal-probe is within noise of output-confidence (internal states add no extra where-to-look signal) OR nothing beats random. POSITIVE CONTROL: the oracle arm must top the ranking, else measurement is BROKEN not refuted.",
+   "reduces_to": "Hidden-state error probing (Azaria&Mitchell 2023; CCS Burns 2022) + inference-time reflection (Reflexion/self-refine). Earns keep ONLY by internal-signal BUDGET ROUTING beating output-confidence routing at EQUAL compute — an efficiency claim neither prior line makes; else refuted-as-rediscovery."
+  }
+ ],
+ "seenStress": [
+  "Reflection loops spend compute uniformly; whether a model's INTERNAL states route a fixed reflection budget to the right steps better than output confidence is open and directly testable."
+ ]
+}
