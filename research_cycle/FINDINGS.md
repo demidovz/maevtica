@@ -99,7 +99,22 @@ Refined understanding: "inside beats voice" (Brick 1) is specific to ARITHMETIC-
 computation where the model commits *confidently* to wrong outputs; it does NOT transfer to
 categorization / the map. Do not reopen without a genuinely new mechanism.
 
-## NEXT (open lines, none started)
+## Teaching line — does the inner signal tell us WHERE to teach? REFUTED (simple version)
+`campaigns/teach-curriculum/` (teach_curriculum.py, 2026-07-07). Child = gpt2 at partial
+addition competence (start 50.7%). Equal teaching budget (K=384, 50 steps); 4 teachers
+differ only in WHICH problems they select. Probe error-detection AUC 0.84 (inner signal strong).
+- Result (mean acc, 3 seeds): random 52.0 (+1.3) > oracle 48.4 > inner 47.6 > output 47.5.
+  Every TARGETED strategy lost to random; inner−output ≈ 0 (+0.11pt) → REFUTED.
+- Mechanism: restricting practice to the hard/confused subset causes catastrophic narrowing
+  (forgets the broad skill). A strong error-DETECTOR is NOT a good teaching-TARGET selector —
+  **diagnosis ≠ cure.** Even the voice's hesitation-boundary (naive ZPD) lost to breadth.
+- Scope: tests only RESTRICT-to-subset teaching. The fairer INTERLEAVE test (broad practice +
+  extra emphasis on inner-flagged spots, which avoids forgetting) is NOT yet run → the open
+  question below.
+
+## NEXT (open lines)
+- **Interleave teaching** (fairest test of the boss's idea): broad practice + upweight
+  inner-flagged spots vs pure broad, equal budget — does emphasis-without-restriction help?
 - κ "one idea, many disguises" (Causal Quotient Feature) — loop's top untested candidate.
 - Harden a night-survivor ("shape-from-data") on a bigger model.
 - The regime question for Brick 1 on a REAL reasoning model (needs cloud GPU).

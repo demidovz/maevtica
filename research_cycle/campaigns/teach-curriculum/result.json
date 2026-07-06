@@ -1,0 +1,43 @@
+{
+ "task": "addition 0-99, teach at equal budget K",
+ "device": "cuda",
+ "C0_start_acc": 0.5073170731707317,
+ "C0_digit_err": 0.4926829268292683,
+ "probe_oof_AUC": 0.8431979368149581,
+ "K": 384,
+ "TEACH_steps": 50,
+ "SEEDS": 3,
+ "mean_acc": {
+  "oracle": 0.4840108401084011,
+  "inner": 0.4758807588075881,
+  "output": 0.47479674796747967,
+  "random": 0.5203252032520326
+ },
+ "std_acc": {
+  "oracle": 0.018122768018753916,
+  "inner": 0.0020279985836173177,
+  "output": 0.006083995750851942,
+  "random": 0.007965820301733874
+ },
+ "improvement_over_C0_pts": {
+  "oracle": -2.3306233062330595,
+  "inner": -3.143631436314359,
+  "output": -3.252032520325204,
+  "random": 1.3008130081300862
+ },
+ "teaching_moved_needle_pts": 1.3008130081300862,
+ "PRIMARY_inner_minus_output_pts": 0.10840108401083774,
+ "inner_minus_output_per_seed": [
+  0.9756097560975618,
+  0.1626016260162566,
+  -0.8130081300813052
+ ],
+ "inner_minus_random_per_seed": [
+  -4.390243902439028,
+  -5.203252032520322,
+  -3.7398373983739908
+ ],
+ "seeds_inner_beats_output": "2/3",
+ "oracle_minus_random_pts": -3.6314363143631456,
+ "verdict": "REFUTED"
+}
