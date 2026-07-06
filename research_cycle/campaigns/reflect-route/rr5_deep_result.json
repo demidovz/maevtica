@@ -1,0 +1,36 @@
+{
+ "model": "gpt2 fine-tuned on addition (partial competence)",
+ "task": "addition 0-99, per-answer-digit steps",
+ "N": 1713,
+ "n_err": 870,
+ "err_rate": 0.5078809106830122,
+ "best_internal_layer": 11,
+ "final_acc": {
+  "oracle": 0.6923525977816696,
+  "internal": 0.6678342089900758,
+  "conf-probe": 0.6684179801517806,
+  "output": 0.6684179801517806,
+  "random": 0.5890251021599533,
+  "no_reflection": 0.4921190893169877
+ },
+ "AUC": {
+  "oracle": 1.0,
+  "internal": 0.9040604845857024,
+  "conf-probe": 0.8699063279748025,
+  "output": 0.863137944669421,
+  "random": 0.4830149575271676
+ },
+ "PRIMARY_gain_internal_minus_output_pts": -0.05837711617047159,
+ "gain_CI": [
+  -0.8756567425569184,
+  0.7005253940455369
+ ],
+ "detection_internal_minus_output_AUC": 0.040922539916281475,
+ "AUC_delta_CI": [
+  0.02646658000669346,
+  0.05448230923907872
+ ],
+ "permutation_control_AUC": 0.4746062911604696,
+ "oracle_lift_pts": 20.023350846468187,
+ "verdict": "REFUTED"
+}
