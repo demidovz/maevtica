@@ -87,8 +87,19 @@ where-to-reflect signal for the model's own concept-mistakes (miscategorizations
   fine-tuned / connect-categorization): internal & geometric signals beat output confidence
   ONLY when the model is confidently wrong; whenever it's competent, the voice wins.
 
-## Refined open question (only place the map signal could still win)
-Test the MAP signal in a CONFIDENTLY-WRONG categorization regime — tricky/ambiguous/rare
-entities, or a partially-trained model that mis-sorts common ones — where output confidence
-should go blind. If the map signal beats the voice THERE, it's a real tool for the
-overconfident regime; if not, the map adds nothing over output confidence for error-routing.
+### Hard regime tested too — REFUTED, connect line CLOSED (2026-07-06)
+`campaigns/map-tree/connect_hard_result.json`. Rare/hard members (gpt2 mis-sorts 62%):
+MAP AUC **0.38 (below chance!)** vs OUTPUT **0.76**, MAP−OUTPUT −0.39 (CI far from 0) → REFUTED.
+Even there the voice isn't blind (entropy on errors 1.46 vs correct 1.16) and still wins.
+**Closure:** the two bricks are both real, but they do NOT combine into a better error-router.
+The MAP-geometry signal is a poor (even anti-correlated) predictor of the model's actual
+concept-mistakes — what the model mis-sorts is NOT what's geometrically ambiguous on our axes;
+its own output confidence is the better error-detector in BOTH easy and hard regimes.
+Refined understanding: "inside beats voice" (Brick 1) is specific to ARITHMETIC-like
+computation where the model commits *confidently* to wrong outputs; it does NOT transfer to
+categorization / the map. Do not reopen without a genuinely new mechanism.
+
+## NEXT (open lines, none started)
+- κ "one idea, many disguises" (Causal Quotient Feature) — loop's top untested candidate.
+- Harden a night-survivor ("shape-from-data") on a bigger model.
+- The regime question for Brick 1 on a REAL reasoning model (needs cloud GPU).
