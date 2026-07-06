@@ -1,0 +1,38 @@
+{
+ "model": "gpt2",
+ "task": "addition (mixed 1-2 digit), per-answer-digit steps",
+ "N": 1041,
+ "n_err": 930,
+ "err_rate": 0.8933717579250721,
+ "best_internal_layer": 11,
+ "internal_AUC_by_layer": {
+  "3": 0.7715780296425458,
+  "6": 0.8232684297200425,
+  "9": 0.8294197423229681,
+  "11": 0.8367625690206334
+ },
+ "AUC": {
+  "oracle": 1.0,
+  "internal": 0.8367625690206334,
+  "conf-probe": 0.5071490845684393,
+  "output": 0.5031967451322291,
+  "random": 0.4636442894507411
+ },
+ "primary_internal_minus_output_AUC": 0.3335658238884043,
+ "AUC_delta_CI": [
+  0.2480556607483298,
+  0.41752889430920354
+ ],
+ "permutation_control_AUC": 0.5269640608350286,
+ "final_acc": {
+  "oracle": 0.30643611911623436,
+  "internal": 0.3035542747358309,
+  "conf-probe": 0.28434197886647455,
+  "output": 0.2747358309317964,
+  "random": 0.27953890489913547,
+  "no_reflection": 0.10662824207492795
+ },
+ "secondary_internal_minus_output_pts": 2.8818443804034533,
+ "oracle_lift_pts": 19.98078770413064,
+ "verdict": "SUPPORTED"
+}

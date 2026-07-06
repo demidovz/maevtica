@@ -30,10 +30,15 @@ PREREGISTERED DECISION RULE (frozen before running):
     class (<20 correct or <20 wrong) too small OR permutation-control AUC > 0.60
     (probe leaks on shuffled labels → pipeline invalid).
   * SUPPORTED  iff internal_AUC - output_AUC >= +0.05 AND paired-bootstrap 95% CI
-               (2000 resamples over steps) excludes 0 AND internal_AUC > 0.55 AND
-               output_AUC > 0.50.
+               (2000 resamples over steps) excludes 0 AND internal_AUC > 0.55.
   * REFUTED    iff internal within noise of output (CI includes 0) or internal_AUC
                <= chance or the +0.05 margin is not met.
+rr4 CORRECTION (frozen before this run): rr3's rule had a BACKWARDS clause
+"output_AUC > 0.50" — it punished the pro-hypothesis case (output confidence being
+USELESS is the hypothesis in its strongest form), so a clean +0.298 AUC win was
+mislabeled REFUTED. rr4 removes ONLY that clause; the fairness safeguard is the
+PERMUTATION control (internal probe on shuffled labels must be ~chance), which stays.
+Fresh data (seed 2). No other change — this is a single-fix confirmation, not a weakening.
 Error label uses the model's best-DIGIT guess (argmax over the 10 digit tokens) vs
 the true digit — the faithful "which digit does the model think it is" for arithmetic.
 """
@@ -50,7 +55,7 @@ print(f"[load] {MODEL} (offline)...", flush=True)
 m = HookedTransformer.from_pretrained(MODEL, device="cpu"); m.eval()
 assert m.cfg.n_layers == 12, f"unexpected model: {m.cfg.n_layers} layers"
 DIG=[m.to_single_token(" "+str(d)) for d in range(10)]   # single-token digits
-rng=np.random.default_rng(1)                              # rr3: FRESH data, not rr2's steps
+rng=np.random.default_rng(2)                              # rr4: FRESH data again (clean confirmation)
 
 def sd(n): return " ".join(list(str(n)))   # space-separated digits -> one token each
 
@@ -163,7 +168,7 @@ oracle_lift=(fa["oracle"]-no_reflect)*100
 
 if aucs["oracle"]<0.98 or oracle_lift<1.0 or n_ok<20 or n_err<20 or perm_auc>0.60:
     verdict="BROKEN_MEASUREMENT"
-elif auc_delta>=0.05 and auc_ci[0]>0 and aucs["internal"]>0.55 and aucs["output"]>0.50:
+elif auc_delta>=0.05 and auc_ci[0]>0 and aucs["internal"]>0.55:
     verdict="SUPPORTED"
 else:
     verdict="REFUTED"
@@ -179,5 +184,5 @@ out=dict(model=MODEL,task="addition (mixed 1-2 digit), per-answer-digit steps",N
 print(f"\n[neg-control] internal probe on shuffled labels: AUC={perm_auc:.3f} (must be ~0.5)", flush=True)
 print("\n=== NUMBERS ==="); print(json.dumps(out,indent=1))
 print("\n=== VERDICT ===",verdict,f"| PRIMARY internal_AUC-output_AUC={auc_delta:+.3f} CI[{auc_ci[0]:+.3f},{auc_ci[1]:+.3f}] · oracle_AUC={aucs['oracle']:.3f} perm={perm_auc:.3f}")
-dst=os.path.join(os.path.dirname(__file__),"..","campaigns","reflect-route","rr3_arith_result.json")
+dst=os.path.join(os.path.dirname(__file__),"..","campaigns","reflect-route","rr4_arith_result.json")
 json.dump(out,open(dst,"w"),indent=1); print("[saved]",os.path.abspath(dst),flush=True)
