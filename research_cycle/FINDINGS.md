@@ -158,6 +158,20 @@ reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problem
   I was told" signal (YES), but NO distinct "unease of lying" — a lie is internally identical to a
   guess.** Deep reading (unease/self-knowledge) reduces cleanly to a shallow real one (grounding).
 
+## LOCAL WORKSPACE PROGRAM (started 2026-07-07) — plan in PLAN_local_workspace_experiments.md
+Build a local J-lens on small models + a battery of original checks. Phase 0a (logit-lens) BUILT
+& validated: reads "poised-to-say" (cold/animal emerge across layers); gpt2-base too weak for
+multi-hop unspoken intermediates (spider→8) → use arithmetic.
+- **E1 "Errors = the missing intermediate" — SUPPORTED** `campaigns/workspace/`. gpt2 adder,
+  the tens-digit's unspoken intermediate = the units CARRY. Errors concentrate on carry problems
+  (+5.7pt); **92% of carry-errors are exactly "forgot the carry"**; and an internal probe flags
+  the error at AUC **0.83 vs output confidence 0.60** (Δ+0.23 CI excl 0, perm 0.55, believable).
+  → An arithmetic error IS a missing workspace intermediate, visible inside BEFORE the wrong digit
+  is spoken. Unifies Brick 1 ⊕ J-space. (Note: this is a POSITIVE for interp-as-detector, our
+  through-line's one working mode — detection, in the confidently-wrong regime.)
+- Next in program: E3 (confabulation=empty workspace, hallucination seed), E2 (emergence curve),
+  E4 tip-of-tongue, E5 privileged injection, E6 belief update.
+
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +
 he likes the "boundary between what it KNOWS and what it can SAY". These FUSE into one clean,

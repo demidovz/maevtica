@@ -1,0 +1,20 @@
+{
+ "exp": "E1 missing intermediate (carry)",
+ "device": "cpu",
+ "N": 1000,
+ "tens_err": 0.135,
+ "err_carry": 0.1652542372881356,
+ "err_nocarry": 0.10795454545454546,
+ "carry_gap": 0.05729969183359014,
+ "carry_probe_AUC": 0.9992817475603493,
+ "internal_err_AUC": 0.8321216013701563,
+ "output_err_AUC": 0.5981417255405694,
+ "delta": 0.2339798758295869,
+ "delta_CI": [
+  0.16604836360542663,
+  0.3049304498710278
+ ],
+ "perm_AUC": 0.5489573967030614,
+ "offby_carry_share": 0.9230769230769231,
+ "verdict": "SUPPORTED"
+}
