@@ -54,3 +54,56 @@ A regime of CONFIDENT confabulation (low entropy but wrong) is where the inside 
 this small model on this task simply doesn't confidently confabulate (it hedges). The cloud plan
 (bigger models, real hallucinations) is exactly where confident confabulation is expected — E3 says
 test it THERE, not that the signal is absent in principle.
+
+---
+
+# E5 — "Privileged injection": is the workspace a LEVER or just a lens? — MIXED, 2026-07-07
+(most interesting result of the program — the first real causal leverage in the whole arc)
+
+Phase 0b: built the real J-lens (Jacobian of digit-logits w.r.t. the residual at the "=" token).
+A tiny K=8 workspace captures **94.7%** of the digit-output effect — a genuine low-dim
+verbalizable subspace. gpt2 adder, 2-digit sums <100 (tens-digit intermediate = the units carry).
+
+## Result
+- **E5a (READ):** carry decodable from the workspace AUC 0.972 — but ALSO from the "silent"
+  complement 0.921 (Δ+0.051, below the +0.10 bar). The reasoning intermediate is NOT locked in the
+  verbalizable subspace; it is distributed.
+- **E5b (CAUSAL) — the money finding:** on NO-carry problems (correct tens digit t), inject a
+  matched-norm vector at L,q and read the new tens digit:
+  | direction | P(tens→t+1) | specificity | scale |
+  |---|---|---|---|
+  | **carry-in-workspace** | **0.64** | **0.99** | 2× |
+  | random-in-workspace | 0.07 | — | 1× |
+  | carry-in-complement | 0.38 | 0.98 | 4× |
+  | random-full-space | 0.14 | — | 4× |
+  - Injecting the CARRY direction makes the model produce **specifically t+1** — the carry-applied
+    (arithmetically correct) answer — with **99% specificity** (not scatter). **The model REASONS
+    FROM the injected concept**, correctly applying a carry that isn't there.
+  - A RANDOM direction in the SAME workspace does almost nothing (0.07): it's the SPECIFIC
+    concept-direction, not the subspace, that carries the lever.
+  - The carry direction works from the complement too (0.38) but needs ~3× the push → the workspace
+    is the more POTENT site per unit norm, not an exclusive one.
+
+## Reading (amends the through-line)
+- **Strong "privileged container" hypothesis: REFUTED** — the concept is distributed and steerable
+  from outside the verbalizable subspace too.
+- **BUT the first real LEVER in the whole arc:** we can inject a clean concept-direction and the
+  model correctly reasons from it (structured t+1, 99% specific; random dirs don't). And the
+  verbalizable workspace is quantitatively PRIVILEGED — ~3× more potent per unit norm.
+- Through-line amendment: "interp is a detector, not a lever" held for READING error signals
+  (E1/E3). But STEERING a well-identified concept-direction DOES causally redirect the model's
+  reasoning. The map isn't only readable — a cleanly-identified direction is a usable knob, and it
+  bites hardest in the verbalizable workspace. This is the closest thing yet to the boss's core
+  question ("can using the map make the child smarter") — a local YES-in-principle.
+
+## Caveats / honesty
+- K=8 is a soft verbalizable/silent cut (⊥ retains ~5% of the Jacobian energy), so "steerable from
+  the silent complement" is partly the imperfect split — do NOT over-claim silent-subspace control.
+  The clean, caveat-free privilege signal is the ~3× potency of the workspace-aligned component.
+- The carry direction is built from carry−nocarry means, so pushing toward t+1 is partly "expected";
+  the non-trivial parts are (a) 99% SPECIFICITY to the exact carry-correct digit (functional, not
+  scatter) and (b) random-in-W ≈ 0 (it's the concept, not the space). Steering itself is a known
+  technique — the contributions here are structured-reasoning-from-concept + the workspace-potency
+  comparison, tying E1's READ of the carry to a WRITE of it.
+- Next sharpening (optional): larger/cleaner workspace cut + measure dW/dperp output-energy to
+  settle the container question; test whether steering COMPOSES (inject two carries → +2?).

@@ -1,0 +1,38 @@
+{
+ "exp": "E5 privileged injection (workspace causal privilege)",
+ "L": 8,
+ "K": 8,
+ "jac_energy": 0.9473413825035095,
+ "carry_AUC_workspace": 0.972422512192991,
+ "carry_AUC_perp": 0.920931858011399,
+ "inject_norm": 171.94822692871094,
+ "e5b": {
+  "carry_in_W": {
+   "scale": 2.0,
+   "P_to_t1": 0.6437847866419295,
+   "P_changed": 0.647495361781076,
+   "specificity": 0.9942693409742122
+  },
+  "random_in_W": {
+   "scale": 1.0,
+   "P_to_t1": 0.0686456400742115,
+   "P_changed": 0.07421150278293136,
+   "specificity": 0.925
+  },
+  "carry_in_perp": {
+   "scale": 4.0,
+   "P_to_t1": 0.38404452690166974,
+   "P_changed": 0.3914656771799629,
+   "specificity": 0.9810426540284359
+  },
+  "random_full": {
+   "scale": 4.0,
+   "P_to_t1": 0.137291280148423,
+   "P_changed": 0.137291280148423,
+   "specificity": 1.0
+  }
+ },
+ "P_t1_W": 0.6437847866419295,
+ "P_t1_best_control": 0.38404452690166974,
+ "verdict": "REFUTED"
+}

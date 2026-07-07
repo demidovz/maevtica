@@ -176,7 +176,19 @@ multi-hop unspoken intermediates (spider→8) → use arithmetic.
   OUTPUT already shows it → no hidden signal. **E1⊕E3 draw the line: interp beats the voice ONLY in
   the confidently-WRONG regime; when the voice honestly hedges, inside adds nothing.** Same through-line
   ("deep reduces to shallow-but-real"). Would flip only under CONFIDENT confabulation → test on cloud.
-- Next in program: E2 (emergence curve), E4 tip-of-tongue, E5 privileged injection, E6 belief update.
+- **E5 "Privileged injection: lever or lens?" — MIXED (biggest result)** `campaigns/workspace/`. Built
+  the real J-lens (Jacobian): K=8 workspace captures 94.7% of digit-output effect. READ: carry
+  decodable from workspace 0.97 but ALSO complement 0.92 → not locked in the verbalizable subspace.
+  CAUSAL (money): injecting the CARRY direction → model produces specifically t+1 (carry-applied)
+  P=0.64, **99% specificity** ("reasons from the injected concept"); random-in-W ≈0.07 (it's the
+  concept, not the space); carry-in-complement 0.38 but needs 3× push. → Strong "privileged container"
+  REFUTED, but **the first real causal LEVER in the arc**: a clean concept-direction is a usable knob,
+  and the workspace is ~3× more potent. **Through-line AMENDED: detection-only holds for READING error
+  signals (E1/E3); but STEERING a well-identified concept-direction DOES redirect reasoning.** Closest
+  yet to the boss's "use the map to make it smarter" = local yes-in-principle. Caveat: K=8 soft cut
+  (⊥ keeps ~5% energy) → don't over-claim silent-subspace control; clean signal = 3× workspace potency.
+- Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update; E5 sharpening
+  (cleaner cut + does steering COMPOSE: two carries → +2?).
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +
