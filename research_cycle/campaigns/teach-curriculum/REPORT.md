@@ -44,3 +44,32 @@ guess: even teaching at the voice's hesitation-boundary (output) didn't win; bro
 **Finding for the vision: the inner error-signal earns its keep as a DETECTOR, not as a
 curriculum. To teach this child, breadth beats targeting — at least when targeting means
 restricting.**
+
+---
+
+# Fair test — INTERLEAVE (broad practice + light emphasis), 2026-07-07
+
+REFUTED (barely), with a nuance. teach_interleave.py. Same child (start 51.6%), probe
+AUC 0.85. Arms differ only in composition of the equal K-budget; run on CPU (GPU was busy
+with another studio job — basketbolica video). 3 seeds.
+
+| arm | mean acc | vs C0 |
+|---|---|---|
+| inner0.3 (light inside-emphasis) | 52.9% | +1.3 |
+| **broad (pure breadth)** | **52.6%** | +0.9 |
+| output0.3 (light voice-emphasis) | 49.7% | −1.9 |
+| inner0.6 (heavy inside-emphasis) | 49.4% | −2.3 |
+
+- PRIMARY inner0.3 − broad = **+0.36 pt (2/3 seeds)** → below +1.0 threshold → **REFUTED**.
+  Light inside-emphasis merely TIES plain breadth; it does not reliably beat it.
+- Nuance: at matched dose, inner-emphasis beats output-emphasis by **+3.2 pt** (per-seed
+  +3.0/0.0/+6.6) — so IF you emphasize, looking INSIDE beats listening to the VOICE
+  (consistent with Brick 1). But neither beats plain breadth.
+- Heavy emphasis (0.6) HURTS (−2.3), same forgetting as the restrict version.
+
+## Teaching line — closed
+Two experiments (restrict + interleave): **breadth beats targeting.** Seeing exactly where
+the child is tangled (probe AUC 0.85) does NOT buy a better curriculum — restricting to the
+tangled spots hurts, and even gentle emphasis only ties broad practice. Diagnosis ≠ better
+curriculum. The one honest positive: as an emphasis signal, INSIDE > the voice — but for
+teaching this child, plain balanced practice wins.

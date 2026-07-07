@@ -112,9 +112,25 @@ differ only in WHICH problems they select. Probe error-detection AUC 0.84 (inner
   extra emphasis on inner-flagged spots, which avoids forgetting) is NOT yet run → the open
   question below.
 
-## NEXT (open lines)
-- **Interleave teaching** (fairest test of the boss's idea): broad practice + upweight
-  inner-flagged spots vs pure broad, equal budget — does emphasis-without-restriction help?
+### Interleave (fair test) done — teaching line CLOSED (2026-07-07)
+`campaigns/teach-curriculum/interleave_result.json` (run on CPU — GPU was busy with a
+basketbolica video job). Broad practice + light emphasis on inner-flagged spots vs pure broad,
+equal budget. Result (start 51.6%, probe AUC 0.85): inner0.3 52.9 ≈ broad 52.6 (PRIMARY
++0.36pt, 2/3 seeds → REFUTED); heavy emphasis inner0.6 49.4 HURTS; output0.3 49.7 HURTS.
+Nuance: at matched dose INSIDE beats the VOICE by +3.2pt (Brick-1 consistent) — but neither
+beats plain breadth. **Closure across both experiments: breadth beats targeting; a strong
+error-DETECTOR (AUC 0.85) does NOT buy a better curriculum. Diagnosis ≠ cure.** Do not reopen
+the "route teaching by the inner signal" idea on this toy without a new mechanism (e.g. a real
+reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problems).
+
+## NEXT (open lines, none started)
 - κ "one idea, many disguises" (Causal Quotient Feature) — loop's top untested candidate.
 - Harden a night-survivor ("shape-from-data") on a bigger model.
 - The regime question for Brick 1 on a REAL reasoning model (needs cloud GPU).
+
+## Infra note (2026-07-07)
+Local GPU (RTX 3050, 3.68 GiB) is SHARED across studio sessions — a basketbolica neurotrack
+job saturated it (clocks clamped to 210MHz). teach_interleave has a CPU fallback
+(CUDA_VISIBLE_DEVICES="" + crc-venv311, torch 2.12 cpu) with BATCHED eval/collect; ~20min for
+this size. Check `nvidia-smi --query-compute-apps` before launching GPU jobs; don't kill other
+sessions' processes.

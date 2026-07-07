@@ -1,0 +1,42 @@
+{
+ "task": "addition 0-99, INTERLEAVE teach at equal budget K",
+ "device": "cpu",
+ "C0_start_acc": 0.5163934426229508,
+ "C0_digit_err": 0.48360655737704916,
+ "probe_oof_AUC": 0.8531011215717245,
+ "K": 260,
+ "TEACH_steps": 50,
+ "SEEDS": 3,
+ "mean_acc": {
+  "broad": 0.5255009107468124,
+  "inner0.3": 0.5291438979963571,
+  "inner0.6": 0.49362477231329693,
+  "output0.3": 0.4972677595628416
+ },
+ "std_acc": {
+  "broad": 0.004643915768299445,
+  "inner0.3": 0.016891836968116053,
+  "inner0.6": 0.028684910287839024,
+  "output0.3": 0.013569821881376462
+ },
+ "improvement_over_C0_pts": {
+  "broad": 0.910746812386154,
+  "inner0.3": 1.2750455373406244,
+  "inner0.6": -2.2768670309653904,
+  "output0.3": -1.9125683060109255
+ },
+ "teaching_moved_needle_pts": 0.910746812386154,
+ "PRIMARY_inner0_3_minus_broad_pts": 0.364298724954463,
+ "inner0_3_minus_broad_per_seed": [
+  1.912568306010931,
+  -2.4590163934426257,
+  1.6393442622950838
+ ],
+ "seeds_inner_beats_broad": "2/3",
+ "inner0_3_minus_output0_3_per_seed": [
+  3.0054644808743203,
+  0.0,
+  6.557377049180335
+ ],
+ "verdict": "REFUTED"
+}
