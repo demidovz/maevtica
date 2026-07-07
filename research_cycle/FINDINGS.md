@@ -187,8 +187,14 @@ multi-hop unspoken intermediates (spider→8) → use arithmetic.
   signals (E1/E3); but STEERING a well-identified concept-direction DOES redirect reasoning.** Closest
   yet to the boss's "use the map to make it smarter" = local yes-in-principle. Caveat: K=8 soft cut
   (⊥ keeps ~5% energy) → don't over-claim silent-subspace control; clean signal = 3× workspace potency.
-- Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update; E5 sharpening
-  (cleaner cut + does steering COMPOSE: two carries → +2?).
+- **E5-compose "does the lever compose?" — SWITCH, not a dial.** Pushed carry-in-W harder: mass moves
+  +0→+1 and SATURATES (~0.45), **+2 never appears**, over-drive just scatters (junk +5..→0.14).
+  Carry lever = binary SWITCH ("a carry happened", +1), NOT a magnitude DIAL — single-digit addition
+  only has carry∈{0,1}, no "+2" axis exists. **Lesson (bears on "make it smarter"): the lever PULLS a
+  learned concept but cannot SYNTHESIZE an unlearned one** — can't squeeze +2 from a brain that only
+  knows carry-0-or-1. Steering speaks the language of what's already mastered. (Potency varied
+  run-to-run 0.45 vs E5's 0.64; no-composition is robust across the sweep.)
+- Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update.
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +

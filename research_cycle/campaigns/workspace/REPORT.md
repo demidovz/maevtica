@@ -107,3 +107,26 @@ verbalizable subspace. gpt2 adder, 2-digit sums <100 (tens-digit intermediate = 
   comparison, tying E1's READ of the carry to a WRITE of it.
 - Next sharpening (optional): larger/cleaner workspace cut + measure dW/dperp output-energy to
   settle the container question; test whether steering COMPOSES (inject two carries → +2?).
+
+## E5-compose — does the lever compose? SWITCH, not a dial (2026-07-07)
+Pushed the carry-in-workspace direction harder (scale 0→7) and read where the tens digit lands
+(offset from the correct no-carry digit t):
+
+| scale | +0 | +1 | +2 | +3 | +5.. |
+|---|---|---|---|---|---|
+| 1.0 | .85 | .15 | 0 | 0 | 0 |
+| 2.0 | .78 | .21 | 0 | 0 | 0 |
+| 4.0 | .54 | .44 | 0 | 0 | .02 |
+| 6.0 | .49 | .45 | 0 | 0 | .06 |
+| 7.0 | .45 | .38 | .03 | 0 | .14 |
+
+- Mass moves +0 → **+1 and SATURATES** (~0.45); **+2 never appears**; over-driving (scale 7) just
+  SCATTERS into junk (+5.. → 0.14), it does not march to +2.
+- **Verdict: the carry lever is a binary SWITCH ("a carry happened", adds exactly +1), NOT a linear
+  DIAL.** Reason: single-digit addition only ever has carry ∈ {0,1}; the model never saw a "double
+  carry", so no +2 axis exists. The direction encodes the LEARNED concept, not an abstract magnitude.
+- **Key lesson (bears on "make it smarter"):** the lever can PULL a concept the model already learned,
+  but cannot SYNTHESIZE one it never learned — you can't squeeze +2 out of a brain that only knows
+  carry-0-or-1. Steering speaks the language of what's already mastered. (Footnote: this run's lever
+  was weaker than E5's, 0.45 vs 0.64 max — potency varies run-to-run with the trained model; the
+  qualitative no-composition result is robust across the whole scale sweep.)
