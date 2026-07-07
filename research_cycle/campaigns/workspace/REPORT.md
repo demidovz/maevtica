@@ -130,3 +130,38 @@ Pushed the carry-in-workspace direction harder (scale 0→7) and read where the 
   carry-0-or-1. Steering speaks the language of what's already mastered. (Footnote: this run's lever
   was weaker than E5's, 0.45 vs 0.64 max — potency varies run-to-run with the trained model; the
   qualitative no-composition result is robust across the whole scale sweep.)
+
+## малыш-крошка — structure-guided vs blind compression — BLIND WINS BIG (2026-07-07)
+Compressed the adder's residual at layer L, "=" position, to a k-dim bottleneck, three ways:
+SMART = keep the Jacobian directions (what our lens reads as driving the digit output);
+BLIND = keep the highest-variance directions (PCA, structure-blind); RANDOM = k random dirs.
+
+| k | SMART (Jacobian) | BLIND (PCA) | RANDOM |
+|---|---|---|---|
+| 1 | .17 (chance) | .60 | .17 |
+| 2 | .17 | **.93** | .17 |
+| 8 | .31 | **.96 (=full)** | .17 |
+| 16 | .91 | .96 | .17 |
+| 32 | .95 | .96 | .17 |
+| 128 | .96 | .96 | .30 |
+
+Full (no compression) = 0.957. **k needed to reach 95% of full: BLIND=2, SMART=32, RANDOM=never.**
+
+## Reading (honest, and it stings the right way)
+- **Blind variance-compression (PCA) beats our structure(Jacobian)-guided compression by ~16×**
+  (k=2 vs k=32). Reading the output-structure is the WRONG tool for compression — it actively hurt.
+- **Why (and it's instructive):** the Jacobian directions are "what linearly maps to the answer at
+  this layer" — but compression asks the UPPER layers to still COMPUTE. To compute they need the raw
+  INGREDIENTS (the two digits), which live in the HIGH-VARIANCE directions. Projecting onto the
+  Jacobian directions keeps the output-readout but throws away the ingredients → the upper layers
+  can't recompute → chance until you keep enough (k≥16). PCA keeps the ingredients → computes fine
+  at k=2. The useful "structure" for compression is the INFORMATION CONTENT (variance), and plain
+  statistics find it with zero interp.
+- **Sharpens E5:** the 8-dim workspace captured 94.7% of the OUTPUT-EFFECT (reading out), NOT the
+  computation's ingredients. Output-readout ≠ compute-substrate. Do not conflate them.
+- **Answer to the boss's idea (b):** does reading the concept-structure (our way) compress better than
+  blind? NO — the opposite, decisively. This is hard-number confirmation of what we told him about
+  distillation: the transfer/compression is best done by dumb gradients/statistics (PCA, standard KD),
+  NOT by interp-surgery. Reinforces the through-line: interp is a DIAGNOSTIC, not a superior engineering
+  lever. (Nuance for fairness: PCA is itself implicitly finding the right structure — "structure
+  matters", just not the output-map structure our lens reads; plain variance already captures it.)

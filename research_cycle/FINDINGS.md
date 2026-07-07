@@ -194,6 +194,15 @@ multi-hop unspoken intermediates (spider→8) → use arithmetic.
   learned concept but cannot SYNTHESIZE an unlearned one** — can't squeeze +2 from a brain that only
   knows carry-0-or-1. Steering speaks the language of what's already mastered. (Potency varied
   run-to-run 0.45 vs E5's 0.64; no-composition is robust across the sweep.)
+- **малыш-крошка "structure-guided vs blind compression" — BLIND WINS BIG.** Compressed the adder's
+  residual at L,"=" to k dims three ways. **BLIND (PCA/variance) keeps full addition at k=2**; SMART
+  (our Jacobian read) needs k=32; RANDOM never. Reading the output-structure is the WRONG tool for
+  compression — it HURT (16× worse). Why: compression needs the compute INGREDIENTS (the digits =
+  high-variance dirs); the Jacobian keeps the output-readout and throws the ingredients away.
+  **Sharpens E5**: 8-dim workspace = 94.7% of OUTPUT-effect ≠ compute-substrate. **Answers boss idea
+  (b): reading structure does NOT compress better than blind — the opposite.** Hard-number confirmation
+  that transfer/compression belongs to dumb gradients/statistics (PCA, standard distillation), NOT
+  interp-surgery. Reinforces through-line: interp = DIAGNOSTIC, not a superior engineering lever.
 - Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update.
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
