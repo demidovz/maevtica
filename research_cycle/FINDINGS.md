@@ -123,10 +123,42 @@ error-DETECTOR (AUC 0.85) does NOT buy a better curriculum. Diagnosis ≠ cure.*
 the "route teaching by the inner signal" idea on this toy without a new mechanism (e.g. a real
 reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problems).
 
-## NEXT (open lines, none started)
-- κ "one idea, many disguises" (Causal Quotient Feature) — loop's top untested candidate.
+## PLANNED — CLOUD (boss-approved to schedule, needs a bigger machine) 2026-07-07
+- **Hallucination detection on a REAL model.** Take Brick 1's confirmed finding (internal
+  states catch confident errors the voice misses, in the confidently-wrong regime) and test it
+  where it MATTERS: does an internal probe on a real reasoning model (7B+ doing QA/CoT) catch
+  CONFIDENT FALSEHOODS (hallucinations) better than the model's own confidence? This both tests
+  generalization of the toy law AND turns our one working tool into something useful. Needs
+  cloud GPU. Boss said: keep working locally for now, but this goes in the plans. — DONE (here).
+
+## NEXT — LOCAL (chosen direction 2026-07-07): reading the hierarchy beyond "lying"
+The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +
+he likes the "boundary between what it KNOWS and what it can SAY". These FUSE into one clean,
+cheap, falsifiable local experiment:
+- **The "says-against-its-own-grain" conflict signal.** Honest framing (no mysticism): a small
+  LM does not FEEL shame; but we can ask whether, when it OUTPUTS X while its internals ENCODE
+  not-X, there is a measurable internal CONFLICT marker — distinct from a plain error. Three
+  cases: (1) honest truth, (2) forced/known falsehood (internals say true, output says false →
+  predicted conflict), (3) confident error (internals also wrong → no conflict). A signal that
+  fires ONLY in case (2) is simultaneously: the KNOWS≠SAYS boundary made concrete, AND the
+  closest honest mechanistic analog of the "unease of lying" (a proto-guilt/shame signal).
+  Preregister; oracle canary; compare the conflict-probe across the 3 cases; control that it's
+  not just detecting the falsehood token.
+- Cheaper warmup / stepping stone: do emotion/evaluation words (shame, guilt, pride, fear) sit
+  as clean DIRECTIONS in the same navigable tree as fruit/bird (Brick 2 machinery)? If yes,
+  does the model apply an evaluation axis to ITSELF (self-reference) vs to others?
+
+## NEXT (other open lines, none started)
+- κ "one idea, many disguises" (Causal Quotient Feature) — clean but another "understand", and
+  our through-line says understanding rarely converts to intervention. Lower priority.
 - Harden a night-survivor ("shape-from-data") on a bigger model.
-- The regime question for Brick 1 on a REAL reasoning model (needs cloud GPU).
+
+## THROUGH-LINE (name it, 2026-07-07)
+Across connect / teaching / (map-as-detector): interp is a strong DIAGNOSTIC (detection, in the
+confident-fool regime) but has REPEATEDLY failed to beat the model's own outputs as an
+INTERVENTION (routing, teaching, lie-catching). Empirical confirmation of the VISION's original
+caveat "understand ≠ improve" — 3× from 3 angles. Design future work knowing this: push the
+DETECTOR where it's useful (hallucinations), or map the DETECTION boundary sharply (knows≠says).
 
 ## Infra note (2026-07-07)
 Local GPU (RTX 3050, 3.68 GiB) is SHARED across studio sessions — a basketbolica neurotrack
