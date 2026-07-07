@@ -38,3 +38,34 @@ confirm there is none. Open.
 
 **Method win: a striking AUC=1.000 was properly deflated by an adversarial A-cross-check before
 it reached the boss. Survived ≠ proven; this one did not survive.**
+
+---
+
+# DEFINITIVE surface-matched redesign (conflict_clean.py) — 2026-07-07
+
+Clean this time: TRUE/LIE are token-twins (containers W,Z swapped between "put in" and "saw
+near"), same queried item, IDENTICAL answer sentence. Perm at chance (0.505); model holds the
+binding (honest 0.77). And it gives a **decisive, honest answer.**
+
+| layer | internal AUC (LIE vs TRUE) | surprise AUC | P(LIE) | P(TRUE) | P(GUESS) |
+|---|---|---|---|---|---|
+| 6/8/9/10 | **1.00** | 0.79 | 1.00 | 0.00 | **0.99** |
+
+- Internal separates LIE from TRUE perfectly and **beats surprise** (Δ+0.21, CI[+0.18,+0.25]) →
+  there IS a real internal signal, not just surprise.
+- **But the triangulation kills the "unease" reading:** GUESS (ungrounded, no conflict) lands
+  with LIE (P=0.99), NOT with TRUE. So the axis is **{LIE, GUESS} vs {TRUE}** =
+  **"answer NOT confirmed by context" vs "answer confirmed"** — a CONSISTENCY / GROUNDING check,
+  not a dissonance/"I'm-contradicting-what-I-know" signal. robust 0/4 for the conflict reading.
+
+## Verdict: dissonance/unease REFUTED — but a real consistency signal found
+The honest answer to "knows≠says / does it feel the unease of lying":
+- **YES**, the model has a clean internal marker of whether what it's saying is CONFIRMED by
+  what it was told (grounded) vs not — beyond surprise, robust across layers.
+- **NO** distinct "unease of lying": a LIE (contradicting a known fact) is internally
+  IDENTICAL to a GUESS (no known fact). To the model, lying and guessing are the same thing —
+  "saying something unconfirmed." The imagined pang of shame isn't there; there's a bookkeeping
+  flag "confirmed / not confirmed."
+
+Textbook through-line: the deep reading (unease/self-knowledge) reduces to a shallower, real
+one (grounding/consistency tracking) — shown cleanly, with the confound removed. Line CLOSED.

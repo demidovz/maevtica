@@ -144,6 +144,14 @@ reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problem
   signal established.** Faint lead at L6 for a SURFACE-MATCHED redesign. Fits the through-line:
   the "deep" reading (self-knowledge/unease) reduces to something shallower once controlled.
 - Method win: a striking AUC=1.000 was deflated by adversarial checking before reaching the boss.
+- **DEFINITIVE surface-matched redesign (conflict_clean.py) — line CLOSED, clean answer:**
+  TRUE/LIE are token-twins (W,Z swapped), same item, identical answer sentence; perm clean (0.51),
+  model holds binding (0.77). Internal separates LIE from TRUE at AUC 1.0 BEYOND surprise
+  (Δ+0.21, CI excl 0) — a REAL signal. But GUESS lands with LIE (P=0.99), not TRUE → the axis is
+  {LIE,GUESS} vs {TRUE} = **"answer NOT confirmed by context" vs "confirmed"** = a CONSISTENCY /
+  GROUNDING check, NOT dissonance. **Answer: the model has a clean "is what I say grounded in what
+  I was told" signal (YES), but NO distinct "unease of lying" — a lie is internally identical to a
+  guess.** Deep reading (unease/self-knowledge) reduces cleanly to a shallow real one (grounding).
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +
