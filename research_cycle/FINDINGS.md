@@ -130,6 +130,11 @@ reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problem
   CONFIDENT FALSEHOODS (hallucinations) better than the model's own confidence? This both tests
   generalization of the toy law AND turns our one working tool into something useful. Needs
   cloud GPU. Boss said: keep working locally for now, but this goes in the plans. — DONE (here).
+  DESIGN written: `PLAN_cloud_grounding_jlens.md` — our grounding-signal × Anthropic's J-lens
+  (J-space, 2026-07-06 transformer-circuits.pub/2026/workspace). Detect a hallucination = a claim
+  STATED but not GROUNDED in the workspace; head-to-head vs the model's own stated confidence
+  (Brick-1). Staged: light lens on 7-13B → reimplement J-lens → scale to 70B. Honest expectation:
+  a real groundedness detector, NOT "knows it's lying" (our GUESS-triangulation: lie ≈ guess internally).
 
 ## Conflict / "knows≠says" signal — INCONCLUSIVE (confound caught) 2026-07-07
 `campaigns/conflict/` (conflict_signal.py + conflict_crosscheck.py, CPU).
