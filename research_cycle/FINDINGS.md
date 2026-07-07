@@ -169,8 +169,14 @@ multi-hop unspoken intermediates (spider→8) → use arithmetic.
   → An arithmetic error IS a missing workspace intermediate, visible inside BEFORE the wrong digit
   is spoken. Unifies Brick 1 ⊕ J-space. (Note: this is a POSITIVE for interp-as-detector, our
   through-line's one working mode — detection, in the confidently-wrong regime.)
-- Next in program: E3 (confabulation=empty workspace, hallucination seed), E2 (emergence curve),
-  E4 tip-of-tongue, E5 privileged injection, E6 belief update.
+- **E3 "Confabulation = empty workspace" — REFUTED (informative)** `campaigns/workspace/`. Synthetic
+  person→city memory, 25% persons hidden. The model HEDGES honestly on strangers (output entropy
+  0.10 grounded vs 0.50 confab) → NOT confident confabulation. Internal AUC 0.826 vs output-conf 0.843
+  (Δ−0.017, CI incl 0, perm 0.48) → inside does NOT beat the voice. The workspace IS emptier but the
+  OUTPUT already shows it → no hidden signal. **E1⊕E3 draw the line: interp beats the voice ONLY in
+  the confidently-WRONG regime; when the voice honestly hedges, inside adds nothing.** Same through-line
+  ("deep reduces to shallow-but-real"). Would flip only under CONFIDENT confabulation → test on cloud.
+- Next in program: E2 (emergence curve), E4 tip-of-tongue, E5 privileged injection, E6 belief update.
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +

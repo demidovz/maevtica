@@ -1,0 +1,17 @@
+{
+ "exp": "E3 confabulation = empty workspace (synthetic memory)",
+ "grounded_acc": 0.7288888888888889,
+ "n_grounded": 164,
+ "n_confab": 75,
+ "output_entropy_grounded": 0.09681849109963446,
+ "output_entropy_confab": 0.49863173681554523,
+ "internal_AUC": 0.8257723577235773,
+ "output_conf_AUC": 0.842520325203252,
+ "delta": -0.016747967479674775,
+ "delta_CI": [
+  -0.07725316146725665,
+  0.04599182067932066
+ ],
+ "perm_AUC": 0.47772357723577236,
+ "verdict": "REFUTED"
+}
