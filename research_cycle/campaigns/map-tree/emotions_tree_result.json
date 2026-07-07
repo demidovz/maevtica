@@ -1,0 +1,26 @@
+{
+ "nouns": {
+  "domain": "nouns",
+  "K": 6,
+  "chance": 0.16666666666666666,
+  "best_layer": 10,
+  "in_sample": 0.8636363636363636,
+  "LOO": 0.6818181818181818,
+  "mean_abs_cos": 0.329152491564552,
+  "shuffled_LOO_canary": 0.18181818181818182,
+  "clean_tree": true
+ },
+ "emotions": {
+  "domain": "emotions",
+  "K": 6,
+  "chance": 0.16666666666666666,
+  "best_layer": 8,
+  "in_sample": 0.8205128205128205,
+  "LOO": 0.5128205128205128,
+  "mean_abs_cos": 0.21159934513270856,
+  "shuffled_LOO_canary": 0.20512820512820512,
+  "clean_tree": true
+ },
+ "verdict": "EMOTIONS_FORM_CLEAN_TREE",
+ "note": "warmup: concept-reading, not feeling; frames differ per domain (natural priming)"
+}
