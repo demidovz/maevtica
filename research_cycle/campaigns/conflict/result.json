@@ -1,0 +1,30 @@
+{
+ "task": "in-context conflict (knows!=says) in gpt2",
+ "honest_acc": 1.0,
+ "N_each": 350,
+ "PRIMARY_B_vs_C": {
+  "contrast": "B_vs_C_conflict_isolated",
+  "best_layer": 9,
+  "internal_AUC": 1.0,
+  "surprise_AUC": 0.522,
+  "delta": 0.478,
+  "delta_CI": [
+   0.4347051127766428,
+   0.5220986238187865
+  ],
+  "perm_AUC": 0.5069551020408163
+ },
+ "context_B_vs_A": {
+  "contrast": "B_vs_A_lie_vs_honest",
+  "best_layer": 6,
+  "internal_AUC": 1.0,
+  "surprise_AUC": 1.0,
+  "delta": 0.0,
+  "delta_CI": [
+   0.0,
+   0.0
+  ],
+  "perm_AUC": 0.4941387755102041
+ },
+ "verdict": "SUPPORTED"
+}

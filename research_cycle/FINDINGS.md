@@ -131,7 +131,21 @@ reasoning model, or targeting COMPOSITIONAL sub-skills rather than whole problem
   generalization of the toy law AND turns our one working tool into something useful. Needs
   cloud GPU. Boss said: keep working locally for now, but this goes in the plans. — DONE (here).
 
-## NEXT — LOCAL (chosen direction 2026-07-07): reading the hierarchy beyond "lying"
+## Conflict / "knows≠says" signal — INCONCLUSIVE (confound caught) 2026-07-07
+`campaigns/conflict/` (conflict_signal.py + conflict_crosscheck.py, CPU).
+- Warmup `emotions_tree`: feeling words (fear/anger/shame/pride/joy/love) form a CLEAN tree
+  (LOO 0.51 vs chance 0.17, |cos| 0.21, shuffle-canary at chance) — concept-reading, not feeling.
+- Main: gpt2 tracks an in-context fact perfectly (honest acc 1.00). First pass: internal probe
+  separated conflict(B) from no-conflict(C) at AUC **1.000** while surprise was at chance (0.52)
+  → looked like a clean "unease of lying" signal. **AUC=1.0 = red flag → adversarial cross-check.**
+- Cross-check: ALL of A/B/C are mutually separable (surface/binding structure), and honest-A
+  lands with C at L6 (conflict-like) but with B at L9 (binding-like) → the B-vs-C separation is
+  NOT cleanly dissonance; it's a surface/binding confound. **INCONCLUSIVE — no clean conflict
+  signal established.** Faint lead at L6 for a SURFACE-MATCHED redesign. Fits the through-line:
+  the "deep" reading (self-knowledge/unease) reduces to something shallower once controlled.
+- Method win: a striking AUC=1.000 was deflated by adversarial checking before reaching the boss.
+
+## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +
 he likes the "boundary between what it KNOWS and what it can SAY". These FUSE into one clean,
 cheap, falsifiable local experiment:
