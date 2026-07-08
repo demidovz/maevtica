@@ -203,7 +203,15 @@ multi-hop unspoken intermediates (spider→8) → use arithmetic.
   (b): reading structure does NOT compress better than blind — the opposite.** Hard-number confirmation
   that transfer/compression belongs to dumb gradients/statistics (PCA, standard distillation), NOT
   interp-surgery. Reinforces through-line: interp = DIAGNOSTIC, not a superior engineering lever.
-- Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update.
+- **сколько деревьев влезет пока не смешаются** `campaigns/workspace/`. (A) фикс.мозг (3552 парам ~1776
+  бит) держит 16 деревьев идеально, излом ~18-20 = **~3× больше наивной формулы** (1776/290≈6): случайные
+  деревья ДЕЛЯТ нижние узлы → эффективно ~100 нов.бит/дерево, не 290. Ёмкость-правило верно на ИСТИННОМ
+  совместном (сжатом) объёме, не наивной сумме — деревья вместе дешевле. (B) близнецы (различие 25%),
+  перегруз: **«похожее об похожее» ПОДТВЕРЖДЕНО** — различия гибнут ПЕРВЫМИ (общее 0.62 vs различия 0.32,
+  разрыв +0.29), а ошибаясь на различии сваливается на родителя БЛИЗНЕЦА 5-15× выше случая. Сливает
+  похожие структуры, теряет что их различает. Расширяет «как забывает»: держит общее/сжимаемое, теряет
+  тонкие различия. Честно: интерференция/забывание известны; наше=демо+мостик.
+- Next in program: E2 (emergence curve), E4 tip-of-tongue, E6 belief update; «прочитать закон из весов».
 
 ## SUPERSEDED / earlier direction note (2026-07-07): reading the hierarchy beyond "lying"
 The boss asked: reading the concept hierarchy — can we find more than lying? shame, guilt? +

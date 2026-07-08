@@ -263,3 +263,40 @@ memorize→generalize); compressibility ~ Kolmogorov complexity. Ours: a clean t
 "archive structure" to "find the rule", with the capacity-threshold framing and the forgetting-rhyme.
 A crisp illustration + bridge, not a new law. Regular generalization ~0.69 (not perfect) = mostly-rule
 with residual imperfection.
+
+## сколько деревьев влезет, пока не смешаются — how many trees before they blur (2026-07-08)
+Pack N trees (V=64) into ONE fixed brain; input = bits(tree_id)++bits(node). Two parts.
+
+### (A) capacity — how many fit (fixed w=32, 3552 params ~1776 bits; one tree ~290 bits)
+| N | naive bits (N×290) | mean recall |
+|---|---|---|
+| 1–16 | up to 4640 | **1.000** |
+| 24 | 6960 | 0.730 |
+| 32 | 9280 | 0.514 |
+- **Knee ~18-20 trees — ~3× MORE than the naive formula (1776/290 ≈ 6).** Because random trees SHARE
+  low-node structure (near the root few parent choices → many trees agree), stored once. Effective NEW
+  info per tree ≈ 1776/~18 ≈ **~100 bits**, not 290. The capacity rule (~0.5 bits/param) holds if fed
+  the trees' TRUE joint (compressed) info, not the naive sum. **Trees are cheaper together than apart.**
+
+### (B) similarity blur — near-twins (25% of nodes differ), OVERLOADED
+| w | params | overall | SHARED nodes | DIFFERING nodes | blur→twin (chance .016) |
+|---|---|---|---|---|---|
+| 4 | 388 | .16 | .17 | .10 | .11 |
+| 6 | 562 | .23 | .27 | .11 | .11 |
+| 10 | 934 | .36 | .40 | .22 | .24 |
+| 14 | 1290 | .55 | **.62** | **.32** | **.24** |
+- **"Similar collides with similar" — CONFIRMED.** Under overload the brain loses the DIFFERING nodes
+  FIRST (shared 0.62 vs differing 0.32 at w=14, gap +0.29; consistent across all w). It merges look-alike
+  trees into their common part and drops exactly what distinguishes them.
+- **Confuses the twin:** when wrong on a differing node, it names the TWIN's parent 5–15× above chance
+  (0.24 vs 0.016). It literally collapses similar structures toward each other.
+
+## Reading — same threads
+- (A) = the compressibility thread again: a SET of trees is compressible (shared structure); capacity is
+  spent on INCOMPRESSIBLE DIFFERENCE, not "number of trees."
+- (B) = extends "how it forgets": under pressure the brain keeps the SHARED/common and loses the fine
+  DISTINCTIONS, collapsing similar things together (blur toward the look-alike = the confabulation/fall-
+  back-to-similar pattern). What survives is what's compressible/common.
+- Honesty on novelty: interference / catastrophic-forgetting / similar-reps-interfere are KNOWN (continual
+  learning, superposition). Ours = clean tree-structured demo + the "distinctions die first, collapse
+  toward the twin" framing tied to our compressibility/forgetting threads. A bridge, not a new law.
