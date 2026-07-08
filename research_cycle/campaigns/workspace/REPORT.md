@@ -193,3 +193,32 @@ To hold a V-species tree exactly: **≈ 2·V·log2(V) parameters** (measured), v
 E.g. 256 species → ~3.4k params; 1000 species → ~17k params (measured) / ~4-5k (theory floor). Shrink below
 and it starts hallucinating edges, more as it shrinks; the edge is a slope, not a cliff; extra layers don't
 buy exactness, only size does.
+
+## как оно забывает — HOW a too-small net forgets a tree — STRUCTURED (2026-07-08)
+Below the exact-storage threshold, WHICH edges break? Tiny MLPs at sub-threshold widths (V=256);
+correlate edge-correctness with node DEPTH (trunk=shallow), SUBTREE SIZE, PARENT POPULARITY (hub).
+
+| w | recall | correctness~popular-parent AUC | ~shallow AUC | ~subtree | wrong→hub (base .11) | pred in-deg (base 1.0) |
+|---|---|---|---|---|---|---|
+| 2 | 0.45 | **0.839** | 0.729 | 0.573 | **0.56** | 3.4 |
+| 3 | 0.83 | 0.622 | 0.553 | 0.572 | 0.48 | 2.5 |
+| 4 | 0.93 | 0.50 | 0.50 | 0.44 | **0.95** | 3.4 |
+(perm canary ~0.49-0.52 = clean. correct-vs-wrong at w=2: subtree 6.8 vs 2.9, depth 3.8 vs 5.4.)
+
+## Findings — forgetting is FREQUENCY-STRUCTURED, not random
+- **Keeps the trunk/hubs, loses the twigs.** The strongest survival predictor is PARENT POPULARITY
+  (AUC 0.84 at heavy compression) — frequent/hub links survive, rare deep twigs die. Depth (0.73) and
+  subtree (0.57) follow, and are entangled with popularity (trunk nodes ARE frequent parents). Correct
+  edges are shallower (3.8 vs 5.4) and bigger branches (6.8 vs 2.9).
+- **Failure = collapse to the hub.** When wrong, it guesses a POPULAR node — 56% of errors land on a
+  top-10% hub (vs 11% chance), rising to 95% of the residual errors near-threshold; wrong-guess parents
+  are 3.4× more popular than random. "Don't know the exact parent → name the frequent one."
+- **Same behaviour as confabulation (E3).** Ungrounded → fall back to the frequent/popular guess. The
+  net is a lossy JPEG of the tree: it keeps the coarse hierarchy and blurs the fine detail toward hubs.
+
+## Honesty on novelty
+The underlying PRINCIPLE — frequency bias of memorization (frequent survives, rare forgotten) + undertrained
+fallback to the high-prior answer — is KNOWN. What's ours: a clean demonstration on tree STRUCTURE
+(trunk-survives / twig-dies), tied to the measured capacity threshold, and the connection that "how it
+forgets a structure" = "confabulate toward the hub" = the same through-line thread. A nice bridge, not a
+new law. (Did not run a formal lit-search; would before any novelty claim.)
