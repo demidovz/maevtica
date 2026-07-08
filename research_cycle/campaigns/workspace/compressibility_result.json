@@ -1,0 +1,80 @@
+{
+ "exp": "compressibility: rule vs table",
+ "thresholds": [
+  {
+   "V": 64,
+   "rnd": [
+    8,
+    704
+   ],
+   "reg": [
+    3,
+    289
+   ],
+   "gain": 2.43598615916955
+  },
+  {
+   "V": 128,
+   "rnd": [
+    8,
+    1288
+   ],
+   "reg": [
+    4,
+    692
+   ],
+   "gain": 1.861271676300578
+  },
+  {
+   "V": 256,
+   "rnd": [
+    12,
+    3592
+   ],
+   "reg": [
+    3,
+    1063
+   ],
+   "gain": 3.379115710253998
+  },
+  {
+   "V": 512,
+   "rnd": [
+    16,
+    9136
+   ],
+   "reg": [
+    4,
+    2620
+   ],
+   "gain": 3.4870229007633586
+  }
+ ],
+ "generalization": [
+  {
+   "V": 64,
+   "rnd_heldout": 0.0,
+   "reg_heldout": 1.0,
+   "chance": 0.015625
+  },
+  {
+   "V": 128,
+   "rnd_heldout": 0.03125,
+   "reg_heldout": 0.75,
+   "chance": 0.0078125
+  },
+  {
+   "V": 256,
+   "rnd_heldout": 0.015625,
+   "reg_heldout": 0.65625,
+   "chance": 0.00390625
+  },
+  {
+   "V": 512,
+   "rnd_heldout": 0.0,
+   "reg_heldout": 0.6875,
+   "chance": 0.001953125
+  }
+ ],
+ "verdict": "ARCHIVES THE RULE (regular compresses AND generalizes)"
+}

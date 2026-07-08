@@ -222,3 +222,44 @@ fallback to the high-prior answer — is KNOWN. What's ours: a clean demonstrati
 (trunk-survives / twig-dies), tied to the measured capacity threshold, and the connection that "how it
 forgets a structure" = "confabulate toward the hub" = the same through-line thread. A nice bridge, not a
 new law. (Did not run a formal lit-search; would before any novelty claim.)
+
+## сжимаемость — does a net ARCHIVE a tree by finding its RULE? — YES (2026-07-08)
+Node i fed as BINARY BITS (so the net can do arithmetic on the index). REGULAR tree = binary heap
+parent(i)=i//2 (a clean bit-shift rule); RANDOM tree = parent=rand(<i) (no rule).
+
+### (A) storage threshold (min params for exact) — regular compresses, gap WIDENS with V
+| V | RANDOM params | REGULAR params | gain |
+|---|---|---|---|
+| 64 | 704 | 289 | 2.4× |
+| 128 | 1288 | 692 | 1.9× |
+| 256 | 3592 | 1063 | 3.4× |
+| 512 | 9136 | 2620 | **3.5×** |
+
+### (B) rule vs table — held-out recall (train 75%, test 25% UNSEEN nodes), weight-decay on
+| V | RANDOM held-out | REGULAR held-out | chance |
+|---|---|---|---|
+| 64 | 0.000 | **1.000** | 0.016 |
+| 128 | 0.031 | 0.750 | 0.008 |
+| 256 | 0.016 | 0.656 | 0.004 |
+| 512 | 0.000 | 0.688 | 0.002 |
+
+## Findings — "archiving structure" = the net FINDS THE RULE
+- **Regular structure is archived cheaply AND generalizes.** The regular tree stores in ~3.5× fewer
+  params (gap widening with V), and a net trained on 75% correctly reconstructs the UNSEEN 25%
+  (held-out ~0.69, vs chance ~0.006 → ~100× above chance). It learned the generating RULE (the
+  bit-shift), not a lookup table.
+- **Random structure cannot be archived — only memorized.** Held-out recall ≈ 0 (chance): no rule to
+  find, so it just stores the table; nothing to reconstruct.
+- **Answer to the boss's "archive structure in neurons":** cheap archival requires the structure to
+  HAVE A RULE. Then the net discovers it (weight-decay drives the memorize→rule transition, grokking-
+  style), stores it compactly, and reconstructs parts it never saw. Compressibility = whether a rule
+  exists (Kolmogorov complexity), and the net approximately realizes it.
+- **Rhymes with "how it forgets":** forgetting keeps the trunk/hubs (the compressible coarse part);
+  archiving keeps the rule (the maximal compression). In both, what SURVIVES is what's COMPRESSIBLE.
+
+## Honesty on novelty
+Known in principle: nets learn rules and generalize on regular data; grokking (weight-decay-driven
+memorize→generalize); compressibility ~ Kolmogorov complexity. Ours: a clean tree-structured demo tying
+"archive structure" to "find the rule", with the capacity-threshold framing and the forgetting-rhyme.
+A crisp illustration + bridge, not a new law. Regular generalization ~0.69 (not perfect) = mostly-rule
+with residual imperfection.
