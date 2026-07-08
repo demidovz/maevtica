@@ -165,3 +165,31 @@ Full (no compression) = 0.957. **k needed to reach 95% of full: BLIND=2, SMART=3
   NOT by interp-surgery. Reinforces the through-line: interp is a DIAGNOSTIC, not a superior engineering
   lever. (Nuance for fairness: PCA is itself implicitly finding the right structure — "structure
   matters", just not the output-map structure our lens reads; plain variance already captures it.)
+
+## минимальный мозг под дерево — capacity threshold for exact structure (2026-07-08)
+How small a net stores a species tree EXACTLY (0 hallucinated edges)? Tiny MLPs memorize "node->parent"
+for random rooted trees; sweep size, find the smallest with 100% exact recall. Theory: tree = log2((V-1)!)
+≈ V·log2(V) bits; big LMs store ~2 bits/param -> floor ≈ bits/2.
+
+| V | tree bits | threshold params | bits/param | min width w* |
+|---|---|---|---|---|
+| 32 | 113 | 308 | 0.37 | 4 |
+| 64 | 290 | 460 | 0.63 | 3 |
+| 128 | 709 | 1706 | 0.42 | 6 |
+| 256 | 1676 | 3370 | 0.50 | 6 |
+
+## Findings
+- **Min size scales ~linearly with tree info (V·log2V), as theory predicts.** Threshold params ≈ **2× the
+  tree's bit-content** → achieved **~0.5 bits/param**, i.e. ~4× BELOW the 2-bits/param ceiling of big
+  optimized transformers. Tiny memorizer-MLPs are less frugal; the practical floor is ~4× the theory floor.
+- **Minimal width w* ≈ log2(V)** — just enough distinct "addresses" to separate the V species (V=256→w≈6-8).
+- **The boundary is a SOFT slope, not a cliff:** at V=256, recall 0.42→0.82→0.92→1.00 across a ~3× param
+  range. Below threshold the net confuses a GROWING fraction of parents = graceful hallucination, not collapse.
+- **Depth does NOT help storage:** 2 hidden layers ≈ 1 layer for the threshold (w*≈6 both). Capacity (total
+  params) stores edges; depth would matter only for MULTI-HOP queries (ancestry "is A above B?"), a natural v2.
+
+## Concrete answer
+To hold a V-species tree exactly: **≈ 2·V·log2(V) parameters** (measured), vs ~V·log2(V)/2 theoretical floor.
+E.g. 256 species → ~3.4k params; 1000 species → ~17k params (measured) / ~4-5k (theory floor). Shrink below
+and it starts hallucinating edges, more as it shrinks; the edge is a slope, not a cliff; extra layers don't
+buy exactness, only size does.
